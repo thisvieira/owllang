@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0.334375" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.column0"/>
+	<item value="C:\ProgramD\lib" key="JavaClasspathTab.LAST_PATH_SETTING"/>
+	<item value="0.334375" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.column1"/>
+	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
+	<section name="org.eclipse.jdt.debug.ui.P&#x09;ROJECT_SELECTION_DIALOG_SECTION">
+		<item value="470" key="org.eclipse.debug.ui.DIALOG_HEIGHT"/>
+		<item value="346" key="org.eclipse.debug.ui.DIALOG_WIDTH"/>
+		<item value="115" key="org.eclipse.debug.ui.DIALOG_ORIGIN_Y"/>
+		<item value="713" key="org.eclipse.debug.ui.DIALOG_ORIGIN_X"/>
+	</section>
+	<section name="ADD_VM_DIALOG_SECTION">
+		<item value="404" key="org.eclipse.debug.ui.DIALOG_HEIGHT"/>
+		<item value="505" key="org.eclipse.debug.ui.DIALOG_WIDTH"/>
+		<item value="139" key="org.eclipse.debug.ui.DIALOG_ORIGIN_Y"/>
+		<item value="398" key="org.eclipse.debug.ui.DIALOG_ORIGIN_X"/>
+	</section>
+</section>

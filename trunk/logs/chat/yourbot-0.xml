@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2012-10-05T14:56:36.641+0100</date>
+  <millis>1349445396641</millis>
+  <sequence>24</sequence>
+  <botid>yourbot</botid>
+  <userid>SCHERMERHOM</userid>
+  <input>CONNECT</input>
+  <reply>Connected to test case AIML set.</reply>
+</record>
+<record>
+  <date>2012-10-05T14:56:46.396+0100</date>
+  <millis>1349445406396</millis>
+  <sequence>29</sequence>
+  <botid>yourbot</botid>
+  <userid>SCHERMERHOM</userid>
+  <input>CONNECT</input>
+  <reply>Connected to test case AIML set.</reply>
+</record>

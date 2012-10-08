@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2006-11-02T15:32:12.548+0000</date>
+  <millis>1162481532548</millis>
+  <sequence>45</sequence>
+  <botid>TF</botid>
+  <userid>uriel</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns="http://www.w3.org/1999/xhtml"/&gt;
+			Would you agree 
+				with this statement, the EFQUEL WIKI Page is not easy to read?</reply>
+</record>
+<record>
+  <date>2006-11-02T15:34:16.235+0000</date>
+  <millis>1162481656235</millis>
+  <sequence>74</sequence>
+  <botid>TF</botid>
+  <userid>guest999@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns="http://www.w3.org/1999/xhtml"/&gt;
+			Would you agree 
+				when some say that the My EFQUEL Section is relevant?</reply>
+</record>

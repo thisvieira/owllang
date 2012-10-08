@@ -1,0 +1,712 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+	
+	<category>
+		<pattern>SWWORD</pattern>
+		<template>
+			<random>
+				<li>Please, </li>
+				<li>Sorry, </li>
+				<li>Excuse me, </li>
+			</random>
+			<random>
+				<li>do not swear!</li>
+				<li>but I do not like swear words.</li>
+				<li>but swearing isn't nice.</li>
+				<li>could you use proper English words to describe the site</li>
+				<li>swearing is offensive to me.</li>
+				<li>that is not said in a nice tone, could you please refrain from using swear words.</li>
+			</random>
+			
+			<html:br/>
+			<think>
+				<set name="dummy"><that/></set>
+			</think>
+			<condition name="dummy" value="DO YOU *">
+				<that index="1,2"/><html:br/>
+			</condition>
+			<think>
+				<set name="dummy"/>
+			</think>
+			<that/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>CUNT</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>CUNT _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ CUNT</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ CUNT _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>	
+	
+	<category>
+		<pattern>MOTHERFUCKER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>MOTHERFUCKER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ MOTHERFUCKER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ MOTHERFUCKER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>COCKSUCKER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>COCKSUCKER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ COCKSUCKER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ COCKSUCKER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>FUCK</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ FUCK</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ FUCK _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>FUCK _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>FUCKED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ FUCKED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ FUCKED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>FUCKED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>FUCKING</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ FUCKING</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ FUCKING _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>FUCKING _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>WANKER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ WANKER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ WANKER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>WANKER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BASTARD</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BASTARD</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BASTARD _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BASTARD _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BITCH</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BITCH</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BITCH _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BITCH _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>SHIT</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ SHIT</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ SHIT _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>SHIT _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BOLLOCKS</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BOLLOCKS</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BOLLOCKS _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BOLLOCKS _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>ARSEHOLE</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>	
+	
+	<category>
+		<pattern>_ ARSEHOLE</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ ARSEHOLE _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>ARSEHOLE _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>ASSHOLE</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>		
+	
+	<category>
+		<pattern>_ ASSHOLE</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ ASSHOLE _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>ASSHOLE _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BOLLOCKS</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>			
+	
+	<category>
+		<pattern>_ BOLLOCKS</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BOLLOCKS _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BOLLOCKS _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>PISS</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>				
+	
+	<category>
+		<pattern>_ PISS</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ PISS _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>PISS _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>PISSED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>			
+	
+	<category>
+		<pattern>_ PISSED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ PISSED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>PISSED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>	
+
+	<category>
+		<pattern>BLOODY</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>	
+	
+	<category>
+		<pattern>_ BLOODY</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BLOODY _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BLOODY _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>	
+	
+	<category>
+		<pattern>HELL</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ HELL</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ HELL _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>HELL _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>	
+	
+	<category>
+		<pattern>DAMN</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ DAMN</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ DAMN _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>DAMN _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>	
+	
+	<category>
+		<pattern>DAMNED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ DAMNED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ DAMNED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>DAMNED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>GODDAMN</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ GODDAMN</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ GODDAMN _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>GODDAMN _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>GODDAMNED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ GODDAMNED</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ GODDAMNED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>GODDAMNED _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BULLSHIT</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BULLSHIT</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ BULLSHIT _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>BULLSHIT _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>TOSSER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ TOSSER</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>_ TOSSER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>TOSSER _</pattern>
+		<template>
+			<srai>SWWORD</srai>
+		</template>
+	</category>
+
+</aiml>

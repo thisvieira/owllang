@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Program Files\Java\jdk1.6.0\src"/>
+	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
+	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\ProgramD\src\org\UoR"/>
+	<item key="TypeHierarchyViewPart.orientation" value="0"/>
+	<item key="UserLibraryLoadSaveDialog.size" value="400,442"/>
+	<section name="javadoc">
+		<item key="access" value="public"/>
+		<item key="docletname" value=""/>
+		<item key="fromStandard" value="true"/>
+		<item key="notree" value="false"/>
+		<item key="use" value="true"/>
+		<item key="noindex" value="false"/>
+		<item key="splitindex" value="true"/>
+		<item key="version" value="true"/>
+		<item key="destdir" value="C:\ProgramD\project\doc"/>
+		<item key="nodeprecated" value="false"/>
+		<item key="javadoc_command_history" value=""/>
+		<item key="antpath" value="C:\ProgramD\project\javadoc.xml"/>
+		<item key="openinbrowser" value="false"/>
+		<item key="docletpath" value=""/>
+		<item key="nodeprecatedlist" value="false"/>
+		<item key="source" value="1.5"/>
+		<item key="nonavbar" value="false"/>
+		<item key="author" value="true"/>
+		<section name="projects">
+		</section>
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="2"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item key="create_main" value="false"/>
+		<item key="create_unimplemented" value="true"/>
+		<item key="create_constructor" value="false"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.TypeSelectionComponent">
+		<item key="show_status_line" value="true"/>
+	</section>
+	<section name="hierarchy_presenter_bounds">
+	</section>
+	<section name="JavaBuildConfigurationBlock">
+		<item key="expanded2" value="false"/>
+		<item key="expanded1" value="false"/>
+		<item key="expanded0" value="true"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item key="index" value="2"/>
+	</section>
+	<section name="outline_presenter_bounds">
+	</section>
+	<section name="JavaSearchPage">
+		<item key="HISTORY_SIZE" value="12"/>
+		<item key="CASE_SENSITIVE" value="false"/>
+		<section name="HISTORY4">
+			<item key="searchFor" value="1"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.server.jettyinterface{ProgramDAwareJettyServer.java[ProgramDAwareJettyServer~addContext~QHttpContext;"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.server.jettyinterface.ProgramDAwareJettyServer.addContext(HttpContext)"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY9">
+			<item key="searchFor" value="1"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.server{ServletRequestTransactionEnvelope.java[ServletRequestTransactionEnvelope~getTemplateName"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.server.ServletRequestTransactionEnvelope.getTemplateName()"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY0">
+			<item key="searchFor" value="3"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.util.sql{DbAccessRefsPoolMgr.java[DbAccessRefsPoolMgr~DbAccessRefsPoolMgr~QString;~QString;~QString;~QString;"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.util.sql.DbAccessRefsPoolMgr(String, String, String, String)"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY5">
+			<item key="searchFor" value="2"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/C:\/ProgramD\/lib\/org.mortbay.jetty.jar&lt;org.mortbay.jetty.servlet"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.mortbay.jetty.servlet"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY10">
+			<item key="searchFor" value="3"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.responder{HTMLResponder.java[HTMLResponder~HTMLResponder~QHTMLResponderManager;~QServletRequestTransactionEnvelope;"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.responder.HTMLResponder(HTMLResponderManager, ServletRequestTransactionEnvelope)"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY2">
+			<item key="searchFor" value="1"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~connect"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.util.sql.DbAccess.connect()"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY7">
+			<item key="searchFor" value="0"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.server.servlet{ProgramD.java[ProgramD"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.server.servlet.ProgramD"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY3">
+			<item key="searchFor" value="1"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~getConnection"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.util.sql.DbAccess.getConnection()"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY6">
+			<item key="searchFor" value="0"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/C:\/ProgramD\/lib\/javax.servlet.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="javax.servlet.http.HttpServlet"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
+			<item key="searchFor" value="3"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~DbAccess~QString;~QString;~QString;~QString;"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.util.sql.DbAccess(String, String, String, String)"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY11">
+			<item key="searchFor" value="1"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.responder{HTMLResponderSettings.java[HTMLResponderSettings~getChatDefaultTemplateName"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.responder.HTMLResponderSettings.getChatDefaultTemplateName()"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY8">
+			<item key="searchFor" value="1"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="javaElement" value="=project/src&lt;org.aitools.programd.responder{HTMLResponderManager.java[HTMLResponderManager~processLogin~QHttpServletRequest;~QHttpServletResponse;~QString;"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="org.aitools.programd.responder.HTMLResponderManager.processLogin(HttpServletRequest, HttpServletResponse, String)"/>
+			<item key="limitTo" value="2"/>
+			<list key="workingSets">
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.jdt.ui.internal.packageExplorer">
+		<item key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;packageexplorer isWindowWorkingSet=&quot;false&quot; layout=&quot;2&quot; org.eclipse.jdt.ui.packages.linktoeditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;&gt;&#x0D;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0D;&#x0A;&lt;xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_*$*.class&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;lastRecentlyUsedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_*$*.class&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot;/&gt;&#x0D;&#x0A;&lt;/lastRecentlyUsedFilters&gt;&#x0D;&#x0A;&lt;/customFilters&gt;&#x0D;&#x0A;&lt;/packageexplorer&gt;"/>
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item key="InsertPosition" value="1"/>
+		<item key="Comments" value="false"/>
+		<item key="FinalModifier" value="false"/>
+		<item key="VisibilityModifier" value="1"/>
+		<item key="SynchronizedModifier" value="false"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+</section>

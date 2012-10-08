@@ -1,0 +1,62 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+QUESTION: Would you agree .........
+-->
+	<topic name="QUESTION WOULDYOUAGREE">
+		<category>
+			<pattern>
+				WOULDYOUAGREE
+			</pattern>
+			<template>
+				Would you agree 
+				<random>
+					<li> that the <get name="subject"/> <get name="predicate"/> <get name="object"/>?</li>
+					<li> with this statement, the <get name="subject"/> <get name="predicate"/> <get name="object"/>?</li>
+					<li> when some say that the <get name="subject"/> <get name="predicate"/> <get name="object"/>?</li>
+				</random>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I WOULD
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I WOULD *
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>
+				I WOULD NOT
+			</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I WOULD NOT *
+			</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+	</topic>
+</aiml>

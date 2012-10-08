@@ -1,0 +1,26 @@
+@prefix :		<http://www.cs.rdg.ac.uk/seequel#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix log:	<http://www.w3.org/2000/10/swap/log#> .
+
+{ ?x	a  :Fact ;
+  	:subject  ?sub ;
+	:predicate  ?pred ;
+	:object  ?obj .} 
+=>
+{ ?sub  ?pred  ?obj . } .
+
+ 
+{ ?x 	?y  ?z .
+  ?q	owl:inverseOf  ?y . }
+=>
+{ ?z	?q  ?x } .
+
+{ ?x	?y  ?z .
+  ?z	?y  ?q .
+  ?y	a   owl:TransitiveProperty . }
+=>
+{ ?x	?y  ?q . } .					

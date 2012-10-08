@@ -1,0 +1,472 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+	<topic name="QUESTION *">
+
+
+		<category>
+			<pattern>
+				IT IS NOT
+			</pattern>
+			<template>
+				<srai>NO It is not</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				THEY ARE NOT
+			</pattern>
+			<template>
+				<srai>NO They are not.</srai>
+			</template>
+		</category>
+		
+		<!-- ADD MORE TO COVER "DOES NOT HAVE" OPTION -->
+		<category>
+			<pattern>
+				* DOES NOT HAVE *
+			</pattern>
+			<template>
+				<srai>NO It does not have <star index="2"/>.</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* DO NOT HAVE *
+			</pattern>
+			<template>
+				<srai>NO They do not have <star index="2"/>.</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I DISAGREE</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* DISAGREE</pattern>
+			<template>
+				<srai>I DISAGREE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>
+				* NOT AGREE
+			</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT TRUE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT TRUE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>FALSE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* FALSE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>HARDLY</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I SUPPOSE NOT</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NAH *</pattern>
+			<template>
+				<srai>NO <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NEGATIVE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>BY NO MEANS</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>IN NO WAY</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT AT ALL</pattern>
+			<template>
+ 			<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT IN THE LEAST</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ON NO ACCOUNT</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NEGATIVE *</pattern>
+			<template>
+				<srai>NO *</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NON</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NON *</pattern>
+			<template>
+				<srai>NO <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOO</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOOO</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOOOO</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOOOOO</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOOOOOO</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOP</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>NOPE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOPE *</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>
+					NO The <get name="subject"/> <get name="predicate"/> 
+					<think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/>
+				</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT ANY MORE *</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT ANY MORE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>NOT PARTICULARLY</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT REALLY</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+
+
+		<category>
+			<pattern>NOT THAT I KNOW OF</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OF COURSE NOT</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* IS NOT RIGHT</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* IS NOT TRUE</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>N</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>N *</pattern>
+			<template>
+				<srai>NO <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT BELIEVE *</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT THINK *</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* WOULD NOT SAY *</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT</pattern>
+			<template>
+				<think><srai>FINDINVERSEOFPREDICATE</srai></think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/><think><srai>FINDINVERSEOFPREDICATE</srai></think> <get name="object"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I DO NOT</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* OPPOSE *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* OPPOSED *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* OPPOSITE *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* OPPOSITE</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* AGAINST *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* AGAINST</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* CONFLICTING *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* CONFLICTING</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>CONTRARY *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* CONTRARY *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* OPPONENT *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* RIVAL *</pattern>
+			<template>
+				<srai>NO <input/></srai>
+			</template>
+		</category>
+
+	</topic>
+
+</aiml>

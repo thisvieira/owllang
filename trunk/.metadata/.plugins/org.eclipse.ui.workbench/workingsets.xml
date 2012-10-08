@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1349270154054_0" label="project" name="project">
+<item elementID="=project/src&lt;org.aitools.programd.processor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.processor.botconfiguration" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.listener" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.server.jettyinterface" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.bot" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.parser" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.graph" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.server.servlet" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.configurations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/project/src/web-server.bat" type="1"/>
+<item elementID="=project/src&lt;org.aitools.programd.interfaces.graphical" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.interfaces" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.logging" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.util.sql" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.responder" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.interpreter" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.gui.icons" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.multiplexor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd.processor.aiml" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/project/src/simple-gui-console.bat" type="1"/>
+<item elementID="=project/src&lt;org.aitools.programd.server" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=project/src&lt;org.aitools.programd" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/project/src/simple-console.bat" type="1"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/project/src/build.bat" type="1"/>
+<item elementID="=project/src&lt;org.aitools.programd.responder.xml" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/project/src/readme.txt" type="1"/>
+<item elementID="=project/src&lt;org.aitools.programd.util" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/project/src/common_functions.bat" type="1"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1349270160315_1" label="Window Working Set" name="Aggregate for window 1349270160314"/>
+<mruList name="project"/>
+</workingSetManager>

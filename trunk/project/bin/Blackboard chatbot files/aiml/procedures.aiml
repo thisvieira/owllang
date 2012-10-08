@@ -1,0 +1,135 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+PROCEDURE FINDINVERSEOFPREDICATE
+-->
+<topic name="_">
+	<category>
+		<pattern>
+			FINDINVERSEOFPREDICATE
+		</pattern>
+		<that>
+			_
+		</that>
+		<template>
+			$OWLLANG(
+				ONTPRO(prop==[owl:inverseOf]>>==[<get name="predicateURI"/>])
+				ONTPRO(prop==#1):[rdfs:label]@'en'
+				)
+			THAT='INVERSEOFPREDICATE'
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			OWLLANG ONTPRO * ONTPRO *
+		</pattern>
+		<that>
+			INVERSEOFPREDICATE
+		</that>
+		<template>
+			<set name="predicateURI"><star/></set>
+			<set name="predicate"><star index="2"/></set>
+			<srai>CHECKPREDICATEGRAMMAR</srai>
+		</template>
+	</category>
+	
+	<!--
+	<category>
+		<pattern>
+			OWLLANG ONTPRO UNKNOWN
+		</pattern>
+		<that>
+			INVERSEOFPREDICATE
+		</that>
+		<template>
+			<think>A</think>
+		</template>
+	</category>	
+	-->
+	
+<!--
+PROCEDURE STOREREIFICATION
+-->
+
+	<category>
+		<pattern>
+			STOREREIFICATION
+		</pattern>
+		<that>
+			_
+		</that>
+		<template>
+			<condition>
+				<li name="subject" value="UNKNOWN"><think>A</think></li>
+				<li name="predicate" value="UNKNOWN"><think>A</think></li>
+				<li name="object" value="UNKNOWN"><think>A</think></li>
+				<li>
+					$OWLLANG(
+						ONTSTORE([<get name="subjectURI"/>] [<get name="predicateURI"/>]  [<get name="objectURI"/>] [seequel:madeBy] [<get name="name"/>])
+						)
+					THAT='STOREREIFICATIONRESULT'
+				</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			OWLLANG ONTSTORE *
+		</pattern>
+		<that>
+			STOREREIFICATIONRESULT
+		</that>
+		<template>
+		</template>
+	</category>
+	
+	<!--
+PROCEDURE STOREREIFICATION
+-->
+
+	<category>
+		<pattern>
+			YESORNOANSWERNEEDED
+		</pattern>
+		<that>
+			_
+		</that>
+		<template>
+			<random>
+				<li>You seam a bit confused, </li>
+				<li>Your last comments are a bit fuzzy to me, </li>
+				<li>I can't determine the meaning of what you just said, </li>
+				<li>The last couple of statements are a bit misty, </li>
+				<li>You are a bit foggy, </li>
+				<li>Either I am out of focus or you are blurred today, </li>
+			</random>
+			<random>
+				<li>could you please answer this </li>
+				<li>so please try and specify your answer </li>
+				<li>so lets try and be more exact </li>
+				<li>therefore let us be boring answering </li>
+			</random>
+			with a unknown, yes or no!
+			<html:br/>
+			<think>
+				<set name="dummy"><that/></set>
+			</think>
+			<condition name="dummy" value="Do you *">
+				<that index="1,2"/><html:br/>
+			</condition>
+			<think>
+				<set name="topic">YESORNOANSWERNEEDED</set>
+				<set name="dummy"/>
+			</think>
+			<that/>
+		</template>
+	</category>
+</topic>
+</aiml>

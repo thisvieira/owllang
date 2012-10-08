@@ -1,0 +1,254 @@
+@prefix :		<http://www.cs.rdf.sc.uk/tp-feedback#> .
+@prefix seequel:	<http://www.cs.rdg.ac.uk/seequel#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+
+:TP					a				seequel:learningSources ;
+					rdfs:label			"teaching product"@en ;
+					rdfs:comment		"a product, which is used in a teaching environment."@en .
+
+:unitOfTP				a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"units of a teaching product"@en ;
+					rdfs:comment		"a unit of a teaching product, such as different courses."@en .
+
+:Functionality			a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"functionality"@en ;
+					rdfs:comment		"functionality of a teaching product or parts of a teaching product."@en .
+
+
+
+:DiscussionBoard			rdfs:subClassOf		:Functionality ;
+					rdfs:label			"discussion board"@en .
+
+:Quiz					rdfs:subClassOf		:Functionality ;
+					rdfs:label			"quiz"@en .
+
+:Assignment				rdfs:subClassOf		:Functionality ;
+					rdfs:label			"assignment"@en .
+
+:Survey				rdfs:subClassOf		:Functionality ;
+					rdfs:label			"survey"@en .
+
+:MailBox				rdfs:subClassOf		:Functionality ;
+					rdfs:label			"mailbox"@en .
+
+:Content				rdfs:subClassOf		:Functionality ;
+					rdfs:label			"content"@en ;
+					rdfs:comment		"content of a teaching product or functional within a teaching product."@en .
+
+
+
+:is					a				owl:ObjectProperty ;
+					rdfs:domain			[ owl:unionOf ( :TP	:unitOfTP	:Functionality ) ] ;
+					rdfs:range			seequel:Descriptor ;
+					rdfs:label			"is"@en ;
+					rdfs:comment		"A relation, which indicates that a teaching product can be described by a descriptor from the Seequel framework (ontology)."@en .
+
+:isNot				a				owl:ObjectProperty ;
+					rdfs:domain			[ owl:unionOf ( :TP	:unitOfTP	:Functionality ) ] ;
+					rdfs:range			seequel:Descriptor ;
+					rdfs:label			"is not"@en ;
+					rdfs:comment		"A relation, which indicates that a teaching product can be described negatively by a descriptor from the Seequel framework (ontology)."@en .
+
+:noRelation				a				owl:ObjectProperty ;
+					rdfs:domain			[ owl:unionOf ( :TP	:unitOfTP	:Functionality ) ] ;
+					rdfs:range			seequel:Descriptor ;
+					rdfs:label			"has no relation to"@en ;
+					rdfs:comment		"A relation is not known to exist between a teaching product and the descriptor from the Seequel framework (ontology)."@en .
+
+:hasUnit				a				owl:ObjectProperty ;
+					rdfs:domain			:TP ;
+					rdfs:range			:unitOfTP ;
+					rdfs:label			"has unit"@en ;
+					rdfs:comment		"A teaching product has the given unit."@en .
+
+:unitOf				a				owl:ObjectProperty ;
+					rdfs:domain			:unitOfTP ;
+					rdfs:range			:TP ;
+					owl:inverseOf		:hasUnit ;
+					rdfs:label			"unit of"@en ;
+					rdfs:comment		"A unit is part of a teaching product."@en .
+
+:hasFunctionality			a				owl:ObjectProperty ;
+					rdfs:domain			[ owl:unionOf ( :TP	:unitOfTP	:Functionality ) ] ;
+					rdfs:range			:Functionality ;
+					rdfs:label			"has functionality"@en ;
+					rdfs:comment		"A teaching product or unit of a tp has a certain functionality"@en .
+
+:functionalityOf			a				owl:ObjectProperty ;
+					rdfs:domain			:Functionality ;
+					rdfs:range			[ owl:unionOf ( :TP	:unitOfTP	:Functionality ) ] ;
+					rdfs:label			"functionality of"@en ;
+					rdfs:comment		"functionality of a teaching product"@en .
+
+
+
+
+:bb					a				:TeachingProduct ;
+					rdfs:label			"Blackboard"@en ;
+					rdfs:comment		"Blackboard is a teaching product, which is used at Reading University."@en ;
+					:hasFunctionality		:bbDB ;
+					:hasFunctionality		:bbTest ;
+					:hasFunctionality		:bbSurvey ;
+					:hasFunctionality		:bbMailBox ;
+					:hasFunctionality		:bbQuiz ;
+					rdfs:seeAlso		<http://www.bb.rdg.ac.uk> .
+
+:bbDB					a				:DiscussionBoard ;
+					rdfs:label			"discussion boards on Blackboard"@en .
+
+:bbAssignments			a				:Assignment ;
+					rdfs:label			"assignments on Blackboard"@en .
+
+:bbSurvey				a				:Survey ;
+					rdfs:label			"surveys on Blackboard"@en .
+
+:bbMailBox				a				:MailBox ;
+					rdfs:label			"mailboxes on Blackboard"@en .
+
+:bbQuiz				a				:Quiz ;
+					rdfs:label			"quizzes on Blackboard"@en .
+
+
+
+:programming			a				:unitOfTP ;
+					:unitOf			:bb ;
+					:hasFunctionality		:prgDB ;
+					:hasFunctionality		:prgQuiz ;
+					rdfs:label			"Programming"@en ;
+					rdfs:comment		"The programming course with the module number SE1SA5."@en ;
+					rdfs:seeAlso		<http://www.info.rdg.ac.uk/module/0506/SC/SE1SA5.htm> .
+
+:prgDB				a				:DiscussionBoard ;
+					:hasFunctionality		:cPrgDB ;
+					rdfs:label			"discussion board in programming"@en .
+
+:cPrgDB				a				:Content ;
+					rdfs:label			"content of the discussion board in programming"@en .
+
+:prgAssignment			a				:Assignment ;
+					:hasFunctionality		:cPrgAssignment ;
+					rdfs:label			"assignments in programming"@en .
+
+:cPrgAssignment			a				:Content ;
+					:hasFunctionality		:cPrgAssignment ;
+					rdfs:label			"content of the assignments in programming"@en .
+
+
+<http://www.cs.rdg.ac.uk/tp-feedback.owl>
+					a				owl:Ontology ;
+					rdfs:comment		"The Teaching Product Feedback ontology" ;
+					rdfs:label			"teaching product feedback Ontology" .
+
+
+
+
+:claim				a				seequel:Claim ;
+					:subject			seequel:easyToUse ;
+					:predicate			:is ;
+					:object			:bbDB ;
+					:madeBy			seequel:Karsten .
+
+:claim1				a				seequel:Claim ;
+					:subject			seequel:easyToNavigate ;
+					:predicate			:isNot ;
+					:object			:bbDB ;
+					:madeBy			seequel:Karsten .
+
+:claim2				a				seequel:Claim ;
+					:subject			seequel:nonIntuitiveLayout ;
+					:predicate			:is ;
+					:object			:bbDB ;
+					:madeBy			seequel:Karsten .
+
+:claim3				a				seequel:Claim ;
+					:subject			seequel:easyToUse ;
+					:predicate			:is ;
+					:object			:bbAssignments;
+					:madeBy			seequel:Karsten .
+
+:claim4				a				seequel:Claim ;
+					:subject			seequel:easyNavigation;
+					:predicate			:is ;
+					:object			:bbAssignments;
+					:madeBy			seequel:Karsten .
+
+:claim5				a				seequel:Claim ;
+					:subject			seequel:flexible;
+					:predicate			:isNot ;
+					:object			:bbMailBox;
+					:madeBy			seequel:Karsten .
+
+:claim6				a				seequel:Claim ;
+					:subject			seequel:organised ;
+					:predicate			:is ;
+					:object			:prgDB ;
+					:madeBy			seequel:Karsten .
+
+:claim7				a				seequel:Claim ;
+					:subject			seequel:easyNavigation ;
+					:predicate			:is ;
+					:object			:prgDB ;
+					:madeBy			seequel:Karsten .
+
+:claim8				a				seequel:Claim ;
+					:subject			seequel:relevant ;
+					:predicate			:isNot ;
+					:object			:cPrgDB ;
+					:madeBy			seequel:Karsten .
+
+:claim9				a				seequel:Claim ;
+					:subject			seequel:offTopic ;
+					:predicate			:is ;
+					:object			:cPrgDB  ;
+					:madeBy			seequel:Karsten .
+
+:claim10				a				seequel:Claim ;
+					:subject			seequel:tooLong ;
+					:predicate			:is ;
+					:object			:cPrgDB ;
+					:madeBy			seequel:Karsten .
+
+:claim11				a				seequel:Claim ;
+					:subject			seequel:nonIntuitiveLayout ;
+					:predicate			:isNot ;
+					:object			:prgAssignment ;
+					:madeBy			seequel:Karsten .
+
+:claim12				a				seequel:Claim ;
+					:subject			seequel:interactive ;
+					:predicate			:is ;
+					:object			:prgAssignment ;
+					:madeBy			seequel:Karsten .
+
+:claim13				a				seequel:Claim ;
+					:subject			seequel:organised ;
+					:predicate			:is ;
+					:object			:prgAssignment  ;
+					:madeBy			seequel:Karsten .
+
+:claim14				a				seequel:Claim ;
+					:subject			seequel:challenging ;
+					:predicate			:is ;
+					:object			:cPrgAssignment ;
+					:madeBy			seequel:Karsten .
+
+:claim15				a				seequel:Claim ;
+					:subject			seequel:boring ;
+					:predicate			:isNot ;
+					:object			:cPrgAssignment ;
+					:madeBy			seequel:Karsten .
+
+:claim16				a				seequel:Claim ;
+					:subject			seequel:tooSimple ;
+					:predicate			:is ;
+					:object			:cPrgAssignment ;
+					:madeBy			seequel:Karsten .
+
+

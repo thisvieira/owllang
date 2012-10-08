@@ -1,0 +1,1396 @@
+options {
+  LOOKAHEAD = 3;
+  FORCE_LA_CHECK = true;
+  STATIC = false;
+}
+
+
+PARSER_BEGIN(OwlLang)
+package org.UoR.OwlLang;
+
+
+import java.io.*;
+import java.util.*;
+import java.util.regex.*;
+
+//Libraries used to communicate with ontologies.
+import com.hp.hpl.jena.ontology.*;
+import com.hp.hpl.jena.query.*;
+import com.hp.hpl.jena.rdf.model.*;
+import com.hp.hpl.jena.util.iterator.* ;
+import org.UoR.GrammaCheck.*;
+
+public class OwlLang 
+{
+	public static class Types
+	{
+		public static final int CLASS = 0;
+		public static final int PROPERTY = 1;
+		public static final int INDIVIDUAL = 2;
+	}
+	private int investigateType;
+	
+	private ArrayList ONTresult;
+	private OntModel ontmodel;
+	private String base;
+	private String prefix;
+	private GrammaCheck gramma;
+	
+	private Random rand;
+	
+	private String thatReturn="";
+	
+	/**An unknown AIML input*/
+	protected static final String O_UNKNOWN = "UNKNOWN";
+	
+	//URI of rdfs:label is the default return string of any resource in an OntModel
+	protected static final String defaultReturnString = "rdfs:label";
+	
+	public OwlLang(OntModel ontmodel, String baseURI)
+	{
+		this(new StringReader("test"));
+	
+		Long seed = System.nanoTime();
+		this.rand = new Random(seed);
+		
+		this.ontmodel = ontmodel;
+				
+		base = "BASE <" + baseURI + ">\n";
+		prefix = "";
+		setLabeledPrefix("rdfs","http://www.w3.org/2000/01/rdf-schema#");
+		setLabeledPrefix("owl","http://www.w3.org/2002/07/owl#");
+		
+		gramma = new GrammaCheck();
+    }
+	
+	public void setLabeledPrefix(String label, String URI)
+	{
+		this.prefix += "PREFIX " + label + ": <" + URI + "> \n";
+	}
+	
+		
+	public String query(String input) throws ParseException
+	{
+		thatReturn="";
+		ONTresult = new ArrayList();
+		StringReader inp = new StringReader(input);
+		this.ReInit(inp);
+		String res = this.OntQue();
+		return res;
+	}
+
+	public String getThatReturn()
+	{
+		return this.thatReturn;
+	}
+
+	private Object getSingleObject(Set possibleInstances)
+	{		
+		Object winner = null;;
+    		
+ 		if (possibleInstances.size()!=0)
+		{
+			Object [] res = possibleInstances.toArray();
+			winner = res[this.rand.nextInt(possibleInstances.size())];
+		}
+		
+		return winner;
+	}
+	
+	
+	private String getPropertyVal(String subject, String property, String stringToken)
+	{
+		if(property==null) return subject;
+				
+		String queryString = 
+			base + prefix +	
+			"SELECT ?str " +
+			"WHERE { " + subject + " " + property +	" ?str . }";
+					
+		Query query = QueryFactory.create(queryString);
+		QueryExecution qe = QueryExecutionFactory.create(query,ontmodel);
+		ResultSet rs = qe.execSelect();
+		
+		HashSet solutions = new HashSet();
+		
+		for (;rs.hasNext();) 
+		{
+			QuerySolution qs = rs.nextSolution();
+			RDFNode rn = qs.get("str");
+			if(rn.isLiteral())
+			{
+				String lang = ((Literal)rn).getLanguage();
+				if(lang==null && stringToken==null)		
+					solutions.add("\"" + ((Literal)rn).getLexicalForm() + "\"");
+				else
+					if(lang!=null && stringToken!=null)
+					{
+						if(lang.equals(stringToken))
+							solutions.add("\"" + ((Literal)rn).getLexicalForm() + "\"");
+					}
+			}
+			else
+				solutions.add("<" + ((Resource)rn).getURI() + ">");
+		}
+		
+		qe.close();
+		
+		if(solutions.size()==0) return "\"" + O_UNKNOWN + "\"";
+		Object [] reses = solutions.toArray();
+		String res = (String)reses[this.rand.nextInt(solutions.size())];
+		
+		return res ;
+	}
+	
+	private String getString(Token t)
+	{
+		if(t==null)
+			return null;
+		else
+			return t.image.substring(1,t.image.length()-1);
+	}
+	
+	private int getNumber(Token t) throws ParseException
+	{
+		if(t!=null)
+			return Integer.parseInt(t.image.substring(1));
+		else
+			throw new ParseException("null pointer error in getNumber(Token t)");
+	}
+	
+	private String getURI(Token t)
+	{
+		if(t!=null)
+			return "<" + ontmodel.expandPrefix(getString(t)) + ">";
+		else
+			return null;
+	}
+	
+	private String getURI(String s)
+	{
+		if(s==null)
+			return null;
+		else
+			return "<" + ontmodel.expandPrefix(s) + ">";
+	}
+	
+	private String getAIMLURI(String s)
+	{
+		s = getPureURI(s);
+		return ontmodel.shortForm(s);
+	}
+	
+	private String getPureURI(String str)
+	{
+		if(str==null) 
+			return null;
+		String foo = str.substring(1,str.length()-1);
+		return  ontmodel.expandPrefix(foo);
+	}
+	
+	private String getPureURIfromAIML(String str)
+	{
+		if(str==null)
+			return null;
+		
+		String foo = str.substring(1,str.length()-1);
+		
+		if(!foo.contains(":"))
+		{		
+			int pos = foo.indexOf(" ");
+		
+			if(pos==-1)
+				return ontmodel.expandPrefix(":" + foo);
+		
+			foo = foo.substring(0,pos) + ":" + foo.substring(pos+1);
+		}
+		
+		return ontmodel.expandPrefix(foo);
+	}
+	
+	private String getPureURIfromAIML(Token t)
+	{
+		
+		if(t==null)
+			return null;
+			
+		return getPureURIfromAIML(t.image);
+	}
+	
+	private String getFullString(String propValue,String stringToken)
+	{
+		if(propValue==null)
+			return null;
+			
+		if(stringToken!=null)
+			return " \"" + propValue + "\"@" + stringToken;
+		else
+			return " \"" + propValue + "\"";
+	}
+	
+	private Set getSetFromIterator(Iterator i)
+	{
+		HashSet res = new HashSet();
+		
+		for(;i.hasNext();)
+		{
+			String id = ((Resource)i.next()).getURI();
+			if(id!=null)
+			{
+				id=getURI(id);
+				res.add(id);
+			}
+		}
+		
+		return res;
+	}
+	
+	private boolean isStringInSet(String test, Set set)
+	{
+		if(test==null)
+			return false;
+					
+		return set.contains(test);
+	}	
+	
+	private ExtendedIterator iteratorOverDomain(Resource res)
+	{
+		String URI = res.getURI();
+		
+		if(URI!=null)
+		{
+			SingletonIterator si = new SingletonIterator(res);
+			return si;
+		}
+		
+		try
+		{
+			ExtendedIterator ni = new NiceIterator();
+			
+			UnionClass uc = (UnionClass)res.as(UnionClass.class);
+			Iterator i = uc.listOperands();
+			for(;i.hasNext();)
+			{
+				Resource next = (Resource)i.next();
+				ni = ni.andThen(iteratorOverDomain(next));
+			}
+			
+			return ni;
+		} catch(Exception e)
+		{
+			return null;
+		}
+	}
+	
+	private Set getCLSes(String propName,Token cType,String propValue) throws ParseException
+	{
+		Set solutions = new HashSet();
+	
+		if(propName==null)
+		{
+			solutions = new HashSet();
+			OntClass oc = ontmodel.getOntClass(getPureURI(propValue));
+			if(oc!=null)
+			{
+				String id = oc.getURI();
+				if(id!=null)
+				{
+					id = getURI(id);
+					solutions.add(id);
+				}
+			}
+		}
+		else
+		{
+			String queryString =
+				base + prefix +
+				"SELECT ?cls\n" +
+				"WHERE { ?cls a owl:Class . ?cls " + propName + " " + propValue + " . }";
+				
+			Query query = QueryFactory.create(queryString);
+
+			// Execute the query and obtain results
+			QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+			ResultSet results = qe.execSelect();
+			
+			for(;results.hasNext();)
+			{
+				QuerySolution qs = results.nextSolution();
+				Resource rn = qs.getResource("cls");
+				if(rn!=null)
+				{
+					String id = rn.getURI();
+					if(id!=null)
+					{
+						id = getURI(id);
+						solutions.add(getURI(id));
+					}
+				}
+			}
+			
+			// Free up resources used running the query
+			qe.close();
+		}
+		
+		//Add subclasses to solution
+		if(cType.image.equals("+="))
+		{
+			Iterator i = solutions.iterator();
+			for(;i.hasNext();)
+			{
+				OntClass oc = ontmodel.getOntClass(getPureURI((String)i.next()));
+				if(oc!=null)
+				{
+					Iterator ei = oc.listSubClasses();
+					Set subClasses = getSetFromIterator(ei);
+					solutions.add(subClasses);
+				}
+			}
+		}
+		
+		//It's a negation
+		if(cType.image.equals("!="))
+		{			
+			Set results = new HashSet();
+			Iterator ei = ontmodel.listClasses();
+			Set allClasses = getSetFromIterator(ei);
+			allClasses.removeAll(solutions);
+			solutions = allClasses;
+		}
+		
+		switch (investigateType)
+		{
+			case Types.CLASS:
+				return solutions;
+				
+			case Types.PROPERTY:
+				Set result = new HashSet();
+				Iterator i = solutions.iterator();
+				for(;i.hasNext();)
+				{
+					OntClass oc = ontmodel.getOntClass(getPureURI((String)i.next()));
+					if(oc!=null)
+					{
+						Iterator pi = oc.listDeclaredProperties();
+						result.addAll(getSetFromIterator(pi));
+					}
+				}
+				return result;
+				
+			case Types.INDIVIDUAL:
+				result = new HashSet();
+				i = solutions.iterator();
+				for(;i.hasNext();)
+				{
+					OntClass oc = ontmodel.getOntClass(getPureURI((String)i.next()));
+					if(oc!=null)
+					{
+						Iterator ii = oc.listInstances();
+						result.addAll(getSetFromIterator(ii));
+					}
+				}						
+				return result;
+				
+			default:
+				throw new ParseException("Illigal investigation type in cls call");
+		}
+	}
+	
+	private Set getPROPERTYs(String propName,Token cType,String propValue, Token t,String indSlotName,Token indType,String indValue) throws ParseException
+	{
+		Set solutions = new HashSet();
+	
+		if(propName==null)
+		{
+			solutions = new HashSet();
+			OntProperty op = ontmodel.getOntProperty(getPureURI(propValue));
+			if(op!=null)
+			{
+				String id = op.getURI();
+				if(id!=null)
+				{
+					id = getURI(id);
+					solutions.add(id);
+				}
+			}
+		}
+		else
+		{
+			String queryString =
+				base + prefix +
+				"SELECT ?prop\n" +
+				"WHERE { ?s ?prop ?o . ?prop " + propName + " " + propValue + " . }";
+				
+			Query query = QueryFactory.create(queryString);
+
+			// Execute the query and obtain results
+			QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+			ResultSet results = qe.execSelect();
+			
+			for(;results.hasNext();)
+			{
+				QuerySolution qs = results.nextSolution();
+				Resource rn = qs.getResource("prop");
+				if(rn!=null)
+				{
+					String id = rn.getURI();
+					
+					if(id!=null)
+					{
+						id = getURI(id);
+						solutions.add(id);
+					}
+				}
+									
+			}
+			
+			// Free up resources used running the query
+			qe.close();
+		}
+		
+		//It's a negation
+		if(cType.image.equals("!="))
+		{	
+			Set res = new HashSet();
+			ExtendedIterator iP = ontmodel.listObjectProperties();
+			ExtendedIterator iProp = iP.andThen(ontmodel.listDatatypeProperties());
+			res.addAll(getSetFromIterator(iProp));				
+			res.removeAll(solutions);
+			solutions=res;
+		}
+		
+		switch (investigateType)
+		{
+			case Types.CLASS:
+				//Returns domain class of Property
+				Set result = new HashSet();
+				Iterator i = solutions.iterator();
+				for(;i.hasNext();)
+				{
+					OntProperty op = ontmodel.getOntProperty(getPureURI((String)i.next()));
+					if(op!=null)
+					{
+						Iterator pi = ((OntProperty)op).listDeclaringClasses();
+						for(;pi.hasNext();)
+						{
+							Resource prop = (Resource)pi.next();
+							if(prop!=null)
+							{
+								Iterator iprop = iteratorOverDomain(prop);
+								result.addAll(getSetFromIterator(iprop));								
+							}
+						}
+					}
+				}
+				return result;
+				
+			case Types.PROPERTY:
+				if(t==null)
+					return solutions;
+				
+				result = new HashSet();
+				Set negationSet = new HashSet();
+					
+				i=solutions.iterator();
+				for(;i.hasNext();)
+				{
+					String queryString;
+					
+					String nextProp = (String)i.next();
+					if(indType.image.equals("!="))
+					{
+						queryString = base + prefix + "SELECT ?ind\n";
+						if(indSlotName==null)
+							queryString += "WHERE { ?ind " + nextProp + " ?object . }";
+						else
+							queryString += "WHERE { ?ind " + nextProp + " ?o .\n?o " + indSlotName + " ?object . }";
+							
+						Query query = QueryFactory.create(queryString);
+						// Execute the query and obtain results
+						QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+						ResultSet rs = qe.execSelect();
+						
+						for(;rs.hasNext();)
+						{
+							QuerySolution qs = rs.nextSolution();
+							Resource rn = qs.getResource("ind");				
+						
+							if(rn!=null)
+							{
+								Iterator iprop = iteratorOverDomain(rn);
+								negationSet.addAll(getSetFromIterator(iprop));
+							}
+						}
+						
+						qe.close();
+					}	
+						
+					queryString = base + prefix + "SELECT ?ind\n";
+					if(indSlotName==null)
+						queryString += "WHERE { ?ind " + nextProp + " " + indValue + " . }";
+					else
+						queryString += "WHERE { ?ind " + nextProp + " ?o .\n?o " + indSlotName + " " + indValue + " . }";
+			
+					Query query = QueryFactory.create(queryString);
+					// Execute the query and obtain results
+					QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+					ResultSet rs = qe.execSelect();
+						
+					for(;rs.hasNext();)
+					{
+						QuerySolution qs = rs.nextSolution();
+						Resource rn = qs.getResource("ind");				
+						
+						if(rn!=null)
+						{
+							Iterator iprop = iteratorOverDomain(rn);
+							result.addAll(getSetFromIterator(iprop));
+						}
+					}
+					
+					qe.close();
+				}
+				
+				if(indType.image.equals("=="))
+					return result;
+				else
+				{
+					negationSet.removeAll(result);
+					return negationSet;
+				}
+				
+			
+							
+			case Types.INDIVIDUAL:
+				result = new HashSet();
+				
+				if(t!=null)
+				{
+					negationSet = new HashSet();
+					
+					i=solutions.iterator();
+					for(;i.hasNext();)
+					{
+						String queryString;
+						
+						String nextProp = (String)i.next();
+						if(indType.image.equals("!="))
+						{
+							queryString = base + prefix + "SELECT ?ind\n";
+							if(indSlotName==null)
+								queryString += "WHERE { ?ind " + nextProp + " ?object . }";
+							else
+								queryString += "WHERE { ?ind " + nextProp + " ?o .\n?o " + indSlotName + " ?object . }";
+								
+							Query query = QueryFactory.create(queryString);
+
+							// Execute the query and obtain results
+							QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+							ResultSet rs = qe.execSelect();
+						
+							for(;rs.hasNext();)
+							{
+								QuerySolution qs = rs.nextSolution();
+								Resource rn = qs.getResource("ind");				
+							
+								if(rn!=null)
+								{
+									Iterator iprop = iteratorOverDomain(rn);
+									negationSet.addAll(getSetFromIterator(iprop));
+								}
+							}
+							
+							qe.close();
+						}	
+							
+						queryString = base + prefix + "SELECT ?ind\n";
+						if(indSlotName==null)
+							queryString += "WHERE { ?ind " + nextProp + " " + indValue + " . }";
+						else
+							queryString += "WHERE { ?ind " + nextProp + " ?o .\n?o " + indSlotName + " " + indValue + " . }";
+				
+						Query query = QueryFactory.create(queryString);
+
+						// Execute the query and obtain results
+						QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+						ResultSet rs = qe.execSelect();
+						
+						for(;rs.hasNext();)
+						{
+							QuerySolution qs = rs.nextSolution();
+							Resource rn = qs.getResource("ind");				
+							
+							if(rn!=null)
+							{
+								Iterator iprop = iteratorOverDomain(rn);
+								result.addAll(getSetFromIterator(iprop));
+							}
+						}
+						
+						qe.close();
+					}
+					
+					if(indType.image.equals("=="))
+						return result;
+					else
+					{
+						negationSet.removeAll(result);
+						return negationSet;
+					}
+				}
+			
+				Set classResult = new HashSet();
+				i = solutions.iterator();
+				for(;i.hasNext();)
+				{
+					OntProperty op = ontmodel.getOntProperty(getPureURI((String)i.next()));
+					if(op!=null)
+					{
+						Iterator pi = ((OntProperty)op).listDeclaringClasses();
+						classResult.addAll(getSetFromIterator(pi));
+					}
+				}
+				
+				i = classResult.iterator();
+				for(;i.hasNext();)
+				{
+					try
+					{
+						Iterator iclasses = iteratorOverDomain((Resource)i.next());
+						
+						for(;iclasses.hasNext();)
+						{
+							Resource clsRes = (Resource)iclasses.next();
+					
+							if(clsRes!=null)
+							{
+								OntClass oc = ontmodel.getOntClass(((Resource)clsRes).getURI());
+								if(oc!=null)
+								{
+									Iterator iIns = oc.listInstances();
+									result.addAll(getSetFromIterator(iIns));
+								}
+							}
+						}
+					} catch(Exception e)
+					{	
+					}
+				}
+				
+				return result;
+				
+			default:
+				throw new ParseException("Illigal investigation type in cls call");
+		}
+	}
+	
+	private Set getINDes(String propName,Token cType,String propValue) throws ParseException
+	{
+		if(investigateType==Types.PROPERTY)
+			return new HashSet();
+	
+		Set solutions = new HashSet();
+		
+				
+		if(propName==null)
+		{
+			solutions = new HashSet();
+			Individual oi = ontmodel.getIndividual(getPureURI(propValue));
+			if(oi!=null)
+			{
+				String id = oi.getURI();
+				if(id!=null)
+				{
+					id = getURI(id);
+					solutions.add(id);
+				}
+			}
+		}
+		else
+		{
+			String queryString =
+				base + prefix +
+				"SELECT ?ind\n" +
+				"WHERE { ?ind a ?s . ?s a owl:Class . ?s rdfs:subClassOf owl:Thing . ?ind " + propName + " " + propValue + " . }";
+				
+			Query query = QueryFactory.create(queryString);
+
+			// Execute the query and obtain results
+			QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+			ResultSet results = qe.execSelect();
+			
+			for(;results.hasNext();)
+			{
+				QuerySolution qs = results.nextSolution();
+				Resource rn = qs.getResource("ind");
+				if(rn!=null)
+				{
+					String id = rn.getURI();
+					if(id!=null)
+					{
+						id = getURI(id); 
+						solutions.add(id);
+					}
+				}
+			}
+			
+			// Free up resources used running the query
+			qe.close();
+		}
+		
+		//It's a negation
+		if(cType.image.equals("!="))
+		{	
+			Set res = new HashSet();
+			
+			String queryString =
+				base + prefix +
+				"SELECT ?ind\n" +
+				"WHERE { ?ind a ?s . ?s a owl:Class . ?s rdfs:subClassOf owl:Thing . }";
+				
+			Query query = QueryFactory.create(queryString);
+
+			// Execute the query and obtain results
+			QueryExecution qe = QueryExecutionFactory.create(query, ontmodel);
+			ResultSet results = qe.execSelect();
+			
+			for(;results.hasNext();)
+			{
+				QuerySolution qs = results.nextSolution();
+				Resource rn = qs.getResource("ind");
+				String rnName = rn.getURI();
+				
+				if(rnName!=null)
+				{
+					rnName = getURI(rnName);
+					res.add(rnName);
+				}		
+			}
+			
+			// Free up resources used running the query
+			qe.close();
+			
+			res.removeAll(solutions);
+					
+			solutions = res;
+		}
+		
+		switch (investigateType)
+		{
+			case Types.CLASS:
+				Set res = new HashSet();
+				Iterator i = solutions.iterator();
+				for(;i.hasNext();)
+				{
+					String indURI = getPureURI((String)i.next());
+					Individual ind = ontmodel.getIndividual(indURI);
+					
+					if(ind!=null)
+					{
+						Iterator iCls = ind.listRDFTypes(true);
+						res.addAll(getSetFromIterator(iCls));
+					}
+				}
+				return res;
+							
+			case Types.INDIVIDUAL:					
+				return solutions;
+				
+			default:
+				throw new ParseException("Illigal investigation type in cls call");
+		}
+	}
+	
+	private Set getRESTs(Token cType,String propValue,Token t) throws ParseException
+	{
+		return null;
+	}
+	
+	private Resource getUniqueResource(String str)
+	{
+		String uri = ontmodel.expandPrefix(":" + str);
+		Resource res = ontmodel.createResource(uri);
+		
+		while(ontmodel.containsResource(res))
+		{
+			uri = ontmodel.expandPrefix(":" + str + System.nanoTime());
+			res = ontmodel.createResource(uri);
+		}
+		
+		return res;
+	}
+}
+
+PARSER_END(OwlLang)
+
+SKIP : /* WHITE SPACE AND COMMENTS*/
+{
+	" "
+|	"\t"
+|	"\n"
+|	"\r"
+|	"\f"
+}
+
+SPECIAL_TOKEN : /* COMMENTS */
+{
+  <SINGLE_LINE_COMMENT: "//" (~["\n","\r"])* ("\n"|"\r"|"\r\n")>
+| <MULTI_LINE_COMMENT: "/*" (~["*"])* "*" ("*" | (~["*","/"] (~["*"])* "*"))* "/">
+}
+
+TOKEN :
+{
+	<ONTQUE: 		"$OWLLANG">			//General command
+|	<ONTSTORE:		"ONTSTORE">			//Store single statement or reified statement with one extra property
+|	<ONTUR:			"ONTUNIQUEID">		//Retrieve unique resource
+|	<ONTISR:		"ONTISRESOURCE">	//is resource (return unknown if not known else the URI.
+|	<ONTGRAMMA:		"ONTGRAMMA">		//Gramma check
+|	<ONTREGEX:		"ONTREGEX">			//Regular expresion check
+|	<ONTIND: 		"ONTIND">			//Find individual
+|	<ONTCLS: 		"ONTCLS">			//Find class
+|	<ONTPRO: 		"ONTPRO">			//Find property
+|	<CLS:			"cls">				//class
+|	<PROPERTY:		"prop">				
+|	<IND:			"ind">				//individual
+|	<REST:			"rest">				//NOT IMPLEMENTED
+|	<THAT:		 	"THAT">				//that return part
+|	<COLON:		 	":">
+|	<LPAREN: 		"(" >
+|	<RPAREN: 		")" >
+|	<ASSIGN: 		"=" >
+|	<EQ: 			"==" >
+|	<NQ:			"!=" >
+|	<PLUSEQ:		"+=" >
+|	<SC_OR: 		"OR" >
+|	<SC_AND: 		"AND" >
+|	<SC_XOR: 		"XOR" >
+|	<GETIND:		">>" >
+|	<REFNUMBER: 	"#" ["1"-"9"] ( ["0"-"9"] )* >
+|	<STRING:		"'" ( (~["'","\n","\r"]) )* "'" >
+|	<URI:			"[" ( (~["<",">","{","}","|","[","]","\\","^","~","\n","\r"] ) )* "]" > // Not allowed char in URI (BNF): { | } | vline | [ | ] | \ | ^ | ~ | < | >
+}
+
+String OntQue() :
+{
+	String res;
+	Token t;
+}
+{
+ 	t=<ONTQUE> res=CommandList() ThatReturnPart() <EOF>
+ 	{
+		return t.image + " " + res;
+ 	}
+}
+
+
+//Returns the strin
+String CommandList() :
+{
+	String res,r1;
+}
+{
+	<LPAREN> res=CommandPart() ( r1=CommandPart() {res+=" "+r1;} )* <RPAREN>
+ 	{
+ 		return res;
+ 	}
+}
+
+//Initiates the Collection to find depending on command
+//Return a string with "<command-type> <single-fit from all possible>"
+String CommandPart() :
+{
+	String res,resIns, regMatch;
+	Token uriToken = null;
+	Set possibles = null;
+	Token stringToken=null;
+	
+	Resource subj, pred;
+	Resource say=null;
+	RDFNode obj;
+	RDFNode what=null;
+	
+	Token t;
+	
+	Token strg, exp;
+}
+{
+	res=Command() possibles=PredicateStatement() [ ":" uriToken=<URI> ] [ "@" stringToken=<STRING> ]
+	{
+		String str = (String)getSingleObject(possibles);
+		
+		if(str!=null)
+		{				
+			resIns = getPropertyVal(str,getURI(getPureURIfromAIML(uriToken)), getString(stringToken));
+			ONTresult.add(resIns);
+			res +=" " + getAIMLURI(resIns);
+ 			return res;
+		}
+		else
+		{ 
+			resIns = "'" + O_UNKNOWN + "'";
+			ONTresult.add(resIns);
+			res +=" " + getAIMLURI(resIns);
+ 			return res;
+		}
+ 	}
+ 	|
+ 	<ONTSTORE> <LPAREN> subj=claimRefURI() pred=claimRefURI() obj=claimRefStringURI() [ say=claimRefURI() what=claimRefStringURI() ] <RPAREN>
+ 	{
+ 		//TODO: Make generic. But first off ok.
+  		try
+  		{	
+			if(say==null)
+			{
+				ontmodel.add(ontmodel.createStatement(subj,(Property)pred.as(Property.class),obj));
+				
+				res = getURI(subj.getURI());
+				ONTresult.add(res);
+				return "ONTSTORE " + getAIMLURI(res);
+			}
+			else
+			{		
+				java.util.List addStatements = new ArrayList();
+  		
+		 		Resource claim = ontmodel.getResource("http://www.cs.rdg.ac.uk/seequel#Claim");
+		 		Property subject = ontmodel.getProperty("http://www.cs.rdg.ac.uk/seequel#subject");
+	 			Property predicate = ontmodel.getProperty("http://www.cs.rdg.ac.uk/seequel#predicate");
+	 			Property object = ontmodel.getProperty("http://www.cs.rdg.ac.uk/seequel#object");
+				Resource statement = ontmodel.getResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#statement");
+				Property a = ontmodel.getProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");	
+				
+				Resource reifiedResource = getUniqueResource("CLAIM");
+				
+		 		addStatements.add(ontmodel.createStatement(reifiedResource,a,claim));
+		 		addStatements.add(ontmodel.createStatement(reifiedResource,subject,subj));
+	 			addStatements.add(ontmodel.createStatement(reifiedResource,predicate,pred));
+	 			addStatements.add(ontmodel.createStatement(reifiedResource,object,obj));
+		 		addStatements.add(ontmodel.createStatement(reifiedResource,(Property)say.as(Property.class),what));
+				ontmodel.add(addStatements);
+				
+				res = getURI(reifiedResource.getURI());
+				ONTresult.add(res);
+				return "ONTSTORE " + getAIMLURI(res);
+			}
+ 		}catch(Exception e)
+ 		{
+ 			throw new ParseException("Type mismatch in ONTCLAIM");
+ 		}	
+ 	}
+ 	|
+ 	<ONTUR> <LPAREN> t=<STRING> <RPAREN>
+ 	{
+ 		Resource r = getUniqueResource(getString(t));
+ 		res = getURI(r.getURI());
+ 		ONTresult.add(res);
+ 		return "ONTUNIQUEID " + getAIMLURI(res);
+ 	}
+ 	|
+ 	<ONTISR> <LPAREN> t=<URI> <RPAREN>
+ 	{
+ 		String URI = getPureURIfromAIML(t.image);
+ 		Resource r = ontmodel.createResource(URI);
+ 		
+ 		URI = getURI(URI);
+ 		ONTresult.add(URI);
+		
+		if (ontmodel.containsResource(r))
+			return "ONTISRESOURCE " + getAIMLURI(URI);
+		else
+			return "ONTISRESOURCE " + O_UNKNOWN ;
+ 	}
+ 	|
+ 	<ONTGRAMMA> <LPAREN> strg=<STRING> <RPAREN>
+ 	{
+ 		String string = getString(strg);
+ 		boolean b = gramma.isStringValid(string);
+ 				
+ 		if(b)
+ 		{
+ 			ONTresult.add(string);
+	 		return "ONTGRAMMA " + string;
+	 	}
+	 	else
+	 	{
+	 		ONTresult.add("\"" + O_UNKNOWN +"\"");
+	 		return "ONTGRAMMA " + "\"" + O_UNKNOWN + "\"";
+	 	}
+ 	}
+ 	|
+ 	<ONTREGEX> <LPAREN> strg=<STRING> <EQ> regMatch=RefStringURI() <RPAREN>
+ 	{
+ 		String string = getString(strg);
+ 		Pattern p = Pattern.compile(string);
+ 		Matcher m = p.matcher(regMatch);
+ 		boolean b = m.matches(); 
+ 		
+ 		if(b)
+ 			return "ONTREGEX TRUE";
+ 		else
+ 			return "ONTREGEX FALSE";
+ 	}
+}
+
+Resource claimRefURI() :
+{
+	Token t;
+}
+{
+ 	t=<URI>
+ 	{
+ 		String URI = getPureURIfromAIML(t.image);
+ 		return ontmodel.createResource(URI);
+ 	}
+	|
+	t=<REFNUMBER>
+ 	{
+ 		int i = getNumber(t);
+ 		try
+ 		{
+ 			return ontmodel.createResource(getPureURI((String)ONTresult.get(i-1)));
+ 		} catch(IndexOutOfBoundsException ie)
+ 		{
+ 			throw new ParseException("Reference out of bounds. #REF < " + ONTresult.size() + " expected.");
+ 		}
+ 	}
+}
+
+RDFNode claimRefStringURI() :
+{
+	Token t;
+	Token langToken = null;
+	Token typeToken = null;
+}
+{
+	t=<STRING> [ "@" langToken=<STRING> | "^^" typeToken=<URI> ]
+	{
+		String rdfString = getString(t);
+		
+		try
+		{
+			if(langToken!=null)
+			{
+				return ontmodel.createLiteral(rdfString,getString(langToken));
+			}
+		
+			if(typeToken!=null)
+				return ontmodel.createTypedLiteral(rdfString,getPureURIfromAIML(typeToken.image));	
+		
+		
+			return ontmodel.createLiteral(rdfString);
+		}catch(Exception e)
+		{
+			throw new ParseException("Resource not properly defined.");
+		}		
+ 	}
+ 	|
+ 	t=<URI>
+ 	{
+ 		String URI = getPureURIfromAIML(t.image);
+ 		return ontmodel.createResource(URI);
+ 	}
+	|
+	t=<REFNUMBER>
+ 	{
+ 		int i = getNumber(t);
+ 		try
+ 		{
+ 			return ontmodel.createResource(getPureURI((String)ONTresult.get(i-1)));
+ 		} catch(IndexOutOfBoundsException ie)
+ 		{
+ 			throw new ParseException("Reference out of bounds. #REF < " + ONTresult.size() + " expected.");
+ 		}
+ 	}
+}
+
+String Command() :
+{
+	Token t;
+}
+{
+	t=<ONTCLS>
+	{
+		this.investigateType = Types.CLASS;
+ 		return t.image;
+ 	}
+	|
+	t=<ONTIND>
+	{
+		this.investigateType = Types.INDIVIDUAL;
+ 		return t.image;
+ 	}
+	|
+	t=<ONTPRO>
+	{
+		this.investigateType = Types.PROPERTY;
+ 		return t.image;
+ 	}
+}
+
+
+
+//Return Collection of possibles using logic between predicates
+Set  PredicateStatement() :
+{
+	Set pos = null;
+}
+{
+	<LPAREN> pos=PredicateList() <RPAREN>
+	{
+		return pos;
+	}
+}
+
+Set  PredicateList() :
+{
+	Set pos = null;
+}
+{
+	pos=PredicateXOR()
+	{
+		return pos;
+	}
+}
+
+Set  PredicateXOR() :
+{
+	Set pos1 = null;
+	Set pos2 = null;
+	Set mpos = null;
+}
+{
+	pos1=PredicateOR() 
+	( <SC_XOR> pos2=PredicateOR() 
+	{
+		if(mpos==null) mpos=pos1; 
+		
+		HashSet dummy = new HashSet(mpos);
+		dummy.retainAll(pos2);
+		
+		mpos.addAll(pos2);
+		mpos.removeAll(dummy);
+	} 
+	)*
+	
+	
+	{
+		if(mpos==null) return pos1;
+		return mpos;
+	}
+} 
+
+Set  PredicateOR() :
+{
+	Set pos1 = null;
+	Set pos2 = null;
+	Set mpos = null;
+}
+{
+	pos1=PredicateAND() 
+	( <SC_OR> pos2=PredicateAND() 
+	{
+		if(mpos==null) mpos=pos1;
+		
+		mpos.addAll(pos2);
+	} 
+	)*
+	
+	
+	{
+		if(mpos==null) return pos1;
+		return mpos;
+	}
+} 
+
+Set  PredicateAND() :
+{
+	Set pos1 = null;
+	Set pos2 = null;
+	Set mpos = null;
+}
+{
+	pos1=PredicateUNARY() 
+	( <SC_AND> pos2=PredicateUNARY() 
+	{
+		if(mpos==null) mpos=pos1; 
+		
+		mpos.retainAll(pos2);
+	} 
+	)*
+	
+	
+	{
+		if(mpos==null) return pos1;
+		return mpos;
+	}
+}
+
+Set  PredicateUNARY() :
+{
+	Set pos;
+}
+{
+	pos=Predicate()
+	{
+		return pos;
+	}
+	|
+	<LPAREN> pos=PredicateList() <RPAREN>
+	{
+		return pos;
+	}
+} 
+
+//Return Collection of possibles
+Set Predicate() :
+{
+	Set pos=null;
+	
+	String propName=null;
+	String propValue=null;
+	String indSlotName=null;
+	String indValue=null;
+	
+	Token t=null;
+	Token cType;
+	Token indType=null;
+}
+{
+	<PROPERTY> [ propName=ColonStringURI() ] cType=CheckType() propValue=RefStringURI() [ t=<GETIND> [ indSlotName=ColonStringURI() ] indType=CheckType() indValue=RefStringURI() ]
+	{		
+ 		pos=getPROPERTYs(propName,cType,propValue,t,indSlotName, indType, indValue);
+ 		return pos;
+ 	}
+ 	|
+	<CLS> [ propName=ColonStringURI() ] cType=ClsCheckType() propValue=RefStringURI() 
+ 	{
+ 		pos = getCLSes(propName,cType,propValue);
+ 		return pos;
+ 	}
+ 	|
+ 	<IND> [ propName=ColonStringURI() ] cType=CheckType() propValue=RefStringURI()
+ 	{		
+ 		pos=getINDes(propName, cType,propValue);
+ 		return pos;
+ 	}
+ 	|
+ 	<REST> cType=CheckType() propValue=RefStringURI() 
+ 	{
+ 		pos=getRESTs(cType,propValue,t);
+ 		return pos;
+ 	}
+}
+
+Token ClsCheckType() :
+{
+	Token t;
+}
+{
+	t=<PLUSEQ>	
+ 	{
+ 		return t;
+ 	}
+ 	|
+	t=CheckType()
+	{
+ 		return t;
+ 	}
+}
+
+Token CheckType() :
+{
+	Token t;
+}
+{
+	t=<EQ>
+ 	{
+ 		return t;
+ 	}
+ 	|
+ 	t=<NQ>
+ 	{
+ 		return t;
+ 	}
+}
+
+String RefStringURI() :
+{
+	Token t;
+	Token langToken = null;
+	Token typeToken = null;
+}
+{
+	t=<STRING> [ "@" langToken=<STRING> | "^^" typeToken=<URI> ]
+	{
+		String retString = "\"" + getString(t) + "\"";
+		
+		if(langToken!=null)
+			return retString + "@" + getString(langToken);
+		
+		if(typeToken!=null)
+			return retString + "^^" + getURI(getPureURIfromAIML(typeToken.image));	
+		
+		return retString;	
+ 	}
+ 	|
+ 	t=<URI>
+ 	{
+ 		return getURI(getPureURIfromAIML(t.image));
+ 	}
+	|
+	t=<REFNUMBER> [ "@" langToken=<STRING> | "^^" typeToken=<URI> ]
+ 	{
+ 		int i = getNumber(t);
+ 		try
+ 		{
+ 			String retString = (String)ONTresult.get(i-1);
+ 			if(langToken!=null)
+ 			{
+				return retString + "@" + getString(langToken);
+			}
+		
+			if(typeToken!=null)
+			{
+				return retString + "^^" + getURI(getPureURIfromAIML(typeToken.image));
+			}	
+		
+			return retString;
+ 		} catch(IndexOutOfBoundsException ie)
+ 		{
+ 			throw new ParseException("Reference out of bounds. #REF < " + ONTresult.size() + " expected.");
+ 		}
+ 	}
+}
+
+String ColonStringURI() :
+{
+	String str;
+}
+{
+	":" str=RefStringURI()
+	{
+		return str;
+	}
+}
+
+String ColonString() :
+{
+	Token t;
+}
+{
+	":" t=<STRING>
+	{
+		return getString(t);
+	}
+}
+
+
+void ThatReturnPart() :
+{
+	Token t;
+}
+{
+	<THAT> <ASSIGN> t=<STRING>
+ 	{
+ 		this.thatReturn = getString(t);
+ 	}
+}

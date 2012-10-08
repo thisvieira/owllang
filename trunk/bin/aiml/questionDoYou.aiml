@@ -1,0 +1,255 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+QUESTION: Some believes that the .........
+-->
+	<topic name="QUESTION DOYOU">	
+		<category>
+			<pattern>
+				ASKSOMEBELIEVES
+			</pattern>
+			<template>
+				<random>
+					<li>Some people believe </li>
+					<li>Some say </li>
+					<li>It has been observed </li>
+					<li>When asked, some people claim </li>
+					<li>I have heard </li>
+					<li>People have said to me </li>
+				</random>
+				that the <get name="subject"/> <get name="predicate"/> <get name="object"/>.<html:br/>
+				<random>
+					<li>Do you agree?</li>
+					<li>Do you agree with that statement?</li>
+					<li>Do you agree with that sentence?</li>
+					<li>Do you agree with that opinion?</li>
+					<li>Do you agree with that view?</li>
+					<li>Do you share that opinion?</li>
+					<li>Do you share that view?</li>
+					<li>Do you share that point of view?</li>
+					<li>Do you share that idea?</li>
+					<li>Do you support that statement?</li>
+					<li>Do you support that sentence?</li>
+					<li>Do you support that opinion?</li>
+					<li>Do you support that view?</li>
+				</random>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I SUPPORT *
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I SUPPORT *
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I DO SUPPORT *
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT SUPPORT *
+			</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT SUPPORT
+			</pattern>
+			<template>
+				<srai>NO</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NO SUPPORT
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NO SUPPORT *
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>
+				I SHARE *
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I SHARE *
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I SHARE
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>
+				I * NOT SHARE *
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I * NOT SHARE *
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I * NOT SHARE
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NOT * VIEW I SHARE
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I DO SHARE *
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* I DO SHARE
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT SHARE *
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT SHARE
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO The <get name="subject"/> <get name="predicate"/> <get name="object"/></srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+	</topic>
+</aiml>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="382" key="DIALOG_Y_ORIGIN"/>
+		<item value="159" key="DIALOG_X_ORIGIN"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="573" key="y"/>
+		<item value="I HAVE * ALREADY" key="selection"/>
+		<item value="929" key="x"/>
+		<list key="findhistory">
+			<item value="I HAVE * ALREADY"/>
+			<item value="* NOT TRIED"/>
+			<item value="* NOT USED"/>
+			<item value="I GUESS"/>
+			<item value="I UNDERSTAND *"/>
+			<item value="I UNDERSTAND*"/>
+			<item value="I THINK *"/>
+			<item value="I BELIEVE *"/>
+		</list>
+		<list key="replacehistory">
+			<item value="\&quot;"/>
+			<item value="&apos;"/>
+			<item value=""/>
+			<item value="getPos"/>
+			<item value="getStringToken"/>
+			<item value="O_NUMBER"/>
+			<item value="O_NOT"/>
+			<item value="O_AND"/>
+		</list>
+	</section>
+</section>

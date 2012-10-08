@@ -1,0 +1,368 @@
+@prefix : <http://www.cs.rdg.ac.uk/webpageEval#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix efq: <http://www.qualityfoundation.org/> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+
+
+# Webpage, structures of webpages and functionality
+:Webpage		a			owl:Class ;
+			rdfs:label		"web page"@en ;
+			rdfs:comment	"A web page is an Internet site with an associated URL"@en .
+			
+:Structure		a			owl:Class ;
+			rdfs:label		"structure on a web page"@en ;
+			rdfs:comment		"A structure which is part of an web page"@en .
+
+:partOf			a			owl:ObjectProperty ;
+			rdfs:domain		:Structure ;
+			rdfs:range		:Webpage ;
+			rdfs:label		"is part of"@en ;
+			rdfs:comment		"The relation that a structure is part of a web page."@en .
+			
+:WebFunctionality	a			owl:Class ;
+			rdfs:label		"web functionality"@en ;
+			rdfs:comment		"A functionality of a web page or web structure."@en .
+			
+:functionalityOf	a			owl:ObjectProperty ;
+			rdfs:domain		:Relation ;
+			rdfs:range		[ owl:unionOf ( :Structure :Webpage ) ] ;
+			rdfs:label		"functionality of"@en ;
+			rdfs:comment		"A functionality of a web page or structure of a webpage."@en .
+			
+			
+			
+			
+			
+# Reification system of claims and facts
+:Relation		a			owl:Class;
+			rdfs:comment 		"internal class used to represent relations between properties"@en;
+			rdfs:label 		"Relation"@en;
+			rdfs:subClassOf 	rdf:statement,
+						[
+							a 			owl:Restriction;
+							owl:cardinality 	"1"^^xsd:nonNegativeInteger;
+							owl:onProperty 		:subject 
+						],
+						[
+							a 			owl:Restriction;
+							owl:cardinality 	"1"^^xsd:nonNegativeInteger;
+							owl:onProperty 		:predicate 
+						],
+						[
+							a 			owl:Restriction;
+							owl:cardinality 	"1"^^xsd:nonNegativeInteger;
+							owl:onProperty :object 
+						] .
+						
+:subject		a			owl:ObjectProperty ;
+			rdfs:subPropertyOf	rdf:subject ;
+			rdfs:domain		:Relation .
+
+:predicate		a			owl:ObjectProperty ;
+			rdfs:subPropertyOf	rdf:predicate ;
+			rdfs:domain		:Relation .
+
+:object			a			owl:ObjectProperty ;
+			rdfs:subPropertyOf	rdf:object ;
+			rdfs:domain		:Relation .
+			
+:madeBy			a			owl:ObjectProperty ;
+			rdfs:domain		:Relation ;
+			rdfs:range		[ owl:unionOf ( foaf:Group foaf:Person ) ] ;
+			rdfs:label		"made by"@en ;
+			rdfs:comment		"the person or group of persons who has made a claim or stated a fact."@en .
+			
+:hasMade		a			owl:ObjectProperty ;
+			rdfs:domain		[ owl:unionOf ( foaf:Group foaf:Person ) ] ;
+			rdfs:range		:Relation ;
+			owl:inverseOf		:madeBy ;
+			rdfs:label		"has made"@en ;
+			rdfs:comment		"claim and facts a person has made."@en .
+
+
+
+
+
+:Claim			a			owl:Class;
+			rdfs:comment 		"a statement or relation, which has not been verified."@en;
+			rdfs:label 		"claim"@en;
+			rdfs:subClassOf		:Relation;
+			owl:disjointWith	:Fact .
+
+:Fact			a 			owl:Class;
+         		rdfs:comment 		"a verified statement or relation."@en;
+			rdfs:label 		"fact"@en;
+			rdfs:subClassOf 	:Relation;
+			owl:disjointWith 	:Claim .
+
+
+
+
+# Quality terms
+:Descriptor     	a 			owl:Class;
+         		rdfs:comment 		"quality term used to evaluate quality."@en;
+			rdfs:subClassOf 	owl:Thing .
+			
+:Quality     		a 			owl:Class;
+         		rdfs:comment 		"type or level of quality"@en;
+			rdfs:label 		"quality"@en;
+			rdfs:subClassOf 	owl:Thing;
+			owl:oneOf  		(
+							:lowQuality 
+							:highQuality  
+						) .
+						
+
+
+						
+						
+:contributesTo		a			owl:ObjectProperty ,
+						owl:TransitiveProperty ;
+			rdfs:domain		:Descriptor ;
+			rdfs:range		[ owl:unionOf ( :Descriptor :Quality ) ] ;
+			rdfs:label		"contributes to"@en ;
+			rdfs:comment		"implication that one descriptor contributes to the other"@en .
+
+:describes		a			owl:ObjectProperty ;
+			rdfs:domain		:Descriptor ;
+			rdfs:range		:LearningExperienceArea ;
+			rdfs:label		"describes"@en ;
+			rdfs:comment		"Indicates which area of the learning experience a quality term describes"@en .
+
+:implies		a			owl:ObjectProperty ,
+						owl:TransitiveProperty ;
+			rdfs:domain		:Descriptor ;
+			rdfs:range		[ owl:unionOf ( :Descriptor :Quality ) ] ;
+			rdfs:label		"implies"@en ;
+			rdfs:comment		"Indicates that a descriptor implies that another descriptor may also apply to the same entity being evaluated"@en .
+
+
+:impliesNot		a			owl:ObjectProperty ;
+			rdfs:domain		[ owl:unionOf ( :Descriptor :Quality ) ] ;
+			rdfs:range		[ owl:unionOf ( :Descriptor :Quality ) ] ;
+			rdfs:label		"does not imply"@en ;
+			rdfs:comment		"Indicates that a descriptor implies that another descriptor does not apply to the same entity"@en .
+
+owl:inverseOf	a			owl:ObjectProperty .
+			
+:is			a			owl:ObjectProperty ;
+			rdfs:domain		[ owl:unionOf ( :Webpage	:Structure	:WebFunctionality ) ] ;
+			owl:inverseOf		:isNot ;
+			rdfs:range		:Descriptor ;
+			rdfs:label		"is"@en ;
+			rdfs:comment		"A relation, which indicates that a part of a web page can be described by a descriptor."@en .
+
+:isNot			a			owl:ObjectProperty ;
+			rdfs:domain		[ owl:unionOf ( :Webpage	:Structure	:WebFunctionality ) ] ;
+			owl:inverseOf		:is ;
+			rdfs:range		:Descriptor ;
+			rdfs:label		"is not"@en ;
+			rdfs:comment		"A relation, which indicates that a part of a web page can be described negatively by a descriptor."@en .
+
+:noRelation		a			owl:ObjectProperty ;
+			rdfs:domain		[ owl:unionOf ( :Webpage	:Structure	:WebFunctionality ) ] ;
+			rdfs:range		:Descriptor ;
+			rdfs:label		"has no relation to"@en ;
+			rdfs:comment		"A relation is not known to exist between a part of a web page and the descriptor."@en .
+			
+			
+			
+			
+			
+:boring			a			:Descriptor ;
+			rdfs:label		"boring"@en .
+
+:easyToUse		a			:Descriptor ;
+			rdfs:label		"easy to use"@en .
+
+:engaging		a			:Descriptor ;
+			rdfs:label		"engaging"@en .
+
+:interesting		a			:Descriptor ;
+			rdfs:label		"interesting"@en .
+
+:organised		a			:Descriptor ;
+			rdfs:label		"organised"@en .
+
+:easyNavigation		a			:Descriptor ;
+			rdfs:label		"easy to navigate"@en .
+
+:fun			a			:Descriptor ;
+			rdfs:label		"fun"@en .
+
+:interactive		a			:Descriptor ;
+			rdfs:label		"interactive"@en .
+
+:monotonous		a			:Descriptor ;
+			rdfs:label		"monotonous"@en .
+
+:motivating		a			:Descriptor ;
+			rdfs:label		"motivating"@en .
+
+:intuitiveLayout	a			:Descriptor ;
+			rdfs:label		"designed with an intuitive layout"@en .
+
+:topical		a			:Descriptor ;
+			rdfs:label		"topical"@en .
+
+:relevant		a			:Descriptor ;
+			rdfs:label		"relevant"@en .
+
+:tooComplex		a			:Descriptor ;
+			rdfs:label		"too complex"@en .
+
+:tooSimple		a			:Descriptor ;
+			rdfs:label		"too simple"@en .
+
+:easyToRead		a			:Descriptor ;
+			rdfs:label		"easy to read"@en .
+
+:wellDesign		a			:Descriptor ;
+			rdfs:label		"well designed"@en .
+
+:goodSource		a			:Descriptor ;
+			rdfs:label		"a good source"@en .
+
+:userInterface		a			:Descriptor ;
+			rdfs:label		"having a good user interface"@en .
+
+
+			
+			
+# EFQUEL page structures
+efq:home		a			:Webpage ;
+			rdfs:label		"Homepage of EFQUEL"@en ;
+			rdfs:comment		"The front page of EFQUELs web presence."@en ;
+			dc:identifier		"" .
+			
+efq:eLQual		a			:Structure ;
+			rdfs:label		"eLearning Quality Tab"@en ;
+			rdfs:comment		"The eLearning Quality tab of EFQUELs web presence."@en ;
+			dc:identifier		"" .
+
+efq:news		a			:Structure ;
+			rdfs:label		"News and Events Section"@en ;
+			rdfs:comment		"The new and events tab of EFQUELs web presence."@en ;
+			dc:identifier		"" .
+
+efq:community		a			:Structure ;
+			rdfs:label		"EFQUEL Community"@en ;
+			rdfs:comment		"The Community tab of EFQUELs web presence."@en ;
+			dc:identifier		"" .
+			
+efq:about		a			:Structure ;
+			rdfs:label		"About Section"@en ;
+			rdfs:comment		"The eLearning Quality tab of EFQUELs web presence."@en ;
+			dc:identifier		"" .
+			
+efq:myEFQ		a			:Structure ;
+			rdfs:label		"My EFQUEL Section"@en ;
+			rdfs:comment		"The my EFQUEL tab of EFQUELs web presence."@en ;
+			dc:identifier		"" .
+						
+efq:wiki		a			:Webpage ;
+			rdfs:label		"EFQUEL WIKI Page"@en ;
+			rdfs:comment		"The Quality WIKIpedia run by EFQUEL"@en ;
+			dc:identifier		"http://www.qualityfoundation.org/quality-wiki/index.php/Main_Page" .
+			
+			
+efq:layout		a			:WebFunctionality ;
+			rdfs:label		"layout of the pages"@en ;
+			rdfs:comment		"The layout of all of the pages contained in EFQUELs web presence"@en .
+
+
+
+
+# The fictive user who makes claims			
+:fictivUser	     	a 			<http://xmlns.com/foaf/0.1/Person>;
+         		rdfs:comment 		"a fictive user"@en;
+			rdfs:label 		"Fictive User"@en .
+			
+			
+			
+			
+
+# claims
+:c1			a			:Claim ;
+			:object			:wellDesign ;
+			:predicate		:is ;
+			:subject		efq:home ;
+			:madeBy			:fictiveUser .
+			
+:c2			a			:Claim ;
+			:object			:topical ;
+			:predicate		:is ;
+			:subject		efq:wiki ;
+			:madeBy			:fictiveUser .
+			
+:c3			a			:Claim ;
+			:object			:relevant ;
+			:predicate		:is ;
+			:subject		efq:news ;
+			:madeBy			:fictiveUser .
+			
+:c4			a			:Claim ;
+			:object			:easyToRead ;
+			:predicate		:isNot ;
+			:subject		efq:wiki ;
+			:madeBy			:fictiveUser .
+			
+:c5			a			:Claim ;
+			:object			:goodSource ;
+			:predicate		:is ;
+			:subject		efq:home ;
+			:madeBy			:fictiveUser .
+			
+:c6			a			:Claim ;
+			:object			:goodSource ;
+			:predicate		:is ;
+			:subject		efq:about ;
+			:madeBy			:fictiveUser .
+			
+:c7			a			:Claim ;
+			:object			:interesting ;
+			:predicate		:is ;
+			:subject		efq:eLQual ;
+			:madeBy			:fictiveUser .
+			
+:c8			a			:Claim ;
+			:object			:interactive ;
+			:predicate		:is ;
+			:subject		efq:community ;
+			:madeBy			:fictiveUser .
+			
+:c9			a			:Claim ;
+			:object			:relevant ;
+			:predicate		:is ;
+			:subject		efq:myEFQ ;
+			:madeBy			:fictiveUser .
+			
+:c10			a			:Claim ;
+			:object			:goodSource ;
+			:predicate		:is ;
+			:subject		efq:wiki ;
+			:madeBy			:fictiveUser .
+			
+:c10			a			:Claim ;
+			:object			:tooSimple ;
+			:predicate		:is ;
+			:subject		efq:home ;
+			:madeBy			:fictiveUser .
+			
+:c11			a			:Claim ;
+			:object			:tooComplex ;
+			:predicate		:is ;
+			:subject		efq:wiki ;
+			:madeBy			:fictiveUser .
+			
+:c12			a			:Claim ;
+			:object			:userInterface ;
+			:predicate		:is ;
+			:subject		efq:home ;
+			:madeBy			:fictiveUser .
+			

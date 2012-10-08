@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?oxygen SCHSchema="../resources/schema/bot-configuration.xsd"?>
+<bots xmlns="http://aitools.org/programd/4.1.5/bot-configuration"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://aitools.org/programd/4.1.5/bot-configuration http://aitools.org/programd/4.1.5/bot-configuration.xsd">
+    <bot id="yourbot" enabled="false">
+        <properties href="properties.xml"/>
+        <predicates href="predicates.xml"/>
+        <substitutions href="substitutions.xml"/>
+        <sentence-splitters href="sentence-splitters.xml"/>
+        <!--
+        The two IM listeners (AIM and ICQ) currently have problems due to protocol changes (see release notes).
+        <listeners>
+            <listener type="ProgramD-AIM" enabled="true">
+                <parameter name="owner" value="MyOwner"/>
+                <parameter name="screenname" value="Me"/>
+                <parameter name="password" value="password"/>
+                <parameter name="bgcolor" value="White"/>
+                <parameter name="fontface" value="Verdana,Arial"/>
+                <parameter name="fontsize" value="2"/>
+                <parameter name="fontcolor" value="Black"/>
+                <parameter name="buddies" value="Buddy1,Buddy2,Buddy3"/>
+            </listener>
+            <listener type="ProgramD-ICQ" enabled="true">
+                <parameter name="number" value="your-uin"/>
+                <parameter name="password" value="your-password"/>
+            </listener>
+            <listener type="ProgramD-IRC" enabled="true">
+                <parameter name="host" value="irc.freenode.net"/>
+                <parameter name="port" value="6667"/>
+                <parameter name="nick" value="programd"/>
+                <parameter name="channel" value="#programd"/>
+            </listener>
+        </listeners>
+        -->
+        <!--<learn>../aiml/*.aiml</learn>-->
+        <learn>../resources/testing/testcases.aiml</learn>
+    </bot>
+    <bot id="TF" enabled="true">
+        <property name="name" value="TF"/>
+        <!--<predicates href="predicates.xml"/>-->
+        <substitutions href="substitutions.xml"/>
+        <sentence-splitters href="sentence-splitters.xml"/>
+        <listeners>
+        	<listener type="ProgramD-Jabber" enabled="true">
+                <parameter name="host" value="jabber.eun.org"/>
+                <parameter name="port" value="5222"/>
+                <parameter name="username" value="efquelbot"/>
+                <parameter name="password" value="triangle2006"/>
+            </listener>
+        </listeners>
+        <learn>../aiml/*.aiml</learn>
+    </bot>
+    <bot id="Karens bot" enabled="false">
+    	<property name="name" value="test bot"/>
+        <predicates href="predicates.xml"/>
+        <substitutions href="substitutions.xml"/>
+        <sentence-splitters href="sentence-splitters.xml"/>
+        <learn>../aiml/Karen_aiml/*.aiml</learn>
+	</bot>
+</bots>

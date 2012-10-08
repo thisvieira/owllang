@@ -1,0 +1,603 @@
+options {
+  LOOKAHEAD = 3;
+  FORCE_LA_CHECK = true;
+  STATIC = false;
+}
+
+
+PARSER_BEGIN(OwlLang)
+package org.UoR.OwlLang;
+
+
+import java.io.*;
+import java.util.*;
+
+//Libraries used to communicate with ontologies.
+import com.hp.hpl.jena.ontology.*;
+import com.hp.hpl.jena.query.*;
+import com.hp.hpl.jena.rdf.model.*;
+
+public class OwlLang 
+{
+	public static class Types
+	{
+		public static final int CLASS = 0;
+		public static final int PROPERTY = 1;
+		public static final int INDIVIDUAL = 2;
+	}
+	private int investigateType;
+	private ArrayList ONTresult;
+	private OntModel ontmodel;
+	private String base;
+	private String prefix;
+	
+	private Random rand;
+	
+	private String thatReturn="";
+	
+	/**An unknown AIML input*/
+	protected static final String O_UNKNOWN = "UNKNOWN";
+	
+	//URI of rdfs:label is the default return string of any resource in an OntModel
+	protected static final String defaultReturnString = "rdfs:label";
+	
+	public OwlLang(OntModel ontmodel, String baseURI)
+	{
+		this(new StringReader("test"));
+	
+		Long seed = System.nanoTime();
+		this.rand = new Random(seed);
+		
+		this.ontmodel = ontmodel;
+				
+		base = "BASE <" + baseURI + ">\n";
+		prefix = "";
+		setLabeledPrefix("rdfs","http://www.w3.org/2000/01/rdf-schema#");
+		setLabeledPrefix("owl","http://www.w3.org/2002/07/owl#");
+    }
+	
+	public void setLabeledPrefix(String label, String URI)
+	{
+		this.prefix += "PREFIX " + label + ": <" + URI + "> \n";
+	}
+	
+		
+	public String query(String input) throws ParseException
+	{
+		thatReturn="";
+		ONTresult = new ArrayList();
+		StringReader inp = new StringReader(input);
+		this.ReInit(inp);
+		String res = this.OntQue();
+		return res;
+	}
+
+	public String getThatReturn()
+	{
+		return this.thatReturn;
+	}
+
+	private Object getSingleObject(Set possibleInstances)
+	{		
+		Object winner = null;;
+    		
+ 		if (possibleInstances.size()!=0)
+		{
+			Object [] res = possibleInstances.toArray();
+			winner = res[this.rand.nextInt(possibleInstances.size())];
+		}
+		
+		return winner;
+	}
+	
+	
+	private String getPropertyVal(Object ores, String property, String stringToken)
+	{
+		if(property==null) property="";
+		if(property.equals("")) property=defaultReturnString;
+		
+		String queryString = 
+			base + prefix +	
+			"SELECT ?str " +
+			"WHERE { <" + ores.toString() + "> " + property +	" ?str . }";
+					
+		Query query = QueryFactory.create(queryString);
+		QueryExecution qe = QueryExecutionFactory.create(query,ontmodel);
+		ResultSet rs = qe.execSelect();
+		
+		HashSet solutions = new HashSet();
+		
+		for (;rs.hasNext();) 
+		{
+			QuerySolution qs = rs.nextSolution();
+			RDFNode rn = qs.get("str");
+			if(rn.isLiteral())
+			{
+				String lang = ((Literal)rn).getLanguage();
+				if(lang==null && stringToken==null)		
+					solutions.add(((Literal)rn).getLexicalForm());
+				else
+					if(lang!=null && stringToken!=null)
+					{
+						if(lang.equals(stringToken))
+							solutions.add(((Literal)rn).getLexicalForm());
+					}
+			}
+			else
+				solutions.add(((Resource)rn).getURI());
+		}
+		
+		if(solutions.size()==0) return O_UNKNOWN;
+		Object [] reses = solutions.toArray();
+		String res = (String)reses[this.rand.nextInt(solutions.size())];
+		
+		return res;
+	}
+	
+	private String getStringToken(Token t)
+	{
+		if(t==null)
+			return null;
+		else
+			return t.image.substring(1,t.image.length()-1);
+	}
+	
+	private int getNumberToken(Token t)
+	{
+		return Integer.parseInt(t.image.substring(1));
+	}
+	
+	private String getFullString(String propValue,String stringToken)
+	{
+		if(stringToken!=null)
+			return " \"" + propValue + "\"@" + stringToken;
+		else
+			return " \"" + propValue + "\"";
+	}
+	
+	private Set getSetFromIterator(Iterator i)
+	{
+		HashSet res = new HashSet();
+		
+		for(;i.hasNext();)
+			res.add(i.next());
+		
+		return res;
+	}
+	
+	private String getFullURI(String s)
+	{
+		if(s==null)
+			return null;
+		else
+			return ontmodel.expandPrefix(s);
+	}
+	
+	private Set getCLSes(String propName,Token cType,String propValue, String langString, String typeString) throws ParseException
+	{
+		Set solutions = null;// = new HashSet();
+		
+				
+		if(propName==null)
+		{
+			solutions = new HashSet();
+			OntClass oc = ontmodel.getOntClass(ontmodel.expandPrefix(propValue));
+			solutions.add(oc);
+		}
+		else
+		{
+			Literal object;
+			if(langString==null & typeString==null)
+				object = ontmodel.createLiteral(propValue);
+			else
+				if(langString!=null)
+					object = ontmodel.createLiteral(propValue,langString);
+				else
+					object = ontmodel.createTypedLiteral(propValue,ontmodel.expandPrefix(typeString));
+				
+			OntProperty property = ontmodel.createOntProperty(ontmodel.expandPrefix(propName));
+			
+			Iterator i = ontmodel.listSubjectsWithProperty(property,object);
+			solutions = getSetFromIterator(i);
+			
+			i = ontmodel.listClasses();
+			Set setB = getSetFromIterator(i);
+			
+			solutions.retainAll(setB);
+		}
+		
+		switch (investigateType)
+		{
+			case Types.CLASS:
+				return solutions;
+			case Types.PROPERTY:	
+				return null;
+			case Types.INDIVIDUAL:
+				return null;
+			default:
+				throw new ParseException("Illigal investigation type in cls call");
+		}
+	}
+	
+	private Set getPROPERTYs(String propName,Token cType,String propValue, Token t,String indSlotName,Token indType,String indValue)
+	{
+		return null;
+	}
+	
+	private Set getINDes(String propName,Token cType,String propValue)
+	{
+		return null;
+	}
+	
+	private Set getRESTs(Token cType,String propValue,Token t)
+	{
+		return null;
+	}
+}
+
+PARSER_END(OwlLang)
+
+SKIP : /* WHITE SPACE AND COMMENTS*/
+{
+	" "
+|	"\t"
+|	"\n"
+|	"\r"
+|	"\f"
+}
+
+SPECIAL_TOKEN : /* COMMENTS */
+{
+  <SINGLE_LINE_COMMENT: "//" (~["\n","\r"])* ("\n"|"\r"|"\r\n")>
+| <MULTI_LINE_COMMENT: "/*" (~["*"])* "*" ("*" | (~["*","/"] (~["*"])* "*"))* "/">
+}
+
+TOKEN :
+{
+	<ONTQUE: 		"$ONTQUE">
+|	<ONTIND: 		"ONTIND">
+|	<ONTCLS: 		"ONTCLS">
+|	<ONTPRO: 		"ONTPRO">
+|	<CLS:			"cls">
+|	<PROPERTY:		"prop">
+|	<IND:			"ind">
+|	<REST:			"rest">
+|	<THAT:		 	"THAT">
+|	<COLON:		 	":">
+|	<LPAREN: 		"(" >
+|	<RPAREN: 		")" >
+|	<ASSIGN: 		"=" >
+|	<EQ: 			"==" >
+|	<NE: 			"!=" >
+|	<PLUSEQ:		"+=" >
+|	<SC_OR: 		"OR" >
+|	<SC_AND: 		"AND" >
+|	<SC_XOR: 		"XOR" >
+|	<GETIND:		">>" >
+|	<REFNUMBER: 	"#" ["1"-"9"] ( ["0"-"9"] )* >
+|	<STRING:		"'" ( (~["'","\n","\r"]) )* "'" >
+/*|	<URI:			"<http://" ( (~["\n","\r"," ","\t","\f"]) )* ">" >
+|	<SHORTURI:		["a"-"z","A"-"Z","0"-"9"]* ":" ["a"-"z","A"-"Z","0"-"9"]+ >*/
+}
+
+String OntQue() :
+{
+	String res;
+	Token t;
+}
+{
+ 	t=<ONTQUE> res=CommandList() ThatReturnPart() <EOF>
+ 	{
+		return t.image + " " + res;
+ 	}
+}
+
+
+//Returns the strin
+String CommandList() :
+{
+	String res,r1;
+}
+{
+	<LPAREN> res=CommandPart() ( r1=CommandPart() {res+=" "+r1;} )* <RPAREN>
+ 	{
+ 		return res;
+ 	}
+}
+
+//Initiates the Collection to find depending on command
+//Return a string with "<command-type> <single-fit from all possible>"
+String CommandPart() :
+{
+	String res,resIns;
+	String propString="";
+	Set possibles = null;
+	Token stringToken=null;
+}
+{
+	res=Command() possibles=PredicateStatement() [ propString=ColonString() ] [ "lang" stringToken=<STRING> ]
+	{
+		RDFNode o = (RDFNode)getSingleObject(possibles);
+		
+		if(o!=null)
+			resIns = getPropertyVal(o,propString, getStringToken(stringToken));
+		else 
+			resIns = O_UNKNOWN;
+			
+		ONTresult.add(resIns);
+		res +=" " + resIns;
+ 		return res;
+ 	}
+}
+
+
+String Command() :
+{
+	Token t;
+}
+{
+	t=<ONTCLS>
+	{
+		this.investigateType = Types.CLASS;
+ 		return t.image;
+ 	}
+	|
+	t=<ONTIND>
+	{
+		this.investigateType = Types.INDIVIDUAL;
+ 		return t.image;
+ 	}
+	|
+	t=<ONTPRO>
+	{
+		this.investigateType = Types.PROPERTY;
+ 		return t.image;
+ 	}
+}
+
+
+
+//Return Collection of possibles using logic between predicates
+Set  PredicateStatement() :
+{
+	Set pos = null;
+}
+{
+	<LPAREN> pos=PredicateList() <RPAREN>
+	{
+		return pos;
+	}
+}
+
+Set  PredicateList() :
+{
+	Set pos = null;
+}
+{
+	pos=PredicateXOR()
+	{
+		return pos;
+	}
+}
+
+Set  PredicateXOR() :
+{
+	Set pos1 = null;
+	Set pos2 = null;
+	Set mpos = null;
+}
+{
+	pos1=PredicateOR() 
+	( <SC_XOR> pos2=PredicateOR() 
+	{
+		if(mpos==null) mpos=pos1; 
+		
+		HashSet dummy = new HashSet(mpos);
+		dummy.retainAll(pos2);
+		
+		mpos.addAll(pos2);
+		mpos.removeAll(dummy);
+	} 
+	)*
+	
+	
+	{
+		if(mpos==null) return pos1;
+		return mpos;
+	}
+} 
+
+Set  PredicateOR() :
+{
+	Set pos1 = null;
+	Set pos2 = null;
+	Set mpos = null;
+}
+{
+	pos1=PredicateAND() 
+	( <SC_OR> pos2=PredicateAND() 
+	{
+		if(mpos==null) mpos=pos1;
+		
+		mpos.addAll(pos2);
+	} 
+	)*
+	
+	
+	{
+		if(mpos==null) return pos1;
+		return mpos;
+	}
+} 
+
+Set  PredicateAND() :
+{
+	Set pos1 = null;
+	Set pos2 = null;
+	Set mpos = null;
+}
+{
+	pos1=PredicateUNARY() 
+	( <SC_AND> pos2=PredicateUNARY() 
+	{
+		if(mpos==null) mpos=pos1; 
+		
+		mpos.retainAll(pos2);
+	} 
+	)*
+	
+	
+	{
+		if(mpos==null) return pos1;
+		return mpos;
+	}
+}
+
+Set  PredicateUNARY() :
+{
+	Set pos;
+}
+{
+	pos=Predicate()
+	{
+		return pos;
+	}
+	|
+	<LPAREN> pos=PredicateList() <RPAREN>
+	{
+		return pos;
+	}
+} 
+
+//Return Collection of possibles
+Set Predicate() :
+{
+	Set pos=null;
+	
+	String propName=null;
+	String propValue=null;
+	String indSlotName=null;
+	String indValue=null;
+	
+	Token t=null;
+	Token cType;
+	Token langToken = null;
+	Token typeToken = null;
+	Token indType=null;
+}
+{
+	<PROPERTY> [ propName=ColonString() ] cType=CheckType() propValue=RefOrString() [ "lang" langToken=<STRING> ] [ t=<GETIND> [ indSlotName=ColonString() ] indType=CheckType() indValue=RefOrString() ]
+	{
+		String fullString;
+		if(propName!=null)
+			fullString = getFullString(propValue,getStringToken(langToken));
+		else
+			fullString = propValue;
+			
+ 		pos=getPROPERTYs(propName,cType,fullString,t,indSlotName, indType, indValue);
+ 		return pos;
+ 	}
+ 	|
+	<CLS> [ propName=ColonString() ] cType=ClsCheckType() propValue=RefOrString() [ "@" langToken=<STRING> | "^^" typeToken=<STRING> ] 
+ 	{
+ 		pos = getCLSes(getFullURI(propName),cType,propValue,getStringToken(langToken),getStringToken(typeToken));
+ 		return pos;
+ 	}
+ 	|
+ 	<IND> [ propName=ColonString() ] cType=CheckType() propValue=RefOrString() [ "lang" langToken=<STRING> ]
+ 	{
+		String fullString;
+		if(propName!=null)
+			fullString = getFullString(propValue,getStringToken(langToken));
+		else
+			fullString = propValue;
+			
+ 		pos=getINDes(propName, cType,fullString);
+ 		return pos;
+ 	}
+ 	|
+ 	<REST> cType=CheckType() propValue=RefOrString() [ "lang" langToken=<STRING> ] 
+ 	{
+ 		String fullString = getFullString(propValue,getStringToken(langToken));
+ 		pos=getRESTs(cType,fullString,t);
+ 		return pos;
+ 	}
+}
+
+Token ClsCheckType() :
+{
+	Token t;
+}
+{
+	t=<PLUSEQ>	
+ 	{
+ 		return t;
+ 	}
+ 	|
+	t=CheckType()
+	{
+ 		return t;
+ 	}
+}
+
+Token CheckType() :
+{
+	Token t;
+}
+{
+	t=<EQ>
+ 	{
+ 		return t;
+ 	}
+	|
+	t=<NE>	
+ 	{
+ 		return t;
+ 	}
+}
+
+String RefOrString() :
+{
+	Token t;
+}
+{
+	t=<STRING> 
+	{
+		return getStringToken(t);	
+ 	}
+	|
+	t=<REFNUMBER>
+ 	{
+ 		int i = getNumberToken(t);
+ 		try
+ 		{
+ 			return (String)ONTresult.get(i-1);
+ 		} catch(IndexOutOfBoundsException ie)
+ 		{
+ 			throw new ParseException("Reference out of bounds. #REF < " + ONTresult.size() + " expected.");
+ 		}
+ 	}
+}
+
+String ColonString() :
+{
+	Token t;
+}
+{
+	":" t=<STRING>
+	{
+		return getStringToken(t);
+	}
+}
+
+
+void ThatReturnPart() :
+{
+	Token t;
+}
+{
+	<THAT> <ASSIGN> t=<STRING>
+ 	{
+ 		this.thatReturn = getStringToken(t);
+ 	}
+}

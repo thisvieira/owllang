@@ -1,0 +1,380 @@
+[2006-11-03 9:30:55] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:30:55] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:30:56] guest10029@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c7 ONTIND efq:eLQual ONTIND :is ONTIND :interesting ONTIND eLearning Quality Tab ONTPRO is ONTIND interesting ONTIND UNKNOWN : INDPROIND : QUESTION DOYOU : TF
+[2006-11-03 9:30:56] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:30:56] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:30:56] Symbolic Reduction:
+[2006-11-03 9:30:56] guest10029@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : Is that a true statement more often than not : QUESTION DOYOU : TF
+[2006-11-03 9:30:56] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:30:56] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:30:56] Symbolic Reduction:
+[2006-11-03 9:30:56] guest10029@jabber.eun.org/eun_Jabber> WOULDYOUAGREE : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:30:56] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:30:56] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2006-11-03 9:30:56] Response 7 in 187 ms. (Average: 390.42856 ms.)
+[2006-11-03 9:31:26] guest10029@jabber.eun.org/eun_Jabber> I still do not know : Would you agree      with this statement  the eLearning Quality Tab is interesting : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:31:26] Match: * NOT KNOW : * : QUESTION * : TF
+[2006-11-03 9:31:26] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 9:31:26] Symbolic Reduction:
+[2006-11-03 9:31:26] guest10029@jabber.eun.org/eun_Jabber> UNKNOWN : Would you agree      with this statement  the eLearning Quality Tab is interesting : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:31:26] Match: UNKNOWN : * : QUESTION _ : TF
+[2006-11-03 9:31:26] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2006-11-03 9:31:26] Symbolic Reduction:
+[2006-11-03 9:31:26] guest10029@jabber.eun.org/eun_Jabber> STOREREIFICATION : Would you agree      with this statement  the eLearning Quality Tab is interesting : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:31:26] Match: STOREREIFICATION : _ : _ : TF
+[2006-11-03 9:31:26] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:31:26] guest10029@jabber.eun.org/eun_Jabber> OWLLANG ONTSTORE :CLAIM84585278798562 : STOREREIFICATIONRESULT : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:31:26] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2006-11-03 9:31:26] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:31:26] Symbolic Reduction:
+[2006-11-03 9:31:26] guest10029@jabber.eun.org/eun_Jabber> QUESTASK : Would you agree      with this statement  the eLearning Quality Tab is interesting : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:31:26] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:31:26] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:31:26] Symbolic Reduction:
+[2006-11-03 9:31:26] guest10029@jabber.eun.org/eun_Jabber> ENDQUSTIONTIME : Would you agree      with this statement  the eLearning Quality Tab is interesting : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:31:26] Match: ENDQUSTIONTIME : * : * : TF
+[2006-11-03 9:31:26] Filename: "../aiml/\general.aiml"
+[2006-11-03 9:31:26] Response 8 in 32 ms. (Average: 345.625 ms.)
+[2006-11-03 9:50:27] guest10030@jabber.eun.org/eun_Jabber> CONNECT : * : * : TF
+[2006-11-03 9:50:27] Match: CONNECT : * : * : TF
+[2006-11-03 9:50:27] Filename: "../aiml/\general.aiml"
+[2006-11-03 9:50:27] Symbolic Reduction:
+[2006-11-03 9:50:27] guest10030@jabber.eun.org/eun_Jabber> QUESTASKINFO : * : * : TF
+[2006-11-03 9:50:27] Match: QUESTASKINFO : _ : * : TF
+[2006-11-03 9:50:27] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:50:27] Symbolic Reduction:
+[2006-11-03 9:50:27] guest10030@jabber.eun.org/eun_Jabber> QUESTASK : * : * : TF
+[2006-11-03 9:50:27] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:50:27] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:50:27] guest10030@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c11 ONTIND efq:wiki ONTIND :is ONTIND :tooComplex ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too complex ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:50:27] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:50:27] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:50:27] Symbolic Reduction:
+[2006-11-03 9:50:27] guest10030@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : * : * : TF
+[2006-11-03 9:50:27] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:50:27] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:50:27] Symbolic Reduction:
+[2006-11-03 9:50:27] guest10030@jabber.eun.org/eun_Jabber> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2006-11-03 9:50:27] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2006-11-03 9:50:27] Filename: "../aiml/\questionDoYou.aiml"
+[2006-11-03 9:50:27] Response 9 in 109 ms. (Average: 319.33334 ms.)
+[2006-11-03 9:53:09] guest10031@jabber.eun.org/eun_Jabber> CONNECT : * : * : TF
+[2006-11-03 9:53:09] Match: CONNECT : * : * : TF
+[2006-11-03 9:53:09] Filename: "../aiml/\general.aiml"
+[2006-11-03 9:53:09] Symbolic Reduction:
+[2006-11-03 9:53:09] guest10031@jabber.eun.org/eun_Jabber> QUESTASKINFO : * : * : TF
+[2006-11-03 9:53:09] Match: QUESTASKINFO : _ : * : TF
+[2006-11-03 9:53:09] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:09] Symbolic Reduction:
+[2006-11-03 9:53:09] guest10031@jabber.eun.org/eun_Jabber> QUESTASK : * : * : TF
+[2006-11-03 9:53:09] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:53:09] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:09] guest10031@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c7 ONTIND efq:eLQual ONTIND :is ONTIND :interesting ONTIND eLearning Quality Tab ONTPRO is ONTIND interesting ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:53:09] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:53:09] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:09] Symbolic Reduction:
+[2006-11-03 9:53:09] guest10031@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : * : * : TF
+[2006-11-03 9:53:09] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:53:09] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:09] Symbolic Reduction:
+[2006-11-03 9:53:09] guest10031@jabber.eun.org/eun_Jabber> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:53:09] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:53:09] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2006-11-03 9:53:09] Response 10 in 78 ms. (Average: 295.2 ms.)
+[2006-11-03 9:53:55] uriel> CONNECT : * : * : TF
+[2006-11-03 9:53:55] Match: CONNECT : * : * : TF
+[2006-11-03 9:53:55] Filename: "../aiml/\general.aiml"
+[2006-11-03 9:53:55] Symbolic Reduction:
+[2006-11-03 9:53:55] uriel> QUESTASKINFO : * : * : TF
+[2006-11-03 9:53:55] Match: QUESTASKINFO : _ : * : TF
+[2006-11-03 9:53:55] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:55] Symbolic Reduction:
+[2006-11-03 9:53:55] uriel> QUESTASK : * : * : TF
+[2006-11-03 9:53:55] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:53:55] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:56] uriel> OWLLANG ONTIND :c6 ONTIND efq:about ONTIND :is ONTIND :goodSource ONTIND About Section ONTPRO is ONTIND a good source ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:53:56] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:53:56] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:56] Symbolic Reduction:
+[2006-11-03 9:53:56] uriel> CHECKPREDICATEGRAMMAR : * : * : TF
+[2006-11-03 9:53:56] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:53:56] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:53:56] Symbolic Reduction:
+[2006-11-03 9:53:56] uriel> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2006-11-03 9:53:56] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2006-11-03 9:53:56] Filename: "../aiml/\questionDoYou.aiml"
+[2006-11-03 9:53:56] Response 1 in 1546 ms. (Average: 1546.0 ms.)
+[2006-11-03 9:54:02] guest10032@jabber.eun.org/eun_Jabber> CONNECT : * : * : TF
+[2006-11-03 9:54:02] Match: CONNECT : * : * : TF
+[2006-11-03 9:54:02] Filename: "../aiml/\general.aiml"
+[2006-11-03 9:54:02] Symbolic Reduction:
+[2006-11-03 9:54:02] guest10032@jabber.eun.org/eun_Jabber> QUESTASKINFO : * : * : TF
+[2006-11-03 9:54:02] Match: QUESTASKINFO : _ : * : TF
+[2006-11-03 9:54:02] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:54:02] Symbolic Reduction:
+[2006-11-03 9:54:02] guest10032@jabber.eun.org/eun_Jabber> QUESTASK : * : * : TF
+[2006-11-03 9:54:02] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:54:02] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:54:02] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c3 ONTIND efq:news ONTIND :is ONTIND :relevant ONTIND News and Events Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:54:02] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:54:02] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:54:02] Symbolic Reduction:
+[2006-11-03 9:54:02] guest10032@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : * : * : TF
+[2006-11-03 9:54:02] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:54:02] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:54:02] Symbolic Reduction:
+[2006-11-03 9:54:02] guest10032@jabber.eun.org/eun_Jabber> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:02] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:02] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2006-11-03 9:54:02] Response 2 in 141 ms. (Average: 843.5 ms.)
+[2006-11-03 9:54:12] guest10032@jabber.eun.org/eun_Jabber> maybe : Would you agree      when some say that the News and Events Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:12] Match: MAYBE : * : QUESTION * : TF
+[2006-11-03 9:54:12] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 9:54:12] Symbolic Reduction:
+[2006-11-03 9:54:12] guest10032@jabber.eun.org/eun_Jabber> sometimes : Would you agree      when some say that the News and Events Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:12] Match: SOMETIMES : * : QUESTION _ : TF
+[2006-11-03 9:54:12] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 9:54:12] Symbolic Reduction:
+[2006-11-03 9:54:12] guest10032@jabber.eun.org/eun_Jabber> UNSURE : Would you agree      when some say that the News and Events Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:12] Match: UNSURE : * : QUESTION _ : TF
+[2006-11-03 9:54:12] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 9:54:12] Response 3 in 31 ms. (Average: 572.6667 ms.)
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> I do not know : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: * NOT KNOW : * : QUESTION * : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 9:54:19] Symbolic Reduction:
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> UNKNOWN : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: UNKNOWN : * : QUESTION _ : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2006-11-03 9:54:19] Symbolic Reduction:
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> STOREREIFICATION : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: STOREREIFICATION : _ : _ : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTSTORE :CLAIM : STOREREIFICATIONRESULT : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:54:19] Symbolic Reduction:
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> QUESTASK : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:54:19] Symbolic Reduction:
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:54:19] Symbolic Reduction:
+[2006-11-03 9:54:19] guest10032@jabber.eun.org/eun_Jabber> WOULDYOUAGREE : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:54:19] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2006-11-03 9:54:19] Response 4 in 234 ms. (Average: 488.0 ms.)
+[2006-11-03 9:57:06] guest10032@jabber.eun.org/eun_Jabber> maybe : Would you agree      when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:06] Match: MAYBE : * : QUESTION * : TF
+[2006-11-03 9:57:06] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 9:57:06] Symbolic Reduction:
+[2006-11-03 9:57:06] guest10032@jabber.eun.org/eun_Jabber> sometimes : Would you agree      when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:06] Match: SOMETIMES : * : QUESTION _ : TF
+[2006-11-03 9:57:06] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 9:57:06] Symbolic Reduction:
+[2006-11-03 9:57:06] guest10032@jabber.eun.org/eun_Jabber> UNSURE : Would you agree      when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:06] Match: UNSURE : * : QUESTION _ : TF
+[2006-11-03 9:57:06] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 9:57:06] Response 5 in 16 ms. (Average: 393.6 ms.)
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> I do not know : Would you say that the My EFQUEL Section is relevant more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:12] Match: * NOT KNOW : * : QUESTION * : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 9:57:12] Symbolic Reduction:
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> UNKNOWN : Would you say that the My EFQUEL Section is relevant more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:12] Match: UNKNOWN : * : QUESTION _ : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2006-11-03 9:57:12] Symbolic Reduction:
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> STOREREIFICATION : Would you say that the My EFQUEL Section is relevant more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:12] Match: STOREREIFICATION : _ : _ : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTSTORE :CLAIM86130980942270 : STOREREIFICATIONRESULT : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:12] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:57:12] Symbolic Reduction:
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> QUESTASK : Would you say that the My EFQUEL Section is relevant more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:12] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c4 ONTIND efq:wiki ONTIND :isNot ONTIND :easyToRead ONTIND EFQUEL WIKI Page ONTPRO is not ONTIND easy to read ONTIND UNKNOWN : INDPROIND : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:12] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:57:12] Symbolic Reduction:
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : Would you say that the My EFQUEL Section is relevant more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:12] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:57:12] Symbolic Reduction:
+[2006-11-03 9:57:12] guest10032@jabber.eun.org/eun_Jabber> ASKSOMEBELIEVES : Would you say that the My EFQUEL Section is relevant more often than not : QUESTION DOYOU : TF
+[2006-11-03 9:57:12] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2006-11-03 9:57:12] Filename: "../aiml/\questionDoYou.aiml"
+[2006-11-03 9:57:12] Response 6 in 156 ms. (Average: 354.0 ms.)
+[2006-11-03 9:57:46] guest10032@jabber.eun.org/eun_Jabber> no it is easy to read : Do you agree with that opinion : QUESTION DOYOU : TF
+[2006-11-03 9:57:46] Match: NO * : * : QUESTION _ : TF
+[2006-11-03 9:57:46] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2006-11-03 9:57:46] Symbolic Reduction:
+[2006-11-03 9:57:46] guest10032@jabber.eun.org/eun_Jabber> FINDINVERSEOFPREDICATE : Do you agree with that opinion : QUESTION DOYOU : TF
+[2006-11-03 9:57:46] Match: FINDINVERSEOFPREDICATE : _ : _ : TF
+[2006-11-03 9:57:46] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTPRO :is ONTPRO is : INVERSEOFPREDICATE : QUESTION DOYOU : TF
+[2006-11-03 9:57:47] Match: OWLLANG ONTPRO * ONTPRO * : INVERSEOFPREDICATE : _ : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:57:47] Symbolic Reduction:
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : Do you agree with that opinion : QUESTION DOYOU : TF
+[2006-11-03 9:57:47] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:57:47] Symbolic Reduction:
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> STOREREIFICATION : Do you agree with that opinion : QUESTION DOYOU : TF
+[2006-11-03 9:57:47] Match: STOREREIFICATION : _ : _ : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTSTORE :CLAIM86165522825387 : STOREREIFICATIONRESULT : QUESTION DOYOU : TF
+[2006-11-03 9:57:47] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:57:47] Symbolic Reduction:
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> QUESTASK : Do you agree with that opinion : QUESTION DOYOU : TF
+[2006-11-03 9:57:47] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c11 ONTIND efq:wiki ONTIND :is ONTIND :tooComplex ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too complex ONTIND UNKNOWN : INDPROIND : QUESTION DOYOU : TF
+[2006-11-03 9:57:47] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:57:47] Symbolic Reduction:
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : Do you agree with that opinion : QUESTION DOYOU : TF
+[2006-11-03 9:57:47] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:57:47] Symbolic Reduction:
+[2006-11-03 9:57:47] guest10032@jabber.eun.org/eun_Jabber> WOULDYOUAGREE : Do you agree with that opinion : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:47] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:57:47] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2006-11-03 9:57:47] Response 7 in 156 ms. (Average: 325.7143 ms.)
+[2006-11-03 9:58:01] guest10032@jabber.eun.org/eun_Jabber> I do not know : Would you agree      when some say that the EFQUEL WIKI Page is too complex : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:58:01] Match: * NOT KNOW : * : QUESTION * : TF
+[2006-11-03 9:58:01] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 9:58:01] Symbolic Reduction:
+[2006-11-03 9:58:01] guest10032@jabber.eun.org/eun_Jabber> UNKNOWN : Would you agree      when some say that the EFQUEL WIKI Page is too complex : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:58:01] Match: UNKNOWN : * : QUESTION _ : TF
+[2006-11-03 9:58:01] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2006-11-03 9:58:01] Symbolic Reduction:
+[2006-11-03 9:58:01] guest10032@jabber.eun.org/eun_Jabber> STOREREIFICATION : Would you agree      when some say that the EFQUEL WIKI Page is too complex : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:58:01] Match: STOREREIFICATION : _ : _ : TF
+[2006-11-03 9:58:01] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:58:01] guest10032@jabber.eun.org/eun_Jabber> OWLLANG ONTSTORE :CLAIM86180145860158 : STOREREIFICATIONRESULT : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:58:01] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2006-11-03 9:58:01] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 9:58:01] Symbolic Reduction:
+[2006-11-03 9:58:01] guest10032@jabber.eun.org/eun_Jabber> ENDQUSTIONTIME : Would you agree      when some say that the EFQUEL WIKI Page is too complex : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 9:58:01] Match: ENDQUSTIONTIME : * : * : TF
+[2006-11-03 9:58:01] Filename: "../aiml/\general.aiml"
+[2006-11-03 9:58:01] Symbolic Reduction:
+[2006-11-03 9:58:01] guest10032@jabber.eun.org/eun_Jabber> QUESTASK : Would you agree      when some say that the EFQUEL WIKI Page is too complex : * : TF
+[2006-11-03 9:58:01] Match: QUESTASK : _ : * : TF
+[2006-11-03 9:58:01] Filename: "../aiml/\questions.aiml"
+[2006-11-03 9:58:01] Symbolic Reduction:
+[2006-11-03 9:58:01] guest10032@jabber.eun.org/eun_Jabber> ENDQUSTIONTIME : Would you agree      when some say that the EFQUEL WIKI Page is too complex : * : TF
+[2006-11-03 9:58:01] Match: ENDQUSTIONTIME : * : * : TF
+[2006-11-03 9:58:01] Filename: "../aiml/\general.aiml"
+[2006-11-03 9:58:01] Response 8 in 31 ms. (Average: 288.875 ms.)
+[2006-11-03 10:04:23] guest10034@jabber.eun.org/eun_Jabber> CONNECT : * : * : TF
+[2006-11-03 10:04:23] Match: CONNECT : * : * : TF
+[2006-11-03 10:04:23] Filename: "../aiml/\general.aiml"
+[2006-11-03 10:04:24] Symbolic Reduction:
+[2006-11-03 10:04:24] guest10034@jabber.eun.org/eun_Jabber> QUESTASKINFO : * : * : TF
+[2006-11-03 10:04:24] Match: QUESTASKINFO : _ : * : TF
+[2006-11-03 10:04:24] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:04:24] Symbolic Reduction:
+[2006-11-03 10:04:24] guest10034@jabber.eun.org/eun_Jabber> QUESTASK : * : * : TF
+[2006-11-03 10:04:24] Match: QUESTASK : _ : * : TF
+[2006-11-03 10:04:24] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:04:26] guest10034@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c7 ONTIND efq:eLQual ONTIND :is ONTIND :interesting ONTIND eLearning Quality Tab ONTPRO is ONTIND interesting ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 10:04:26] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 10:04:26] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:04:26] Symbolic Reduction:
+[2006-11-03 10:04:26] guest10034@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : * : * : TF
+[2006-11-03 10:04:26] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 10:04:26] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:04:26] Symbolic Reduction:
+[2006-11-03 10:04:26] guest10034@jabber.eun.org/eun_Jabber> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2006-11-03 10:04:26] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2006-11-03 10:04:26] Filename: "../aiml/\questionDoYou.aiml"
+[2006-11-03 10:04:26] Response 9 in 2982 ms. (Average: 588.1111 ms.)
+[2006-11-03 10:04:37] guest10034@jabber.eun.org/eun_Jabber> mostly : Do you support that statement : QUESTION DOYOU : TF
+[2006-11-03 10:04:37] Match: MOSTLY : * : QUESTION * : TF
+[2006-11-03 10:04:37] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 10:04:37] Symbolic Reduction:
+[2006-11-03 10:04:37] guest10034@jabber.eun.org/eun_Jabber> sometimes : Do you support that statement : QUESTION DOYOU : TF
+[2006-11-03 10:04:37] Match: SOMETIMES : * : QUESTION _ : TF
+[2006-11-03 10:04:37] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 10:04:37] Symbolic Reduction:
+[2006-11-03 10:04:37] guest10034@jabber.eun.org/eun_Jabber> UNSURE : Do you support that statement : QUESTION DOYOU : TF
+[2006-11-03 10:04:37] Match: UNSURE : * : QUESTION _ : TF
+[2006-11-03 10:04:37] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 10:04:37] Response 10 in 203 ms. (Average: 549.6 ms.)
+[2006-11-03 10:04:41] guest10034@jabber.eun.org/eun_Jabber> yes : Is that a true statement more often than not : QUESTION DOYOU : TF
+[2006-11-03 10:04:41] Match: YES : * : QUESTION _ : TF
+[2006-11-03 10:04:41] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2006-11-03 10:04:41] Symbolic Reduction:
+[2006-11-03 10:04:41] guest10034@jabber.eun.org/eun_Jabber> STOREREIFICATION : Is that a true statement more often than not : QUESTION DOYOU : TF
+[2006-11-03 10:04:41] Match: STOREREIFICATION : _ : _ : TF
+[2006-11-03 10:04:41] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 10:04:41] guest10034@jabber.eun.org/eun_Jabber> OWLLANG ONTSTORE :CLAIM86580081148302 : STOREREIFICATIONRESULT : QUESTION DOYOU : TF
+[2006-11-03 10:04:41] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2006-11-03 10:04:41] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 10:04:41] Symbolic Reduction:
+[2006-11-03 10:04:41] guest10034@jabber.eun.org/eun_Jabber> QUESTASK : Is that a true statement more often than not : QUESTION DOYOU : TF
+[2006-11-03 10:04:41] Match: QUESTASK : _ : * : TF
+[2006-11-03 10:04:41] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:04:41] guest10034@jabber.eun.org/eun_Jabber> OWLLANG ONTIND :c10 ONTIND efq:wiki ONTIND :is ONTIND :goodSource ONTIND EFQUEL WIKI Page ONTPRO is ONTIND a good source ONTIND UNKNOWN : INDPROIND : QUESTION DOYOU : TF
+[2006-11-03 10:04:41] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2006-11-03 10:04:41] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:04:41] Symbolic Reduction:
+[2006-11-03 10:04:41] guest10034@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : Is that a true statement more often than not : QUESTION DOYOU : TF
+[2006-11-03 10:04:43] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 10:04:43] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:04:43] Symbolic Reduction:
+[2006-11-03 10:04:43] guest10034@jabber.eun.org/eun_Jabber> WOULDYOUAGREE : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:43] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:43] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2006-11-03 10:04:43] Response 11 in 2046 ms. (Average: 685.63635 ms.)
+[2006-11-03 10:04:53] guest10034@jabber.eun.org/eun_Jabber> not always : Would you agree      with this statement  the EFQUEL WIKI Page is a good source : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:53] Match: NOT ALWAYS : * : QUESTION * : TF
+[2006-11-03 10:04:53] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 10:04:53] Symbolic Reduction:
+[2006-11-03 10:04:53] guest10034@jabber.eun.org/eun_Jabber> maybe : Would you agree      with this statement  the EFQUEL WIKI Page is a good source : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:54] Match: MAYBE : * : QUESTION * : TF
+[2006-11-03 10:04:54] Filename: "../aiml/\UnsureAnswers.aiml"
+[2006-11-03 10:04:54] Symbolic Reduction:
+[2006-11-03 10:04:54] guest10034@jabber.eun.org/eun_Jabber> sometimes : Would you agree      with this statement  the EFQUEL WIKI Page is a good source : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:54] Match: SOMETIMES : * : QUESTION _ : TF
+[2006-11-03 10:04:54] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 10:04:54] Symbolic Reduction:
+[2006-11-03 10:04:54] guest10034@jabber.eun.org/eun_Jabber> UNSURE : Would you agree      with this statement  the EFQUEL WIKI Page is a good source : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:54] Match: UNSURE : * : QUESTION _ : TF
+[2006-11-03 10:04:54] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 10:04:54] Response 12 in 250 ms. (Average: 649.3333 ms.)
+[2006-11-03 10:04:59] guest10034@jabber.eun.org/eun_Jabber> no : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:59] Match: NO : * OFTEN THAN NOT : QUESTION _ : TF
+[2006-11-03 10:04:59] Filename: "../aiml/\questionAnswersOther.aiml"
+[2006-11-03 10:04:59] Symbolic Reduction:
+[2006-11-03 10:04:59] guest10034@jabber.eun.org/eun_Jabber> FINDINVERSEOFPREDICATE : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:04:59] Match: FINDINVERSEOFPREDICATE : _ : _ : TF
+[2006-11-03 10:04:59] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 10:04:59] guest10034@jabber.eun.org/eun_Jabber> OWLLANG ONTPRO :isNot ONTPRO is not : INVERSEOFPREDICATE : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:05:00] Match: OWLLANG ONTPRO * ONTPRO * : INVERSEOFPREDICATE : _ : TF
+[2006-11-03 10:05:00] Filename: "../aiml/\procedures.aiml"
+[2006-11-03 10:05:00] Symbolic Reduction:
+[2006-11-03 10:05:00] guest10034@jabber.eun.org/eun_Jabber> CHECKPREDICATEGRAMMAR : Is that a true statement more often than not : QUESTION WOULDYOUAGREE : TF
+[2006-11-03 10:05:00] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2006-11-03 10:05:00] Filename: "../aiml/\questions.aiml"
+[2006-11-03 10:05:00] Response 13 in 718 ms. (Average: 654.61536 ms.)
+[2006-12-15 10:18:50] athene> CONNECT : * : * : TF
+[2006-12-15 10:18:50] Match: CONNECT : * : * : TF
+[2006-12-15 10:18:50] Filename: "../aiml/\general.aiml"
+[2006-12-15 10:18:50] Symbolic Reduction:
+[2006-12-15 10:18:50] athene> QUESTASKINFO : * : * : TF
+[2006-12-15 10:18:50] Match: QUESTASKINFO : _ : * : TF
+[2006-12-15 10:18:50] Filename: "../aiml/\questions.aiml"
+[2006-12-15 10:18:50] Symbolic Reduction:
+[2006-12-15 10:18:50] athene> QUESTASK : * : * : TF
+[2006-12-15 10:18:50] Match: QUESTASK : _ : * : TF
+[2006-12-15 10:18:50] Filename: "../aiml/\questions.aiml"

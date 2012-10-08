@@ -1,0 +1,9 @@
+@prefix seequel: <http://www.cs.rdg.ac.uk/seequel#>
+@include <RDFS>
+
+[ruleFact:	( ?x	rdf:type  seequel:Fact)  
+        	( ?x seequel:subject  ?sub) 
+        	( ?x seequel:predicate  ?pred) 
+        	( ?x seequel:object  ?obj) 
+        	-> 
+		(?sub  ?pred  ?obj) ]

@@ -1,0 +1,219 @@
+
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+QUESTIONS INITIATION
+-->
+
+	<category>
+		<pattern>
+			QUESTASKINFO
+		</pattern>
+		<that>_</that>
+		<template>
+			<think>
+				<set name="numberOfQuestions"/>
+			</think>
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! <html:br/>
+			<srai>QUESTASK</srai>
+		</template>
+	</category>
+	
+	
+	<category>
+		<pattern>
+			QUESTASK
+		</pattern>
+		<that>_</that>
+		<template>
+			<think>
+				<condition name="name">
+					<li value="tester">
+						<set name="numberOfQuestions"/>
+					</li>
+					<li>
+						<set name="numberOfQuestions"><get name="numberOfQuestions"/>I</set>
+					</li>
+				</condition>
+			</think>
+			<condition name="numberOfQuestions">
+				<li value="IIIII"><srai>ENDQUSTIONTIME</srai></li>
+				<li value="IIIIII"><srai>ENDQUSTIONTIME</srai></li>
+				<li value="IIIIIII"><srai>ENDQUSTIONTIME</srai></li>
+				<li>	
+					$OWLLANG(
+						ONTIND(cls==[:Claim] AND prop==[:madeBy]>>!=[:<get name="name"/>] AND prop==[:predicate]>>!=[:noRelation])
+						ONTIND(ind==#1):[:subject]
+						ONTIND(ind==#1):[:predicate]
+						ONTIND(ind==#1):[:object]
+						ONTIND(ind==#2):[rdfs:label]@'en'
+						ONTPRO(prop==#3):[rdfs:label]@'en'
+						ONTIND(ind==#4):[rdfs:label]@'en'
+						ONTIND(cls==[:Claim] AND 
+								prop==[:subject]>>==#2 AND 
+								prop==[:object]>>==#4 AND 
+								prop==[:madeBy]>>==[:<get name="name"/>]
+								)
+						)
+						THAT='INDPROIND'
+				</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			QUESTASKANOTHER
+		</pattern>
+		<that>_</that>
+		<template>
+			<condition name="numberOfQuestions">
+				<li value="IIIII"><srai>ENDQUSTIONTIME</srai></li>
+				<li value="IIIIII"><srai>ENDQUSTIONTIME</srai></li>
+				<li value="IIIIIII"><srai>ENDQUSTIONTIME</srai></li>
+				<li>	
+					$OWLLANG(
+						ONTIND(cls==[:Claim] AND prop==[:madeBy]>>!=[:<get name="name"/>] AND prop==[:predicate]>>!=[:noRelation])
+						ONTIND(ind==#1):[:subject]
+						ONTIND(ind==#1):[:predicate]
+						ONTIND(ind==#1):[:object]
+						ONTIND(ind==#2):[rdfs:label]@'en'
+						ONTPRO(prop==#3):[rdfs:label]@'en'
+						ONTIND(ind==#4):[rdfs:label]@'en'
+						ONTIND(cls==[:Claim] AND 
+								prop==[:subject]>>==#2 AND 
+								prop==[:object]>>==#4 AND 
+								prop==[:madeBy]>>==[:<get name="name"/>]
+								)
+						)
+						THAT='INDPROIND'
+				</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN
+		</pattern>
+		<that>
+			INDPROIND
+		</that>
+		<template>
+			<think>
+				<set name="subject"><star index="5"/></set>
+				<set name="predicate"><star index="6"/></set>
+				<set name="object"><star index="7"/></set>
+				<set name="subjectURI"><star index="2"/></set>
+				<set name="predicateURI"><star index="3"/></set>
+				<set name="objectURI"><star index="4"/></set>
+				<srai>CHECKPREDICATEGRAMMAR</srai>
+			</think>
+			<random>
+				<li>
+					<think>
+						<set name="topic">QUESTION DOYOU</set>
+					</think>
+					<srai>ASKSOMEBELIEVES</srai>
+				</li>
+				<li>
+					<think>
+						<set name="topic">QUESTION WOULDYOUAGREE</set>
+					</think>
+					<srai>WOULDYOUAGREE</srai>
+				</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND *
+		</pattern>
+		<that>
+			INDPROIND
+		</that>
+		<template>
+			$OWLLANG(
+						ONTIND(cls==[:Claim] AND prop==[:madeBy]>>!=[:<get name="name"/>] AND prop==[:predicate]>>!=[:noRelation])
+						ONTIND(ind==#1):[:subject]
+						ONTIND(ind==#1):[:predicate]
+						ONTIND(ind==#1):[:object]
+						ONTIND(ind==#2):[rdfs:label]@'en'
+						ONTPRO(prop==#3):[rdfs:label]@'en'
+						ONTIND(ind==#4):[rdfs:label]@'en'
+						ONTIND(cls==[:Claim] AND 
+								prop==[:subject]>>==#2 AND 
+								prop==[:object]>>==#4 AND 
+								prop==[:madeBy]>>==[:<get name="name"/>]
+								)
+						)
+						THAT='INDPROIND'
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			OWLLANG ONTIND UNKNOWN ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND *
+		</pattern>
+		<that>
+			INDPROIND
+		</that>
+		<template>
+			<srai>ENDQUSTIONTIME</srai>
+		</template>
+	</category>
+	
+	
+	
+	<category>
+		<pattern>
+			CHECKPREDICATEGRAMMAR
+		</pattern>
+		<that>
+			_
+		</that>
+		<template> 
+			<!--Remove the comments to enable are/is destinction
+				$OWLLANG(
+						ONTGRAMMA('The <get name="subject"/> <get name="predicate"/> <get name="object"/>.')
+				)
+				THAT='GRAMMACHECK'-->
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			OWLLANG ONTGRAMMA *
+		</pattern>
+		<that>
+			GRAMMACHECK
+		</that>
+		<template>
+			<think>A</think>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			OWLLANG ONTGRAMMA UNKNOWN
+		</pattern>
+		<that>
+			GRAMMACHECK
+		</that>
+		<template>
+			<think>
+				<condition name="predicate">
+					<li value="is"><set name="predicate">are</set></li>
+					<li value="is not"><set name="predicate">are not</set></li>
+				</condition>
+			</think>
+		</template>
+	</category>
+</aiml>

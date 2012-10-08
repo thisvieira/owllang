@@ -1,0 +1,347 @@
+
+<!-- Processed by Id: cwm.py,v 1.164 2004/10/28 17:41:59 timbl Exp -->
+<!--     using base file:/cwm/tp-feedback.n3-->
+
+
+<rdf:RDF xmlns="http://www.cs.rdf.sc.uk/tp-feedback#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:seequel="http://www.cs.rdg.ac.uk/seequel#">
+
+    <rdf:Description rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#Assignment">
+        <rdfs:label xml:lang="en">assignment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#Content">
+        <rdfs:comment xml:lang="en">content of a teaching product or functional within a teaching product.</rdfs:comment>
+        <rdfs:label xml:lang="en">content</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#DiscussionBoard">
+        <rdfs:label xml:lang="en">discussion board</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+    </rdf:Description>
+
+    <owl:Class rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#Functionality">
+        <rdfs:comment xml:lang="en">functionality of a teaching product or parts of a teaching product.</rdfs:comment>
+        <rdfs:label xml:lang="en">functionality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <rdf:Description rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#MailBox">
+        <rdfs:label xml:lang="en">mailbox</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#Quiz">
+        <rdfs:label xml:lang="en">quiz</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#Survey">
+        <rdfs:label xml:lang="en">survey</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+    </rdf:Description>
+
+    <seequel:learningSources rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#TP">
+        <rdfs:comment xml:lang="en">a product, which is used in a teaching environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">teaching product</rdfs:label>
+    </seequel:learningSources>
+
+    <TeachingProduct rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#bb">
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbDB"/>
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbMailBox"/>
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbQuiz"/>
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbSurvey"/>
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbTest"/>
+        <rdfs:comment xml:lang="en">Blackboard is a teaching product, which is used at Reading University.</rdfs:comment>
+        <rdfs:label xml:lang="en">Blackboard</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.bb.rdg.ac.uk"/>
+    </TeachingProduct>
+
+    <Assignment rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#bbAssignments">
+        <rdfs:label xml:lang="en">assignments on Blackboard</rdfs:label>
+    </Assignment>
+
+    <DiscussionBoard rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#bbDB">
+        <rdfs:label xml:lang="en">discussion boards on Blackboard</rdfs:label>
+    </DiscussionBoard>
+
+    <MailBox rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#bbMailBox">
+        <rdfs:label xml:lang="en">mailboxes on Blackboard</rdfs:label>
+    </MailBox>
+
+    <Quiz rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#bbQuiz">
+        <rdfs:label xml:lang="en">quizzes on Blackboard</rdfs:label>
+    </Quiz>
+
+    <Survey rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#bbSurvey">
+        <rdfs:label xml:lang="en">surveys on Blackboard</rdfs:label>
+    </Survey>
+
+    <Content rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#cPrgAssignment">
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgAssignment"/>
+        <rdfs:label xml:lang="en">content of the assignments in programming</rdfs:label>
+    </Content>
+
+    <Content rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#cPrgDB">
+        <rdfs:label xml:lang="en">content of the discussion board in programming</rdfs:label>
+    </Content>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyToUse"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim1">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#isNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyToNavigate"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim10">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#tooLong"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim11">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#prgAssignment"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#isNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#nonIntuitiveLayout"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim12">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#prgAssignment"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interactive"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim13">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#prgAssignment"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#organised"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim14">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgAssignment"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#challenging"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim15">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgAssignment"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#isNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim16">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgAssignment"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#tooSimple"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim2">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#nonIntuitiveLayout"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim3">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbAssignments"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyToUse"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim4">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbAssignments"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyNavigation"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim5">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bbMailBox"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#isNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#flexible"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim6">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#prgDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#organised"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim7">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#prgDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyNavigation"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim8">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#isNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#relevant"/>
+    </seequel:Claim>
+
+    <seequel:Claim rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#claim9">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#Karsten"/>
+        <object rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgDB"/>
+        <predicate rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#is"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#offTopic"/>
+    </seequel:Claim>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#functionalityOf">
+        <rdfs:comment xml:lang="en">functionality of a teaching product</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+        <rdfs:label xml:lang="en">functionality of</rdfs:label>
+        <rdfs:range rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#TP"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#hasFunctionality">
+        <rdfs:comment xml:lang="en">A teaching product or unit of a tp has a certain functionality</rdfs:comment>
+        <rdfs:domain rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#TP"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">has functionality</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#hasUnit">
+        <rdfs:comment xml:lang="en">A teaching product has the given unit.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#TP"/>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#is">
+        <rdfs:comment xml:lang="en">A relation, which indicates that a teaching product can be described by a descriptor from the Seequel framework (ontology).</rdfs:comment>
+        <rdfs:domain rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#TP"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">is</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#isNot">
+        <rdfs:comment xml:lang="en">A relation, which indicates that a teaching product can be described negatively by a descriptor from the Seequel framework (ontology).</rdfs:comment>
+        <rdfs:domain rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#TP"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">is not</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#noRelation">
+        <rdfs:comment xml:lang="en">A relation is not known to exist between a teaching product and the descriptor from the Seequel framework (ontology).</rdfs:comment>
+        <rdfs:domain rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#TP"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#Functionality"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">has no relation to</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+    </owl:ObjectProperty>
+
+    <Assignment rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#prgAssignment">
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgAssignment"/>
+        <rdfs:label xml:lang="en">assignments in programming</rdfs:label>
+    </Assignment>
+
+    <DiscussionBoard rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#prgDB">
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#cPrgDB"/>
+        <rdfs:label xml:lang="en">discussion board in programming</rdfs:label>
+    </DiscussionBoard>
+
+    <unitOfTP rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#programming">
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#prgDB"/>
+        <hasFunctionality rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#prgQuiz"/>
+        <unitOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#bb"/>
+        <rdfs:comment xml:lang="en">The programming course with the module number SE1SA5.</rdfs:comment>
+        <rdfs:label xml:lang="en">Programming</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.info.rdg.ac.uk/module/0506/SC/SE1SA5.htm"/>
+    </unitOfTP>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#unitOf">
+        <rdfs:comment xml:lang="en">A unit is part of a teaching product.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP"/>
+        <rdfs:label xml:lang="en">unit of</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#TP"/>
+        <owl:inverseOf rdf:resource="http://www.cs.rdf.sc.uk/tp-feedback#hasUnit"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="http://www.cs.rdf.sc.uk/tp-feedback#unitOfTP">
+        <rdfs:comment xml:lang="en">a unit of a teaching product, such as different courses.</rdfs:comment>
+        <rdfs:label xml:lang="en">units of a teaching product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:Ontology rdf:about="http://www.cs.rdg.ac.uk/tp-feedback.owl">
+        <rdfs:comment>The Teaching Product Feedback ontology</rdfs:comment>
+        <rdfs:label>teaching product feedback Ontology</rdfs:label>
+    </owl:Ontology>
+</rdf:RDF>

@@ -1,0 +1,146 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+UPPER LEVEL STRUCTURE
+-->
+	<category>
+		<pattern>
+			CONNECT
+		</pattern>
+		<template>
+			<think>
+				<set name="name"><id/></set>
+				<set name="stop">false</set>
+			</think>
+			Hello! <!--<id/>.--><html:br/>
+			<condition name="name">
+				<li value="tester">
+					You are here to test, so I will not put you though the usual da di da. 1<html:br/>
+					<srai>QUESTASK</srai>
+				</li>
+				<li>
+					<srai>QUESTASKINFO</srai>
+				</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			ENDQUSTIONTIME
+		</pattern>
+		<template>
+			This is all for this time. <!-- <get name="name"/>.<html:br/>-->
+			Thanks for your help in our evaluation. <html:br/>
+			Have a nice day. <html:br/>
+			<think>
+				<set name="stop">true</set>
+				<set name="topic"/>
+			</think>
+		</template>
+	</category>
+
+<!--
+	<category>
+		<pattern>
+			INFINITE LOOP
+		</pattern>
+		<template>
+			<think>
+				<set name="topic"/>
+			</think>
+			An error has occurred in my thought. <html:br/>
+			Sorry, I have to start from the beginning again! <html:br/>
+		</template>
+	</category>
+-->
+	
+<category>
+		<pattern>
+			INACTIVITY
+		</pattern>
+		<template>
+			<random>
+				<li>Knock, Knock, where are you? <html:br/></li>
+				<li>Have you fallen asleep? Let's try again! <html:br/></li>
+				<li>I actually have got all day! So in your own time... <html:br/></li>
+			</random>
+			<srai><that/></srai>
+		</template>
+	</category>
+
+<!--
+UNKNOWN INPUT
+-->
+
+	<category>
+		<pattern>
+			*
+		</pattern>
+		<template>
+			<condition name="stop">
+				<li value="true">
+					<random>
+						<li>Goodbye!</li>
+						<li>Farewell!</li>
+						<li>Have a nice day!</li>
+						<li>See you later!</li>
+						<li>Auf wiedersehen!</li>
+						<li>So long!</li>
+						<li>Bye bye!</li>
+						<li>Bye!</li>
+						<li>Cheerio!</li>
+						<li>Au revoir!</li>
+						<li>Adios!</li>
+					</random>
+				</li>
+				<li>
+					<think>
+						<set name="oldtopic"><get name="topic"/></set>
+						<set name="topic">checkForValidAnswer</set>
+						<set name="isValidAnswer">true</set>
+					</think>
+					<srai><star/></srai>
+					<think>
+						<set name="topic"><get name="oldtopic"/></set>
+					</think>
+					<condition name="isValidAnswer">
+						<li value="false">
+							<random>
+								<li>Hmn, </li>
+								<li>I didn't get that, </li>
+								<li>I am a bit dumb, </li>
+								<li>I simply didn't understand that, </li>
+								<li>You where a bit too sofisticated for me, </li>
+								<li>My mind was in another place, </li>
+							</random>
+							<random>
+								<li>try and answer the question in another way, please?</li>
+								<li>please re-phrase your answer.</li>
+								<li>please say it in another way?</li>
+								<li>please repeat what you just said using other words?</li>
+								<li>could you say that in another way, please?</li>
+							</random>
+							<html:br/>
+							<think>
+								<set name="dummy"><that/></set>
+							</think>
+							<condition name="dummy" value="DO YOU *">
+								<that index="1,2"/><html:br/>
+							</condition>
+							<think>
+								<set name="dummy"/>
+							</think>
+							<that/>
+						</li>
+					</condition>
+				</li>
+			</condition>
+		</template>
+	</category>	
+</aiml>

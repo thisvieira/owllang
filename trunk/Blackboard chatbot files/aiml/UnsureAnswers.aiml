@@ -1,0 +1,1300 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+	<topic name="QUESTION *">
+
+		<category>
+			<pattern>* NO OPINION</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* HAVE NO OPINION</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+	
+<!--
+ANSWER: Maybe
+-->
+		
+		<category>
+			<pattern>
+				MAYBE
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				MAYBE _
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ MAYBE _
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ MAYBE
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>	
+		
+		<category>
+			<pattern>
+				MAY BE
+			</pattern>
+			<template>
+				<srai>maybe</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				MAY BE _
+			</pattern>
+			<template>
+				<srai>maybe <star/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ MAY BE _
+			</pattern>
+			<template>
+				<srai><star/> maybe <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ MAY BE
+			</pattern>
+			<template>
+				<srai><star/> maybe</srai>
+			</template>
+		</category>
+
+		
+<!--
+ANSWER: Perhaps
+-->
+	
+		<category>
+			<pattern>
+				PERHAPS
+			</pattern>
+			<template>
+				<srai>maybe</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				PERHAPS _
+			</pattern>
+			<template>
+				<srai>maybe <star/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ PERHAPS _
+			</pattern>
+			<template>
+				<srai><star/> maybe <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ PERHAPS
+			</pattern>
+			<template>
+				<srai><star/> maybe</srai>
+			</template>
+		</category>
+	
+
+<!--
+ANSWER: I guess
+-->
+	
+		<category>
+			<pattern>
+				I GUESS
+			</pattern>
+			<template>
+				<srai>maybe</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I GUESS *
+			</pattern>
+			<template>
+				<srai><star/></srai>
+			</template>
+		</category>
+		
+		
+<!--
+ANSWER: Not always
+-->
+	
+		<category>
+			<pattern>
+				NOT ALWAYS
+			</pattern>
+			<template>
+				<srai>maybe</srai>
+			</template>
+		</category>
+		
+<!--
+ANSWER: Every now and then
+-->
+	
+		<category>
+			<pattern>
+				EVERY NOW AND THEN
+			</pattern>
+			<template>
+				<srai>maybe</srai>
+			</template>
+		</category>
+		
+		
+<!--
+ANSWER: Once in a while
+-->
+	
+		<category>
+			<pattern>
+				ONCE IN A WHILE
+			</pattern>
+			<template>
+				<srai>maybe</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				ONCE IN A WHILE *
+			</pattern>
+			<template>
+				<srai><star/></srai>
+			</template>
+		</category>
+		
+
+<!--
+ANSWER: Probably
+-->
+		
+		<category>
+			<pattern>
+				PROBABLY
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				PROBABLY _
+			</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ PROBABLY _
+			</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ PROBABLY
+			</pattern>
+			<template>
+				<srai><star/></srai>
+			</template>
+		</category>
+		
+		
+<!--
+ANSWER: Usually
+-->
+		
+		<category>
+			<pattern>
+				USUALLY
+			</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>
+				USUALLY _
+			</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ USUALLY _
+			</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ USUALLY
+			</pattern>
+			<template>
+				<srai><star/></srai>
+			</template>
+		</category>
+		
+		
+<!--
+ANSWER: Mostly
+-->
+		
+		<category>
+			<pattern>
+				MOSTLY
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>
+				MOSTLY _
+			</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ MOSTLY _
+			</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ MOSTLY
+			</pattern>
+			<template>
+				<srai><star/></srai>
+			</template>
+		</category>
+
+
+<!--
+ANSWER: Depends
+-->
+
+		<category>
+			<pattern>
+				DEPENDS
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ DEPENDS
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ DEPENDS _
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				DEPENDS _
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		
+<!--
+ANSWER: Occasionally
+-->
+
+		<category>
+			<pattern>
+				OCCASIONALLY
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ OCCASIONALLY
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ OCCASIONALLY _
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OCCASIONALLY _
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+
+<!--
+ANSWER: Rarely
+-->		
+		
+		<category>
+			<pattern>
+				RARELY
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				RARELY _
+			</pattern>
+			<template>
+				<srai>rarely</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ RARELY _
+			</pattern>
+			<template>
+				<srai>rarely</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ RARELY
+			</pattern>
+			<template>
+				<srai>rarely</srai>
+			</template>
+		</category>
+		
+
+<!--
+ANSWER: Partly
+-->			
+		
+		<category>
+			<pattern>
+				PARTLY
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				PARTLY _
+			</pattern>
+			<template>
+				<srai>partly</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ PARTLY _
+			</pattern>
+			<template>
+				<srai>partly</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				_ PARTLY
+			</pattern>
+			<template>
+				<srai>partly</srai>
+			</template>
+		</category>
+	
+		
+<!--
+ANSWER: Unsure
+-->			
+		
+		<category>
+			<pattern>
+				* UNSURE
+			</pattern>
+			<template>
+				<srai>unsure</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* UNSURE *
+			</pattern>
+			<template>
+				<srai>unsure</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT SURE</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>* NOT SURE *</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NOT UNSURE
+			</pattern>
+			<template>
+				<random>
+					<li>OK. </li>
+					<li>Fine. </li>
+					<li>Alreight. </li>
+				</random>
+				<html:br/>
+				<random>
+					<li>Try then and answer this with yes / no, </li>
+					<li>Answer then please with a yes / no, </li>
+					<li>If you don't mind then, please try and anser with a yes / no, </li>
+				</random>
+				<random>
+					<li>is the <get name="subject"/> <get name="predicate"/> <get name="object"/>?</li>
+					<li>the <get name="subject"/> <get name="predicate"/> <get name="object"/>. Is that a true statement?</li>
+					<li>is it true that the <get name="subject"/> <get name="predicate"/> <get name="object"/>?</li>
+				</random>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT UNSURE
+			</pattern>
+			<template>
+				<srai>NOT UNSURE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT UNSURE *
+			</pattern>
+			<template>
+				<srai>NOT UNSURE</srai>
+			</template>
+		</category>		
+
+<!--
+ANSWER: Not know
+-->			
+		
+		<category>
+			<pattern>
+				* NOT KNOW
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT KNOW *
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT KNOWN
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT KNOWN *
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+<!--
+ANSWER: Not used
+-->			
+		
+		<category>
+			<pattern>
+				* NOT USED
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT USED *
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT USED
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+	
+	
+<!--
+ANSWER: Not used
+-->			
+		
+		<category>
+			<pattern>
+				* NOT TRIED
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT TRIED *
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* NOT TRIED
+			</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+<!--
+ANSWER: hard to * (e.g. say, tell)
+-->			
+		
+		<category>
+			<pattern>
+				HARD TO *
+			</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HARD TO *
+			</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HARD TO *
+			</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				HARD TO *
+			</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>				
+		
+		
+<!--
+ANSWER: Unsure be with some value added.
+-->	
+		<category>
+			<pattern>YES AND NO</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* YES AND NO</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* BOTH</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* BOTH *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>BOTH *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I SHOULD</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I COULD</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I WOULD</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I IMAGINE</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I GUESS</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>GUESS SO</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I GUESS SO</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I SUPPOSE</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SORT OF</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* SORT OF</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALMOST</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALMOST NOT</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* ALMOST</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* ALMOST * </pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>BARELY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* BARELY *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* FAMILIAR</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* FAMILIAR *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT FAMILIAR</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT FAMILIAR *</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>FAIRLY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>FAIRLY *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* FAIRLY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>INFREQUENTLY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* INFREQUENTLY *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>JUST</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>LITTLE</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* LITTLE</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* LITTLE *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>LITTLE *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NARROWLY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NARROWLY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NARROWLY *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ONLY JUST</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>SOMEWHAT</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* DIFFICULT</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* DIFFICULT *</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>TRICKY</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* TRICKY</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* TRICKY *</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>TRICKY *</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>COMPLICATED</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* COMPLICATED</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* COMPLICATED *</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>COMPLICATED *</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* UNFAMILIAR</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* UNFAMILIAR *</pattern>
+			<template>
+				<srai>UNKNOWN</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT UNFAMILIAR</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT UNFAMILIAR *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SCARCE</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SCARCELY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* SCARCELY</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* SCARCELY *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>KINDA</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT OPPOSE *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT OPPOSED *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT OPPOSITE *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT OPPOSITE</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT AGAINST *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT AGAINST</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT CONFLICTING *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT CONFLICTING</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT * OPPONENT *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* NOT * RIVAL *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>NOT OFTEN</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT OFTEN</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT OFTEN *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>NOT OFTEN *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>NOT VERY OFTEN</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT VERY OFTEN</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT VERY OFTEN *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>NOT VERY OFTEN *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>SELDOM</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* SELDOM</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* SELDOM *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>SELDOM *</pattern>
+			<template>
+				<srai>UNSUREWITHVALUE</srai>
+			</template>
+		</category>
+		
+	</topic>
+
+</aiml>

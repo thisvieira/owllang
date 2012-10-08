@@ -1,0 +1,472 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+QUESTION: generic answers
+-->
+		
+	<topic name="QUESTION _">
+		<category>
+			<pattern>
+				YES
+			</pattern>
+			<template>
+				<think>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Ok!</li>
+					<li>So you agree.</li>
+					<li>Good Good.</li>
+					<li>I'll remember that.</li>
+					<li>That's fine.</li>
+					<li>Agreeing with others is nice!</li>
+				</random>
+				<html:br/>
+				<srai>QUESTASK</srai>
+				
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				YES *
+			</pattern>
+			<template>
+				<think>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Ok! <person2><star/></person2>!</li>
+					<li>I see! <person2><star/></person2>!</li>
+					<li>Hmn! <person2><star/></person2>!</li>
+				</random>
+				<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				YES BUT
+			</pattern>
+			<template>
+				<srai>unsurewithvalue</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				YES BUT *
+			</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NO
+			</pattern>
+			<template>
+				<random>
+					<li>You answered negatively, is that </li>
+					<li>Did you answer like that </li>
+					<li>Do you say that </li>
+				</random>
+				<random>
+					<li>because you have not made up you mind?</li>
+					<li>because you have not got a view?</li>
+					<li>because you have not got an opinion?</li>
+					<li>because you have not thought about it?</li>
+				</random>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>
+				NO
+			</pattern>
+			<that>
+				* YES NO
+			</that>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<srai>NO I know</srai>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+			</template>
+		</category>
+		
+		
+		<category>
+			<pattern>
+				NO *
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Interesting view! <person2><star/></person2>!</li>
+					<li>So you say that <person2><star/></person2>.<html:br/> That's ok!</li>
+					<li>The <get name="subject"/> <get name="predicate"/> <get name="object"/>! I'll remember that.</li>
+				</random>
+				<html:br/>
+				<condition name="numberOfQuestions">
+					<li value="IIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li>
+						<random>
+							<li>Here is another one.</li>
+							<li>Let's try a new question.</li>
+							<li>What about this then.</li>
+							<li>Let's take another one.</li>
+						</random>
+					</li>
+				</condition>					
+				<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NO BUT
+			</pattern>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<random>
+					<li>Because you sound a bit unsure to me, </li>
+					<li>Just to be completely sure what you mean, </li>
+					<li>Here I'll need a bit of clarification, </li>
+				</random>
+				<random>
+					<li>what do you say to this one then?</li>
+					<li>let me rephrase it into this question!</li>
+					<li>try and answer this then.</li>
+				</random>
+				<html:br/>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NO BUT *
+			</pattern>
+			<template>
+				<srai>NO BUT</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				UNKNOWN
+			</pattern>
+			<template>
+				<think>
+					<set name="predicateURI">noRelation</set>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Ok, </li>
+					<li>Cool, </li>
+					<li>So, you have no opinion about this, </li>
+				</random>
+				<condition name="numberOfQuestions">
+					<li value="IIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li>
+						<random>
+							<li>here is another one then.</li>
+							<li>let's try another question.</li>
+							<li>what about this then.</li>
+							<li>let's take another one.</li>
+						</random>
+					</li>
+				</condition>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+			
+		
+		<category>
+			<pattern>
+				YES
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<think>
+					<set name="predicateURI">noRelation</set>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<condition name="numberOfQuestions">
+					<li value="IIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li>
+						<random>
+							<li>Fair enough. </li>
+							<li>That's ok, let's try another question. </li>
+							<li>That is cool. </li>
+							<li>Hmmn, interesting!</li>
+							<li>I must say.</li>
+							<li>Ok!</li>
+						</random>
+					</li>
+				</condition>
+				<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* DO NOT *
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>YES</srai>								
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* DOES NOT *
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>YES</srai>								
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HAVE NOT *
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>YES</srai>								
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HAVE NO *
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>YES</srai>								
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NO
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Ok, so you disagree, interesting! </li>
+					<li>Really! </li>
+					<li>It's ok to disagree. </li>
+				</random>
+				<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				BUT *
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>NO</srai>								
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* DO *
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>NO</srai>								
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HAVE *
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>NO</srai>								
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* KNOW
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>NO</srai>								
+			</template>
+		</category>
+		
+				
+		<category>
+			<pattern>
+				* DISAGREE
+			</pattern>
+			<that>
+				* HAVE NOT *
+			</that>
+			<template>
+				<srai>NO</srai>								
+			</template>
+		</category>
+	</topic>
+	
+	<topic name="YESORNOANSWERNEEDED">
+	<category>
+			<pattern>
+				_
+			</pattern>
+			<that>
+				_
+			</that>
+			<template>
+				<think>
+					<set name="dummy"><star/></set>
+				</think>
+				<condition name="dummy">
+					<li value="UNKNOWN">
+						<think>
+							<set name="predicateURI">noRelation</set>
+							<srai>STOREREIFICATION</srai>
+						</think>
+						<think>
+							<srai>FINDINVERSEOFPREDICATE</srai>
+						</think>
+						<random>
+							<li>It is ok </li>
+							<li>It is fine </li>
+							<li>It is perfectly alright </li>
+						</random>
+						<random>
+							<li>not to know.</li>
+							<li>if you haven't made up your mind.</li>
+							<li>to be clueless!</li>
+						</random>
+						<html:br/>
+						<set name="topic"/>
+						<srai>QUESTASK</srai>
+					</li>
+					<li value="YES">
+						<think>
+							<srai>STOREREIFICATION</srai>
+						</think>
+						<random>
+							<li>Good, </li>
+							<li>Fine, </li>
+							<li>Ok, </li>
+						</random>
+						<random>
+							<li>now I know, thanks!</li>
+							<li>I'll remember that.</li>
+							<li>so you believe the <get name="subject"/> <get name="predicate"/> <get name="object"/>.</li>
+						</random>
+						<html:br/>
+						<set name="topic"/>
+						<srai>QUESTASK</srai>
+					</li>
+					<li value="NO">
+						<think>
+							<srai>FINDINVERSEOFPREDICATE</srai>
+							<srai>STOREREIFICATION</srai>
+						</think>
+						<random>
+							<li>Good, </li>
+							<li>Cool, </li>
+							<li>Thats ok, </li>
+						</random>
+						<random>
+							<li>I have stored that in my knowledge base.</li>
+							<li>I am happy that we got that out of the way!</li>
+							<li>so you believe the <get name="subject"/> <get name="predicate"/> <get name="object"/>.</li>
+						</random>
+						<html:br/>
+						<set name="topic"/>
+						<srai>QUESTASK</srai>
+					</li>
+					<li>
+						<random>
+							<li>All I asked for was a simple answer!!!</li>
+							<li>I was only looking for a straightforward reply!</li>
+							<li>All I needed was a plain response!!</li>
+						</random>
+						<html:br/>
+						<random>
+							<li>So lets try it again...</li>
+							<li>Therefore here we go again!</li>
+							<li>So please be specific this time.</li>
+							<li>So try and follow the instruction this time.</li>
+						</random>
+						<html:br/>
+						<random>
+							<li>Answer </li>
+							<li>Think about it and type either </li>
+							<li>Reply </li>
+							<li>Your response should be either </li>
+						</random>
+						"unknown", "yes" or "no".
+					</li>
+				</condition>
+				<think>
+					<set name="dummy"/>
+				</think>
+			</template>
+		</category>
+	</topic>
+	
+</aiml>

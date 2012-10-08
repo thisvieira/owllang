@@ -1,0 +1,684 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+	<topic name="QUESTION *">
+
+		<category>
+			<pattern>I AGREE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I THINK SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I BELIEVE SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I ASSUME SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I EXPECT SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I FIGURE SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I MAINTAIN SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I PRESUME SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I SUPPOSE SO</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I SUSPECT SO</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I WOULD SAY SO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT DISAGREE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* AGREE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>AGREE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ABSOLUTELY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALTOGETHER</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>COMPLETELY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ENTIRELY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>PERFECTLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>QUITE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>TOTALLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>UTTERLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>WHOLLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>DEFINITELY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>POSITIVELY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>IMPLICITLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>UNCONDITIONALLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>UNQUESTIONINGLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>AFFIRMATIVE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>AH YES</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALRIGHT</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALRIGHT THEN</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALRIGHT *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALL RIGHT</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALL RIGHT *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALLRIGHT</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ALLRIGHT *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>AYE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>CERTAINLY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>CERTAINLY *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>DA</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>DA *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>HAI</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>JA</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OUI</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OUI *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OK</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OK *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OKEY</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OKEY THEN</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OKEY *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SI</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SI *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SHURE _</pattern>
+			<template>
+				<srai>SURE <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SURE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SURE *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>SURELY</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* IS RIGHT</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* IS TRUE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YA</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YAH</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YAP</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEA</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEA *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEAH</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEAH *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEAP</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEAP *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEAS</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEH</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEH *</pattern>
+			<template>
+				<srai>Yes <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEP</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEP *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YES YES</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YES YES *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YEPPERS</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>YEPPERS *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>YEPPER</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>YEPPER *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YER</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YIP</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YS</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YS *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YUP</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YUP *</pattern>
+			<template>
+				<srai>YES <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>YUPPERS</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>OF COURSE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>Y</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>TRUE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>TRUE *</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* TRUE</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* NOT FALSE</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>NOT FALSE</pattern>
+			<template>
+				<srai>YES BUT</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>I DO</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>MOST OF THE TIME</pattern>
+			<template>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+	</topic>
+
+</aiml>

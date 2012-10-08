@@ -1,0 +1,33 @@
+#Fri Jan 06 11:30:55 GMT 2006
+predicate=is
+subjectURI=cPrgDB
+objectURI=seequeltooLong
+userid=sis05kol
+number=one
+URIuserid=http   www cs rdf sc uk tp feedback sis05kol
+lcinterest=no
+subject=content of the discussion boards in programming
+two=Learning Context
+predicateURI=is
+three=Learning Processes
+lpinterest=no
+input.4=CONNECT
+input.3=sis05kol
+lsqualitymeasure=asrdh
+input.2=no
+input.1=CONNECT
+mrelevant=learning sources
+that.4=I am very pleased to meet you, sis05kol. I will be asking you a series of questions. \n\t\t\tYour answers will be used to evaluate the use of different teaching products at Reading University,\n\t\t\tso it is important that you answer them as correctly as you can. \n\t\t\tWell here we go\! \n\t\t\tSome people believe that the assignments in programming is not having a nonintuitive layout. Do you agree?
+that.3=Hello. What is your University username?
+that.2=I am very pleased to meet you, sis05kol. I will be asking you a series of questions. \n\t\t\tYour answers will be used to evaluate the use of different teaching products at Reading University,\n\t\t\tso it is important that you answer them as correctly as you can. \n\t\t\tWell here we go\! \n\t\t\tSome people believe that the content of the discussion boards in programming is too long. Do you agree?
+that.1=Hello. What is your University username?
+thirdparameter=Relevant
+one=Learning Sources
+topic=QUESTION SOMEBELIEVES
+sector=ag
+lsboringterms=adfh
+lsinterest=yes
+object=too long
+lsterms=Interesting \= tuil
+name=gf
+role=gar
