@@ -1,0 +1,473 @@
+@prefix :		<http://www.cs.rdg.ac.uk/seequel#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+:Quality				a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					owl:oneOf			( 
+									:lowQuality 
+									:highQuality
+									) ;
+					rdfs:label			"quality"@en ;
+					rdfs:comment		"type or level of quality"@en .
+					
+:LearningExperienceArea		a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"learning experience area"@en ;
+					rdfs:comment		"an area of the learning experience, according to SEEQUEL there are three such areas in the e-Learning experience; context, sources and processes."@en .
+
+:Role					a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"role"@en ;
+					rdfs:comment		"role of an individual in a specific sector."@en .
+
+:Sector				a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"sector"@en ;
+					rdfs:comment		"the sector in which an individual works."@en .
+
+:WorldView				a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"world view"@en ;
+					rdfs:comment		"world view is a representation of the values an individual has, according to Boltanski and Thevenot there are six different world view; inspiration, domestic, opinion, civic, merchant and industrial."@en .
+
+:Descriptor				a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:comment		"quality term used to evaluate quality."@en .
+
+:ExperienceDescriptor		a				owl:Class ;
+					rdfs:subClassOf		:Descriptor ;
+					rdfs:label			"experience descriptor"@en ;
+					rdfs:comment		"an experience descriptor is more specific than a general descriptor and can be more easily be measured or assessed"@en .
+
+:GeneralDescriptor		a				owl:Class ;
+					rdfs:subClassOf		:Descriptor ;
+					rdfs:label			"general descriptor"@en ;
+					rdfs:comment		"a quality term which cannot be directly measured and tends to be an abstract quality measure."@en .
+
+:Criteria				a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:comment		"an area in which quality can be measured in e-Learning"@en .
+
+:SpecificCriteria			a				owl:Class ;
+					rdfs:subClassOf		:Criteria ;
+					rdfs:label			"specific criteria"@en ;
+					rdfs:comment		"is a specific area of the e-Learning domain that relates to quality"@en .
+
+:GeneralCriteria			a				owl:Class ;
+					rdfs:subClassOf		:Criteria ;
+					rdfs:label			"general criteria"@en ;
+					rdfs:comment		"a broad area of the e-Learning domain with specific quality issues relevant to it"@en .
+
+
+foaf:Group				a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"group"@en ;
+					rdfs:comment		"a group of people"@en .
+
+foaf:Person 			a				owl:Class ;
+					rdfs:subClassOf		owl:Thing ;
+					rdfs:label			"person"@en ;
+					rdfs:comment		"an individual"@en .
+
+foaf:firstName			a				owl:DatatypeProperty ;
+					rdfs:domain			foaf:Person ;
+					rdfs:range			xsd:string ;
+					rdfs:label			"first name"@en ;
+					rdfs:comment		"the name of a person"@en .
+
+foaf:surname			a				owl:DatatypeProperty ;
+					rdfs:domain			foaf:Person ;
+					rdfs:range			xsd:string ;
+					rdfs:label			"surname"@en ;
+					rdfs:comment		"the surname of a person"@en .
+
+foaf:member				a				owl:ObjectProperty ;
+					rdfs:domain			foaf:Group ;
+					rdfs:range			foaf:Person ;
+					rdfs:label			"member"@en ;
+					rdfs:comment		"a person who is a member of a group."@en .
+
+:MemberOf				a				owl:ObjectProperty ;
+					rdfs:domain			foaf:Person ;
+					rdfs:range			foaf:Group ;
+					owl:inverseOf		foaf:member ;
+					rdfs:label			"member of"@en ;
+					rdfs:comment		"a group in which the person is a member"@en .
+
+
+
+:Relation				rdfs:subClassOf		rdf:statement ,
+									[
+									a	owl:Restriction ;
+									owl:onProperty	:subject ;
+									owl:cardinality	"1"^^xsd:nonNegativeInteger
+									] ,
+									[
+									a	owl:Restriction ;
+									owl:onProperty	:predicate ;
+									owl:cardinality	"1"^^xsd:nonNegativeInteger
+									] ,
+									[
+									a	owl:Restriction ;
+									owl:onProperty	:object ;
+									owl:cardinality	"1"^^xsd:nonNegativeInteger
+									] ;
+					rdfs:label			"Relation"@en ;
+					rdfs:comment		"internal class used to represent relations between properties"@en .
+
+
+:Claim				rdfs:subClassOf		:Relation ;
+					owl:disjointWith		:Fact ;
+					rdfs:label			"claim"@en ;
+					rdfs:comment		"a statement or relation, which has not been verified."@en .
+
+:Fact					rdfs:subClassOf		:Relation ;
+					owl:disjointWith		:Claim ;
+					rdfs:label			"fact"@en ;
+					rdfs:comment		"a verified statement or relation."@en .
+
+:subject				a				owl:ObjectProperty ;
+					rdfs:subPropertyOf	rdf:subject ;
+					rdfs:domain			:Relation .
+
+:predicate				a				owl:ObjectProperty ;
+					rdfs:subPropertyOf	rdf:predicate ;
+					rdfs:domain			:Relation .
+
+:object				a				owl:ObjectProperty ;
+					rdfs:subPropertyOf	rdf:object ;
+					rdfs:domain			:Relation .
+
+:madeBy				a				owl:ObjectProperty ;
+					rdfs:domain			:Relation ;
+					rdfs:range			[ owl:unionOf ( foaf:Group foaf:Person ) ] ;
+					rdfs:label			"made by"@en ;
+					rdfs:comment		"the person or group of persons who has made a claim or stated a fact."@en .
+
+:contributesTo			a				owl:ObjectProperty ,
+									owl:TransitiveProperty ;
+					rdfs:domain			:Descriptor ;
+					rdfs:range			[ owl:unionOf ( :Descriptor :Quality ) ] ;
+					rdfs:label			"contributes to"@en ;
+					rdfs:comment		"implication that one descriptor contributes to the other"@en .
+
+:describes				a				owl:ObjectProperty ;
+					rdfs:domain			:Descriptor ;
+					rdfs:range			:LearningExperienceArea ;
+					rdfs:label			"describes"@en ;
+					rdfs:comment		"Indicates which area of the learning experience a quality term describes"@en .
+
+:implies				a				owl:ObjectProperty ,
+									owl:TransitiveProperty ;
+					rdfs:domain			:Descriptor ;
+					rdfs:range			[ owl:unionOf ( :Descriptor :Quality ) ] ;
+					rdfs:label			"implies"@en ;
+					rdfs:comment		"Indicates that a descriptor implies that another descriptor may also apply to the same entity being evaluated"@en .
+
+
+:impliesNot				a				owl:ObjectProperty ;
+					rdfs:domain			[ owl:unionOf ( :Descriptor :Quality ) ] ;
+					rdfs:range			[ owl:unionOf ( :Descriptor :Quality ) ] ;
+					rdfs:label			"does not imply"@en ;
+					rdfs:comment		"Indicates that a descriptor implies that another descriptor does not apply to the same entity"@en .
+
+
+:partOf				a				owl:ObjectProperty ,
+									owl:TransitiveProperty ;
+					rdfs:domain			:Sector ;
+					rdfs:range			:Sector ;
+					rdfs:label			"part of"@en ;
+					rdfs:comment		"Indicates that a sector is a sub sector of another"@en .
+
+:typeOf				a				owl:ObjectProperty ;
+					rdfs:domain			:Role ;
+					rdfs:range			:Role ;
+					rdfs:label			"type of"@en ;
+					rdfs:comment		"Indicates that a role is a type of another role (eg tutor is a type of teacher)"@en .
+
+:workInSector			a				owl:ObjectProperty ;
+					rdfs:domain			foaf:Person ;
+					rdfs:range			:Sector ;
+					rdfs:label			"works in sector" ;
+					rdfs:comment		"the sector in which a person works."@en .
+
+:hasRole				a				owl:ObjectProperty ;
+					rdfs:domain			foaf:Person ;
+					rdfs:range			:Role ;
+					rdfs:label			"has role"@en ;
+					rdfs:comment		"the role a person has in a specific sector."@en .
+
+:hasWorldView			a				owl:ObjectProperty ;
+					rdfs:domain			foaf:Person ;
+					rdfs:range			:WorldView ;
+					rdfs:label			"has world view"@en ;
+					rdfs:comment		"the world view of a person"@en .
+
+:areaOfInterest			a				owl:ObjectProperty ;
+					rdfs:domain			foaf:Person ;
+					rdfs:range			:LearningExperienceArea ;
+					rdfs:label			"area of interest"@en ;
+					rdfs:comment		"areas in which a person is particularly interested."@en .
+
+:hasMade				a				owl:ObjectProperty ;
+					rdfs:domain			[ owl:unionOf ( foaf:Group foaf:Person ) ] ;
+					rdfs:range			:Relation ;
+					owl:inverseOf		:madeBy ;
+					rdfs:label			"has made"@en ;
+					rdfs:comment		"claim and facts a person has made."@en .
+
+
+:boring				a				:GeneralDescriptor ;
+					rdfs:label			"boring"@en .
+
+:accessible				a				:GeneralDescriptor ;
+					rdfs:label			"accessible"@en .
+
+:easyToUse				a				:GeneralDescriptor ;
+					rdfs:label			"easy to use"@en .
+
+:engaging				a				:GeneralDescriptor ;
+					rdfs:label			"engaging"@en .
+
+:flexible				a				:GeneralDescriptor ;
+					rdfs:label			"flexible"@en .
+
+:inaccessible			a				:GeneralDescriptor ;
+					rdfs:label			"inaccessible"@en .
+
+:interesting			a				:GeneralDescriptor ;
+					rdfs:label			"interesting"@en .
+
+:organised				a				:GeneralDescriptor ;
+					rdfs:label			"organised"@en .
+
+:respected				a				:GeneralDescriptor ;
+					rdfs:label			"respected"@en .
+ 
+:challenging			a				:ExperienceDescriptor ;
+					rdfs:label			"challenging"@en .
+
+:collaboration			a				:ExperienceDescriptor ;
+					rdfs:label			"collaborative"@en .
+
+:concise				a				:ExperienceDescriptor ;
+					rdfs:label			"concise"@en .
+
+:easyNavigation			a				:ExperienceDescriptor ;
+					rdfs:label			"easy to navigate"@en .
+
+:effective				a				:ExperienceDescriptor ;
+					rdfs:label			"effective"@en .
+
+:efficient				a				:ExperienceDescriptor ;
+					rdfs:label			"efficient"@en .
+
+:fun					a				:ExperienceDescriptor ;
+					rdfs:label			"fun"@en .
+
+:incomplete				a				:ExperienceDescriptor ;
+					rdfs:label			"incomplete"@en .
+
+:interactive			a				:ExperienceDescriptor ;
+					rdfs:label			"interactive"@en .
+
+:monotonous				a				:ExperienceDescriptor ;
+					rdfs:label			"monotonous"@en .
+
+:motivating				a				:ExperienceDescriptor ;
+					rdfs:label			"motivating"@en .
+
+:nonIntuitiveLayout		a				:ExperienceDescriptor ;
+					rdfs:label			"having a non-intuitive layout"@en .
+
+:offTopic				a				:ExperienceDescriptor ;
+					rdfs:label			"off topic"@en .
+
+:openMinded				a				:ExperienceDescriptor ;
+					rdfs:label			"open minded"@en .
+
+:qualifiedTeachers		a				:ExperienceDescriptor ;
+					rdfs:label			"having qualified teachers"@en .
+
+:relevant				a				:ExperienceDescriptor ;
+					rdfs:label			"relevant"@en .
+
+:routine				a				:ExperienceDescriptor ;
+					rdfs:label			"routine"@en .
+
+:studentSupport			a				:ExperienceDescriptor ;
+					rdfs:label			"supported by students"@en .
+
+:tolerantOfMistakes		a				:ExperienceDescriptor ;
+					rdfs:label			"tolerant of mistakes"@en .
+
+:tooLong				a				:ExperienceDescriptor ;
+					rdfs:label			"too long"@en .
+
+:tooSimple				a				:ExperienceDescriptor ;
+					rdfs:label			"too simple"@en .
+
+:trackable				a				:ExperienceDescriptor ;
+					rdfs:label			"trackable"@en .
+
+:culture				a				:GeneralCriteria ;
+					rdfs:label			"culture"@en .
+
+:delivery				a				:GeneralCriteria ;
+					rdfs:label			"delivery"@en .
+
+:designGuidancePrinciples	a				:GeneralCriteria ;
+					rdfs:label			"design guidance principles"@en .
+
+:evaluation				a				:GeneralCriteria ;
+					rdfs:label			"evaluation"@en .
+
+:financialRules			a				:GeneralCriteria ;
+					rdfs:label			"financial rules"@en .
+
+:guidanceRecruitmentTNA		a				:GeneralCriteria ;
+					rdfs:label			"guidance and recruitment in the training needs analysis"@en .
+
+:institutionalSetting		a				:GeneralCriteria ;
+					rdfs:label			"institutional setting"@en .
+
+:learningEnvironment		a				:GeneralCriteria ;
+					rdfs:label			"learning environment"@en .
+
+:learningMaterials		a				:GeneralCriteria ;
+					rdfs:label			"learning material"@en .
+
+:legislation			a				:GeneralCriteria ;
+					rdfs:label			"legislation"@en .
+
+:staffCVandQualifications	a				:GeneralCriteria ;
+					rdfs:label			"supporting and teaching staff CV and qualifications"@en .
+
+:technicalLearningEnvironment	a				:GeneralCriteria ;
+					rdfs:label			"technical learning environment"@en .
+
+:valueSystem			a				:GeneralCriteria ;
+					rdfs:label			"value system"@en .
+
+:learningSources			a				:LearningExperienceArea ;
+					rdfs:label			"learning sources"@en ;
+					rdfs:comment		"examples of learning sources are: Learning materials, reference materials, components, teachers, teachers qualifications etc. "@en .
+
+:learningContext			a				:LearningExperienceArea ;
+					rdfs:label			"learning context"@en ;
+					rdfs:comment		"examples of learning contexts are: Institutional setting, environments, culture, legislation, values etc."@en .
+
+:learningProcesses		a				:LearningExperienceArea ;
+					rdfs:label			"learning processes"@en ;
+					rdfs:comment		"examples of learning processes are: Planning, design, delivery, evaluation etc."@en .
+
+:lowQuality				a				:Quality ;
+					rdfs:label			"low quality"@en .
+
+:highQuality			a				:Quality ;
+					owl:differentFrom		:lowQuality ;
+					rdfs:label			"high quality"@en .
+
+:classroomAssistant		a				:Role ;
+					rdfs:label			"classroom assistant"@en .
+
+:etManager				a				:Role ;
+					rdfs:label			"E&T manager"@en .
+
+:learner				a				:Role ;
+					rdfs:label			"learner"@en .
+
+:learnersRepresentative		a				:Role ;
+					rdfs:label			"learner's representative"@en .
+
+:policymaker			a				:Role ;
+					rdfs:label			"policymaker"@en .
+
+:teacher				a				:Role ;
+					rdfs:label			"teacher"@en .
+
+:tutor				a				:Role ;
+					:typeOf			:teacher ;
+					rdfs:label			"tutor"@en .
+
+:administration			a				:Sector ;
+					rdfs:label			"administration"@en .
+
+:corporate				a				:Sector ;
+					rdfs:label			"corporate"@en .
+
+:higherEducation			a				:Sector ;
+					rdfs:label			"higher education"@en .
+
+:ict					a				:Sector ;
+					rdfs:label			"ICT"@en .
+
+:informalLearning			a				:Sector ;
+					rdfs:label			"informal learning"@en .
+
+:primaryEducation			a				:Sector ;
+					rdfs:label			"primary education"@en .
+
+:professionalAssociation	a				:Sector ;
+					rdfs:label			"professional association"@en .
+
+:publishers				a				:Sector ;
+					rdfs:label			"publishers"@en .
+
+:schoolK12				a				:Sector ;
+					rdfs:label			"school K-12"@en .
+
+:trainingServices			a				:Sector ;
+					rdfs:label			"training services"@en .
+
+:usersOfCorporateTrainingServices	a			:Sector ;
+					rdfs:label			"users of corporate training services"@en .
+
+:vocationalTraining		a				:Sector ;
+					rdfs:label			"vocational training"@en .
+
+:civic				a				:WorldView ;
+					rdfs:label			"civic"@en ;
+					rdfs:comment		"following is a list of values for this world view: The general will, the common interest, generosity, selfabnegation, sacrifice, pride, the group, collective action, collective entities (ideas, values, symbols and institutions)."@en .
+
+:domestic				a				:WorldView ;
+					rdfs:label			"domestic"@en ;
+					rdfs:comment		"following is a list of values for this world view: Confidence, responsibility, merit, respectability, convention, dignity, tradition, hierarchy, rank; parents, children, generation; rules and confidence, principles; harmony; the natural; the duty."@en .
+
+:industrial				a				:WorldView ;
+					rdfs:label			"industrial"@en ;
+					rdfs:comment		"following is a list of values for this world view: Progress, future, functionality, efficiency, optimality, performance, productivity, professionality, reliability, farsightedness, system."@en .
+
+:inspiration			a				:WorldView ;
+					rdfs:label			"inspiration"@en ;
+					rdfs:comment		"following is a list of values for this world view: Singularity, difference, innovation, originality, irrationality, imaginary, spirituality, unconscious, chance."@en .
+
+:merchant				a				:WorldView ;
+					rdfs:label			"merchant"@en ;
+					rdfs:comment		"following is a list of values for this world view: Wealth, money, luxury; business, fair deals, good deals, bargain; interest, attentions to others; contract; competition, rivalry, opportunism, freedom."@en .
+
+:opinion				a				:WorldView ;
+					rdfs:label			"opinion"@en ;
+					rdfs:comment		"following is a list of values for this world view: Image, reputation, fame, success, honour, acknowledgement, visibility, audience, credibility, identification. "@en .
+
+
+
+:seequel				a				foaf:Group ;
+					foaf:member			:karsten ;
+					rdfs:comment		"Seequel"@en ;
+					rdfs:label			"SEEQUEL"@en .
+
+:karsten				a				foaf:Person ;
+					foaf:firstName		"Karsten" ;
+					foaf:surname		"Lundqvist" ;
+					rdfs:comment		"Karsten Oster Lundqvist"@en ;
+					rdfs:label			"Karsten Oster Lundqvist"@en .
+
+<http://www.cs.rdg.ac.uk/seequel.n3>
+					a				owl:Ontology ;
+					rdfs:comment		"The SEEQUEL e-Learning Ontology" ;
+					rdfs:label			"e-Learning Ontology" .

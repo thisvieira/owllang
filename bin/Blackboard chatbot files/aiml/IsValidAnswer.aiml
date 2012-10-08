@@ -1,0 +1,947 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+ANSWER: If it is suspected that a valid answer is given, but no inclination has been found. Ask in, to find that inclination
+
+		* HAVE *
+		* AM *
+		* WOULD *
+		* HAS *
+		* DO *
+		* IS *
+		* ARE *
+		* SHOULD *
+		* COULD *
+		* DOES *
+		* WERE *
+		* WAS *
+		THAT *
+		THIS *
+		WHAT *
+-->			
+	<topic name="checkForValidAnswer">
+		<category>
+			<pattern>
+				NOINCLINATIONBUTPROBABLYVALIDANSWER
+			</pattern>
+			<template>
+				<condition name="stop">
+					<li value="true">STOPAGE</li>
+					<li>
+						<random>
+							<li><person2><input/></person2>.<html:br/>Hmn, how do you respond to this then.</li>
+							<li><person2><input/></person2>,<html:br/>so what would you say to this?</li>
+							<li><person2><input/></person2>,<html:br/>how would you answer to this then.</li>
+							<li><person2><input/></person2>.<html:br/>What is you opinion to this then?</li>
+						</random>
+					</li>
+				</condition>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NOINCLINATIONBUTPROBABLYVALIDANSWER
+			</pattern>
+			<that>
+				* OFTEN THAN NOT
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				USERTHINKSHEHASANSWERED
+			</pattern>
+			<template>
+				<condition name="stop">
+					<li value="true">STOPAGE</li>
+					<li>
+						<person2><input/></person2>
+						<random>
+							<li>.<html:br/>Hmn, I didn't get your opinion then!</li>
+							<li>, I am not sure that I understood you when answering before.</li>
+							<li>.<html:br/>We must have been chatting in different directions!</li>
+						</random>
+						<html:br/>
+						<random>
+							<li>Let's try another question then.</li>
+							<li>Let's start from a fresh with another question</li>
+							<li>Let me give you a fresh new question.</li>
+						</random>
+						<html:br/>
+					</li>
+				</condition>
+				<srai>QUESTASKANOTHER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HAS *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HAS
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HAVE *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* HAVE
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* AM *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* AM
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>
+				* WOULD *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* WOULD
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* DO *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>
+				* DO
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+			
+		<category>
+			<pattern>
+				* SHOULD *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* SHOULD
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* COULD *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* COULD
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* DOES *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* DOES
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* WERE *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* WERE
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* WAS *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* WAS
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NOT *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				THAT *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>
+				THIS *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				WHAT *
+			</pattern>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				ITS
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>IT IS</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				ITS *
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>IT IS <star/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ITS
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai><star/> IT IS</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ITS *
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai><star/> IT IS <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				ISNT
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>IS NOT</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				ISNT *
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>IS NOT <star/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ISNT
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai><star/> IS NOT</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ISNT *
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai><star/> IS NOT <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				IM
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>I AM</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				IM *
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>I AM <star/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* IM
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai><star/> I AM</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* IM *
+			</pattern>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai><star/> I AM <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* QUESTION
+			</pattern>
+			<template>
+				<srai>QUESTASKANOTHER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* QUESTION *
+			</pattern>
+			<template>
+				<srai>QUESTASKANOTHER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				ASK ME *
+			</pattern>
+			<template>
+				<srai>QUESTASKANOTHER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ASK ME *
+			</pattern>
+			<template>
+				<srai>QUESTASKANOTHER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I ALREADY *
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I HAVE ALREADY *
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I HAVE * ALREADY
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				I HAVE * ALREADY
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ANSWERED
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ANSWERED *
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ANSWERED * QUESTION
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* TOLD YOU
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* TOLD YOU *
+			</pattern>
+			<template>
+				<srai>USERTHINKSHEHASANSWERED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				*
+			</pattern>
+			<template>
+				<think>
+					<set name="topic">checkForValidAnswer</set>
+					<set name="isValidAnswer">false</set>
+				</think>
+			</template>
+		</category>
+		
+		
+<!-- THIS IS TO CATCH THE 'IT IS EASY TO NAVIGATE' answer. -->
+		<category>
+			<pattern>
+				* ARE *
+			</pattern>
+			<template>
+				<srai><star/> IS <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* ARE
+			</pattern>
+			<template>
+				<srai><star/> IS</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* IS
+			</pattern>
+			<template>
+				<srai><star/> IS <get name="object"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* IS NOT
+			</pattern>
+			<template>
+				<srai><star/> IS NOT <get name="object"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* IS *
+			</pattern>
+			<template>
+				$OWLLANG(
+					ONTIND(ind:[rdfs:label]=='<get name="object"/>'@'en' AND ind:[rdfs:label]=='<star index="2"/>'@'en')
+					)
+				THAT='QUST <get name="predicate"/> <star index="2"/>'
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* IS NOT *
+			</pattern>
+			<template>
+				$OWLLANG(
+					ONTIND(ind:[rdfs:label]=='<get name="object"/>'@'en' AND ind:[rdfs:label]=='<star index="2"/>'@'en')
+					)
+				THAT='QUSTNOT <get name="predicate"/> <star index="2"/>'
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUST IS *
+			</that>
+			<template>
+				<srai>CHECKREGEXIS <thatstar/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND *
+			</pattern>
+			<that>
+				QUST IS *
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUST IS NOT *
+			</that>
+			<template>
+				<srai>CHECKREGEXIS <thatstar/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND *
+			</pattern>
+			<that>
+				QUST IS NOT *
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				Ok, so you believe that the <get name="subject"/> <get name="predicate"/> <get name="object"/>. <html:br/>
+				Here is another one. <html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>		
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUSTNOT IS *
+			</that>
+			<template>
+				<srai>CHECKREGEXISNOT <thatstar/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND *
+			</pattern>
+			<that>
+				QUSTNOT IS *
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				Ok, so you believe that the <get name="subject"/> <get name="predicate"/> <get name="object"/>. <html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUSTNOT IS NOT *
+			</that>
+			<template>
+				<srai>CHECKREGEXISNOT <thatstar/></srai>
+			</template>
+		</category>
+		
+		<!-- THE ARE SITUATION-->
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUST ARE *
+			</that>
+			<template>
+				<srai>CHECKREGEXIS <thatstar/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND *
+			</pattern>
+			<that>
+				QUST ARE *
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+				</think>
+				<srai>YES</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUST ARE NOT *
+			</that>
+			<template>
+				<srai>CHECKREGEXIS <thatstar/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND *
+			</pattern>
+			<that>
+				QUST ARE NOT *
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				Ok, so you believe that the <get name="subject"/> <get name="predicate"/> <get name="object"/>. <html:br/>
+				Here is another one. <html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>		
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUSTNOT ARE *
+			</that>
+			<template>
+				<srai>CHECKREGEXISNOT <thatstar/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND *
+			</pattern>
+			<that>
+				QUSTNOT ARE *
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				Ok, so you believe that the <get name="subject"/> <get name="predicate"/> <get name="object"/>. <html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTIND UNKNOWN
+			</pattern>
+			<that>
+				QUSTNOT ARE NOT *
+			</that>
+			<template>
+				<srai>CHECKREGEXISNOT <thatstar/></srai>
+			</template>
+		</category>
+		
+		
+		<category>
+			<pattern>
+				CHECKREGEXIS *
+			</pattern>
+			<template>
+				$OWLLANG(
+					ONTREGEX('.*<star/>.*'=='<get name="object"/>')
+					)
+				THAT='REGEXANSWERIS'
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTREGEX TRUE
+			</pattern>
+			<that>
+				REGEXANSWERIS
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+					<set name="predicate">is</set>
+					<set name="predicateURI">:is</set>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Ok! </li>
+					<li>I see! </li>
+					<li>Hmn! </li>
+				</random>
+				The <get name="subject"/> <get name="predicate"/> <get name="object"/>.<html:br/>
+				I'll remember that.
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTREGEX FALSE
+			</pattern>
+			<that>
+				REGEXANSWERIS
+			</that>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				CHECKREGEXISNOT *
+			</pattern>
+			<template>
+				$OWLLANG(
+					ONTREGEX('.*<star/>.*'=='<get name="object"/>')
+					)
+				THAT='REGEXANSWERISNOT'
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTREGEX TRUE
+			</pattern>
+			<that>
+				REGEXANSWERISNOT
+			</that>
+			<template>
+				<think>
+					<set name="topic"><get name="oldtopic"/></set>
+					<set name="predicate">is not</set>
+					<set name="predicateURI">:isNot</set>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Ok! </li>
+					<li>I see! </li>
+					<li>Hmn! </li>
+				</random>
+				The <get name="subject"/> <get name="predicate"/> <get name="object"/>.<html:br/>
+				I'll remember that.<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				OWLLANG ONTREGEX FALSE
+			</pattern>
+			<that>
+				REGEXANSWERISNOT
+			</that>
+			<template>
+				<srai>NOINCLINATIONBUTPROBABLYVALIDANSWER</srai>
+			</template>
+		</category>
+		
+		
+	</topic>
+</aiml>

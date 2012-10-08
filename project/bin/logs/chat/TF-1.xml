@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2006-11-03T09:53:56.700+0000</date>
+  <millis>1162547636700</millis>
+  <sequence>45</sequence>
+  <botid>TF</botid>
+  <userid>uriel</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! <br xmlns="http://www.w3.org/1999/xhtml"/>
+			I have heard
+				that the About Section is a good source.<br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you share that idea?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:54:02.761+0000</date>
+  <millis>1162547642761</millis>
+  <sequence>70</sequence>
+  <botid>TF</botid>
+  <userid>guest10032@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! <br xmlns="http://www.w3.org/1999/xhtml"/>
+			Would you agree 
+				when some say that the News and Events Section is relevant?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:54:12.929+0000</date>
+  <millis>1162547652929</millis>
+  <sequence>83</sequence>
+  <botid>TF</botid>
+  <userid>guest10032@jabber.eun.org/eun_Jabber</userid>
+  <input>maybe</input>
+  <reply>The News and Events Section is relevant.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;Is that a true statement more often than not?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:54:19.318+0000</date>
+  <millis>1162547659318</millis>
+  <sequence>116</sequence>
+  <botid>TF</botid>
+  <userid>guest10032@jabber.eun.org/eun_Jabber</userid>
+  <input>I don&apos;t know</input>
+  <reply>So, you have no opinion about this,
+				here is another one then.
+				Would you agree 
+				when some say that the My EFQUEL Section is relevant?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:57:06.423+0000</date>
+  <millis>1162547826423</millis>
+  <sequence>135</sequence>
+  <botid>TF</botid>
+  <userid>guest10032@jabber.eun.org/eun_Jabber</userid>
+  <input>maybe</input>
+  <reply>Would you say that the My EFQUEL Section is relevant more often than not?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:57:12.640+0000</date>
+  <millis>1162547832640</millis>
+  <sequence>168</sequence>
+  <botid>TF</botid>
+  <userid>guest10032@jabber.eun.org/eun_Jabber</userid>
+  <input>I don&apos;t know</input>
+  <reply>So, you have no opinion about this,
+				here is another one then.
+				Some say
+				that the EFQUEL WIKI Page is not easy to read.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Do you agree with that opinion?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:57:47.148+0000</date>
+  <millis>1162547867148</millis>
+  <sequence>209</sequence>
+  <botid>TF</botid>
+  <userid>guest10032@jabber.eun.org/eun_Jabber</userid>
+  <input>no it is easy to read</input>
+  <reply>The EFQUEL WIKI Page is easy to read! I&apos;ll remember that.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Let&apos;s try a new question.					
+				<br xmlns="http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				when some say that the EFQUEL WIKI Page is too complex?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:58:01.687+0000</date>
+  <millis>1162547881687</millis>
+  <sequence>240</sequence>
+  <botid>TF</botid>
+  <userid>guest10032@jabber.eun.org/eun_Jabber</userid>
+  <input>I don&apos;t know</input>
+  <reply>Ok,
+				This is all for this time. 
+			Thanks for your help in our evaluation. &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			Have a nice day. <br xmlns="http://www.w3.org/1999/xhtml"/>
+				This is all for this time. 
+			Thanks for your help in our evaluation. <br xmlns="http://www.w3.org/1999/xhtml"/>
+			Have a nice day. <br xmlns="http://www.w3.org/1999/xhtml"/></reply>
+</record>
+<record>
+  <date>2006-11-03T10:04:26.252+0000</date>
+  <millis>1162548266252</millis>
+  <sequence>277</sequence>
+  <botid>TF</botid>
+  <userid>guest10034@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! <br xmlns="http://www.w3.org/1999/xhtml"/>
+			When asked, some people claim
+				that the eLearning Quality Tab is interesting.<br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you support that statement?</reply>
+</record>
+<record>
+  <date>2006-11-03T10:04:37.353+0000</date>
+  <millis>1162548277353</millis>
+  <sequence>290</sequence>
+  <botid>TF</botid>
+  <userid>guest10034@jabber.eun.org/eun_Jabber</userid>
+  <input>mostly</input>
+  <reply>The eLearning Quality Tab is interesting.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;Is that a true statement more often than not?</reply>
+</record>
+<record>
+  <date>2006-11-03T10:04:43.255+0000</date>
+  <millis>1162548283255</millis>
+  <sequence>319</sequence>
+  <botid>TF</botid>
+  <userid>guest10034@jabber.eun.org/eun_Jabber</userid>
+  <input>yes</input>
+  <reply>Agreeing with others is nice!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				with this statement, the EFQUEL WIKI Page is a good source?</reply>
+</record>
+<record>
+  <date>2006-11-03T10:04:54.059+0000</date>
+  <millis>1162548294059</millis>
+  <sequence>338</sequence>
+  <botid>TF</botid>
+  <userid>guest10034@jabber.eun.org/eun_Jabber</userid>
+  <input>not always</input>
+  <reply>The EFQUEL WIKI Page is a good source.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;Is that a true statement more often than not?</reply>
+</record>
+<record>
+  <date>2006-11-03T10:05:00.335+0000</date>
+  <millis>1162548300335</millis>
+  <sequence>355</sequence>
+  <botid>TF</botid>
+  <userid>guest10034@jabber.eun.org/eun_Jabber</userid>
+  <input>no</input>
+  <reply>However would you say that the EFQUEL WIKI Page is not a good source more often than not?</reply>
+</record>

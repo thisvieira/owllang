@@ -1,0 +1,1266 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix seequel:  <http://www.cs.rdg.ac.uk/seequel#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix daml:    <http://www.daml.org/2001/03/daml+oil#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix :        <http://www.cs.rdg.ac.uk/tp-feedback#> .
+
+seequel:trackable
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "trackable"@en .
+
+seequel:fact106
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:engaging .
+
+seequel:Descriptor
+      a       owl:Class ;
+      rdfs:comment "quality term used to evaluate quality."@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:typeOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates that a role is a type of another role (eg tutor is a type of teacher)"@en ;
+      rdfs:domain seequel:Role ;
+      rdfs:label "type of"@en ;
+      rdfs:range seequel:Role .
+
+foaf:Group
+      a       owl:Class ;
+      rdfs:comment "a group of people"@en ;
+      rdfs:label "group"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:Sector
+      a       owl:Class ;
+      rdfs:comment "the sector in which an individual works."@en ;
+      rdfs:label "sector"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:fact137
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningProcesses ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:motivating .
+
+seequel:staffCVandQualifications
+      a       seequel:GeneralCriteria ;
+      rdfs:label "supporting and teaching staff CV and qualifications"@en .
+
+seequel:fact107
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:interesting ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:engaging .
+
+seequel:civic
+      a       seequel:WorldView ;
+      rdfs:comment "following is a list of values for this world view: The general will, the common interest, generosity, selfabnegation, sacrifice, pride, the group, collective action, collective entities (ideas, values, symbols and institutions)."@en ;
+      rdfs:label "civic"@en .
+
+:claim
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:easyToUse ;
+      seequel:predicate :is ;
+      seequel:subject :bbDB .
+
+seequel:challenging
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "challenging"@en .
+
+seequel:fact114
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningProcesses ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:interesting .
+
+seequel:learningMaterials
+      a       seequel:GeneralCriteria ;
+      rdfs:label "learning material"@en .
+
+seequel:relevant
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "relevant"@en .
+
+:Assignment
+      a       owl:Class ;
+      rdfs:label "assignment"@en ;
+      rdfs:subClassOf :Functionality .
+
+seequel:object
+      a       owl:ObjectProperty ;
+      rdfs:domain seequel:Relation ;
+      rdfs:subPropertyOf rdf:object .
+
+seequel:fact111
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:accessible ;
+      seequel:predicate seequel:impliesNot ;
+      seequel:subject seequel:inaccessible .
+
+<http://www.cs.rdg.ac.uk/tp-feedback.owl>
+      a       owl:Ontology ;
+      rdfs:comment "The Teaching Product Feedback ontology" ;
+      rdfs:label "teaching product feedback Ontology" .
+
+:isNot
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation, which indicates that a teaching product can be described negatively by a descriptor from the Seequel framework (ontology)."@en ;
+      rdfs:domain
+              [ owl:unionOf (:TP :unitOfTP :Functionality)
+              ] ;
+      rdfs:label "is not"@en ;
+      rdfs:range seequel:Descriptor ;
+      owl:inverseOf :is .
+
+seequel:fact155
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:boring ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:tooLong .
+
+seequel:easyNavigation
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "easy to navigate"@en .
+
+seequel:tolerantOfMistakes
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "tolerant of mistakes"@en .
+
+seequel:fact139
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:nonIntuitiveLayout .
+
+foaf:Person
+      a       owl:Class ;
+      rdfs:comment "an individual"@en ;
+      rdfs:label "person"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:ExperienceDescriptor
+      a       owl:Class ;
+      rdfs:comment "an experience descriptor is more specific than a general descriptor and can be more easily be measured or assessed"@en ;
+      rdfs:label "experience descriptor"@en ;
+      rdfs:subClassOf seequel:Descriptor .
+
+seequel:domestic
+      a       seequel:WorldView ;
+      rdfs:comment "following is a list of values for this world view: Confidence, responsibility, merit, respectability, convention, dignity, tradition, hierarchy, rank; parents, children, generation; rules and confidence, principles; harmony; the natural; the duty."@en ;
+      rdfs:label "domestic"@en .
+
+seequel:fact156
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:boring ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:tooSimple .
+
+:noRelation
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation is not known to exist between a teaching product and the descriptor from the Seequel framework (ontology)."@en ;
+      rdfs:domain
+              [ owl:unionOf (:TP :unitOfTP :Functionality)
+              ] ;
+      rdfs:label "has no relation to"@en ;
+      rdfs:range seequel:Descriptor .
+
+seequel:karsten
+      a       foaf:Person ;
+      rdfs:comment "Karsten Oster Lundqvist"@en ;
+      rdfs:label "Karsten Oster Lundqvist"@en ;
+      foaf:firstName "Karsten" ;
+      foaf:surname "Lundqvist" .
+
+seequel:fun
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "fun"@en .
+
+seequel:highQuality
+      a       seequel:Quality ;
+      rdfs:label "high quality"@en ;
+      owl:differentFrom seequel:lowQuality .
+
+:claim14
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:challenging ;
+      seequel:predicate :is ;
+      seequel:subject :cPrgAssignment .
+
+seequel:fact138
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:interesting ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:motivating .
+
+seequel:engaging
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "engaging"@en .
+
+seequel:primaryEducation
+      a       seequel:Sector ;
+      rdfs:label "primary education"@en .
+
+seequel:Claim
+      rdfs:comment "a statement or relation, which has not been verified."@en ;
+      rdfs:label "claim"@en ;
+      rdfs:subClassOf seequel:Relation ;
+      owl:disjointWith seequel:Fact .
+
+seequel:effective
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "effective"@en .
+
+seequel:fact105
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:easyToUse .
+
+:claim13
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:organised ;
+      seequel:predicate :is ;
+      seequel:subject :prgAssignment .
+
+seequel:fact104
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:easyToUse .
+
+:claim12
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:interactive ;
+      seequel:predicate :is ;
+      seequel:subject :prgAssignment .
+
+seequel:WorldView
+      a       owl:Class ;
+      rdfs:comment "world view is a representation of the values an individual has, according to Boltanski and Thevenot there are six different world view; inspiration, domestic, opinion, civic, merchant and industrial."@en ;
+      rdfs:label "world view"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:describes
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates which area of the learning experience a quality term describes"@en ;
+      rdfs:domain seequel:Descriptor ;
+      rdfs:label "describes"@en ;
+      rdfs:range seequel:LearningExperienceArea .
+
+seequel:hasMade
+      a       owl:ObjectProperty ;
+      rdfs:comment "claim and facts a person has made."@en ;
+      rdfs:domain
+              [ owl:unionOf (foaf:Group foaf:Person)
+              ] ;
+      rdfs:label "has made"@en ;
+      rdfs:range seequel:Relation ;
+      owl:inverseOf seequel:madeBy .
+
+seequel:fact134
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:interactive .
+
+seequel:legislation
+      a       seequel:GeneralCriteria ;
+      rdfs:label "legislation"@en .
+
+seequel:LearningExperienceArea
+      a       owl:Class ;
+      rdfs:comment "an area of the learning experience, according to SEEQUEL there are three such areas in the e-Learning experience; context, sources and processes."@en ;
+      rdfs:label "learning experience area"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:fact150
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:studentSupport .
+
+seequel:usersOfCorporateTrainingServices
+      a       seequel:Sector ;
+      rdfs:label "users of corporate training services"@en .
+
+seequel:fact153
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:flexible ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:tolerantOfMistakes .
+
+seequel:flexible
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "flexible"@en .
+
+:Functionality
+      a       owl:Class ;
+      rdfs:comment "functionality of a teaching product or parts of a teaching product."@en ;
+      rdfs:label "functionality"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:learningEnvironment
+      a       seequel:GeneralCriteria ;
+      rdfs:label "learning environment"@en .
+
+seequel:fact136
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:boring ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:monotonous .
+
+:claim5
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:flexible ;
+      seequel:predicate :isNot ;
+      seequel:subject :bbMailBox .
+
+seequel:fact151
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:organised ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:studentSupport .
+
+seequel:learner
+      a       seequel:Role ;
+      rdfs:label "learner"@en .
+
+:DiscussionBoard
+      a       owl:Class ;
+      rdfs:label "discussion board"@en ;
+      rdfs:subClassOf :Functionality .
+
+:bbDB
+      a       :DiscussionBoard ;
+      rdfs:label "discussion board on Blackboard"@en .
+
+seequel:lowQuality
+      a       seequel:Quality ;
+      rdfs:label "low quality"@en .
+
+:claim8
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:relevant ;
+      seequel:predicate :isNot ;
+      seequel:subject :cPrgDB .
+
+seequel:fact152
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:tolerantOfMistakes .
+
+seequel:fact109
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningProcesses ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:flexible .
+
+seequel:interesting
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "interesting"@en .
+
+seequel:fact108
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:flexible .
+
+:claim7
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:easyNavigation ;
+      seequel:predicate :is ;
+      seequel:subject :prgDB .
+
+:prgAssignment
+      a       :Assignment ;
+      rdfs:label "assignments in programming"@en ;
+      :hasFunctionality :cPrgAssignment .
+
+seequel:fact135
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:interesting ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:interactive .
+
+:cPrgAssignment
+      a       :Content ;
+      rdfs:label "content of the assignments in programming"@en ;
+      :hasFunctionality :cPrgAssignment .
+
+seequel:administration
+      a       seequel:Sector ;
+      rdfs:label "administration"@en .
+
+seequel:fact154
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:tooLong .
+
+seequel:Quality
+      a       owl:Class ;
+      rdfs:comment "type or level of quality"@en ;
+      rdfs:label "quality"@en ;
+      rdfs:subClassOf owl:Thing ;
+      owl:oneOf (seequel:lowQuality seequel:highQuality) .
+
+seequel:institutionalSetting
+      a       seequel:GeneralCriteria ;
+      rdfs:label "institutional setting"@en .
+
+seequel:fact133
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:engaging ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:interactive .
+
+seequel:implies
+      a       owl:TransitiveProperty , owl:ObjectProperty ;
+      rdfs:comment "Indicates that a descriptor implies that another descriptor may also apply to the same entity being evaluated"@en ;
+      rdfs:domain seequel:Descriptor ;
+      rdfs:label "implies"@en ;
+      rdfs:range
+              [ owl:unionOf (seequel:Descriptor seequel:Quality)
+              ] .
+
+seequel:workInSector
+      a       owl:ObjectProperty ;
+      rdfs:comment "the sector in which a person works."@en ;
+      rdfs:domain foaf:Person ;
+      rdfs:label "works in sector" ;
+      rdfs:range seequel:Sector .
+
+seequel:interactive
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "interactive"@en .
+
+seequel:vocationalTraining
+      a       seequel:Sector ;
+      rdfs:label "vocational training"@en .
+
+seequel:ict
+      a       seequel:Sector ;
+      rdfs:label "ICT"@en .
+
+seequel:fact103
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:interesting ;
+      seequel:predicate seequel:impliesNot ;
+      seequel:subject seequel:boring .
+
+foaf:surname
+      a       owl:DatatypeProperty ;
+      rdfs:comment "the surname of a person"@en ;
+      rdfs:domain foaf:Person ;
+      rdfs:label "surname"@en ;
+      rdfs:range xsd:string .
+
+seequel:tutor
+      a       seequel:Role ;
+      rdfs:label "tutor"@en ;
+      seequel:typeOf seequel:teacher .
+
+:prgDB
+      a       :DiscussionBoard ;
+      rdfs:label "discussion board in programming"@en ;
+      :hasFunctionality :cPrgDB .
+
+seequel:fact101
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:lowQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:boring .
+
+seequel:fact102
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:boring .
+
+seequel:efficient
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "efficient"@en .
+
+:claim6
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:organised ;
+      seequel:predicate :is ;
+      seequel:subject :prgDB .
+
+seequel:GeneralCriteria
+      a       owl:Class ;
+      rdfs:comment "a broad area of the e-Learning domain with specific quality issues relevant to it"@en ;
+      rdfs:label "general criteria"@en ;
+      rdfs:subClassOf seequel:Criteria .
+
+seequel:fact132
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:incomplete .
+
+seequel:SpecificCriteria
+      a       owl:Class ;
+      rdfs:comment "is a specific area of the e-Learning domain that relates to quality"@en ;
+      rdfs:label "specific criteria"@en ;
+      rdfs:subClassOf seequel:Criteria .
+
+seequel:organised
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "organised"@en .
+
+seequel:qualifiedTeachers
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "having qualified teachers"@en .
+
+:claim9
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:offTopic ;
+      seequel:predicate :is ;
+      seequel:subject :cPrgDB .
+
+seequel:collaboration
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "collaborative"@en .
+
+seequel:fact128
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:effective .
+
+seequel:inspiration
+      a       seequel:WorldView ;
+      rdfs:comment "following is a list of values for this world view: Singularity, difference, innovation, originality, irrationality, imaginary, spirituality, unconscious, chance."@en ;
+      rdfs:label "inspiration"@en .
+
+:functionalityOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "functionality of a teaching product"@en ;
+      rdfs:domain :Functionality ;
+      rdfs:label "functionality of"@en ;
+      rdfs:range
+              [ owl:unionOf (:TP :unitOfTP :Functionality)
+              ] .
+
+seequel:valueSystem
+      a       seequel:GeneralCriteria ;
+      rdfs:label "value system"@en .
+
+seequel:fact127
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningProcesses ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:effective .
+
+seequel:fact131
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:lowQuality ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:incomplete .
+
+:claim16
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:tooSimple ;
+      seequel:predicate :is ;
+      seequel:subject :cPrgAssignment .
+
+seequel:trainingServices
+      a       seequel:Sector ;
+      rdfs:label "training services"@en .
+
+seequel:fact129
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningProcesses ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:efficient .
+
+seequel:fact100
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:accessible .
+
+seequel:fact144
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:qualifiedTeachers .
+
+seequel:classroomAssistant
+      a       seequel:Role ;
+      rdfs:label "classroom assistant"@en .
+
+seequel:financialRules
+      a       seequel:GeneralCriteria ;
+      rdfs:label "financial rules"@en .
+
+seequel:respected
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "respected"@en .
+
+:programming
+      a       :unitOfTP ;
+      rdfs:comment "The programming course with the module number SE1SA5."@en ;
+      rdfs:label "Programming"@en ;
+      rdfs:seeAlso <http://www.info.rdg.ac.uk/module/0506/SC/SE1SA5.htm> ;
+      :hasFunctionality :prgDB , :prgAssignment ;
+      :unitOf :bb .
+
+:hasFunctionality
+      a       owl:ObjectProperty ;
+      rdfs:comment "A teaching product or unit of a tp has a certain functionality"@en ;
+      rdfs:domain
+              [ owl:unionOf (:TP :unitOfTP :Functionality)
+              ] ;
+      rdfs:label "has functionality"@en ;
+      rdfs:range :Functionality .
+
+seequel:fact130
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:interesting ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:fun .
+
+:TP   a       seequel:learningSources ;
+      rdfs:comment "a product, which is used in a teaching environment."@en ;
+      rdfs:label "teaching product"@en .
+
+seequel:tooSimple
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "too simple"@en .
+
+seequel:fact119
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:interesting ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:challenging .
+
+seequel:fact143
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:flexible ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:openMinded .
+
+seequel:teacher
+      a       seequel:Role ;
+      rdfs:label "teacher"@en .
+
+seequel:easyToUse
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "easy to use"@en .
+
+seequel:GeneralDescriptor
+      a       owl:Class ;
+      rdfs:comment "a quality term which cannot be directly measured and tends to be an abstract quality measure."@en ;
+      rdfs:label "general descriptor"@en ;
+      rdfs:subClassOf seequel:Descriptor .
+
+seequel:fact149
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:boring ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:routine .
+
+seequel:fact142
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:openMinded .
+
+seequel:fact117
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:organised .
+
+seequel:fact147
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:interesting ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:relevant .
+
+seequel:contributesTo
+      a       owl:TransitiveProperty , owl:ObjectProperty ;
+      rdfs:comment "implication that one descriptor contributes to the other"@en ;
+      rdfs:domain seequel:Descriptor ;
+      rdfs:label "contributes to"@en ;
+      rdfs:range
+              [ owl:unionOf (seequel:Descriptor seequel:Quality)
+              ] .
+
+owl:inverseOf
+      a       owl:ObjectProperty .
+
+seequel:predicate
+      a       owl:ObjectProperty ;
+      rdfs:domain seequel:Relation ;
+      rdfs:subPropertyOf rdf:predicate .
+
+seequel:delivery
+      a       seequel:GeneralCriteria ;
+      rdfs:label "delivery"@en .
+
+seequel:partOf
+      a       owl:TransitiveProperty , owl:ObjectProperty ;
+      rdfs:comment "Indicates that a sector is a sub sector of another"@en ;
+      rdfs:domain seequel:Sector ;
+      rdfs:label "part of"@en ;
+      rdfs:range seequel:Sector .
+
+seequel:fact115
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:boring ;
+      seequel:predicate seequel:impliesNot ;
+      seequel:subject seequel:interesting .
+
+seequel:studentSupport
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "supported by students"@en .
+
+seequel:seequel
+      a       foaf:Group ;
+      rdfs:comment "Seequel"@en ;
+      rdfs:label "SEEQUEL"@en ;
+      foaf:member seequel:karsten .
+
+seequel:fact122
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:concise .
+
+:bbQuiz
+      a       :Quiz ;
+      rdfs:label "quizzes on Blackboard"@en .
+
+seequel:etManager
+      a       seequel:Role ;
+      rdfs:label "E&T manager"@en .
+
+:hasUnit
+      a       owl:ObjectProperty ;
+      rdfs:comment "A teaching product has the given unit."@en ;
+      rdfs:domain :TP ;
+      rdfs:label "has unit"@en ;
+      rdfs:range :unitOfTP .
+
+seequel:fact123
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:easyToUse ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:concise .
+
+seequel:fact145
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:respected ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:qualifiedTeachers .
+
+seequel:fact146
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:relevant .
+
+seequel:policymaker
+      a       seequel:Role ;
+      rdfs:label "policymaker"@en .
+
+seequel:fact116
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:organised .
+
+seequel:routine
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "routine"@en .
+
+seequel:boring
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "boring"@en .
+
+seequel:fact126
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningContext ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:easyNavigation .
+
+seequel:technicalLearningEnvironment
+      a       seequel:GeneralCriteria ;
+      rdfs:label "technical learning environment"@en .
+
+seequel:fact148
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:offTopic ;
+      seequel:predicate seequel:impliesNot ;
+      seequel:subject seequel:relevant .
+
+seequel:accessible
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "accessible"@en .
+
+seequel:madeBy
+      a       owl:ObjectProperty ;
+      rdfs:comment "the person or group of persons who has made a claim or stated a fact."@en ;
+      rdfs:domain seequel:Relation ;
+      rdfs:label "made by"@en ;
+      rdfs:range
+              [ owl:unionOf (foaf:Group foaf:Person)
+              ] .
+
+:claim15
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:boring ;
+      seequel:predicate :isNot ;
+      seequel:subject :cPrgAssignment .
+
+seequel:higherEducation
+      a       seequel:Sector ;
+      rdfs:label "higher education"@en .
+
+foaf:firstName
+      a       owl:DatatypeProperty ;
+      rdfs:comment "the name of a person"@en ;
+      rdfs:domain foaf:Person ;
+      rdfs:label "first name"@en ;
+      rdfs:range xsd:string .
+
+seequel:impliesNot
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates that a descriptor implies that another descriptor does not apply to the same entity"@en ;
+      rdfs:domain
+              [ owl:unionOf (seequel:Descriptor seequel:Quality)
+              ] ;
+      rdfs:label "does not imply"@en ;
+      rdfs:range
+              [ owl:unionOf (seequel:Descriptor seequel:Quality)
+              ] .
+
+seequel:publishers
+      a       seequel:Sector ;
+      rdfs:label "publishers"@en .
+
+seequel:fact141
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:boring ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:offTopic .
+
+:claim10
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:tooLong ;
+      seequel:predicate :is ;
+      seequel:subject :cPrgDB .
+
+foaf:member
+      a       owl:ObjectProperty ;
+      rdfs:comment "a person who is a member of a group."@en ;
+      rdfs:domain foaf:Group ;
+      rdfs:label "member"@en ;
+      rdfs:range foaf:Person .
+
+:MailBox
+      a       owl:Class ;
+      rdfs:label "mailbox"@en ;
+      rdfs:subClassOf :Functionality .
+
+seequel:schoolK12
+      a       seequel:Sector ;
+      rdfs:label "school K-12"@en .
+
+seequel:openMinded
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "open minded"@en .
+
+:claim2
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:nonIntuitiveLayout ;
+      seequel:predicate :is ;
+      seequel:subject :bbDB .
+
+:Quiz
+      a       owl:Class ;
+      rdfs:label "quiz"@en ;
+      rdfs:subClassOf :Functionality .
+
+seequel:Role
+      a       owl:Class ;
+      rdfs:comment "role of an individual in a specific sector."@en ;
+      rdfs:label "role"@en ;
+      rdfs:subClassOf owl:Thing .
+
+:cPrgDB
+      a       :Content ;
+      rdfs:label "content of the discussion boards in programming"@en .
+
+seequel:nonIntuitiveLayout
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "designed with a non-intuitive layout"@en .
+
+seequel:merchant
+      a       seequel:WorldView ;
+      rdfs:comment "following is a list of values for this world view: Wealth, money, luxury; business, fair deals, good deals, bargain; interest, attentions to others; contract; competition, rivalry, opportunism, freedom."@en ;
+      rdfs:label "merchant"@en .
+
+seequel:evaluation
+      a       seequel:GeneralCriteria ;
+      rdfs:label "evaluation"@en .
+
+seequel:subject
+      a       owl:ObjectProperty ;
+      rdfs:domain seequel:Relation ;
+      rdfs:subPropertyOf rdf:subject .
+
+seequel:designGuidancePrinciples
+      a       seequel:GeneralCriteria ;
+      rdfs:label "design guidance principles"@en .
+
+seequel:motivating
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "motivating"@en .
+
+:Content
+      a       owl:Class ;
+      rdfs:comment "content of a teaching product or functional within a teaching product."@en ;
+      rdfs:label "content"@en ;
+      rdfs:subClassOf :Functionality .
+
+seequel:offTopic
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "off topic"@en .
+
+seequel:Criteria
+      a       owl:Class ;
+      rdfs:comment "an area in which quality can be measured in e-Learning"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:guidanceRecruitmentTNA
+      a       seequel:GeneralCriteria ;
+      rdfs:label "guidance and recruitment in the training needs analysis"@en .
+
+seequel:fact124
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:accessible ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:easyNavigation .
+
+:bb   a       :TeachingProduct ;
+      rdfs:comment "Blackboard is a teaching product, which is used at Reading University."@en ;
+      rdfs:label "Blackboard"@en ;
+      rdfs:seeAlso <http://www.bb.rdg.ac.uk> ;
+      :hasFunctionality :bbMailBox , :bbAssignments , :bbDB , :bbQuiz .
+
+seequel:MemberOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "a group in which the person is a member"@en ;
+      rdfs:domain foaf:Person ;
+      rdfs:label "member of"@en ;
+      rdfs:range foaf:Group ;
+      owl:inverseOf foaf:member .
+
+seequel:fact140
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:offTopic .
+
+seequel:areaOfInterest
+      a       owl:ObjectProperty ;
+      rdfs:comment "areas in which a person is particularly interested."@en ;
+      rdfs:domain foaf:Person ;
+      rdfs:label "area of interest"@en ;
+      rdfs:range seequel:LearningExperienceArea .
+
+seequel:fact112
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:interesting .
+
+seequel:informalLearning
+      a       seequel:Sector ;
+      rdfs:label "informal learning"@en .
+
+:bbAssignments
+      a       :Assignment ;
+      rdfs:label "assignment system on Blackboard"@en .
+
+seequel:fact110
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:lowQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:inaccessible .
+
+:unitOfTP
+      a       owl:Class ;
+      rdfs:comment "a unit of a teaching product, such as different courses."@en ;
+      rdfs:label "units of a teaching product"@en ;
+      rdfs:subClassOf owl:Thing .
+
+seequel:Relation
+      rdfs:comment "internal class used to represent relations between properties"@en ;
+      rdfs:label "Relation"@en ;
+      rdfs:subClassOf rdf:statement ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty seequel:object
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty seequel:predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty seequel:subject
+              ] .
+
+seequel:fact120
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningProcesses ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:collaboration .
+
+seequel:learnersRepresentative
+      a       seequel:Role ;
+      rdfs:label "learner's representative"@en .
+
+seequel:industrial
+      a       seequel:WorldView ;
+      rdfs:comment "following is a list of values for this world view: Progress, future, functionality, efficiency, optimality, performance, productivity, professionality, reliability, farsightedness, system."@en ;
+      rdfs:label "industrial"@en .
+
+seequel:hasRole
+      a       owl:ObjectProperty ;
+      rdfs:comment "the role a person has in a specific sector."@en ;
+      rdfs:domain foaf:Person ;
+      rdfs:label "has role"@en ;
+      rdfs:range seequel:Role .
+
+:is   a       owl:ObjectProperty ;
+      rdfs:comment "A relation, which indicates that a teaching product can be described by a descriptor from the Seequel framework (ontology)."@en ;
+      rdfs:domain
+              [ owl:unionOf (:TP :unitOfTP :Functionality)
+              ] ;
+      rdfs:label "is"@en ;
+      rdfs:range seequel:Descriptor ;
+      owl:inverseOf :isNot .
+
+:bbMailBox
+      a       :MailBox ;
+      rdfs:label "mailbox functionality on Blackboard"@en .
+
+seequel:fact118
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:respected .
+
+seequel:fact125
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:easyToUse ;
+      seequel:predicate seequel:implies ;
+      seequel:subject seequel:easyNavigation .
+
+:claim3
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:easyToUse ;
+      seequel:predicate :is ;
+      seequel:subject :bbAssignments .
+
+seequel:incomplete
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "incomplete"@en .
+
+:Survey
+      a       owl:Class ;
+      rdfs:label "survey"@en ;
+      rdfs:subClassOf :Functionality .
+
+seequel:learningContext
+      a       seequel:LearningExperienceArea ;
+      rdfs:comment "examples of learning contexts are: Institutional setting, environments, culture, legislation, values etc."@en ;
+      rdfs:label "learning context"@en .
+
+:claim4
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:easyNavigation ;
+      seequel:predicate :is ;
+      seequel:subject :bbAssignments .
+
+seequel:opinion
+      a       seequel:WorldView ;
+      rdfs:comment "following is a list of values for this world view: Image, reputation, fame, success, honour, acknowledgement, visibility, audience, credibility, identification. "@en ;
+      rdfs:label "opinion"@en .
+
+seequel:corporate
+      a       seequel:Sector ;
+      rdfs:label "corporate"@en .
+
+:unitOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "A unit is part of a teaching product."@en ;
+      rdfs:domain :unitOfTP ;
+      rdfs:label "unit of"@en ;
+      rdfs:range :TP ;
+      owl:inverseOf :hasUnit .
+
+:claim11
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:nonIntuitiveLayout ;
+      seequel:predicate :isNot ;
+      seequel:subject :prgAssignment .
+
+seequel:Fact
+      rdfs:comment "a verified statement or relation."@en ;
+      rdfs:label "fact"@en ;
+      rdfs:subClassOf seequel:Relation ;
+      owl:disjointWith seequel:Claim .
+
+:claim1
+      a       seequel:Claim ;
+      seequel:madeBy seequel:karsten ;
+      seequel:object seequel:easyNavigation ;
+      seequel:predicate :isNot ;
+      seequel:subject :bbDB .
+
+seequel:fact113
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:learningSources ;
+      seequel:predicate seequel:describes ;
+      seequel:subject seequel:interesting .
+
+seequel:professionalAssociation
+      a       seequel:Sector ;
+      rdfs:label "professional association"@en .
+
+<http://www.cs.rdg.ac.uk/seequel.n3>
+      a       owl:Ontology ;
+      rdfs:comment "The SEEQUEL e-Learning Ontology" ;
+      rdfs:label "e-Learning Ontology" .
+
+seequel:culture
+      a       seequel:GeneralCriteria ;
+      rdfs:label "culture"@en .
+
+seequel:tooLong
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "too long"@en .
+
+seequel:fact121
+      a       seequel:Fact ;
+      seequel:madeBy seequel:seequel ;
+      seequel:object seequel:highQuality ;
+      seequel:predicate seequel:contributesTo ;
+      seequel:subject seequel:concise .
+
+seequel:monotonous
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "monotonous"@en .
+
+seequel:learningSources
+      a       seequel:LearningExperienceArea ;
+      rdfs:comment "examples of learning sources are: Learning materials, reference materials, components, teachers, teachers qualifications etc. "@en ;
+      rdfs:label "learning sources"@en .
+
+seequel:hasWorldView
+      a       owl:ObjectProperty ;
+      rdfs:comment "the world view of a person"@en ;
+      rdfs:domain foaf:Person ;
+      rdfs:label "has world view"@en ;
+      rdfs:range seequel:WorldView .
+
+seequel:learningProcesses
+      a       seequel:LearningExperienceArea ;
+      rdfs:comment "examples of learning processes are: Planning, design, delivery, evaluation etc."@en ;
+      rdfs:label "learning processes"@en .
+
+seequel:inaccessible
+      a       seequel:GeneralDescriptor ;
+      rdfs:label "inaccessible"@en .
+
+seequel:concise
+      a       seequel:ExperienceDescriptor ;
+      rdfs:label "concise"@en .

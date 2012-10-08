@@ -1,0 +1,1347 @@
+; Thu Nov 03 09:06:35 GMT 2005
+; 
+;+ (version "3.1.1")
+;+ (build "Build 216")
+
+([challenging] of  Experience_Descriptor
+
+	(description "challenging")
+	(implies [SimpleChatbotDriver_00052]))
+
+([Classroom+Assistant] of  Role
+
+	(description "Classroom Assistant"))
+
+([engaging] of  General_Descriptor
+
+	(describes [SimpleChatbotDriver_00010])
+	(description "engaging")
+	(implies [SimpleChatbotDriver_00052]))
+
+([fun] of  Experience_Descriptor
+
+	(description "fun")
+	(implies [SimpleChatbotDriver_00052]))
+
+([monotonous] of  Experience_Descriptor
+
+	(description "monotonous")
+	(implies [SimpleChatbotDriver_00048])
+	(impliesNot [SimpleChatbotDriver_00052]))
+
+([Ontology2_00015] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00009])
+	(description "Supporting and Teaching Staff CV and Qualifications"))
+
+([Ontology2_00016] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00009])
+	(description "Learning Materials"))
+
+([Ontology2_00017] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00009])
+	(description "Technical Learning Environment"))
+
+([Ontology2_00018] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00011])
+	(description "Guidance/Recruitment/TNA"))
+
+([Ontology2_00019] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00011])
+	(description "Design (Guidance Principles)"))
+
+([Ontology2_00020] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00011])
+	(description "Delivery"))
+
+([Ontology2_00021] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00011])
+	(description "Evaluation"))
+
+([Ontology2_00022] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00010])
+	(description "Institutional Setting"))
+
+([Ontology2_00023] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00010])
+	(description "Culture"))
+
+([Ontology2_00024] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00010])
+	(description "Learning Environment"))
+
+([Ontology2_00025] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00010])
+	(description "Legislation"))
+
+([Ontology2_00026] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00010])
+	(description "Financial Rules"))
+
+([Ontology2_00027] of  General_Criteria
+
+	(criteriaFor [SimpleChatbotDriver_00010])
+	(description "Value System"))
+
+([Ontology2_00028] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Ability to learn"))
+
+([Ontology2_00029] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Adaptability (to change/flexibility of teacher)"))
+
+([Ontology2_00030] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Managing complexity"))
+
+([Ontology2_00031] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Communication skills"))
+
+([Ontology2_00032] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Intuitive and lateral thinking"))
+
+([Ontology2_00033] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Open mindedness of staff"))
+
+([Ontology2_00034] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Problem finding and solving"))
+
+([Ontology2_00035] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Reactive"))
+
+([Ontology2_00036] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Thoughtful"))
+
+([Ontology2_00037] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Motivation of staff"))
+
+([Ontology2_00038] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Relevant experience in the field"))
+
+([Ontology2_00039] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Supportive staff"))
+
+([Ontology2_00040] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Team player"))
+
+([Ontology2_00041] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Specific educational background in e-Learning"))
+
+([Ontology2_00042] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Organisational and practical skills"))
+
+([Ontology2_00043] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Technology oriented"))
+
+([Ontology2_00044] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Adaptability (to context and individual of learning materials)"))
+
+([Ontology2_00045] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Suitability of language and contents"))
+
+([Ontology2_00046] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Controversial content as opposed to non controversial content"))
+
+([Ontology2_00047] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Interactive"))
+
+([Ontology2_00048] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Iterative"))
+
+([Ontology2_00049] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Learner driven"))
+
+([Ontology2_00050] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Multicultural as oppsed to culture specific"))
+
+([Ontology2_00051] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Multiplayer"))
+
+([Ontology2_00052] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Pedagogical quality"))
+
+([Ontology2_00053] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Brand recognition"))
+
+([Ontology2_00054] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Ease of use of materials"))
+
+([Ontology2_00055] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Focused on learning"))
+
+([Ontology2_00056] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Low cost"))
+
+([Ontology2_00057] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Modularity/Granularity"))
+
+([Ontology2_00058] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Motivating learning materials"))
+
+([Ontology2_00059] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Content reliability and updatedness"))
+
+([Ontology2_00060] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Integration property"))
+
+([Ontology2_00061] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Technical and aesthetic quality"))
+
+([Ontology2_00062] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Conformance to standard"))
+
+([Ontology2_00063] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Interoperability and portability of materials"))
+
+([Ontology2_00064] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Reusability"))
+
+([Ontology2_00065] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Security"))
+
+([Ontology2_00066] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Metadata attribution"))
+
+([Ontology2_00067] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Relevant background of the authors of materials"))
+
+([Ontology2_00068] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Clear objectives"))
+
+([Ontology2_00069] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Clear organisation of the content and structure"))
+
+([Ontology2_00070] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Coherency with the purpose"))
+
+([Ontology2_00071] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Practical"))
+
+([Ontology2_00072] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00016])
+	(description "Standardised layout as opposed to personalised layout"))
+
+([Ontology2_00073] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Availability of different communication resources"))
+
+([Ontology2_00074] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Tolerance to mistakes is guaranteed"))
+
+([Ontology2_00075] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Tools to enhance the pedagogic effectiveness of technologies are provided"))
+
+([Ontology2_00076] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Accessibility of technical learning environment"))
+
+([Ontology2_00077] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Ease of use of environment"))
+
+([Ontology2_00078] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Relevance of service and tools"))
+
+([Ontology2_00079] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Adaptability (of the learning environment)"))
+
+([Ontology2_00080] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Interoperability of learning environment"))
+
+([Ontology2_00081] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Database for institution information management"))
+
+([Ontology2_00082] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Technical tools for learners information management"))
+
+([Ontology2_00083] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Plan for information security is operational"))
+
+([Ontology2_00084] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Learning platforms support a range of pedagogic methods"))
+
+([Ontology2_00085] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Reliability of the technical infrastructure"))
+
+([Ontology2_00086] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "The course authoring and production system is able to cover a variety of actual and future delivery formats"))
+
+([Ontology2_00087] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "The technological platform used to deliver learning is consistent with the pedagogic approach of the institution"))
+
+([Ontology2_00088] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00017])
+	(description "Uniform interface as opposed to personalised interface"))
+
+([Ontology2_00089] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Recognition of previous achievments/prerequisites/informal and non-formal learning"))
+
+([Ontology2_00090] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Specialist guidance available"))
+
+([Ontology2_00091] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Different payment facilities for the course fee are operational"))
+
+([Ontology2_00092] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Means and strategies for reaching different categories of potential users are implemented"))
+
+([Ontology2_00093] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Coherence between institutional objectives/mission and the public/market in which the insitution operates is periodically checked"))
+
+([Ontology2_00094] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Standard procedures/tools exist for new and existing customer's TNA"))
+
+([Ontology2_00095] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Specialists in TNA are available"))
+
+([Ontology2_00096] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Materials and procedures for informing the potential learners about the course characteristics, aims, and methodology"))
+
+([Ontology2_00097] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Standard procedures for recruiting users are in place as opposed to adapting procedures to the user's profile"))
+
+([Ontology2_00098] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Standard guidance services/tools as opposed to personalised guidance services"))
+
+([Ontology2_00099] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00018])
+	(description "Results of the guidance process are linked to the course management"))
+
+([Ontology2_00100] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "The learning course is aimed at developing knowledge as well as competence"))
+
+([Ontology2_00101] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Ex-ante, in itinere and ex-post course evaluation procedures and tools are in place"))
+
+([Ontology2_00102] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Clear definition of the target groups"))
+
+([Ontology2_00103] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Coherence of the didactic strategy with course objectives"))
+
+([Ontology2_00104] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Community building and social nature based"))
+
+([Ontology2_00105] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Content structure and organisation coherent to the didactic model"))
+
+([Ontology2_00106] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Correct use/mix of different media"))
+
+([Ontology2_00107] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Effective design of the communication strategy"))
+
+([Ontology2_00108] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Granularity of the content"))
+
+([Ontology2_00110] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Tools for detecting emerging needs of the learners during the course are in place"))
+
+([Ontology2_00111] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Flexibility of the learning path is guaranteed"))
+
+([Ontology2_00112] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Identification of the learning objectives is guaranteed"))
+
+([Ontology2_00113] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "The course design is based on a competence model"))
+
+([Ontology2_00114] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Learner controlled as opposed to teacher controlled"))
+
+([Ontology2_00115] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Learning accreditation system available and linked to the national/European accrediation system"))
+
+([Ontology2_00116] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Activation of learner motivation"))
+
+([Ontology2_00117] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Problem solving procedures are in place"))
+
+([Ontology2_00118] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Supporting learners diversity is guaranteed in design"))
+
+([Ontology2_00119] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Technical assistance in the course development is assured"))
+
+([Ontology2_00120] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00019])
+	(description "Supporting progression in learning in design"))
+
+([Ontology2_00121] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Accessibility of the delivery mechanism"))
+
+([Ontology2_00122] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Adaptability (to context and individual of delivery mechanism)"))
+
+([Ontology2_00123] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Availability of online material for staff and students"))
+
+([Ontology2_00124] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Throughout the course students are provided with technical and pedagogical support for using the services available"))
+
+([Ontology2_00125] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Availability of systems and services to support communication among students and staff"))
+
+([Ontology2_00126] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Standard coordination procedures implemented"))
+
+([Ontology2_00127] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Measures to avoid drop out after the guidance phase are adopted"))
+
+([Ontology2_00128] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Open endedness"))
+
+([Ontology2_00129] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Software to collect statisitcal data on student and staff utilisation of support services is implemented"))
+
+([Ontology2_00130] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Support staff are regularly informed of the most frequent questions and problems encountered by the students"))
+
+([Ontology2_00131] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Technology based measures to monitor and rectify common technical problems"))
+
+([Ontology2_00132] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00020])
+	(description "Traceability"))
+
+([Ontology2_00133] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Availability of evaluation reports"))
+
+([Ontology2_00134] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Both staff and student assessment procedures and methods are represented within the decision making structure of the Institution"))
+
+([Ontology2_00135] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Coherence of the evaluation tools, actions and timing with the objectives"))
+
+([Ontology2_00136] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Effectiveness of evaluation mechanism"))
+
+([Ontology2_00137] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Efficiency in the use of resources"))
+
+([Ontology2_00138] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Feedback mechanism"))
+
+([Ontology2_00139] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "A process of reflexive review is promoted and encouraged by different means and tools"))
+
+([Ontology2_00140] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Identification of the evaluation objectives, objects and sources"))
+
+([Ontology2_00141] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "The mode and the tools of assessing learning is negotiated between the learners"))
+
+([Ontology2_00142] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Measures to avoid abuse in the online evaluation procedure are in place"))
+
+([Ontology2_00143] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Procedures and tools for monitoring and reviewing the systems are implemented"))
+
+([Ontology2_00144] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Quality standards are adopted for assessing course and learning services"))
+
+([Ontology2_00145] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Reliability of the training provider"))
+
+([Ontology2_00146] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Return on investment for the learner"))
+
+([Ontology2_00147] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Return on investment for the organisation"))
+
+([Ontology2_00148] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Students feedback on the services and the course is requested and collected regularly"))
+
+([Ontology2_00149] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Tools and procedures for assessing the outcomes of the learning process are implemented"))
+
+([Ontology2_00150] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00021])
+	(description "Use of the evaluation results in the overall improvement process"))
+
+([Ontology2_00151] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Staff recognition mechanism is operational"))
+
+([Ontology2_00152] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Monitoring and evaluation procedure link to the adminstrative and management system"))
+
+([Ontology2_00153] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Quality is focused on the learning process itself"))
+
+([Ontology2_00154] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Quality is focused on the results of the learning process"))
+
+([Ontology2_00155] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Knowledge management system is in place"))
+
+([Ontology2_00156] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Education quality policy is in place"))
+
+([Ontology2_00157] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "An overall plan and measures for managing the technical resources exists"))
+
+([Ontology2_00158] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Authoring tools and authoring support systems are available"))
+
+([Ontology2_00159] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Collaborative working procedures and tools are adopted in order to share knowledge developed within and with other institutions"))
+
+([Ontology2_00160] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Course design and delivery guidelines are available for relevant staff"))
+
+([Ontology2_00161] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Guidelines, instructional material, training, and support services are provided to teachers in order to support them in the process of moving from conventional teaching to on-line teaching"))
+
+([Ontology2_00162] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Measures are adopted in order to check and maintain up to date software, hardware and productivity tools and solve techincal problems"))
+
+([Ontology2_00163] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Monitoring and content management system for collecting student feedback and documenting usage of resources is in place"))
+
+([Ontology2_00164] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Procedures for recruiting staff and teachers on comptenece based system is available"))
+
+([Ontology2_00165] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Procedures for testing draft versions of the material are in place"))
+
+([Ontology2_00166] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Research and monitoring results transferred into teaching/learning/management practice"))
+
+([Ontology2_00167] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Standard criteria/procedures for cataloguing material exist"))
+
+([Ontology2_00168] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Technical services to support staff interaction are implemented and provided on a permanent basis"))
+
+([Ontology2_00169] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "TNA mechanism for staff and teachers"))
+
+([Ontology2_00170] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Educational choices are made at central level as opposed to choices at department/unit level"))
+
+([Ontology2_00171] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00022])
+	(description "Decentralised curriculum as opposed to centralised curriculum"))
+
+([Ontology2_00172] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00023])
+	(description "Flexible pedagogic and learning delivery models adopted to meet different users needs and sociocultural specifities"))
+
+([Ontology2_00173] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00023])
+	(description "Institution adopts open access policy in student and staff recruitment"))
+
+([Ontology2_00174] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00023])
+	(description "Staff competences include training and/or experience in working with disadvantaged learners"))
+
+([Ontology2_00175] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00023])
+	(description "Technology based system is implemented in order to track and to collect statistical data on the bahaviours of the users population and in particular of the excluded groups"))
+
+([Ontology2_00176] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00023])
+	(description "Individual personality of the staff is supported"))
+
+([Ontology2_00177] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00023])
+	(description "Equal opportunity policy is operational"))
+
+([Ontology2_00178] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00023])
+	(description "Tools and services targeted to disadvantaged categories are implemented"))
+
+([Ontology2_00179] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "System preventative/corrective action is in place"))
+
+([Ontology2_00180] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Control of non-conformance is in place"))
+
+([Ontology2_00181] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Stimulating collaboration as opposed to competition"))
+
+([Ontology2_00182] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Supporting personalisation"))
+
+([Ontology2_00183] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Supporting competence representation and recognition"))
+
+([Ontology2_00184] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Supporting interaction and communication"))
+
+([Ontology2_00185] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Respect for different learning pace/mode and learning styles"))
+
+([Ontology2_00186] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Supporting individual works as opposed to team work"))
+
+([Ontology2_00187] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Supporting contextualisation rather than abstraction"))
+
+([Ontology2_00188] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Supporting individual behaviour patterns rather than common behaviour patterns"))
+
+([Ontology2_00189] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00024])
+	(description "Supporting divergent thinking"))
+
+([Ontology2_00190] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00025])
+	(description "IPR related to the materials content is owned by the institution"))
+
+([Ontology2_00191] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00025])
+	(description "Copyright issues are respected"))
+
+([Ontology2_00192] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00025])
+	(description "The accreditation system in place is recognised by professional associations"))
+
+([Ontology2_00193] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00025])
+	(description "The acheived credits are transferable within other programmes"))
+
+([Ontology2_00194] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00025])
+	(description "The accreditation system in place is recognised by other educational and training organisations"))
+
+([Ontology2_00195] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00025])
+	(description "IPRs are respected"))
+
+([Ontology2_00196] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00026])
+	(description "The organisation invests in resource and systems to provide effective user-friendly systems for students"))
+
+([Ontology2_00197] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00026])
+	(description "Specific financial aid measures devoted to disadvantaged categories are applied"))
+
+([Ontology2_00198] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00026])
+	(description "Procedures and tools for monitoring the costs related to staff and teachers are implemented"))
+
+([Ontology2_00199] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00026])
+	(description "Procedures and tools for monitoring the costs of delivery of e-Learning are implemented"))
+
+([Ontology2_00200] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00026])
+	(description "Procedures and tools for monitoring the cost of developing e-Learning resources are implemented"))
+
+([Ontology2_00201] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Supportiveness as value"))
+
+([Ontology2_00202] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Open mindedness as value"))
+
+([Ontology2_00203] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Valorisation of learning results"))
+
+([Ontology2_00204] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Encouragement to collaboration"))
+
+([Ontology2_00205] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Encouragement to competition"))
+
+([Ontology2_00206] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Promotion of change"))
+
+([Ontology2_00207] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Autonomy"))
+
+([Ontology2_00208] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Customer satisfaction"))
+
+([Ontology2_00209] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Staff satisfaction"))
+
+([Ontology2_00210] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Pedagogical innovation"))
+
+([Ontology2_00211] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Institutional changes"))
+
+([Ontology2_00212] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Technological innovation"))
+
+([Ontology2_00213] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Socio-cultural diversity"))
+
+([Ontology2_00214] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Recognition of staff results and competences"))
+
+([Ontology2_00215] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Reflecting norms"))
+
+([Ontology2_00216] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Supporting learners diversity as value"))
+
+([Ontology2_00217] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00027])
+	(description "Supporting progression in learning as a value"))
+
+([Ontology2_00218] of  World_View
+
+	(description "Inspiration"))
+
+([Ontology2_00219] of  World_View
+
+	(description "Domestic"))
+
+([Ontology2_00220] of  World_View
+
+	(description "Opinion"))
+
+([Ontology2_00221] of  World_View
+
+	(description "Civic"))
+
+([Ontology2_00222] of  World_View
+
+	(description "Merchant"))
+
+([Ontology2_00223] of  World_View
+
+	(description "Industrial"))
+
+([Ontology2_00224] of  Specific_Criteria
+
+	(contributesTo [Ontology2_00015])
+	(description "Respect for diversity"))
+
+([Ontology2_Instance_0] of  Experience_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_7])
+	(describes [SimpleChatbotDriver_00009])
+	(description "concise")
+	(implies [SimpleChatbotDriver_00049]))
+
+([Primary+Education] of  Sector
+
+	(description "Primary Education"))
+
+([routine] of  Experience_Descriptor
+
+	(description "routine")
+	(implies [SimpleChatbotDriver_00048]))
+
+([SimpleChatbotDriver_00009] of  Learning_Experience_Area
+
+	(description "Learning_Sources"))
+
+([SimpleChatbotDriver_00010] of  Learning_Experience_Area
+
+	(description "Learning_Context"))
+
+([SimpleChatbotDriver_00011] of  Learning_Experience_Area
+
+	(description "Learning_Processes"))
+
+([SimpleChatbotDriver_00012] of  Role
+
+	(description "Teacher"))
+
+([SimpleChatbotDriver_00013] of  Sector
+
+	(description "School K-12"))
+
+([SimpleChatbotDriver_00014] of  Sector
+
+	(description "Higher Education"))
+
+([SimpleChatbotDriver_00015] of  Sector
+
+	(description "Vocational Training"))
+
+([SimpleChatbotDriver_00016] of  Sector
+
+	(description "Informal Learning"))
+
+([SimpleChatbotDriver_00017] of  Sector
+
+	(description "Corporate"))
+
+([SimpleChatbotDriver_00018] of  Sector
+
+	(description "Administration"))
+
+([SimpleChatbotDriver_00019] of  Sector
+
+	(description "Training Services"))
+
+([SimpleChatbotDriver_00020] of  Sector
+
+	(description "Professional Association"))
+
+([SimpleChatbotDriver_00021] of  Sector
+
+	(description "ICT"))
+
+([SimpleChatbotDriver_00022] of  Sector
+
+	(description "Publishers"))
+
+([SimpleChatbotDriver_00023] of  Sector
+
+	(description "Users of Corporate Training Services"))
+
+([SimpleChatbotDriver_00024] of  Role
+
+	(description "Tutor")
+	(type_of [SimpleChatbotDriver_00012]))
+
+([SimpleChatbotDriver_00025] of  Role
+
+	(description "Policymaker"))
+
+([SimpleChatbotDriver_00026] of  Role
+
+	(description "E&T Manager"))
+
+([SimpleChatbotDriver_00027] of  Role
+
+	(description "Learner"))
+
+([SimpleChatbotDriver_00028] of  Role
+
+	(description "Learner's Representative"))
+
+([SimpleChatbotDriver_00037] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00011])
+	(description "Collaboration"))
+
+([SimpleChatbotDriver_00038] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00010])
+	(description "Easy Navigation")
+	(implies
+		[SimpleChatbotDriver_00047]
+		[SimpleChatbotDriver_00049]))
+
+([SimpleChatbotDriver_00039] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00011])
+	(description "Effective")
+	(implies [SimpleChatbotDriver_Instance_7]))
+
+([SimpleChatbotDriver_00040] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00011])
+	(description "Efficient"))
+
+([SimpleChatbotDriver_00041] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00009])
+	(description "Incomplete")
+	(implies [SimpleChatbotDriver_Instance_9]))
+
+([SimpleChatbotDriver_00042] of  Experience_Descriptor
+
+	(contributesTo [engaging])
+	(describes [SimpleChatbotDriver_00009])
+	(description "Interactive")
+	(implies [SimpleChatbotDriver_00052]))
+
+([SimpleChatbotDriver_00043] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00011])
+	(description "Motivating")
+	(implies [SimpleChatbotDriver_00052]))
+
+([SimpleChatbotDriver_00044] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00010])
+	(description "Non-intuitive Layout")
+	(impliesNot [SimpleChatbotDriver_00049]))
+
+([SimpleChatbotDriver_00045] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00009])
+	(description "Off topic")
+	(implies [SimpleChatbotDriver_00048])
+	(impliesNot [SimpleChatbotDriver_Instance_12]))
+
+([SimpleChatbotDriver_00046] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00010])
+	(description "Open minded")
+	(implies [SimpleChatbotDriver_00050]))
+
+([SimpleChatbotDriver_00047] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_7])
+	(description "Accessible")
+	(impliesNot [SimpleChatbotDriver_00051]))
+
+([SimpleChatbotDriver_00048] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_9])
+	(describes [SimpleChatbotDriver_00009])
+	(description "Boring")
+	(impliesNot [SimpleChatbotDriver_00052]))
+
+([SimpleChatbotDriver_00049] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_7])
+	(describes [SimpleChatbotDriver_00009])
+	(description "Easy to Use"))
+
+([SimpleChatbotDriver_00050] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_7])
+	(describes [SimpleChatbotDriver_00011])
+	(description "Flexible"))
+
+([SimpleChatbotDriver_00051] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_9])
+	(description "Inaccessible")
+	(impliesNot [SimpleChatbotDriver_00047]))
+
+([SimpleChatbotDriver_00052] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_7])
+	(describes
+		[SimpleChatbotDriver_00009]
+		[SimpleChatbotDriver_00011])
+	(description "Interesting")
+	(impliesNot [SimpleChatbotDriver_00048]))
+
+([SimpleChatbotDriver_00053] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00010])
+	(description "Qualified Teachers")
+	(implies [SimpleChatbotDriver_Instance_11]))
+
+([SimpleChatbotDriver_Instance_10] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_7])
+	(describes [SimpleChatbotDriver_00010])
+	(description "Organised"))
+
+([SimpleChatbotDriver_Instance_11] of  General_Descriptor
+
+	(contributesTo [SimpleChatbotDriver_Instance_7])
+	(description "Respected"))
+
+([SimpleChatbotDriver_Instance_12] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00009])
+	(description "Relevant")
+	(implies [SimpleChatbotDriver_00052])
+	(impliesNot [SimpleChatbotDriver_00045]))
+
+([SimpleChatbotDriver_Instance_13] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00010])
+	(description "Student Support")
+	(implies [SimpleChatbotDriver_Instance_10]))
+
+([SimpleChatbotDriver_Instance_14] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00010])
+	(description "Tolerant of Mistakes")
+	(implies [SimpleChatbotDriver_00050]))
+
+([SimpleChatbotDriver_Instance_15] of  Experience_Descriptor
+
+	(describes [SimpleChatbotDriver_00009])
+	(description "Too long")
+	(implies [SimpleChatbotDriver_00048]))
+
+([SimpleChatbotDriver_Instance_16] of  Experience_Descriptor
+
+	(description "Trackable"))
+
+([SimpleChatbotDriver_Instance_7] of  Quality
+
+	(description "High_Quality")
+	(impliesNot [SimpleChatbotDriver_Instance_9]))
+
+([SimpleChatbotDriver_Instance_9] of  Quality
+
+	(description "Low_Quality")
+	(impliesNot [SimpleChatbotDriver_Instance_7]))
+
+([Test+of+Duplicates] of  Individual
+
+	(areaOfInterest [SimpleChatbotDriver_00009])
+	(considersHighlyImportant [Ontology2_00051])
+	(considersImportant [Ontology2_00207])
+	(description "John")
+	(primaryAreaOfInterest [SimpleChatbotDriver_00009])
+	(role [Classroom+Assistant])
+	(sector [Primary+Education])
+	(usesTerm
+		[engaging]
+		[fun]
+		[challenging]
+		[routine]
+		[monotonous]
+		[too+simple])
+	(world_view [Ontology2_00220]))
+
+([too+simple] of  Experience_Descriptor
+
+	(description "too simple")
+	(implies [SimpleChatbotDriver_00048]))

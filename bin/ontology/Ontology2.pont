@@ -1,0 +1,251 @@
+; Thu Nov 03 09:06:35 GMT 2005
+; 
+;+ (version "3.1.1")
+;+ (build "Build 216")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot world_view
+		(type INSTANCE)
+;+		(allowed-classes World_View)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sector
+		(type INSTANCE)
+;+		(allowed-classes Sector)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot describes
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+		(create-accessor read-write))
+	(multislot considersHighlyImportant
+		(type INSTANCE)
+;+		(allowed-classes Specific_Criteria)
+		(create-accessor read-write))
+	(single-slot primaryAreaOfInterest
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot implies
+;+		(comment "implies")
+		(type INSTANCE)
+;+		(allowed-classes Quality Descriptor)
+		(create-accessor read-write))
+	(multislot contributesTo
+;+		(comment "contributes to")
+		(type INSTANCE)
+;+		(allowed-classes Quality Descriptor)
+		(create-accessor read-write))
+	(multislot areaOfInterest
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+		(create-accessor read-write))
+	(single-slot part_of
+		(type INSTANCE)
+;+		(allowed-classes Sector)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot view
+		(type INSTANCE)
+;+		(allowed-classes World_View)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot role
+		(type INSTANCE)
+;+		(allowed-classes Role)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot impliesNot
+;+		(comment "does not imply")
+		(type INSTANCE)
+;+		(allowed-classes Quality Descriptor)
+		(create-accessor read-write))
+	(multislot considersImportant
+		(type INSTANCE)
+;+		(allowed-classes Specific_Criteria)
+		(create-accessor read-write))
+	(single-slot criteriaFor
+;+		(comment "is a criteria for")
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot type_of
+		(type INSTANCE)
+;+		(allowed-classes Role)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot usesTerm
+		(type INSTANCE)
+;+		(allowed-classes General_Descriptor Experience_Descriptor)
+		(create-accessor read-write)))
+
+(defclass Quality
+	(is-a USER)
+	(role concrete)
+	(multislot impliesNot
+;+		(comment "does not imply")
+		(type INSTANCE)
+;+		(allowed-classes Quality Descriptor)
+		(create-accessor read-write))
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Learning_Experience_Area
+	(is-a USER)
+	(role concrete)
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Role
+	(is-a USER)
+	(role concrete)
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot type_of
+		(type INSTANCE)
+;+		(allowed-classes Role)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Sector
+	(is-a USER)
+	(role concrete)
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot part_of
+		(type INSTANCE)
+;+		(allowed-classes Sector)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Individual
+	(is-a USER)
+	(role concrete)
+	(multislot considersHighlyImportant
+		(type INSTANCE)
+;+		(allowed-classes Specific_Criteria)
+		(create-accessor read-write))
+	(single-slot world_view
+		(type INSTANCE)
+;+		(allowed-classes World_View)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot primaryAreaOfInterest
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot considersImportant
+		(type INSTANCE)
+;+		(allowed-classes Specific_Criteria)
+		(create-accessor read-write))
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sector
+		(type INSTANCE)
+;+		(allowed-classes Sector)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot role
+		(type INSTANCE)
+;+		(allowed-classes Role)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot areaOfInterest
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+		(create-accessor read-write))
+	(multislot usesTerm
+		(type INSTANCE)
+;+		(allowed-classes General_Descriptor Experience_Descriptor)
+		(create-accessor read-write)))
+
+(defclass World_View
+	(is-a USER)
+	(role concrete)
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Descriptor
+	(is-a USER)
+	(role concrete)
+	(multislot impliesNot
+;+		(comment "does not imply")
+		(type INSTANCE)
+;+		(allowed-classes Quality Descriptor)
+		(create-accessor read-write))
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot describes
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+		(create-accessor read-write))
+	(multislot contributesTo
+;+		(comment "contributes to")
+		(type INSTANCE)
+;+		(allowed-classes Quality Descriptor)
+		(create-accessor read-write))
+	(multislot implies
+;+		(comment "implies")
+		(type INSTANCE)
+;+		(allowed-classes Quality Descriptor)
+		(create-accessor read-write)))
+
+(defclass General_Descriptor
+	(is-a Descriptor)
+	(role concrete))
+
+(defclass Experience_Descriptor
+	(is-a Descriptor)
+	(role concrete))
+
+(defclass Criteria
+	(is-a USER)
+	(role concrete)
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass General_Criteria
+	(is-a Criteria)
+	(role concrete)
+	(single-slot criteriaFor
+;+		(comment "is a criteria for")
+		(type INSTANCE)
+;+		(allowed-classes Learning_Experience_Area)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Specific_Criteria
+	(is-a Criteria)
+	(role concrete)
+	(single-slot contributesTo
+;+		(comment "contributes to")
+		(type INSTANCE)
+;+		(allowed-classes General_Criteria)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))

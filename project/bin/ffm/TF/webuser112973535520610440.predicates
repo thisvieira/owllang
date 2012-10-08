@@ -1,0 +1,19 @@
+#Thu Oct 20 12:36:56 BST 2005
+lcinterest=no
+two=Learning Context
+three=Learning Processes
+lpinterest=no
+input.4=CONNECT
+input.3=yes
+input.2=Karsten
+input.1=exit
+that.4=Hello.  Thank you for visiting this site and assisting us in our\n\t\t\tresearch.  My name is TF and I am a chatbot.  I will be asking you a series of \n\t\t\tquestions.  Your answers will contribute to an ontology for the e-Learning quality \n\t\t\tdomain.  Are you ready to start?
+that.3=Right.  \n\t\t\tIf you don't understand a question, enter 'help', and I will try to \n\t\t\texplain the question.  If that doesn't help, answer the question as best you can.\n\t\t\tFirst I need to find out about you.  What is your name?
+that.2=Hello, Karsten.   \n\t\t\tWhat sector are you involved in?
+that.1=Ok.\n\t\t\tAnd what is your role within the exit sector?
+topic=USERID
+one=Learning Sources
+sector=exit
+lsinterest=no
+role=Research
+name=Karsten

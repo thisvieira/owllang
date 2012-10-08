@@ -1,0 +1,367 @@
+@prefix :		<http://www.cs.rdg.ac.uk/seequel#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+
+
+:fact100				a				:Fact ;
+					:subject			:accessible ;
+					:predicate			:contributesTo ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact101				a				:Fact ;
+					:subject			:boring ;
+					:predicate			:contributesTo ;
+					:object			:lowQuality ;
+					:madeBy			:seequel .
+
+:fact102				a				:Fact ;
+					:subject			:boring ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact103				a				:Fact ;
+					:subject			:boring ;
+					:predicate			:impliesNot ;
+					:object			:interesting ;
+					:madeBy			:seequel .
+
+:fact104				a				:Fact ;
+					:subject			:easyToUse ;
+					:predicate			:contributesTo ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact105				a				:Fact ;
+					:subject			:easyToUse ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact106				a				:Fact ;
+					:subject			:engaging ;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact107				a				:Fact ;
+					:subject			:engaging ;
+					:predicate			:implies ;
+					:object			:interesting ;
+					:madeBy			:seequel .
+
+:fact108				a				:Fact ;
+					:subject			:flexible ;
+					:predicate			:contributesTo ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact109				a				:Fact ;
+					:subject			:flexible ;
+					:predicate			:describes ;
+					:object			:learningProcesses ;
+					:madeBy			:seequel .
+
+:fact110				a				:Fact ;
+					:subject			:inaccessible ;
+					:predicate			:contributesTo ;
+					:object			:lowQuality ;
+					:madeBy			:seequel .
+
+:fact111				a				:Fact ;
+					:subject			:inaccessible ;
+					:predicate			:impliesNot ;
+					:object			:accessible ;
+					:madeBy			:seequel .
+
+:fact112				a				:Fact ;
+					:subject			:interesting ;
+					:predicate			:contributesTo ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact113				a				:Fact ;
+					:subject			:interesting ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact114				a				:Fact ;
+					:subject			:interesting ;
+					:predicate			:describes ;
+					:object			:learningProcesses ;
+					:madeBy			:seequel .
+
+:fact115				a				:Fact ;
+					:subject			:interesting ;
+					:predicate			:impliesNot ;
+					:object			:boring ;
+					:madeBy			:seequel .
+
+:fact116				a				:Fact ;
+					:subject			:organised ;
+					:predicate			:contributesTo ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact117				a				:Fact ;
+					:subject			:organised ;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact118				a				:Fact ;
+					:subject			:respected ;
+					:predicate			:contributesTo ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact119				a				:Fact ;
+					:subject			:challenging ;
+					:predicate			:implies ;
+					:object			:interesting ;
+					:madeBy			:seequel .
+
+:fact120				a				:Fact ;
+					:subject			:collaboration ;
+					:predicate			:describes ;
+					:object			:learningProcesses ;
+					:madeBy			:seequel .
+
+:fact121				a				:Fact ;
+					:subject			:concise ;
+					:predicate			:contributesTo ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact122				a				:Fact ;
+					:subject			:concise ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact123				a				:Fact ;
+					:subject			:concise ;
+					:predicate			:implies ;
+					:object			:easyToUse ;
+					:madeBy			:seequel .
+
+:fact124				a				:Fact ;
+					:subject			:easyNavigation ;
+					:predicate			:implies ;
+					:object			:accessible ;
+					:madeBy			:seequel .
+
+:fact125				a				:Fact ;
+					:subject			:easyNavigation ;
+					:predicate			:implies ;
+					:object			:easyToUse ;
+					:madeBy			:seequel .
+
+:fact126				a				:Fact ;
+					:subject			:easyNavigation ;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact127				a				:Fact ;
+					:subject			:effective ;
+					:predicate			:describes ;
+					:object			:learningProcesses ;
+					:madeBy			:seequel .
+
+:fact128				a				:Fact ;
+					:subject			:effective ;
+					:predicate			:implies ;
+					:object			:highQuality ;
+					:madeBy			:seequel .
+
+:fact129				a				:Fact ;
+					:subject			:efficient ;
+					:predicate			:describes ;
+					:object			:learningProcesses ;
+					:madeBy			:seequel .
+
+:fact130				a				:Fact ;
+					:subject			:fun ;
+					:predicate			:implies ;
+					:object			:interesting ;
+					:madeBy			:seequel .
+
+:fact131				a				:Fact ;
+					:subject			:incomplete ;
+					:predicate			:implies ;
+					:object			:lowQuality ;
+					:madeBy			:seequel .
+
+:fact132				a				:Fact ;
+					:subject			:incomplete ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact133				a				:Fact ;
+					:subject			:interactive ;
+					:predicate			:contributesTo ;
+					:object			:engaging ;
+					:madeBy			:seequel .
+
+:fact134				a				:Fact ;
+					:subject			:interactive ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact135				a				:Fact ;
+					:subject			:interactive ;
+					:predicate			:implies ;
+					:object			:interesting ;
+					:madeBy			:seequel .
+
+:fact136				a				:Fact ;
+					:subject			:monotonous ;
+					:predicate			:implies ;
+					:object			:boring ;
+					:madeBy			:seequel .
+
+:fact137				a				:Fact ;
+					:subject			:motivating ;
+					:predicate			:describes ;
+					:object			:learningProcesses ;
+					:madeBy			:seequel .
+
+:fact138				a				:Fact ;
+					:subject			:motivating ;
+					:predicate			:implies ;
+					:object			:interesting ;
+					:madeBy			:seequel .
+
+:fact139				a				:Fact ;
+					:subject			:nonIntuitiveLayout ;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact140				a				:Fact ;
+					:subject			:offTopic ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact141				a				:Fact ;
+					:subject			:offTopic ;
+					:predicate			:implies ;
+					:object			:boring ;
+					:madeBy			:seequel .
+
+:fact142				a				:Fact ;
+					:subject			:openMinded ;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact143				a				:Fact ;
+					:subject			:openMinded ;
+					:predicate			:implies ;
+					:object			:flexible ;
+					:madeBy			:seequel .
+
+:fact144				a				:Fact ;
+					:subject			:qualifiedTeachers ;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact145				a				:Fact ;
+					:subject			:qualifiedTeachers ;
+					:predicate			:implies ;
+					:object			:respected ;
+					:madeBy			:seequel .
+
+:fact146				a				:Fact ;
+					:subject			:relevant ;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact147				a				:Fact ;
+					:subject			:relevant ;
+					:predicate			:implies ;
+					:object			:interesting ;
+					:madeBy			:seequel .
+
+:fact148				a				:Fact ;
+					:subject			:relevant ;
+					:predicate			:impliesNot ;
+					:object			:offTopic ;
+					:madeBy			:seequel .
+
+:fact149				a				:Fact ;
+					:subject			:routine ;
+					:predicate			:implies ;
+					:object			:boring ;
+					:madeBy			:seequel .
+
+:fact150				a				:Fact ;
+					:subject			:studentSupport;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact151				a				:Fact ;
+					:subject			:studentSupport;
+					:predicate			:implies ;
+					:object			:organised ;
+					:madeBy			:seequel .
+
+:fact152				a				:Fact ;
+					:subject			:tolerantOfMistakes;
+					:predicate			:describes ;
+					:object			:learningContext ;
+					:madeBy			:seequel .
+
+:fact153				a				:Fact ;
+					:subject			:tolerantOfMistakes;
+					:predicate			:implies ;
+					:object			:flexible ;
+					:madeBy			:seequel .
+
+:fact154				a				:Fact ;
+					:subject			:tooLong;
+					:predicate			:describes ;
+					:object			:learningSources ;
+					:madeBy			:seequel .
+
+:fact155				a				:Fact ;
+					:subject			:tooLong;
+					:predicate			:implies ;
+					:object			:boring ;
+					:madeBy			:seequel .
+
+:fact156				a				:Fact ;
+					:subject			:tooSimple;
+					:predicate			:implies ;
+					:object			:boring ;
+					:madeBy			:seequel .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2006-11-02T17:37:20.019+0000</date>
+  <millis>1162489040019</millis>
+  <sequence>45</sequence>
+  <botid>TF</botid>
+  <userid>uriel</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Would you agree 
+				when some say that the Homepage of EFQUEL is a good source?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:37:27.562+0000</date>
+  <millis>1162489047562</millis>
+  <sequence>70</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Would you agree 
+				when some say that the EFQUEL WIKI Page is too simple?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:37:42.102+0000</date>
+  <millis>1162489062102</millis>
+  <sequence>111</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>no they are not</input>
+  <reply>So you say that they are not.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt; That&apos;s ok!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Let's take another one.					
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+				People have said to me
+				that the Homepage of EFQUEL is a good source.<br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you agree?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:38:32.030+0000</date>
+  <millis>1162489112030</millis>
+  <sequence>146</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>yes I do</input>
+  <reply>I see! you do!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				with this statement, the eLearning Quality Tab is interesting?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:38:43.805+0000</date>
+  <millis>1162489123805</millis>
+  <sequence>155</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>not really</input>
+  <reply>Did you answer like that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:38:50.786+0000</date>
+  <millis>1162489130786</millis>
+  <sequence>184</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>yes</input>
+  <reply>Hmmn, interesting!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Some say
+				that the About Section is a good source.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+				Do you support that opinion?</reply>
+</record>

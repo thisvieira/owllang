@@ -1,0 +1,3 @@
+#Fri Oct 05 14:22:25 BST 2012
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="defaultStrings[Types.INS]"/>\r\n<expression enabled\="true" text\="slotName"/>\r\n<expression enabled\="true" text\="request.getServletPath().substring(1)"/>\r\n<expression enabled\="true" text\="request.getAttribute(&quot;x-session&quot;)"/>\r\n</watchExpressions>\r\n
+eclipse.preferences.version=1

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2006-11-02T17:43:47.292+0000</date>
+  <millis>1162489427292</millis>
+  <sequence>45</sequence>
+  <botid>TF</botid>
+  <userid>uriel</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Would you agree 
+				that the My EFQUEL Section is relevant?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:43:54.897+0000</date>
+  <millis>1162489434897</millis>
+  <sequence>70</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Would you agree 
+				with this statement, the eLearning Quality Tab is interesting?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:43:58.083+0000</date>
+  <millis>1162489438083</millis>
+  <sequence>79</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Do you say that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:01.441+0000</date>
+  <millis>1162489441441</millis>
+  <sequence>112</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>That is cool.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				that the Homepage of EFQUEL is well designed?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:02.425+0000</date>
+  <millis>1162489442425</millis>
+  <sequence>121</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Do you say that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:03.393+0000</date>
+  <millis>1162489443393</millis>
+  <sequence>154</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>I must say.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Some people believe
+				that the eLearning Quality Tab is interesting.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+				Do you share that opinion?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:04.299+0000</date>
+  <millis>1162489444299</millis>
+  <sequence>163</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>You answered negatively, is that
+				because you have not made up you mind?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:05.283+0000</date>
+  <millis>1162489445283</millis>
+  <sequence>196</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Fair enough.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				that the News and Events Section is relevant?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:06.376+0000</date>
+  <millis>1162489446376</millis>
+  <sequence>205</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Did you answer like that
+				because you have not made up you mind?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:07.157+0000</date>
+  <millis>1162489447157</millis>
+  <sequence>230</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Hmmn, interesting!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				This is all for this time. 
+			Thanks for your help in our evaluation. &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Have a nice day. &lt;br xmlns="http://www.w3.org/1999/xhtml"/></reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:07.985+0000</date>
+  <millis>1162489447985</millis>
+  <sequence>235</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Farewell!</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:08.734+0000</date>
+  <millis>1162489448734</millis>
+  <sequence>240</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Auf wiedersehen!</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:09.531+0000</date>
+  <millis>1162489449531</millis>
+  <sequence>245</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Auf wiedersehen!</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:10.327+0000</date>
+  <millis>1162489450327</millis>
+  <sequence>250</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Adios!</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:13.576+0000</date>
+  <millis>1162489453576</millis>
+  <sequence>275</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Would you agree 
+				that the EFQUEL WIKI Page is not easy to read?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:15.715+0000</date>
+  <millis>1162489455715</millis>
+  <sequence>284</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Do you say that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:17.589+0000</date>
+  <millis>1162489457589</millis>
+  <sequence>317</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Ok!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				that the About Section is a good source?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:20.353+0000</date>
+  <millis>1162489460353</millis>
+  <sequence>326</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Did you answer like that
+				because you have not got a view?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:21.415+0000</date>
+  <millis>1162489461415</millis>
+  <sequence>359</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Fair enough.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Some say
+				that the EFQUEL Community is interactive.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+				Do you agree with that opinion?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:22.961+0000</date>
+  <millis>1162489462961</millis>
+  <sequence>368</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Do you say that
+				because you have not got an opinion?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:24.008+0000</date>
+  <millis>1162489464008</millis>
+  <sequence>401</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>I must say.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Some people believe
+				that the EFQUEL WIKI Page is too complex.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+				Do you share that point of view?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:26.179+0000</date>
+  <millis>1162489466179</millis>
+  <sequence>410</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Did you answer like that
+				because you have not got a view?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:26.850+0000</date>
+  <millis>1162489466850</millis>
+  <sequence>435</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>I must say.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				This is all for this time. 
+			Thanks for your help in our evaluation. &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Have a nice day. &lt;br xmlns="http://www.w3.org/1999/xhtml"/></reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:28.209+0000</date>
+  <millis>1162489468209</millis>
+  <sequence>440</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>See you later!</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:32.051+0000</date>
+  <millis>1162489472051</millis>
+  <sequence>465</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			When asked, some people claim
+				that the Homepage of EFQUEL is well designed.&lt;br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you agree with that sentence?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:35.752+0000</date>
+  <millis>1162489475752</millis>
+  <sequence>474</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Do you say that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:36.767+0000</date>
+  <millis>1162489476767</millis>
+  <sequence>507</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Ok!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				with this statement, the News and Events Section is relevant?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:39.781+0000</date>
+  <millis>1162489479781</millis>
+  <sequence>516</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>Did you answer like that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:41.030+0000</date>
+  <millis>1162489481030</millis>
+  <sequence>551</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Hmmn, interesting!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				People have said to me
+				that the My EFQUEL Section is relevant.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+				Do you share that point of view?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:43.326+0000</date>
+  <millis>1162489483326</millis>
+  <sequence>560</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>You answered negatively, is that
+				because you have not got a view?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:45.169+0000</date>
+  <millis>1162489485169</millis>
+  <sequence>593</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>Hmmn, interesting!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				with this statement, the EFQUEL WIKI Page is not easy to read?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:46.418+0000</date>
+  <millis>1162489486418</millis>
+  <sequence>602</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>You answered negatively, is that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:47.308+0000</date>
+  <millis>1162489487308</millis>
+  <sequence>627</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>y</input>
+  <reply>I must say.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				This is all for this time. 
+			Thanks for your help in our evaluation. &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Have a nice day. &lt;br xmlns="http://www.w3.org/1999/xhtml"/></reply>
+</record>
+<record>
+  <date>2006-11-02T17:44:48.511+0000</date>
+  <millis>1162489488511</millis>
+  <sequence>632</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>n</input>
+  <reply>See you later!</reply>
+</record>
+<record>
+  <date>2006-11-03T08:05:39.119+0000</date>
+  <millis>1162541139119</millis>
+  <sequence>2377</sequence>
+  <botid>TF</botid>
+  <userid>guest10020@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			People have said to me
+				that the eLearning Quality Tab is interesting.&lt;br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you agree with that opinion?</reply>
+</record>
+<record>
+  <date>2006-11-03T08:05:49.787+0000</date>
+  <millis>1162541149787</millis>
+  <sequence>2386</sequence>
+  <botid>TF</botid>
+  <userid>guest10020@jabber.eun.org/eun_Jabber</userid>
+  <input>testing</input>
+  <reply>My mind was in another place,
+							try and answer the question in another way, please?
+							&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+							
+							People have said to me
+				that the eLearning Quality Tab is interesting.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+							
+							Do you agree with that opinion?</reply>
+</record>
+<record>
+  <date>2006-11-03T08:05:56.957+0000</date>
+  <millis>1162541156957</millis>
+  <sequence>2395</sequence>
+  <botid>TF</botid>
+  <userid>guest10020@jabber.eun.org/eun_Jabber</userid>
+  <input>hi everyone</input>
+  <reply>You where a bit too sofisticated for me,
+							could you say that in another way, please?
+							&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+							
+							My mind was in another place,
+							try and answer the question in another way, please?
+							
+							
+							People have said to me
+				that the eLearning Quality Tab is interesting.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+							
+							Do you agree with that opinion?</reply>
+</record>
+<record>
+  <date>2006-11-03T08:59:32.984+0000</date>
+  <millis>1162544372984</millis>
+  <sequence>2528</sequence>
+  <botid>TF</botid>
+  <userid>guest10021@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Some people believe
+				that the EFQUEL WIKI Page is too complex.&lt;br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you agree with that statement?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:00:17.799+0000</date>
+  <millis>1162544417799</millis>
+  <sequence>2555</sequence>
+  <botid>TF</botid>
+  <userid>guest10022@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			It has been observed
+				that the EFQUEL WIKI Page is topical.&lt;br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you share that idea?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:00:49.148+0000</date>
+  <millis>1162544449148</millis>
+  <sequence>2580</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Some people believe
+				that the EFQUEL Community is interactive.&lt;br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you agree?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:01:10.657+0000</date>
+  <millis>1162544470657</millis>
+  <sequence>2611</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>yes</input>
+  <reply>I&apos;ll remember that.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				when some say that the Homepage of EFQUEL is too simple?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:01:17.233+0000</date>
+  <millis>1162544477233</millis>
+  <sequence>2632</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>nope</input>
+  <reply>Did you answer like that
+				because you have not thought about it?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:01:31.385+0000</date>
+  <millis>1162544491385</millis>
+  <sequence>2673</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>no because I meant no</input>
+  <reply>Interesting view! because you meant no!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Here is another one.					
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+				Would you agree 
+				when some say that the Homepage of EFQUEL is well designed?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:01:45.928+0000</date>
+  <millis>1162544505928</millis>
+  <sequence>2706</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>possibly</input>
+  <reply>Ok!
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				Would you agree 
+				with this statement, the About Section is a good source?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:01:52.191+0000</date>
+  <millis>1162544512191</millis>
+  <sequence>2719</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>maybe</input>
+  <reply>The About Section is a good source.&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;Is that a true statement more often than not?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:02:07.156+0000</date>
+  <millis>1162544527156</millis>
+  <sequence>2744</sequence>
+  <botid>TF</botid>
+  <userid>karsten@jabber.eun.org/Gaim_Jabber</userid>
+  <input>possibly</input>
+  <reply>So you agree.
+				&lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+				This is all for this time. 
+			Thanks for your help in our evaluation. &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Have a nice day. &lt;br xmlns="http://www.w3.org/1999/xhtml"/></reply>
+</record>
+<record>
+  <date>2006-11-03T09:06:55.551+0000</date>
+  <millis>1162544815551</millis>
+  <sequence>2779</sequence>
+  <botid>TF</botid>
+  <userid>guest10023@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Some people believe
+				that the EFQUEL WIKI Page is too complex.&lt;br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you share that opinion?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:13:14.622+0000</date>
+  <millis>1162545194622</millis>
+  <sequence>2818</sequence>
+  <botid>TF</botid>
+  <userid>guest999@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			Would you agree 
+				when some say that the Homepage of EFQUEL is having a good user interface?</reply>
+</record>
+<record>
+  <date>2006-11-03T09:15:15.054+0000</date>
+  <millis>1162545315054</millis>
+  <sequence>2847</sequence>
+  <botid>TF</botid>
+  <userid>guest999@jabber.eun.org/eun_Jabber</userid>
+  <input>CONNECT</input>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt;
+			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/>
+			When asked, some people claim
+				that the Homepage of EFQUEL is too simple.&lt;br xmlns="http://www.w3.org/1999/xhtml"/>
+				Do you agree with that sentence?</reply>
+</record>

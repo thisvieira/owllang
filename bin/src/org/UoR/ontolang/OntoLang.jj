@@ -1,0 +1,974 @@
+options {
+  LOOKAHEAD = 3;
+  FORCE_LA_CHECK = true;
+  STATIC = false;
+}
+
+
+PARSER_BEGIN(OntoLang)
+package org.UoR.ontolang;
+
+
+import java.io.*;
+import java.util.*;
+
+//Libraries used to communicate with ontologies.
+import edu.stanford.smi.protege.model.KnowledgeBase;
+import edu.stanford.smi.protege.model.*;
+
+public class OntoLang 
+{
+	public static class Types
+	{
+		public static final int CLS = 0;
+		public static final int SLOT = 1;
+		public static final int INS = 2;
+	}
+
+	private String thatReturn="";
+
+	private int investigateType;
+	private ArrayList ONTresult;
+	
+	
+	private KnowledgeBase kb;
+	private SystemFrames systemframes;
+	private Random rand;
+	
+	//Default string to use with the parser
+	private String defaultStrings[];
+	
+    /**An unknown AIML input*/
+    protected static final String O_UNKNOWN = "UNKNOWN";
+	
+    public OntoLang(KnowledgeBase kb)
+    {
+    	this(new StringReader("test"));
+		this.kb = kb;
+		
+		Long seed = System.nanoTime();
+		this.rand = new Random(seed);
+		
+		defaultStrings = new String[3];
+		defaultStrings[Types.CLS] = ":NAME";
+		defaultStrings[Types.SLOT]= ":NAME";
+		defaultStrings[Types.INS] = ":NAME";
+		
+		systemframes = kb.getSystemFrames();
+    }
+    
+    public void setDefaultInstanceString(String instanceString)
+    {
+    	defaultStrings[Types.INS] = instanceString;
+    }
+    
+	public String getOntologyResponse(String input) throws ParseException
+	{
+		ONTresult = new ArrayList();
+		StringReader inp = new StringReader(input);
+		this.ReInit(inp);
+		String res = this.OntQue();
+		return res;
+	}
+	
+	/**
+	 * Gets collection of instances (Cls, Instance or Slot) satisfying the predicate
+	 * slotName: name of slot used to identify Cls. If null cls found by their defaultName.
+	 * cType: Token storing comparison knowledge
+	 * slotValue: Value which is used to check against
+	*/	
+	private Collection getCLSes(String slotName,Token cType,String slotValue) throws ParseException
+	{
+		//Find all Cls'es, which are equal to slotValue
+		Collection possibles;
+		Iterator iPos;
+
+		boolean check;
+		if (cType.image.equals("==")| cType.image.equals("+="))
+			check=true;
+		else
+			check=false;
+
+		if(slotName==null)
+		{
+			possibles = new ArrayList();
+			Cls c = kb.getCls(slotValue);
+			if(c!=null) possibles.add(c);
+		}
+		else
+		{
+			Collection allClses = kb.getClses();
+			possibles = new ArrayList();
+			iPos = allClses.iterator();
+			while(iPos.hasNext())
+			{
+				Cls c=(Cls)iPos.next();
+				String val=getSlotVal(c,slotName);
+				if ((val.equals(slotValue) & check) | (!val.equals(slotValue) & !check)) collectionAdd(possibles,c);
+			}
+		}
+		
+		//Holds all cls, which have been removed during negation.
+		//Used to find instances
+		Collection removeCls = new ArrayList();
+		
+		//Get inverse set if it is a neg. predicate.
+		if(!check & (slotName==null))
+		{
+			Collection allCls = kb.getClses();
+			iPos = possibles.iterator();
+			while(iPos.hasNext())
+			{
+				Cls c=(Cls)iPos.next();
+				String val;
+				val=getSlotVal(c,slotName);
+				if(val!=slotValue) 
+				{
+					//if (investigateType==Types.INS) allCls.removeAll(c.getSuperclasses());
+					
+					allCls.remove(c);
+					removeCls.add(c);
+				}
+			}
+			possibles=allCls;
+		}
+			
+		//Add sub-Cls to possibles
+		if(cType.image.equals("+=") & (investigateType!=Types.INS))
+		{
+			Collection subClses = new ArrayList();
+			iPos = possibles.iterator();
+			while(iPos.hasNext())
+			{
+				Cls c = (Cls)iPos.next();
+				subClses.addAll(c.getSubclasses());
+			}
+			possibles.addAll(subClses);
+		}
+		
+		ArrayList results = new ArrayList();
+		//Return correct type.
+		switch (investigateType)
+		{
+			case Types.CLS:
+				return possibles;
+			case Types.SLOT:	
+				iPos = possibles.iterator();
+				while(iPos.hasNext())
+				{
+					Cls c = (Cls)iPos.next();
+					collectionAddAll(results, c.getTemplateSlots());
+					//collectionAddAll(c.getOwnSlots()); ONTSLOT should only return template slots
+				}
+				return results;
+			case Types.INS:
+				//removeSuperCls(possibles);
+				iPos = possibles.iterator();
+				while(iPos.hasNext())
+				{
+					Cls c = (Cls)iPos.next();
+					collectionAddAll(results, c.getInstances());
+				}
+				iPos = removeCls.iterator();
+				while(iPos.hasNext())
+				{
+					Cls c = (Cls)iPos.next();
+					results.removeAll(c.getDirectInstances());
+				}
+				return results;
+			default:
+				throw new ParseException("Illigal investigation type in cls call");
+		}
+	}
+	
+	
+	/**
+	 * Gets collection of instances (Cls, Instance or Slot) satisfying the predicate
+	 * slotName: Name of slot to check for equality. If null the get default value.
+	 * cType: Can be equal-to or not-equal-to token
+	 * slotValue: Value which is used to check against
+	 * eType: If null then no instance check is performed, else if it is an ONTINS query instances in the domain is check to satisfy the folowing predicate.
+	 * insSlotName: The Slot of the instance to use in the check. If null use default value or toString() if not ValueType.INSTANCE
+	 * insType: Type of check. equal-to, not-equal-to
+	 * insValue: Value to check against.
+	*/	
+	private Collection getSLOTs(String slotName,Token cType,String slotValue,Token eType, String insSlotName, Token insCheckType, String insValue) throws ParseException
+	{
+		//Find all Slots, which are equal to slotValue
+		Collection possibles;
+		Iterator iPos;
+
+		boolean check;
+		if (cType.image.equals("=="))
+			check=true;
+		else
+			check=false;
+
+		if(slotName==null)
+		{
+			possibles = new ArrayList();
+			Slot s = kb.getSlot(slotValue);
+			if (s!=null) possibles.add(s);
+		}
+		else
+		{
+			Collection allSlots = kb.getSlots();
+			allSlots.removeAll(kb.getSubclasses(kb.getRootSlotMetaCls()));
+			possibles = new ArrayList();
+			iPos = allSlots.iterator();
+			while(iPos.hasNext())
+			{
+				Slot s=(Slot)iPos.next();
+				String val=getSlotVal(s,slotName);
+				if ((val.equals(slotValue) & check) | (!val.equals(slotValue) & !check)) collectionAdd(possibles,s);
+			}
+			//if (investigateType==Types.INS) removeSuperCls(possibles);
+		}
+		
+		//Get inverse set if it is a neg. predicate.
+		if(!check & (slotName==null))
+		{
+			Collection allSlots = kb.getSlots();
+			allSlots.removeAll(kb.getSubclasses(kb.getRootSlotMetaCls()));
+			iPos = possibles.iterator();
+			while(iPos.hasNext())
+			{
+				Slot s=(Slot)iPos.next();
+				String val;
+				val=getSlotVal(s,slotName);
+				if(val!=slotValue) 
+				{
+					//if (investigateType==Types.INS) allSlots.removeAll(c.getSuperclasses());
+					allSlots.remove(s);
+				}
+			}
+			possibles=allSlots;
+		}
+				
+		ArrayList results = new ArrayList();
+		Collection allSlots;
+		iPos = possibles.iterator();
+		//Return correct type.
+		switch (investigateType)
+		{
+			case Types.CLS:
+				while(iPos.hasNext())
+				{
+					Slot s = (Slot)iPos.next();
+					collectionAddAll(results,s.getDomain());
+				}
+				return results;
+			case Types.SLOT:
+				return possibles;
+			case Types.INS:
+				Collection domainCls = new ArrayList();
+				while(iPos.hasNext())
+				{
+					Slot s = (Slot)iPos.next();
+					collectionAddAll(domainCls,s.getDomain());				
+				}
+				iPos = domainCls.iterator();
+				while(iPos.hasNext())
+				{
+					Cls c = (Cls)iPos.next();
+					collectionAddAll(results,c.getInstances());
+				}		
+				if(eType==null) return results;
+				
+				iPos = results.iterator();
+				Collection insResults = new ArrayList();
+
+				while(iPos.hasNext())
+				{
+					Instance c = (Instance)iPos.next();
+					
+					Collection vals = new ArrayList();
+					
+					Iterator iSlots = possibles.iterator();
+					while(iSlots.hasNext())
+					{
+						Slot sl = (Slot)iSlots.next();
+						if (c instanceof Cls)
+							collectionAddAll(vals,((Cls)c).getTemplateSlotValues(sl));
+						
+						collectionAddAll(vals,c.getOwnSlotValues(sl));
+					}
+					
+					//TODO: Incorporate a way to control whether unknown values are allowed.
+					//They aren't now
+					if((vals.size()==0)& (!check|(insValue.equals("")))) 
+					{
+						collectionAdd(insResults,c);
+						continue;
+					}
+					
+					if(insSlotName=="" | insSlotName==null) insSlotName=defaultStrings[Types.INS];
+					iSlots = vals.iterator();
+					while(iSlots.hasNext())
+					{
+						Object o = iSlots.next();
+						String val;
+						if(o instanceof Instance) 
+							val = getSlotVal((Instance)o,insSlotName);
+						else
+							val = o.toString();
+							
+						boolean strEqual = val.equals(insValue);
+						boolean eqSign = false;
+						
+						if(insCheckType.image.equals("==")) 
+							eqSign=true;
+						if ((strEqual & eqSign)|(!strEqual & !eqSign)) 
+						{
+							collectionAdd(insResults, c);
+							break;
+						}
+					}					
+				}
+				return insResults;				
+			default:
+				throw new ParseException("Illigal investigation type in slot call");
+		}
+	}
+
+	/**
+	 * Gets collection of instances (Cls, Instance or Slot) satisfying the predicate
+	 * slotName: Name of slot to check for equality. If null the get default value.
+	 * cType: Token storing comparison knowledge
+	 * slotValue: Value which is used to check against
+	*/		
+	private Collection getINSes(String slotName,Token cType,String slotValue) throws ParseException
+	{
+		//Find all instances, which are equal to slotValue
+		Collection possibles = new ArrayList();
+		Iterator iPos;
+
+		boolean check;
+		if (cType.image.equals("=="))
+			check=true;
+		else
+			check=false;
+
+		if(slotName==null) 
+			slotName = new String(defaultStrings[Types.INS]);
+		if(slotName.equals("")) slotName = defaultStrings[Types.INS];
+
+		Collection allIns = kb.getInstances(kb.getRootCls());
+		allIns.removeAll(kb.getInstances(kb.getRootClsMetaCls()));
+		
+		iPos = allIns.iterator();
+		while(iPos.hasNext())
+		{
+			Instance i=(Instance)iPos.next();
+			String val;
+			val=getSlotVal(i,slotName);
+			if(val.equals(slotValue)) collectionAdd(possibles,i); 
+		}
+		
+		if(!check & (investigateType==Types.CLS))
+		{
+			Collection results = kb.getClses();
+			iPos = possibles.iterator();
+			while(iPos.hasNext())
+			{
+				Instance i = (Instance)iPos.next();
+				results.remove(i.getDirectType());
+			}
+			return results;
+		}
+		if(!check)
+		{
+			iPos = possibles.iterator();
+			while(iPos.hasNext())
+			{
+				Instance i = (Instance)iPos.next();
+				allIns.remove(i);
+			}
+			possibles = allIns;
+		}
+		
+		switch (investigateType)
+		{
+			case Types.CLS:
+				Collection results = new ArrayList();
+				iPos = possibles.iterator();
+				while(iPos.hasNext())
+				{
+					Instance i = (Instance)iPos.next();
+					collectionAdd(results,i.getDirectType());
+				}
+				return results;
+			case Types.SLOT:
+				//TODO: find a functionality
+				return new ArrayList();
+			case Types.INS:
+				return possibles;
+			default:
+				throw new ParseException("Illigal investigation type in ins call");
+		}
+	}
+
+	/**
+	 * Gets collection of instances (Cls, Instance or Slot) satisfying the predicate
+	*/	
+	private Collection getFCTs(Token cType,String slotValue,Token type) throws ParseException
+	{
+		//Throw exception if not (slotValue XOR type)
+		if((slotValue==null && type==null) || (slotValue!=null && type!=null)) 
+			throw new ParseException("Designer ERROR: slotValue XOR type not satisfied."); 	
+
+		//Returns empty Collection is a ins or cls is expected return type.
+		if(investigateType==Types.INS || investigateType==Types.CLS) return new ArrayList();
+		
+		//Find all Slots, which are equal to slotValue or type
+		Collection possibles = kb.getSlots();
+		Iterator iPos = possibles.iterator();
+		
+		Collection results = new ArrayList();
+		
+		boolean equal;
+		if(cType.image.equals("=="))
+			equal=true;
+		else 
+			equal=false;
+		
+		while(iPos.hasNext())
+		{
+			Slot s = (Slot)iPos.next();
+			boolean slotAllowsValue;
+
+			if(slotValue==null)
+			{
+				slotAllowsValue = ((s.getValueType()==ValueType.INSTANCE) & type.image.equals("INSTANCE")) |
+									((s.getValueType()!=ValueType.INSTANCE) & !type.image.equals("INSTANCE"));
+
+			}		
+			else
+			{
+				Cls c = kb.getCls(slotValue);
+				slotAllowsValue = s.getAllowedClses().contains(c);
+			}
+			
+			if ((slotAllowsValue & equal) | (!slotAllowsValue & !equal)) results.add(s);
+		}
+		
+		switch (investigateType)
+		{
+			case Types.CLS:
+				throw new ParseException("Illigal investigation type in ins call");
+			case Types.SLOT:
+				return results;
+			case Types.INS:
+				throw new ParseException("Illigal investigation type in ins call");
+			default:
+				throw new ParseException("Illigal investigation type in ins call");			
+		}
+	}
+	
+	/**
+	 * Gets a single instance (Cls, Instance or Slot) from a Collection
+	*/
+	private Object getSingleObject(Collection possibleInstances)
+	{		
+    	Object winner = null;;
+    		
+ 		if (possibleInstances.size()!=0)
+		{
+    		Object [] res = possibleInstances.toArray();
+			winner = res[this.rand.nextInt(possibleInstances.size())];
+    	}
+    	
+		return winner;
+    }
+    
+    private void collectionAdd(Collection col, Object o)
+    {
+    	if(!col.contains(o)) col.add(o);
+    }
+    
+    private void collectionAddAll(Collection col, Collection in)
+    {
+    	Iterator i = in.iterator();
+    	while(i.hasNext())
+    	{
+    		Object o = i.next();
+    		if(!col.contains(o)) col.add(o);
+    	}
+    }
+    
+    //Removes META-CLS from collection
+    //TODO: incorporate functionality to choose META data
+    private void removeMetaData(Collection col)
+    {
+		/*col.removeAll(kb.getSubclasses(kb.getRootClsMetaCls()));
+		col.removeAll(kb.getSubclasses(kb.getRootFacetMetaCls()));
+		col.removeAll(kb.getSubclasses(kb.getRootSlotMetaCls()));
+		col.remove(kb.getRootClsMetaCls());
+		col.remove(kb.getRootFacetMetaCls());
+		col.remove(kb.getRootClsMetaCls());*/
+		col.removeAll(systemframes.getFrames());
+    }
+    
+    private void removeSuperCls(Collection col)
+    {
+    	Collection superCls = new ArrayList();
+    
+    	Iterator iCol = col.iterator();
+    	while(iCol.hasNext())
+    	{
+    		Cls c = (Cls)iCol.next();
+    		superCls.addAll(c.getSuperclasses());
+    	}
+    	
+    	iCol = col.iterator();
+    	while(iCol.hasNext())
+    	{
+    		Cls c = (Cls)iCol.next();
+    		if (superCls.contains(c)) iCol.remove();    		
+    	}
+    }
+    
+    private String getSlotVal(Frame fr,String slotName) throws ParseException
+    {
+    	if (slotName==null) slotName="";
+    	if(slotName=="")
+    	{
+    		if(fr instanceof Cls)
+    			slotName=defaultStrings[Types.CLS];
+    		else
+    			if(fr instanceof Slot)
+		    		slotName=defaultStrings[Types.SLOT];
+		    	else
+    				if(fr instanceof Instance)
+    					slotName=defaultStrings[Types.INS]; 
+		    		else
+		    			throw new ParseException("Return type mismatch.");
+    	}
+		
+		Collection slots = kb.getSlots();
+		Iterator iSlots = slots.iterator();
+		while(iSlots.hasNext())
+		{
+			Slot s = (Slot)iSlots.next();			
+			String name = s.getName();			
+			if(name.equals(slotName))
+			{
+				if (fr instanceof Cls)
+				{
+					Cls c = (Cls)fr;
+					if (kb.hasTemplateSlot(c,s) & !kb.hasOwnSlot(c,s))
+					{
+						if (c.getTemplateSlotValueType(s)==ValueType.INSTANCE)
+						{
+    						Instance i = (Instance)c.getTemplateSlotValue(s);  	
+    						return (String)i.getOwnSlotValue(kb.getSlot(defaultStrings[Types.INS]));
+    					}
+    					else
+    					{
+    						Object o = c.getTemplateSlotValue(s);
+    						if(o==null) return "";
+    						return o.toString();
+    					}
+    				}
+				}
+				if (kb.hasOwnSlot(fr,s))
+				{
+					if (fr.getOwnSlotValueType(s)==ValueType.INSTANCE)
+					{
+    					Instance i = (Instance)fr.getOwnSlotValue(s);  	
+    					return (String)i.getOwnSlotValue(kb.getSlot(defaultStrings[Types.INS]));
+    				}
+    				else
+    				{
+    					Object o = fr.getOwnSlotValue(s);
+    					if(o==null) return "";
+    					return o.toString();
+    				}
+    			}
+    				
+    		}
+    	}
+    	return O_UNKNOWN; 	
+    }
+        
+	private String getStringToken(Token t)
+	{
+		return t.image.substring(1,t.image.length()-1);
+	}
+	
+	private int getNumberToken(Token t)
+	{
+		return Integer.parseInt(t.image.substring(1));
+	}
+	
+	public String getThatReturn()
+	{
+		return this.thatReturn;
+	}
+	
+	private Collection collectionXOR(Collection pos1, Collection pos2)
+	{
+		Collection XORcol = new ArrayList();
+		Collection dummy = new ArrayList();
+		
+		dummy.addAll(pos2);
+		dummy.removeAll(pos1);
+		
+		XORcol.addAll(dummy);
+		
+		dummy.clear();
+		dummy.addAll(pos1);
+		dummy.removeAll(pos2);		
+		
+		XORcol.addAll(dummy);
+		
+		return XORcol;
+	}
+}
+
+PARSER_END(OntoLang)
+
+SKIP : /* WHITE SPACE AND COMMENTS*/
+{
+	" "
+|	"\t"
+|	"\n"
+|	"\r"
+|	"\f"
+}
+
+SPECIAL_TOKEN : /* COMMENTS */
+{
+  <SINGLE_LINE_COMMENT: "//" (~["\n","\r"])* ("\n"|"\r"|"\r\n")>
+| <MULTI_LINE_COMMENT: "/*" (~["*"])* "*" ("*" | (~["*","/"] (~["*"])* "*"))* "/">
+}
+
+TOKEN :
+{
+	<ONTQUE: 		"$ONTQUE">
+|	<ONTINS: 		"ONTINS">
+|	<ONTCLS: 		"ONTCLS">
+|	<ONTSLT: 		"ONTSLT">
+|	<CLS:			"cls">
+|	<SLOT:			"slot">
+|	<INS:			"ins">
+|	<FCT:			"fct">
+|	<FCTTYPEINS:	"INSTANCE">
+|	<FCTTYPENOTINS:	"NOT_INSTANCE">
+|	<THAT:		 	"THAT">
+|	<COLON:		 	":">
+|	<LPAREN: 		"(" >
+|	<RPAREN: 		")" >
+|	<SEMICOLON: 	";" >
+|	<ASSIGN: 		"=" >
+|	<EQ: 			"==" >
+|	<NE: 			"!=" >
+|	<PLUSEQ:		"+=" >
+|	<SC_OR: 		"OR" >
+|	<SC_AND: 		"AND" >
+|	<SC_XOR: 		"XOR" >
+|	<GETINS:		">>" >
+|	<REFNUMBER: 	"#" ["1"-"9"] ( ["0"-"9"] )* >
+|	<STRING:		"'" ( (~["'","\n","\r"]) )* "'" >
+}
+
+String OntQue() :
+{
+	String res;
+	Token t
+}
+{
+ 	t=<ONTQUE> res=CommandList() ThatReturnPart() <EOF>
+ 	{
+ 		
+ 		return t.image + " " + res;
+ 	}
+}
+
+
+//Returns the strin
+String CommandList() :
+{
+	String res,r1;
+}
+{
+	<LPAREN> res=CommandPart() ( r1=CommandPart() {res+=" "+r1;} )* <RPAREN>
+ 	{
+ 		return res;
+ 	}
+}
+
+//Initiates the Collection to find depending on command
+//Return a string with "<command-type> <single-fit from all possible>"
+String CommandPart() :
+{
+	String res,resIns;
+	String slotString="";
+	Collection possibles = new ArrayList();
+}
+{
+	res=Command() possibles=PredicateStatement() [ slotString=ColonString() ]
+	{
+		//if(investigateType == Types.CLS) possibles.removeAll(kb.getSubclasses(kb.getRootClsMetaCls()));
+		Object o = getSingleObject(possibles);
+		
+		if(o!=null)
+			resIns = getSlotVal((Frame)o,slotString);
+		else 
+			resIns = O_UNKNOWN;
+			
+		ONTresult.add(resIns);
+		res +=" " + resIns;
+ 		return res;
+ 	}
+}
+
+//Returns all frames of the given type
+String Command() :
+{
+	Token t;
+}
+{
+	t=<ONTCLS>
+	{
+		this.investigateType = Types.CLS;
+ 		return t.image;
+ 	}
+	|
+	t=<ONTINS>
+	{
+		this.investigateType = Types.INS;
+ 		return t.image;
+ 	}
+	|
+	t=<ONTSLT>
+	{
+		this.investigateType = Types.SLOT;
+ 		return t.image;
+ 	}
+}
+
+
+
+//Return Collection of possibles using logic between predicates
+Collection  PredicateStatement() :
+{
+	Collection pos;
+}
+{
+	<LPAREN> pos=PredicateList() <RPAREN>
+	{
+		return pos;
+	}
+}
+
+Collection  PredicateList() :
+{
+	Collection pos;
+}
+{
+	pos=PredicateXOR()
+	{
+		return pos;
+	}
+}
+
+Collection  PredicateXOR() :
+{
+	Collection pos1 = null;
+	Collection pos2 = null;
+	Collection mpos = null;
+}
+{
+	pos1=PredicateOR() ( <SC_XOR> pos2=PredicateOR() {if(mpos==null) mpos=pos2; else mpos=collectionXOR(mpos,pos2);} )*
+	{
+		if(mpos==null) return pos1;
+		pos1 = collectionXOR(pos1,mpos);
+		return pos1;
+	}
+} 
+
+Collection  PredicateOR() :
+{
+	Collection pos1 = null;
+	Collection pos2 = null;
+	Collection mpos = null;
+}
+{
+	pos1=PredicateAND() ( <SC_OR> pos2=PredicateAND() {if(mpos==null) mpos=pos2; else mpos.addAll(pos2);} )*
+	{
+		if(mpos==null) return pos1;
+		
+		pos1.addAll(mpos);		
+		return pos1;
+	}
+} 
+
+Collection  PredicateAND() :
+{
+	Collection pos1 = null;
+	Collection pos2 = null;
+	Collection mpos = null;
+}
+{
+	pos1=PredicateUNARY() ( <SC_AND> pos2=PredicateUNARY() {if(mpos==null) mpos=pos2; else mpos.retainAll(pos2);} )*
+	{
+		if(mpos==null) return pos1;
+		
+		pos1.retainAll(mpos);
+		return pos1;
+	}
+}
+
+Collection  PredicateUNARY() :
+{
+	Collection pos;
+}
+{
+	pos=Predicate()
+	{
+		removeMetaData(pos);
+		return pos;
+	}
+	|
+	<LPAREN> pos=PredicateList() <RPAREN>
+	{
+		//removeMetaData(pos);
+		return pos;
+	}
+} 
+
+//Return Collection of possibles
+Collection Predicate() :
+{
+	Collection pos;
+	
+	String slotName=null;
+	String slotValue=null;
+	String insSlotName=null;
+	String insValue=null;
+	
+	Token t=null;
+	Token cType;
+	Token insType=null;
+}
+{
+	<SLOT> [ slotName=ColonString() ] cType=CheckType() slotValue=RefOrString() [ t=<GETINS> [ insSlotName=ColonString() ] insType=CheckType() insValue=RefOrString() ]
+	{
+ 		pos=getSLOTs(slotName,cType,slotValue,t,insSlotName, insType, insValue);
+ 		return pos;
+ 	}
+ 	|
+	<CLS> [ slotName=ColonString() ] cType=ClsCheckType() slotValue=RefOrString() 
+ 	{
+ 		pos=getCLSes(slotName,cType,slotValue);
+ 		return pos;
+ 	}
+ 	|
+ 	<INS> [ slotName=ColonString() ] cType=CheckType() slotValue=RefOrString()
+ 	{
+ 		pos=getINSes(slotName, cType,slotValue);
+ 		return pos;
+ 	}
+ 	|
+ 	<FCT> cType=CheckType() ( slotValue=RefOrString() | t=TypeToken() )
+ 	{
+ 		pos=getFCTs(cType,slotValue,t);
+ 		return pos;
+ 	}
+}
+
+Token TypeToken() :
+{
+	Token t;
+}
+{
+	t=<FCTTYPEINS>
+	{
+ 		return t;
+ 	}
+	|
+	t=<FCTTYPENOTINS>
+	{
+ 		return t;
+ 	}
+}
+
+Token ClsCheckType() :
+{
+	Token t;
+}
+{
+	t=<PLUSEQ>	
+ 	{
+ 		return t;
+ 	}
+ 	|
+	t=CheckType()
+	{
+ 		return t;
+ 	}
+}
+
+Token CheckType() :
+{
+	Token t;
+}
+{
+	t=<EQ>
+ 	{
+ 		return t;
+ 	}
+	|
+	t=<NE>	
+ 	{
+ 		return t;
+ 	}
+}
+
+String RefOrString() :
+{
+	Token t;
+}
+{
+	t=<STRING>
+	{
+ 		return getStringToken(t);
+ 	}
+	|
+	t=<REFNUMBER>
+ 	{
+ 		int i = getNumberToken(t);
+ 		try
+ 		{
+ 			String res = (String)ONTresult.get(i-1);
+	 		return res;
+ 		} catch(IndexOutOfBoundsException ie)
+ 		{
+ 			throw new ParseException("Reference out of bounds. #REF < " + ONTresult.size() + " expected.");
+ 		}
+ 	}
+}
+
+String ColonString() :
+{
+	Token t;
+}
+{
+	<COLON> t=<STRING>
+ 	{
+ 		return getStringToken(t);
+ 	}
+}
+
+
+void ThatReturnPart() :
+{
+	Token t;
+}
+{
+	<THAT> <ASSIGN> t=<STRING>
+ 	{
+ 		this.thatReturn = getStringToken(t);
+ 	}
+}

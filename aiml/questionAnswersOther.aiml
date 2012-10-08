@@ -1,0 +1,339 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+<!--
+ANSWER: Sometimes
+-->
+		
+	<topic name="QUESTION _">		
+		<category>
+			<pattern>
+				UNSURE
+			</pattern>
+			<template>
+				<random>
+					<li>Would you say that the <get name="subject"/> <get name="predicate"/> <get name="object"/> more often than not?</li>
+					<li>In your opinion would it be true that the <get name="subject"/> <get name="predicate"/> <get name="object"/> more often than not?</li>
+					<li>The <get name="subject"/> <get name="predicate"/> <get name="object"/>.<html:br/>Is that a true statement more often than not?</li>
+				</random>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				UNSURE
+			</pattern>
+			<that>
+				* OFTEN THAN NOT
+			</that>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<random>
+					<li>But would you say that the <get name="subject"/> <get name="predicate"/> <get name="object"/> more often than not?</li>
+					<li>But in your opinion would it be true that the <get name="subject"/> <get name="predicate"/> <get name="object"/> more often than not?</li>
+					<li>But is this a true statement 'The <get name="subject"/> <get name="predicate"/> <get name="object"/>' more often than not?</li>
+				</random>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				UNSURE
+			</pattern>
+			<that>
+				BUT * OFTEN THAN NOT
+			</that>
+			<template>
+				<srai>YESORNOANSWERNEEDED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				UNSURE
+			</pattern>
+			<that>
+				HOWEVER * OFTEN THAN NOT
+			</that>
+			<template>
+				<srai>YESORNOANSWERNEEDED</srai>
+			</template>
+		</category>
+		
+		
+		
+		<!-- Uncertainty shown, but with some value -->
+		<category>
+			<pattern>
+				UNSUREWITHVALUE
+			</pattern>
+			<template>
+				<person2><input/></person2>.
+				<random>
+					<li>You seam a bit confused, </li>
+					<li>That's not concise enough, </li>
+					<li>That is too vague, </li>
+					<li>You aren't very clear, </li>
+					<li>You sound a bit unsure to me, </li>
+					<li>I would like to be completely sure what you mean, </li>
+					<li>You do not sound convincing to me </li>
+				</random>
+				<random>
+					<li>so let's try and be more specific.</li>
+					<li>so here is another question to help you be more precise.</li>
+					<li>therefore this question, which is more detailed.</li>
+					<li>for that reason I'll try to be more detailed.</li>
+					<li>so what do you say to this then?</li>
+					<li>therefore let me rephrase it in this question!</li>
+					<li>so try and answer this.</li>
+				</random>
+				<html:br/>
+				<srai>unsure</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				UNSUREWITHVALUE
+			</pattern>
+			<that>
+				* OFTEN THAN NOT
+			</that>
+			<template>
+				<think>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>I'll take this as a yes!</li>
+					<li>OK, I think you believe it is so.</li>
+					<li>It seems to me, that you agree with the statement.</li>
+				</random>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				UNSUREWITHVALUE
+			</pattern>
+			<that>
+				BUT * OFTEN THAN NOT
+			</that>
+			<template>
+				<srai>YESORNOANSWERNEEDED</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				UNSUREWITHVALUE
+			</pattern>
+			<that>
+				HOWEVER * OFTEN THAN NOT
+			</that>
+			<template>
+				<think>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Everthough you where a bit unclear, </li>
+					<li>Although you seem a bit hazy, </li>
+					<li>Though you appear opaque, </li>
+				</random>
+				<random>
+					<li>I believe it's your opinion that</li>
+					<li>it is my conclusion that you believe that </li>
+					<li>I assess that you think that </li>
+				</random>
+				'The <get name="subject"/> <get name="predicate"/> <get name="object"/>.'
+				<html:br/>
+				<condition name="numberOfQuestions">
+					<li value="IIIII">Lets end it here.<html:br/><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIII">Lets end it here.<html:br/><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIIII">Lets end it here.<html:br/><srai>ENDQUSTIONTIME</srai></li>
+					<li>
+						<random>
+							<li>Here is another question.</li>
+							<li>We'll take another one.</li>
+							<li>Let's try this one.</li>
+						</random>
+					</li>
+				</condition>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>
+				SOMETIMES
+			</pattern>
+			<template>
+				<srai>UNSURE</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				SOMETIMES
+			</pattern>
+			<that>
+				* OFTEN THAN NOT
+			</that>
+			<template>
+				<random>
+					<li>It sounds like you aren't sure, </li>
+					<li>I think you haven't made up your mind, </li>
+					<li>You sound a bit confused, </li>
+				</random>
+				<condition name="numberOfQuestions">
+					<li value="IIII">so lets end it here.<html:br/><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIII">so lets end it here.<html:br/><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIII">so lets end it here.<html:br/><srai>ENDQUSTIONTIME</srai></li>
+					<li>
+						<random>
+							<li>so here is another question.</li>
+							<li>therefore we'll take another one.</li>
+							<li>let's try this one.</li>
+							<li>what do you say to this then?</li>
+							<li>let me rephrase it in this question!</li>
+							<li>try and answer this one.</li>
+						</random>
+					</li>
+				</condition>
+				<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				SOMETIMES
+			</pattern>
+			<that>
+				BUT * OFTEN THAN NOT
+			</that>
+			<template>
+				<srai>no</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NO
+			</pattern>
+			<that>
+				* OFTEN THAN NOT
+			</that>
+			<template>
+				<think>
+					<srai>FINDINVERSEOFPREDICATE</srai>
+				</think>
+				<random>
+					<li>However would you say that the <get name="subject"/> <get name="predicate"/> <get name="object"/> more often than not?</li>
+					<li>However in your opinion would it be true that the <get name="subject"/> <get name="predicate"/> <get name="object"/> more often than not?</li>
+					<li>However is this a true statement the <get name="subject"/> <get name="predicate"/> <get name="object"/> more often than not?</li>
+				</random>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NO
+			</pattern>
+			<that>
+				HOWEVER * OFTEN THAN NOT
+			</that>
+			<template>
+				<think>
+					<set name="predicateURI">noRelation</set>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>So in your opinion there is no strong relation between </li>
+					<li>Ok, there is no correlation between </li>
+					<li>Fair enough, you believe there isn't a strong link between </li>
+					<li>So the relationship is weak between </li>
+				</random>
+				the "<get name="subject"/>" and "<get name="object"/>".<html:br/> 
+				<random>
+					<li>Good.</li>
+					<li>Fine.</li>
+					<li>All right.</li>
+					<li>Cool.</li>
+				</random> 
+				<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				NO
+			</pattern>
+			<that>
+				BUT * OFTEN THAN NOT
+			</that>
+			<template>
+				<think>
+					<srai>STOREREIFICATION</srai>
+				</think>
+				<random>
+					<li>Interesting! <person2><star/></person2>! So you believe that <get name="subject"/> <get name="predicate"/> <get name="object"/>.</li>
+					<li>So you say that <person2><star/></person2>.<html:br/> That's ok!</li>
+					<li>The <get name="subject"/> <get name="predicate"/> <get name="object"/>! I'll remember that.</li>
+				</random>
+				<html:br/>
+				<condition name="numberOfQuestions">
+					<li value="IIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li value="IIIIIII"><srai>ENDQUSTIONTIME</srai></li>
+					<li>
+						<random>
+							<li>Here is another one.</li>
+							<li>Let's try a new question.</li>
+							<li>What about this then.</li>
+							<li>Let's take another one.</li>
+						</random>
+					</li>
+				</condition>					
+				<html:br/>
+				<srai>QUESTASK</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				SOMETIMES *
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* SOMETIMES *
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>
+				* SOMETIMES
+			</pattern>
+			<template>
+				<srai>sometimes</srai>
+			</template>
+		</category>
+
+
+	</topic>
+</aiml>

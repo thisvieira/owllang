@@ -1,0 +1,5 @@
+#Fri Jan 06 11:58:24 GMT 2006
+that.2=Hello. What is your University username?
+that.1=$OWLLANG(ONTREGEX('[a-zA-Z]{3}[0-9]{2}[a-zA-Z]{2,3}' 'sis05kol'))THAT\='IDTEST'
+input.2=CONNECT
+input.1=sis05kol

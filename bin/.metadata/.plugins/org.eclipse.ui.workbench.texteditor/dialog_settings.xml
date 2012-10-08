@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="y" value="573"/>
+		<item key="selection" value="\&quot;"/>
+		<item key="wrap" value="false"/>
+		<item key="casesensitive" value="false"/>
+		<item key="x" value="929"/>
+		<list key="findhistory">
+			<item value="&quot;"/>
+			<item value="UNKNOWN is not flexible"/>
+			<item value="UNKNOWN is flexible"/>
+			<item value="internalresponse"/>
+			<item value="O_UNKNOWN"/>
+			<item value="&quot;[&quot;"/>
+			<item value="&quot;&lt;&quot;"/>
+			<item value="2001"/>
+		</list>
+		<list key="replacehistory" value="2001">
+			<item value="\&quot;"/>
+			<item value="&apos;"/>
+			<item value=""/>
+			<item value="getPos"/>
+			<item value="getStringToken"/>
+			<item value="O_NUMBER"/>
+			<item value="O_NOT"/>
+			<item value="O_AND"/>
+		</list>
+	</section>
+</section>

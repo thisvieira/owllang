@@ -1,0 +1,231 @@
+By Karsten Oster Lundqvist
+sis05kol
+
+
+20/10/05:
+Prepared ProgramD for use with eclipse.
+
+Changed the Multiplexor class to an superclass with the following intermediate sub-classes
+
+	* NormalMultiplexor.java
+		Same functionality as usual
+	* OntologyMultiplexor.java
+		TODO: Ontology communication is maintained here.
+
+Have solved all the annoying warnings that the Java compiler picked 
+up from the ProgramD source.
+
+Added programd.multiplexor-ontology property to CoreSettings getOntologyFileName
+The name is loaded at construction of the core.
+
+21/10/05:
+Found an error in the ontology work. No distinction is made between 
+the different induviduals view points.
+
+added ontology.xml file
+
+25/10/05:
+Have implemented a simple script language, which is placed in an AIML:template tag. It then 
+ships protege ontology instances (String) names into the AIML file to be used.
+
+Here is an explanation of the language:
+
+$ONTQUE$ontins-parts$that-return
+
+
+$			Is a delimiter between the different parts of sentence.
+ONTQUE		Denotes a new sentence. Stands for ontology query. There can only be one ONTQUE 
+			in each sentence. It is neccesary as this language later will implement more
+			commands, e.g. ONTSTR (ontology store) etc.
+			
+ontins-parts	Is a list of ontology instances needed in the AIML code. Described futher down.
+
+that-return	Is the <aiml:THAT>, which will be referenced to by the return of the script.
+
+ontins-parts has the following structure:
+ontins-part@ontins-part@... with as many ontins-part as necessary 
+(one is also legal then ontins-parts==ontins-part.)
+
+ontins-part can have 2 different structures: 
+
+ONTINS$Cls-type:slot-list
+
+and
+
+ONTINS$Cls-type:slot-list|exclusions
+
+exclusions	Is a list of names (description in ontology2.pprj) of instances (can also be ref), which can't be
+			used in the return. If more than one instance is to be excluded then the names are
+			parted by |. E.g. interesting|ease of use|fun
+Cls-type	Is the name of the Cls of which the instance needs to be. The actual type of the
+			instance can be a sub-class of Cls.
+:			Is used to delimit the Cls-type and slot-list.
+slot-list	list of slot delimited with @, which signifies an and operation.
+			Different logics can be included later on!
+
+slot has the following:
+
+Slot-name=Instance-discription
+
+Slot-name	is the name of the slot
+Instance-discription 	is the name of the discription slot of an instance, which is contained in the
+						wanted instance. Can also be a ref.
+						
+that-return has the following:
+THATRETURN=string	string is the string return in the that part.
+
+ref has the following:
+#num	#is the command. Num is the number of an instance already found in a previous ontins-part
+		of the same ONTQUE command.
+				
+The return from the script call can be caught in AIML by a normal <category> of the form:
+
+<category>
+	<pattern>
+		ONTQUE ONTINS * ONTINS *  <!-- ... As many ontint-part in ontins-parts -->
+	</pattern>
+	<that>
+		STRING
+	</that>
+	<template>
+		<!-- Do what needs to be done -->
+	</template>
+</category>
+	
+
+Here is an example.
+
+$ONTQUE$ONTINS$General_Descriptor:contributesTo=High_Quality@describes=Learning_Sources$ONTINS$Descriptor:implies=#1$ONTINS$Descriptor:implies=#1|#2$THATRETURN=SOURCEQUESTION
+
+which will return 3 instances. 
+The first will contributeTo=High_Quality and describes=Learning_Sources
+The next will have the first in the implies slot.
+The third will also have that, but will be different from number 2 instance.
+
+It can be caught in a category containing a that part SOURCEQUESTION
+
+This is implemented in OntologyMultiplexor class:
+	getOntologyInput();
+	getOntologyThat();
+	getOntologyInstance();
+	
+They are working as is, but should be refactored as they are messy: 
+There should be a predicates class, which implements all the functionality of predicates
+This should be used in the getOntologyInstance methods (Create an interface for predicates.)
+
+28/10/05:
+Has re-thought the semantics of the script language, so that it is more intuitive to read (in my opinion),
+and will have much more functionalities than it would be possible in the old one.
+
+I call it OntoLang.
+
+I have now (hopefully without too many bugs) implemented an OntoLang parser in javacc, which only verifies the
+the language. I'll describe the language later on, when it has fully been implemented. But here is an example:
+
+$ONTQUE(
+	ONTINS(cls:'name'=='General_Descriptor'&& slot=='contributesTo'>>'High_Quality' && slot:'name'=='describes'>>'Learning_Sources'):'description'
+    ONTINS(cls+='Descriptor'&&slot=='implies'>>#1 slot=='describes'>>'Learning_Sources')
+	ONTINS(cls+='Descriptor' && slot=='implies'>>#1 && slot:'name'=='describes'>>'Learning_Sources' && slot=='name'!>#2)
+	)THAT='SOURCEQUESTION'
+	
+ONTINS, ONTCLS and ONTSLT are in the language, but remember that the language only can return Strings to AIML
+Predicates can also only be done with strings, so ":" parts can only reference String type slots
+
+slot:'name'=='describes'>>'Learning_Sources'
+and
+slot=='describes'>>'Learning_Sources'
+is the same if 'name' is the defaultString for slot
+>> is used to get instances to be checked (instances are always checked by their description so no need for ":" parts)
+
+cls, slot, ins and fct can be used as predicate. fct can only be used in ONTCLS and ONTSLT. 
+In ONSINS it will give an empty collection
+
+07/11/05:
+A beta version of the OntoLang is now ready, so it is a good time to recap, and write a user manual / documentation.
+
+The 28/10/05 text is not valid anymore, as I had to make a few changed to the language as I had not taken everything into account.
+
+All 1st level commands are followed by a THAT='str' part, which is used to determine , which that category will match the result.
+
+ONTQUE is the only 1st level command implemented at present.
+Within the brackets of that command 3 different commands can be used.
+
+ONTINS: Finds an instance of a Cls in the ontology that matches the predicates. Remember an instance of a Cls is not the same as the
+		Instance class in protege, as Cls, Slot and Facet all are sub-classes of Instance, hence all elements in a protege ontology are
+		Instance class, but in this work I want to be able to destingues between the classes.
+ONTCLS: Finds a Cls in the ontology...
+ONTSLT: Finds a Slot in the ontology...
+
+Predicates to control the selection are put within brackest. Remember that the predicates returns a collection of possibles, 
+but the command finds a random result among the possible results.
+
+After the brackets a voluntary slot choice can be put after a colon. If no choice is given the default value is given.
+
+Predicates can be separated by 3 different boolean commands
+AND : Logical and
+OR : Logical or
+XOR : Logical xor
+
+The computational order is in the mentioned order. So A || B && C is equal to:  D=B && C  result = A || D.
+Brackets can change the order so (A || B) && C is equal to: D=A || B result = D && C
+
+There are 4 different predicate commands, which can be used. They have different meanings depending on, which command is used.
+The general composition of a command is:
+command [:'slotstring'] predicatetype value [ slot_command_optional_part ]
+
+command: is the command used.
+slotstring: is obtional and determines, which slot is used in the evalution. Strings have the form 'str' not "str"
+predicatetype: What kind of evaluation is used.
+	== : finds exact matches.
+	!= : finds exact opposits to ==
+	+= : can be used with the cls command to find exact matches plus sub-cls. e.g cls=='Descriptor' would return Descriptor cls, but
+		 cls+='Descriptor' would find that cls and the 2 sub-cls'es as well.
+value: Is generally a string value or a reference to a previous result in the command stream, but under the fct predicate command can 
+	   also INSTANCE or NOT_INSTANCE (explained later!)
+
+slot_command_optional_part: Is only possible with the slot command and has this structure:
+	>> [:'slotstring'] predicatetype value
+The part function as previously explained, but what happens is that all instances of the possible values of the matched slots are found and then matched
+with the slot_command_optional_part as if it was an ins predicate command, but only performed on the allowed values...
+
+
+Here is a description of each predicate command and what they exactly find according to the command for which they are used:		 
+
+cls : 
+	ONTINS : Returns the instances of the matched Cls'es
+	ONTCLS : Returns the matched Cls'es
+	ONTSLT : Returns the slots contained (domain of) in Cls
+
+slot : (When >> the slot part turns in effect into an ins predicate.)
+	ONTINS : Returns instances of Cls'es with mathced slots
+	ONTCLS : Returns Cls's with matched slots
+	ONTSLT : Returns slots
+	
+ins :
+	ONTINS : Returns instances matching
+	ONTCLS : Returns Cls's of all the instances, that match
+	ONTSLT : Returns an empty collection.
+
+fct :
+	ONTINS : Returns an empty collection.
+	ONTCLS : Returns an empty collection.
+	ONTSLT : If value is a string, the slots that can have the named Cls as a value will be returned.
+			 If value is INSTANCE: all slots that can have an instance of a Cls are returned.
+			 If value is NOT_INSTANCE: returns all slots that aren't instances of a Cls.
+			 
+It is worth mentioning that for all commands, that system frames are never returned. Only user defined frames can be returned, however
+during predicate matching they can be used for matching purposes, by using their slot names, e.g. cls':NAME'=='str' would be equal to cls=='str'.
+
+If a reference is used instead of a string as a vaule, then the reference is simply replaced by the result.
+E.g. $ONTQUE(ONTCLS(slot=='implies')ONTINS(cls==#1))THAT='str'
+
+Will first find a Cls, which has an implies slot, and then an instances of that Cls. 
+so, it will return something like 
+ONTCLS clsname ONTINS instancename
+
+Why not just make this command:
+$ONTQUE(ONTINS(slot=='implies'))THAT='str'
+
+Well someone might want the name of (or documentation of) the Cls within the chat, and in this way get it. As the latter command only returns
+ONTINS instancename
+

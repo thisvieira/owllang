@@ -1,0 +1,1033 @@
+
+<!-- Processed by Id: cwm.py,v 1.164 2004/10/28 17:41:59 timbl Exp -->
+<!--     using base file:/cwm/-->
+
+
+<rdf:RDF xmlns="http://www.cs.rdg.ac.uk/seequel#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="http://www.cs.rdg.ac.uk/seequel#Claim">
+        <rdfs:comment xml:lang="en">a statement or relation, which has not been verified.</rdfs:comment>
+        <rdfs:label xml:lang="en">claim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#Relation"/>
+        <owl:disjointWith rdf:resource="http://www.cs.rdg.ac.uk/seequel#Fact"/>
+    </rdf:Description>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#Criteria">
+        <rdfs:comment xml:lang="en">an area in which quality can be measured in e-Learning</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#Descriptor">
+        <rdfs:comment xml:lang="en">quality term used to evaluate quality.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#ExperienceDescriptor">
+        <rdfs:comment xml:lang="en">an experience descriptor is more specific than a general descriptor and can be more easily be measured or assessed</rdfs:comment>
+        <rdfs:label xml:lang="en">experience descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+    </owl:Class>
+
+    <rdf:Description rdf:about="http://www.cs.rdg.ac.uk/seequel#Fact">
+        <rdfs:comment xml:lang="en">a verified statement or relation.</rdfs:comment>
+        <rdfs:label xml:lang="en">fact</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#Relation"/>
+        <owl:disjointWith rdf:resource="http://www.cs.rdg.ac.uk/seequel#Claim"/>
+    </rdf:Description>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#GeneralCriteria">
+        <rdfs:comment xml:lang="en">a broad area of the e-Learning domain with specific quality issues relevant to it</rdfs:comment>
+        <rdfs:label xml:lang="en">general criteria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#Criteria"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#GeneralDescriptor">
+        <rdfs:comment xml:lang="en">a quality term which cannot be directly measured and tends to be an abstract quality measure.</rdfs:comment>
+        <rdfs:label xml:lang="en">general descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#LearningExperienceArea">
+        <rdfs:comment xml:lang="en">an area of the learning experience, according to SEEQUEL there are three such areas in the e-Learning experience; context, sources and processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">learning experience area</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#MemberOf">
+        <rdfs:comment xml:lang="en">a group in which the person is a member</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">member of</rdfs:label>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/member"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#Quality">
+        <rdfs:comment xml:lang="en">type or level of quality</rdfs:comment>
+        <rdfs:label xml:lang="en">quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:oneOf rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#lowQuality"/>
+            <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:rest>
+        </owl:oneOf>
+    </owl:Class>
+
+    <rdf:Description rdf:about="http://www.cs.rdg.ac.uk/seequel#Relation">
+        <rdfs:comment xml:lang="en">internal class used to represent relations between properties</rdfs:comment>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#statement"/>
+        <rdfs:subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            <owl:onProperty rdf:resource="http://www.cs.rdg.ac.uk/seequel#subject"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            <owl:onProperty rdf:resource="http://www.cs.rdg.ac.uk/seequel#predicate"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            <owl:onProperty rdf:resource="http://www.cs.rdg.ac.uk/seequel#object"/>
+        </rdfs:subClassOf>
+    </rdf:Description>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#Role">
+        <rdfs:comment xml:lang="en">role of an individual in a specific sector.</rdfs:comment>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#Sector">
+        <rdfs:comment xml:lang="en">the sector in which an individual works.</rdfs:comment>
+        <rdfs:label xml:lang="en">sector</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#SpecificCriteria">
+        <rdfs:comment xml:lang="en">is a specific area of the e-Learning domain that relates to quality</rdfs:comment>
+        <rdfs:label xml:lang="en">specific criteria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#Criteria"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.cs.rdg.ac.uk/seequel#WorldView">
+        <rdfs:comment xml:lang="en">world view is a representation of the values an individual has, according to Boltanski and Thevenot there are six different world view; inspiration, domestic, opinion, civic, merchant and industrial.</rdfs:comment>
+        <rdfs:label xml:lang="en">world view</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#accessible">
+        <rdfs:label xml:lang="en">accessible</rdfs:label>
+    </GeneralDescriptor>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#administration">
+        <rdfs:label xml:lang="en">administration</rdfs:label>
+    </Sector>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#areaOfInterest">
+        <rdfs:comment xml:lang="en">areas in which a person is particularly interested.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">area of interest</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#LearningExperienceArea"/>
+    </owl:ObjectProperty>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#boring">
+        <rdfs:label xml:lang="en">boring</rdfs:label>
+    </GeneralDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#challenging">
+        <rdfs:label xml:lang="en">challenging</rdfs:label>
+    </ExperienceDescriptor>
+
+    <WorldView rdf:about="http://www.cs.rdg.ac.uk/seequel#civic">
+        <rdfs:comment xml:lang="en">following is a list of values for this world view: The general will, the common interest, generosity, selfabnegation, sacrifice, pride, the group, collective action, collective entities (ideas, values, symbols and institutions).</rdfs:comment>
+        <rdfs:label xml:lang="en">civic</rdfs:label>
+    </WorldView>
+
+    <Role rdf:about="http://www.cs.rdg.ac.uk/seequel#classroomAssistant">
+        <rdfs:label xml:lang="en">classroom assistant</rdfs:label>
+    </Role>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#collaboration">
+        <rdfs:label xml:lang="en">collaborative</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#concise">
+        <rdfs:label xml:lang="en">concise</rdfs:label>
+    </ExperienceDescriptor>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#contributesTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">implication that one descriptor contributes to the other</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+        <rdfs:label xml:lang="en">contributes to</rdfs:label>
+        <rdfs:range rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Quality"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#corporate">
+        <rdfs:label xml:lang="en">corporate</rdfs:label>
+    </Sector>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#culture">
+        <rdfs:label xml:lang="en">culture</rdfs:label>
+    </GeneralCriteria>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#delivery">
+        <rdfs:label xml:lang="en">delivery</rdfs:label>
+    </GeneralCriteria>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#describes">
+        <rdfs:comment xml:lang="en">Indicates which area of the learning experience a quality term describes</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+        <rdfs:label xml:lang="en">describes</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#LearningExperienceArea"/>
+    </owl:ObjectProperty>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#designGuidancePrinciples">
+        <rdfs:label xml:lang="en">design guidance principles</rdfs:label>
+    </GeneralCriteria>
+
+    <WorldView rdf:about="http://www.cs.rdg.ac.uk/seequel#domestic">
+        <rdfs:comment xml:lang="en">following is a list of values for this world view: Confidence, responsibility, merit, respectability, convention, dignity, tradition, hierarchy, rank; parents, children, generation; rules and confidence, principles; harmony; the natural; the duty.</rdfs:comment>
+        <rdfs:label xml:lang="en">domestic</rdfs:label>
+    </WorldView>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#easyNavigation">
+        <rdfs:label xml:lang="en">easy to navigate</rdfs:label>
+    </ExperienceDescriptor>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#easyToUse">
+        <rdfs:label xml:lang="en">easy to use</rdfs:label>
+    </GeneralDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#effective">
+        <rdfs:label xml:lang="en">effective</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#efficient">
+        <rdfs:label xml:lang="en">efficient</rdfs:label>
+    </ExperienceDescriptor>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#engaging">
+        <rdfs:label xml:lang="en">engaging</rdfs:label>
+    </GeneralDescriptor>
+
+    <Role rdf:about="http://www.cs.rdg.ac.uk/seequel#etManager">
+        <rdfs:label xml:lang="en">E&#38;T manager</rdfs:label>
+    </Role>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#evaluation">
+        <rdfs:label xml:lang="en">evaluation</rdfs:label>
+    </GeneralCriteria>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact100">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#accessible"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact101">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#lowQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact102">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact103">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#impliesNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact104">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyToUse"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact105">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyToUse"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact106">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#engaging"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact107">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#engaging"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact108">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#flexible"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact109">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningProcesses"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#flexible"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact110">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#lowQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#inaccessible"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact111">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#accessible"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#impliesNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#inaccessible"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact112">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact113">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact114">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningProcesses"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact115">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#impliesNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact116">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#organised"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact117">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#organised"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact118">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#respected"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact119">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#challenging"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact120">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningProcesses"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#collaboration"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact121">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#concise"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact122">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#concise"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact123">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyToUse"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#concise"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact124">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#accessible"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyNavigation"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact125">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyToUse"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyNavigation"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact126">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#easyNavigation"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact127">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningProcesses"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#effective"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact128">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#highQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#effective"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact129">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningProcesses"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#efficient"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact130">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#fun"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact131">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#lowQuality"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#incomplete"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact132">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#incomplete"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact133">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#engaging"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#contributesTo"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interactive"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact134">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interactive"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact135">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#interactive"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact136">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#monotonous"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact137">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningProcesses"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#motivating"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact138">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#motivating"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact139">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#nonIntuitiveLayout"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact140">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#offTopic"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact141">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#offTopic"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact142">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#openMinded"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact143">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#flexible"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#openMinded"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact144">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#qualifiedTeachers"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact145">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#respected"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#qualifiedTeachers"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact146">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#relevant"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact147">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#interesting"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#relevant"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact148">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#offTopic"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#impliesNot"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#relevant"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact149">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#routine"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact150">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#studentSupport"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact151">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#organised"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#studentSupport"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact152">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningContext"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#tolerantOfMistakes"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact153">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#flexible"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#tolerantOfMistakes"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact154">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#learningSources"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#describes"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#tooLong"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact155">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#tooLong"/>
+    </Fact>
+
+    <Fact rdf:about="http://www.cs.rdg.ac.uk/seequel#fact156">
+        <madeBy rdf:resource="http://www.cs.rdg.ac.uk/seequel#seequel"/>
+        <object rdf:resource="http://www.cs.rdg.ac.uk/seequel#boring"/>
+        <predicate rdf:resource="http://www.cs.rdg.ac.uk/seequel#implies"/>
+        <subject rdf:resource="http://www.cs.rdg.ac.uk/seequel#tooSimple"/>
+    </Fact>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#financialRules">
+        <rdfs:label xml:lang="en">financial rules</rdfs:label>
+    </GeneralCriteria>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#flexible">
+        <rdfs:label xml:lang="en">flexible</rdfs:label>
+    </GeneralDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#fun">
+        <rdfs:label xml:lang="en">fun</rdfs:label>
+    </ExperienceDescriptor>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#guidanceRecruitmentTNA">
+        <rdfs:label xml:lang="en">guidance and recruitment in the training needs analysis</rdfs:label>
+    </GeneralCriteria>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#hasMade">
+        <rdfs:comment xml:lang="en">claim and facts a person has made.</rdfs:comment>
+        <rdfs:domain rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">has made</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Relation"/>
+        <owl:inverseOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#madeBy"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#hasRole">
+        <rdfs:comment xml:lang="en">the role a person has in a specific sector.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Role"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#hasWorldView">
+        <rdfs:comment xml:lang="en">the world view of a person</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">has world view</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#WorldView"/>
+    </owl:ObjectProperty>
+
+    <Quality rdf:about="http://www.cs.rdg.ac.uk/seequel#highQuality">
+        <rdfs:label xml:lang="en">high quality</rdfs:label>
+        <owl:differentFrom rdf:resource="http://www.cs.rdg.ac.uk/seequel#lowQuality"/>
+    </Quality>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#higherEducation">
+        <rdfs:label xml:lang="en">higher education</rdfs:label>
+    </Sector>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#ict">
+        <rdfs:label xml:lang="en">ICT</rdfs:label>
+    </Sector>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#implies">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">Indicates that a descriptor implies that another descriptor may also apply to the same entity being evaluated</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+        <rdfs:label xml:lang="en">implies</rdfs:label>
+        <rdfs:range rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Quality"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#impliesNot">
+        <rdfs:comment xml:lang="en">Indicates that a descriptor implies that another descriptor does not apply to the same entity</rdfs:comment>
+        <rdfs:domain rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Quality"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">does not imply</rdfs:label>
+        <rdfs:range rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Descriptor"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.cs.rdg.ac.uk/seequel#Quality"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#inaccessible">
+        <rdfs:label xml:lang="en">inaccessible</rdfs:label>
+    </GeneralDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#incomplete">
+        <rdfs:label xml:lang="en">incomplete</rdfs:label>
+    </ExperienceDescriptor>
+
+    <WorldView rdf:about="http://www.cs.rdg.ac.uk/seequel#industrial">
+        <rdfs:comment xml:lang="en">following is a list of values for this world view: Progress, future, functionality, efficiency, optimality, performance, productivity, professionality, reliability, farsightedness, system.</rdfs:comment>
+        <rdfs:label xml:lang="en">industrial</rdfs:label>
+    </WorldView>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#informalLearning">
+        <rdfs:label xml:lang="en">informal learning</rdfs:label>
+    </Sector>
+
+    <WorldView rdf:about="http://www.cs.rdg.ac.uk/seequel#inspiration">
+        <rdfs:comment xml:lang="en">following is a list of values for this world view: Singularity, difference, innovation, originality, irrationality, imaginary, spirituality, unconscious, chance.</rdfs:comment>
+        <rdfs:label xml:lang="en">inspiration</rdfs:label>
+    </WorldView>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#institutionalSetting">
+        <rdfs:label xml:lang="en">institutional setting</rdfs:label>
+    </GeneralCriteria>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#interactive">
+        <rdfs:label xml:lang="en">interactive</rdfs:label>
+    </ExperienceDescriptor>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#interesting">
+        <rdfs:label xml:lang="en">interesting</rdfs:label>
+    </GeneralDescriptor>
+
+    <foaf:Person rdf:about="http://www.cs.rdg.ac.uk/seequel#karsten">
+        <rdfs:comment xml:lang="en">Karsten Oster Lundqvist</rdfs:comment>
+        <rdfs:label xml:lang="en">Karsten Oster Lundqvist</rdfs:label>
+        <foaf:firstName>Karsten</foaf:firstName>
+        <foaf:surname>Lundqvist</foaf:surname>
+    </foaf:Person>
+
+    <Role rdf:about="http://www.cs.rdg.ac.uk/seequel#learner">
+        <rdfs:label xml:lang="en">learner</rdfs:label>
+    </Role>
+
+    <Role rdf:about="http://www.cs.rdg.ac.uk/seequel#learnersRepresentative">
+        <rdfs:label xml:lang="en">learner's representative</rdfs:label>
+    </Role>
+
+    <LearningExperienceArea rdf:about="http://www.cs.rdg.ac.uk/seequel#learningContext">
+        <rdfs:comment xml:lang="en">examples of learning contexts are: Institutional setting, environments, culture, legislation, values etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">learning context</rdfs:label>
+    </LearningExperienceArea>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#learningEnvironment">
+        <rdfs:label xml:lang="en">learning environment</rdfs:label>
+    </GeneralCriteria>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#learningMaterials">
+        <rdfs:label xml:lang="en">learning material</rdfs:label>
+    </GeneralCriteria>
+
+    <LearningExperienceArea rdf:about="http://www.cs.rdg.ac.uk/seequel#learningProcesses">
+        <rdfs:comment xml:lang="en">examples of learning processes are: Planning, design, delivery, evaluation etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">learning processes</rdfs:label>
+    </LearningExperienceArea>
+
+    <LearningExperienceArea rdf:about="http://www.cs.rdg.ac.uk/seequel#learningSources">
+        <rdfs:comment xml:lang="en">examples of learning sources are: Learning materials, reference materials, components, teachers, teachers qualifications etc. </rdfs:comment>
+        <rdfs:label xml:lang="en">learning sources</rdfs:label>
+    </LearningExperienceArea>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#legislation">
+        <rdfs:label xml:lang="en">legislation</rdfs:label>
+    </GeneralCriteria>
+
+    <Quality rdf:about="http://www.cs.rdg.ac.uk/seequel#lowQuality">
+        <rdfs:label xml:lang="en">low quality</rdfs:label>
+    </Quality>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#madeBy">
+        <rdfs:comment xml:lang="en">the person or group of persons who has made a claim or stated a fact.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Relation"/>
+        <rdfs:label xml:lang="en">made by</rdfs:label>
+        <rdfs:range rdf:parseType="Resource">
+            <owl:unionOf rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </owl:unionOf>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <WorldView rdf:about="http://www.cs.rdg.ac.uk/seequel#merchant">
+        <rdfs:comment xml:lang="en">following is a list of values for this world view: Wealth, money, luxury; business, fair deals, good deals, bargain; interest, attentions to others; contract; competition, rivalry, opportunism, freedom.</rdfs:comment>
+        <rdfs:label xml:lang="en">merchant</rdfs:label>
+    </WorldView>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#monotonous">
+        <rdfs:label xml:lang="en">monotonous</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#motivating">
+        <rdfs:label xml:lang="en">motivating</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#nonIntuitiveLayout">
+        <rdfs:label xml:lang="en">having a non-intuitive layout</rdfs:label>
+    </ExperienceDescriptor>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#object">
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"/>
+    </owl:ObjectProperty>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#offTopic">
+        <rdfs:label xml:lang="en">off topic</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#openMinded">
+        <rdfs:label xml:lang="en">open minded</rdfs:label>
+    </ExperienceDescriptor>
+
+    <WorldView rdf:about="http://www.cs.rdg.ac.uk/seequel#opinion">
+        <rdfs:comment xml:lang="en">following is a list of values for this world view: Image, reputation, fame, success, honour, acknowledgement, visibility, audience, credibility, identification. </rdfs:comment>
+        <rdfs:label xml:lang="en">opinion</rdfs:label>
+    </WorldView>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#organised">
+        <rdfs:label xml:lang="en">organised</rdfs:label>
+    </GeneralDescriptor>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#partOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">Indicates that a sector is a sub sector of another</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Sector"/>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Sector"/>
+    </owl:ObjectProperty>
+
+    <Role rdf:about="http://www.cs.rdg.ac.uk/seequel#policymaker">
+        <rdfs:label xml:lang="en">policymaker</rdfs:label>
+    </Role>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#predicate">
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"/>
+    </owl:ObjectProperty>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#primaryEducation">
+        <rdfs:label xml:lang="en">primary education</rdfs:label>
+    </Sector>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#professionalAssociation">
+        <rdfs:label xml:lang="en">professional association</rdfs:label>
+    </Sector>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#publishers">
+        <rdfs:label xml:lang="en">publishers</rdfs:label>
+    </Sector>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#qualifiedTeachers">
+        <rdfs:label xml:lang="en">having qualified teachers</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#relevant">
+        <rdfs:label xml:lang="en">relevant</rdfs:label>
+    </ExperienceDescriptor>
+
+    <GeneralDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#respected">
+        <rdfs:label xml:lang="en">respected</rdfs:label>
+    </GeneralDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#routine">
+        <rdfs:label xml:lang="en">routine</rdfs:label>
+    </ExperienceDescriptor>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#schoolK12">
+        <rdfs:label xml:lang="en">school K-12</rdfs:label>
+    </Sector>
+
+    <foaf:Group rdf:about="http://www.cs.rdg.ac.uk/seequel#seequel">
+        <rdfs:comment xml:lang="en">Seequel</rdfs:comment>
+        <rdfs:label xml:lang="en">SEEQUEL</rdfs:label>
+        <foaf:member rdf:resource="http://www.cs.rdg.ac.uk/seequel#karsten"/>
+    </foaf:Group>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#staffCVandQualifications">
+        <rdfs:label xml:lang="en">supporting and teaching staff CV and qualifications</rdfs:label>
+    </GeneralCriteria>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#studentSupport">
+        <rdfs:label xml:lang="en">supported by students</rdfs:label>
+    </ExperienceDescriptor>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#subject">
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"/>
+    </owl:ObjectProperty>
+
+    <Role rdf:about="http://www.cs.rdg.ac.uk/seequel#teacher">
+        <rdfs:label xml:lang="en">teacher</rdfs:label>
+    </Role>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#technicalLearningEnvironment">
+        <rdfs:label xml:lang="en">technical learning environment</rdfs:label>
+    </GeneralCriteria>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#tolerantOfMistakes">
+        <rdfs:label xml:lang="en">tolerant of mistakes</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#tooLong">
+        <rdfs:label xml:lang="en">too long</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#tooSimple">
+        <rdfs:label xml:lang="en">too simple</rdfs:label>
+    </ExperienceDescriptor>
+
+    <ExperienceDescriptor rdf:about="http://www.cs.rdg.ac.uk/seequel#trackable">
+        <rdfs:label xml:lang="en">trackable</rdfs:label>
+    </ExperienceDescriptor>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#trainingServices">
+        <rdfs:label xml:lang="en">training services</rdfs:label>
+    </Sector>
+
+    <Role rdf:about="http://www.cs.rdg.ac.uk/seequel#tutor">
+        <typeOf rdf:resource="http://www.cs.rdg.ac.uk/seequel#teacher"/>
+        <rdfs:label xml:lang="en">tutor</rdfs:label>
+    </Role>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#typeOf">
+        <rdfs:comment xml:lang="en">Indicates that a role is a type of another role (eg tutor is a type of teacher)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.cs.rdg.ac.uk/seequel#Role"/>
+        <rdfs:label xml:lang="en">type of</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Role"/>
+    </owl:ObjectProperty>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#usersOfCorporateTrainingServices">
+        <rdfs:label xml:lang="en">users of corporate training services</rdfs:label>
+    </Sector>
+
+    <GeneralCriteria rdf:about="http://www.cs.rdg.ac.uk/seequel#valueSystem">
+        <rdfs:label xml:lang="en">value system</rdfs:label>
+    </GeneralCriteria>
+
+    <Sector rdf:about="http://www.cs.rdg.ac.uk/seequel#vocationalTraining">
+        <rdfs:label xml:lang="en">vocational training</rdfs:label>
+    </Sector>
+
+    <owl:ObjectProperty rdf:about="http://www.cs.rdg.ac.uk/seequel#workInSector">
+        <rdfs:comment xml:lang="en">the sector in which a person works.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label>works in sector</rdfs:label>
+        <rdfs:range rdf:resource="http://www.cs.rdg.ac.uk/seequel#Sector"/>
+    </owl:ObjectProperty>
+
+    <owl:Ontology rdf:about="http://www.cs.rdg.ac.uk/seequel.n3">
+        <rdfs:comment>The SEEQUEL e-Learning Ontology</rdfs:comment>
+        <rdfs:label>e-Learning Ontology</rdfs:label>
+    </owl:Ontology>
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
+        <rdfs:comment xml:lang="en">a group of people</rdfs:comment>
+        <rdfs:label xml:lang="en">group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:comment xml:lang="en">an individual</rdfs:comment>
+        <rdfs:label xml:lang="en">person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:comment xml:lang="en">the name of a person</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">first name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/member">
+        <rdfs:comment xml:lang="en">a person who is a member of a group.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <rdfs:label xml:lang="en">member</rdfs:label>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/surname">
+        <rdfs:comment xml:lang="en">the surname of a person</rdfs:comment>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">surname</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+</rdf:RDF>

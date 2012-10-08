@@ -1,0 +1,9 @@
+@prefix eval: <http://www.cs.rdg.ac.uk/webpageEval#>
+@include <RDFS>
+
+[ruleFact:	( ?x	rdf:type  eval:Fact)  
+        	( ?x eval:subject  ?sub) 
+        	( ?x eval:predicate  ?pred) 
+        	( ?x eval:object  ?obj) 
+        	-> 
+		(?sub  ?pred  ?obj) ]

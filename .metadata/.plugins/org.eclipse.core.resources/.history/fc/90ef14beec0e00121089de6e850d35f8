@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!--
+Ontology properties file
+===============================================================
+by Karsten Oster Lundqvist: sis05kol
+-->
+
+<!--
+GENERAL NOTES
+
+1. Configuration options are grouped for easy maintenance.
+2. Unless otherwise noted, commenting out a property will
+   cause the engine's default value to be used.
+3. A property may only be defined once.
+4. The notations in [square brackets] are used to generate
+   the Settings class that corresponds with this properties
+   file.  Please do not change these notations unless you
+   know what you are doing.
+-->
+
+<properties version="1.0">
+	<!-- Ontology file -->
+	<entry key="programd.ontology.filename">ontology/WebpageEval.n3</entry>
+    
+    <!-- Entry point of the ontology 
+    <entry key="programd.ontology.entrypoint">Individual</entry> -->
+    
+    <!-- The classes that should have no added instances 
+    	 Should be a list with Cls names One class on each line 
+    	 TODO: should be conformed to XML
+    <entry key="programd.ontology.fixedclasses">
+    	Quality
+    	Learning_Experience_Area
+    </entry>-->
+</properties>

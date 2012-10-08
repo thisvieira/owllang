@@ -1,0 +1,117 @@
+[2012-10-05 15:08:04] Starting Program D version 4.5.
+[2012-10-05 15:08:04] Using Java VM 20.10-b01 from Sun Microsystems Inc.
+[2012-10-05 15:08:04] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-05 15:08:04] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-05 15:08:04] Predicates with no values defined will return: "undefined".
+[2012-10-05 15:08:04] Initializing OntologyDBMultiplexor.
+[2012-10-05 15:08:06] Opening database pool.
+[2012-10-05 15:08:06] Saving Ontology
+[2012-10-05 15:08:06] Populating database pool.
+[2012-10-05 15:08:06] PredicateMaster saving all cached predicates (0)
+[2012-10-05 15:08:06] Starting up the Graphmaster.
+[2012-10-05 15:08:06] Configuring bot "TF".
+[2012-10-05 15:08:06] Loaded 287 input substitutions.
+[2012-10-05 15:08:06] Loaded 19 gender substitutions.
+[2012-10-05 15:08:06] Loaded 9 person substitutions.
+[2012-10-05 15:08:06] Loaded 60 person2 substitutions.
+[2012-10-05 15:08:06] Loaded 4 sentence-splitters.
+[2012-10-05 15:08:06] 630 unique categories loaded in 0.33 seconds.
+[2012-10-05 15:08:06] 13 path-identical categories were encountered, and handled according to the COMBINE merge policy.
+[2012-10-05 15:08:06] The AIML Watcher is not active.
+[2012-10-05 15:08:06] JavaScript interpreter not started.
+[2012-10-05 15:08:06] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-05 15:08:06] Match: CONNECT : * : * : TF
+[2012-10-05 15:08:06] Filename: "../aiml/\general.aiml"
+[2012-10-05 15:08:06] Symbolic Reduction:
+[2012-10-05 15:08:06] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-05 15:08:06] Match: QUESTASKINFO : _ : * : TF
+[2012-10-05 15:08:06] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:06] Symbolic Reduction:
+[2012-10-05 15:08:06] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-05 15:08:06] Match: QUESTASK : _ : * : TF
+[2012-10-05 15:08:06] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:07] 
+INPUT = OWLLANG ONTIND :c4 ONTIND efq:wiki ONTIND :isNot ONTIND :easyToRead ONTIND EFQUEL WIKI Page ONTPRO is not ONTIND easy to read ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-05 15:08:07] SCHERMERHOM> OWLLANG ONTIND :c4 ONTIND efq:wiki ONTIND :isNot ONTIND :easyToRead ONTIND EFQUEL WIKI Page ONTPRO is not ONTIND easy to read ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-05 15:08:07] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-05 15:08:07] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:07] Symbolic Reduction:
+[2012-10-05 15:08:07] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-05 15:08:07] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-05 15:08:07] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:07] Symbolic Reduction:
+[2012-10-05 15:08:07] SCHERMERHOM> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:07] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:07] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-05 15:08:07] Response 1 in 225 ms. (Average: 225.0 ms.)
+[2012-10-05 15:08:26] SCHERMERHOM> CONNECT : Would you agree with this statement the EFQUEL WIKI Page is not easy to read : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:26] Match: CONNECT : * : * : TF
+[2012-10-05 15:08:26] Filename: "../aiml/\general.aiml"
+[2012-10-05 15:08:26] Symbolic Reduction:
+[2012-10-05 15:08:26] SCHERMERHOM> QUESTASKINFO : Would you agree with this statement the EFQUEL WIKI Page is not easy to read : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:26] Match: QUESTASKINFO : _ : * : TF
+[2012-10-05 15:08:26] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:26] Symbolic Reduction:
+[2012-10-05 15:08:26] SCHERMERHOM> QUESTASK : Would you agree with this statement the EFQUEL WIKI Page is not easy to read : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:26] Match: QUESTASK : _ : * : TF
+[2012-10-05 15:08:26] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:26] 
+INPUT = OWLLANG ONTIND :c10 ONTIND efq:home ONTIND :is ONTIND :tooSimple ONTIND Homepage of EFQUEL ONTPRO is ONTIND too simple ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-05 15:08:26] SCHERMERHOM> OWLLANG ONTIND :c10 ONTIND efq:home ONTIND :is ONTIND :tooSimple ONTIND Homepage of EFQUEL ONTPRO is ONTIND too simple ONTIND UNKNOWN : INDPROIND : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:26] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-05 15:08:26] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:26] Symbolic Reduction:
+[2012-10-05 15:08:26] SCHERMERHOM> CHECKPREDICATEGRAMMAR : Would you agree with this statement the EFQUEL WIKI Page is not easy to read : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:26] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-05 15:08:26] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:26] Symbolic Reduction:
+[2012-10-05 15:08:26] SCHERMERHOM> ASKSOMEBELIEVES : Would you agree with this statement the EFQUEL WIKI Page is not easy to read : QUESTION DOYOU : TF
+[2012-10-05 15:08:26] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-05 15:08:26] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-05 15:08:26] Response 2 in 47 ms. (Average: 136.0 ms.)
+[2012-10-05 15:08:30] SCHERMERHOM> yes I do : Do you support that sentence : QUESTION DOYOU : TF
+[2012-10-05 15:08:30] Match: YES * : * : QUESTION _ : TF
+[2012-10-05 15:08:30] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2012-10-05 15:08:30] Symbolic Reduction:
+[2012-10-05 15:08:30] SCHERMERHOM> STOREREIFICATION : Do you support that sentence : QUESTION DOYOU : TF
+[2012-10-05 15:08:30] Match: STOREREIFICATION : _ : _ : TF
+[2012-10-05 15:08:30] Filename: "../aiml/\procedures.aiml"
+[2012-10-05 15:08:30] 
+INPUT = OWLLANG ONTSTORE :CLAIM
+THAT = STOREREIFICATIONRESULT
+[2012-10-05 15:08:30] SCHERMERHOM> OWLLANG ONTSTORE :CLAIM : STOREREIFICATIONRESULT : QUESTION DOYOU : TF
+[2012-10-05 15:08:30] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2012-10-05 15:08:30] Filename: "../aiml/\procedures.aiml"
+[2012-10-05 15:08:30] Symbolic Reduction:
+[2012-10-05 15:08:30] SCHERMERHOM> QUESTASK : Do you support that sentence : QUESTION DOYOU : TF
+[2012-10-05 15:08:30] Match: QUESTASK : _ : * : TF
+[2012-10-05 15:08:30] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:30] 
+INPUT = OWLLANG ONTIND :c8 ONTIND efq:community ONTIND :is ONTIND :interactive ONTIND EFQUEL Community ONTPRO is ONTIND interactive ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-05 15:08:30] SCHERMERHOM> OWLLANG ONTIND :c8 ONTIND efq:community ONTIND :is ONTIND :interactive ONTIND EFQUEL Community ONTPRO is ONTIND interactive ONTIND UNKNOWN : INDPROIND : QUESTION DOYOU : TF
+[2012-10-05 15:08:30] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-05 15:08:30] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:30] Symbolic Reduction:
+[2012-10-05 15:08:30] SCHERMERHOM> CHECKPREDICATEGRAMMAR : Do you support that sentence : QUESTION DOYOU : TF
+[2012-10-05 15:08:30] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-05 15:08:30] Filename: "../aiml/\questions.aiml"
+[2012-10-05 15:08:30] Symbolic Reduction:
+[2012-10-05 15:08:30] SCHERMERHOM> WOULDYOUAGREE : Do you support that sentence : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:30] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:30] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-05 15:08:30] Response 3 in 49 ms. (Average: 107.0 ms.)
+[2012-10-05 15:08:37] SCHERMERHOM> not really : Would you agree that the EFQUEL Community is interactive : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:37] Match: NOT REALLY : * : QUESTION * : TF
+[2012-10-05 15:08:37] Filename: "../aiml/\NoAnswers.aiml"
+[2012-10-05 15:08:37] Symbolic Reduction:
+[2012-10-05 15:08:37] SCHERMERHOM> NO : Would you agree that the EFQUEL Community is interactive : QUESTION WOULDYOUAGREE : TF
+[2012-10-05 15:08:37] Match: NO : * : QUESTION _ : TF
+[2012-10-05 15:08:37] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2012-10-05 15:08:37] Response 4 in 4 ms. (Average: 81.25 ms.)
+[2012-10-05 15:09:06] Saving Ontology
+[2012-10-05 15:09:06] PredicateMaster saving all cached predicates (38)
+[2012-10-05 15:10:06] Saving Ontology
+[2012-10-05 15:10:06] PredicateMaster saving all cached predicates (29)

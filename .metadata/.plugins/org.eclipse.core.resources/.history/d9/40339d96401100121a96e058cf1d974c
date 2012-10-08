@@ -1,0 +1,530 @@
+<aiml 
+	version="1.0.1" 
+	xmlns="http://alicebot.org/2001/AIML-1.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 resources/schema/AIML.xsd">
+
+	<topic name="QUESTION _">	
+		<category>
+			<pattern>WELL *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>HMN *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>OH *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>FURTHERMORE _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>ADDITIONALLY _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>BESIDES _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+
+		<category>
+			<pattern>MAINLY _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>IN ADDITION _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>IN ADDITION TO THAT _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>MOREOVER _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>MOST OF THE TIME *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>LIKEWISE _</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>_ TOO</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>_ AS WELL</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>_ ALSO _</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>_ EVEN _</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>YOU KNOW *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>YOU SEE *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>OF COURSE *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>SURELY *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>I THINK *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+				
+		<category>
+			<pattern>I BELIEVE *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+			
+		<category>
+			<pattern>I ASSUME *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>I CONCEIVE *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I CONSIDER *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I EXPECT *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I FIGURE *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I GATHER *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I GUESS *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I MAINTAIN *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I PRESUME *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I SUPPOSE *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I SUSPECT *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I TRUST *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+	
+		<category>
+			<pattern>I UNDERSTAND *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>I WOULD SAY *</pattern>
+			<template>
+				<sr/>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>I BELIEVE *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>I THINK *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+
+		
+		<category>
+			<pattern>* RATHER *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* KINDA *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* CERTAINLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* EXTREMELY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* AWFULLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* EXCEEDINGLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* EXCEPTIONALLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* EXCESSIVELY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* EXTRAORDINARILY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* HIGHLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* HORRIBLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* INORDINATELY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* UNCOMMONLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* INCREDIBLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* VERY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* ULTRA *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* FAIRLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>FAIRLY</pattern>
+			<template>
+				<srai></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* MODERATELY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* PASSABLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* PRETTY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* QUITE *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>QUITE *</pattern>
+			<template>
+				<srai><star/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* SOMEWHAT *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* ABSOLUTELY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* ALTOGETHER *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* COMPLETELY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* DOWNRIGHT *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* ENTIRELY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* FULLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* OUTRIGHT *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* TOTALLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* UTTERLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* WHOLLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>* PERFECTLY *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+			
+		<category>
+			<pattern>* NOT DIFFICULT *</pattern>
+			<template>
+				<srai><star/> <star index="2"/></srai>
+			</template>
+		</category>
+			
+	</topic>
+
+</aiml>

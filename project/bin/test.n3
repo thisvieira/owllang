@@ -1,0 +1,387 @@
+@prefix :        <http://www.cs.rdg.ac.uk/webpageEval#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix efq:     <http://www.qualityfoundation.org/> .
+@prefix daml:    <http://www.daml.org/2001/03/daml+oil#> .
+
+:madeBy
+      a       owl:ObjectProperty ;
+      rdfs:comment "the person or group of persons who has made a claim or stated a fact."@en ;
+      rdfs:domain :Relation ;
+      rdfs:label "made by"@en ;
+      rdfs:range
+              [ owl:unionOf (foaf:Group foaf:Person)
+              ] .
+
+:easyToRead
+      a       :Descriptor ;
+      rdfs:label "easy to read"@en .
+
+:wellDesign
+      a       :Descriptor ;
+      rdfs:label "well designed"@en .
+
+:easyToUse
+      a       :Descriptor ;
+      rdfs:label "easy to use"@en .
+
+:predicate
+      a       owl:ObjectProperty ;
+      rdfs:domain :Relation ;
+      rdfs:subPropertyOf rdf:predicate .
+
+:Fact
+      a       owl:Class ;
+      rdfs:comment "a verified statement or relation."@en ;
+      rdfs:label "fact"@en ;
+      rdfs:subClassOf :Relation ;
+      owl:disjointWith :Claim .
+
+owl:inverseOf
+      a       owl:ObjectProperty .
+
+:isNot
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation, which indicates that a part of a web page can be described negatively by a descriptor."@en ;
+      rdfs:domain
+              [ owl:unionOf (:Webpage :Structure :WebFunctionality)
+              ] ;
+      rdfs:label "is not"@en ;
+      rdfs:range :Descriptor ;
+      owl:inverseOf :is .
+
+:Claim
+      a       owl:Class ;
+      rdfs:comment "a statement or relation, which has not been verified."@en ;
+      rdfs:label "claim"@en ;
+      rdfs:subClassOf :Relation ;
+      owl:disjointWith :Fact .
+
+efq:home
+      a       :Webpage ;
+      rdfs:comment "The front page of EFQUELs web presence."@en ;
+      rdfs:label "Homepage of EFQUEL"@en ;
+      dc:identifier "" .
+
+efq:about
+      a       :Structure ;
+      rdfs:comment "The eLearning Quality tab of EFQUELs web presence."@en ;
+      rdfs:label "About Section"@en ;
+      dc:identifier "" .
+
+efq:eLQual
+      a       :Structure ;
+      rdfs:comment "The eLearning Quality tab of EFQUELs web presence."@en ;
+      rdfs:label "eLearning Quality Tab"@en ;
+      dc:identifier "" .
+
+efq:layout
+      a       :WebFunctionality ;
+      rdfs:comment "The layout of all of the pages contained in EFQUELs web presence"@en ;
+      rdfs:label "layout of the pages"@en .
+
+:fun  a       :Descriptor ;
+      rdfs:label "fun"@en .
+
+:tooComplex
+      a       :Descriptor ;
+      rdfs:label "too complex"@en .
+
+:userInterface
+      a       :Descriptor ;
+      rdfs:label "having a good user interface"@en .
+
+efq:news
+      a       :Structure ;
+      rdfs:comment "The new and events tab of EFQUELs web presence."@en ;
+      rdfs:label "News and Events Section"@en ;
+      dc:identifier "" .
+
+:object
+      a       owl:ObjectProperty ;
+      rdfs:domain :Relation ;
+      rdfs:subPropertyOf rdf:object .
+
+:implies
+      a       owl:ObjectProperty , owl:TransitiveProperty ;
+      rdfs:comment "Indicates that a descriptor implies that another descriptor may also apply to the same entity being evaluated"@en ;
+      rdfs:domain :Descriptor ;
+      rdfs:label "implies"@en ;
+      rdfs:range
+              [ owl:unionOf (:Descriptor :Quality)
+              ] .
+
+:engaging
+      a       :Descriptor ;
+      rdfs:label "engaging"@en .
+
+efq:wiki
+      a       :Webpage ;
+      rdfs:comment "The Quality WIKIpedia run by EFQUEL"@en ;
+      rdfs:label "EFQUEL WIKI Page"@en ;
+      dc:identifier "http://www.qualityfoundation.org/quality-wiki/index.php/Main_Page" .
+
+:Structure
+      a       owl:Class ;
+      rdfs:comment "A structure which is part of an web page"@en ;
+      rdfs:label "structure on a web page"@en .
+
+:boring
+      a       :Descriptor ;
+      rdfs:label "boring"@en .
+
+:intuitiveLayout
+      a       :Descriptor ;
+      rdfs:label "designed with an intuitive layout"@en .
+
+:contributesTo
+      a       owl:ObjectProperty , owl:TransitiveProperty ;
+      rdfs:comment "implication that one descriptor contributes to the other"@en ;
+      rdfs:domain :Descriptor ;
+      rdfs:label "contributes to"@en ;
+      rdfs:range
+              [ owl:unionOf (:Descriptor :Quality)
+              ] .
+
+:functionalityOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "A functionality of a web page or structure of a webpage."@en ;
+      rdfs:domain :Relation ;
+      rdfs:label "functionality of"@en ;
+      rdfs:range
+              [ owl:unionOf (:Structure :Webpage)
+              ] .
+
+:partOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "The relation that a structure is part of a web page."@en ;
+      rdfs:domain :Structure ;
+      rdfs:label "is part of"@en ;
+      rdfs:range :Webpage .
+
+:c7   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :interesting ;
+      :predicate :is ;
+      :subject efq:eLQual .
+
+:c6   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :goodSource ;
+      :predicate :is ;
+      :subject efq:about .
+
+:c5   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :goodSource ;
+      :predicate :is ;
+      :subject efq:home .
+
+:c4   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :easyToRead ;
+      :predicate :isNot ;
+      :subject efq:wiki .
+
+:c9   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :relevant ;
+      :predicate :is ;
+      :subject efq:myEFQ .
+
+:c8   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :interactive ;
+      :predicate :is ;
+      :subject efq:community .
+
+efq:community
+      a       :Structure ;
+      rdfs:comment "The Community tab of EFQUELs web presence."@en ;
+      rdfs:label "EFQUEL Community"@en ;
+      dc:identifier "" .
+
+:monotonous
+      a       :Descriptor ;
+      rdfs:label "monotonous"@en .
+
+:c2   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :topical ;
+      :predicate :is ;
+      :subject efq:wiki .
+
+:c3   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :relevant ;
+      :predicate :is ;
+      :subject efq:news .
+
+:c1   a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :wellDesign ;
+      :predicate :is ;
+      :subject efq:home .
+
+:interactive
+      a       :Descriptor ;
+      rdfs:label "interactive"@en .
+
+:c12  a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :userInterface ;
+      :predicate :is ;
+      :subject efq:home .
+
+:c11  a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :tooComplex ;
+      :predicate :is ;
+      :subject efq:wiki .
+
+:is   a       owl:ObjectProperty ;
+      rdfs:comment "A relation, which indicates that a part of a web page can be described by a descriptor."@en ;
+      rdfs:domain
+              [ owl:unionOf (:Webpage :Structure :WebFunctionality)
+              ] ;
+      rdfs:label "is"@en ;
+      rdfs:range :Descriptor ;
+      owl:inverseOf :isNot .
+
+:c10  a       :Claim ;
+      :madeBy :fictiveUser ;
+      :object :tooSimple , :goodSource ;
+      :predicate :is ;
+      :subject efq:home , efq:wiki .
+
+:organised
+      a       :Descriptor ;
+      rdfs:label "organised"@en .
+
+:fictivUser
+      a       foaf:Person ;
+      rdfs:comment "a fictive user"@en ;
+      rdfs:label "Fictive User"@en .
+
+:Descriptor
+      a       owl:Class ;
+      rdfs:comment "quality term used to evaluate quality."@en ;
+      rdfs:subClassOf owl:Thing .
+
+:Relation
+      a       owl:Class ;
+      rdfs:comment "internal class used to represent relations between properties"@en ;
+      rdfs:label "Relation"@en ;
+      rdfs:subClassOf rdf:statement ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :object
+              ] .
+
+:WebFunctionality
+      a       owl:Class ;
+      rdfs:comment "A functionality of a web page or web structure."@en ;
+      rdfs:label "web functionality"@en .
+
+:interesting
+      a       :Descriptor ;
+      rdfs:label "interesting"@en .
+
+:easyNavigation
+      a       :Descriptor ;
+      rdfs:label "easy to navigate"@en .
+
+:subject
+      a       owl:ObjectProperty ;
+      rdfs:domain :Relation ;
+      rdfs:subPropertyOf rdf:subject .
+
+:tooSimple
+      a       :Descriptor ;
+      rdfs:label "too simple"@en .
+
+:impliesNot
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates that a descriptor implies that another descriptor does not apply to the same entity"@en ;
+      rdfs:domain
+              [ owl:unionOf (:Descriptor :Quality)
+              ] ;
+      rdfs:label "does not imply"@en ;
+      rdfs:range
+              [ owl:unionOf (:Descriptor :Quality)
+              ] .
+
+:goodSource
+      a       :Descriptor ;
+      rdfs:label "a good source"@en .
+
+efq:myEFQ
+      a       :Structure ;
+      rdfs:comment "The my EFQUEL tab of EFQUELs web presence."@en ;
+      rdfs:label "My EFQUEL Section"@en ;
+      dc:identifier "" .
+
+:noRelation
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation is not known to exist between a part of a web page and the descriptor."@en ;
+      rdfs:domain
+              [ owl:unionOf (:Webpage :Structure :WebFunctionality)
+              ] ;
+      rdfs:label "has no relation to"@en ;
+      rdfs:range :Descriptor .
+
+:motivating
+      a       :Descriptor ;
+      rdfs:label "motivating"@en .
+
+:Quality
+      a       owl:Class ;
+      rdfs:comment "type or level of quality"@en ;
+      rdfs:label "quality"@en ;
+      rdfs:subClassOf owl:Thing ;
+      owl:oneOf (:lowQuality :highQuality) .
+
+:topical
+      a       :Descriptor ;
+      rdfs:label "topical"@en .
+
+:describes
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates which area of the learning experience a quality term describes"@en ;
+      rdfs:domain :Descriptor ;
+      rdfs:label "describes"@en ;
+      rdfs:range :LearningExperienceArea .
+
+:Webpage
+      a       owl:Class ;
+      rdfs:comment "A web page is an Internet site with an associated URL"@en ;
+      rdfs:label "web page"@en .
+
+:relevant
+      a       :Descriptor ;
+      rdfs:label "relevant"@en .
+
+:hasMade
+      a       owl:ObjectProperty ;
+      rdfs:comment "claim and facts a person has made."@en ;
+      rdfs:domain
+              [ owl:unionOf (foaf:Group foaf:Person)
+              ] ;
+      rdfs:label "has made"@en ;
+      rdfs:range :Relation ;
+      owl:inverseOf :madeBy .

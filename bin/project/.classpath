@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry output="build_bin" kind="src" path="src"/>
+	<classpathentry sourcepath="JRE_SRC" kind="var" path="JRE_LIB"/>
+	<classpathentry kind="lib" path="C:/ProgramD/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/ProgramD/lib/gnu.getopt-1.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/ProgramD/lib/js.jar"/>
+	<classpathentry kind="lib" path="C:/ProgramD/lib/org.mortbay.jetty.jar"/>
+	<classpathentry kind="lib" path="C:/ProgramD/lib/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/antlr-2.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/arq.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/concurrent.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/icu4j_3_4.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/jena.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/jenatest.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/junit.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/log4j-1.2.12.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/stax-1.1.1-dev.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/stax-api-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/Jena-2.3/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="C:/mysql-connector-java-5.0.0-beta/mysql-connector-java-5.0.0-beta-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Protege_3.1/protege.jar"/>
+	<classpathentry kind="lib" path="C:/smack-2.2.1/smack.jar"/>
+	<classpathentry kind="lib" path="C:/smack-2.2.1/smackx.jar"/>
+	<classpathentry kind="lib" path="C:/smack-2.2.1/smackx-debug.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jre1.5.0_06/lib/jsse.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
