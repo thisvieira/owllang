@@ -31,6 +31,7 @@ import org.aitools.programd.util.FileManager;
  * predicate data.
  * </p>
  * 
+ * @author Karsten Oster Lundqvist
  * @author <a href="mailto:noel@aitools.org">Noel Bush</a>
  * @version 4.5
  */

@@ -12,7 +12,8 @@ package org.aitools.programd.multiplexor;
 import org.aitools.programd.util.Settings;
 
 /**
- * 21/10/05: sis05kol
+ * 
+ * @author Karsten Oster Lundqvist
  */
 public class OntologySettings extends Settings
 {
