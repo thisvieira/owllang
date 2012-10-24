@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
-	<item value="filter_imports;" key="filters_last_used"/>
 	<item value="400,442" key="UserLibraryLoadSaveDialog.size"/>
+	<item value="filter_imports;" key="filters_last_used"/>
 	<item value="C:\ProgramD\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="0" key="TypeHierarchyViewPart.orientation"/>
 	<item value="C:\ProgramD\src\org\UoR" key="org.eclipse.jdt.ui.last.external.project"/>
@@ -20,8 +20,8 @@
 		<section name="HISTORY11">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.responder.HTMLResponderSettings.getChatDefaultTemplateName()" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponderSettings.java[HTMLResponderSettings~getChatDefaultTemplateName" key="javaElement"/>
+			<item value="org.aitools.programd.responder.HTMLResponderSettings.getChatDefaultTemplateName()" key="pattern"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -30,8 +30,8 @@
 		<section name="HISTORY2">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.util.sql.DbAccess.connect()" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~connect" key="javaElement"/>
+			<item value="org.aitools.programd.util.sql.DbAccess.connect()" key="pattern"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -40,19 +40,9 @@
 		<section name="HISTORY3">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.util.sql.DbAccess.getConnection()" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~getConnection" key="javaElement"/>
+			<item value="org.aitools.programd.util.sql.DbAccess.getConnection()" key="pattern"/>
 			<item value="1" key="searchFor"/>
-			<item value="true" key="isCaseSensitive"/>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY10">
-			<item value="2" key="limitTo"/>
-			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.responder.HTMLResponder(HTMLResponderManager, ServletRequestTransactionEnvelope)" key="pattern"/>
-			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponder.java[HTMLResponder~HTMLResponder~QHTMLResponderManager;~QServletRequestTransactionEnvelope;" key="javaElement"/>
-			<item value="3" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
 			</list>
@@ -60,8 +50,18 @@
 		<section name="HISTORY0">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.util.sql.DbAccessRefsPoolMgr(String, String, String, String)" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccessRefsPoolMgr.java[DbAccessRefsPoolMgr~DbAccessRefsPoolMgr~QString;~QString;~QString;~QString;" key="javaElement"/>
+			<item value="org.aitools.programd.util.sql.DbAccessRefsPoolMgr(String, String, String, String)" key="pattern"/>
+			<item value="3" key="searchFor"/>
+			<item value="true" key="isCaseSensitive"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY10">
+			<item value="2" key="limitTo"/>
+			<item value="0" key="scope"/>
+			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponder.java[HTMLResponder~HTMLResponder~QHTMLResponderManager;~QServletRequestTransactionEnvelope;" key="javaElement"/>
+			<item value="org.aitools.programd.responder.HTMLResponder(HTMLResponderManager, ServletRequestTransactionEnvelope)" key="pattern"/>
 			<item value="3" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -70,8 +70,8 @@
 		<section name="HISTORY1">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.util.sql.DbAccess(String, String, String, String)" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~DbAccess~QString;~QString;~QString;~QString;" key="javaElement"/>
+			<item value="org.aitools.programd.util.sql.DbAccess(String, String, String, String)" key="pattern"/>
 			<item value="3" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -80,8 +80,8 @@
 		<section name="HISTORY9">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.server.ServletRequestTransactionEnvelope.getTemplateName()" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.server{ServletRequestTransactionEnvelope.java[ServletRequestTransactionEnvelope~getTemplateName" key="javaElement"/>
+			<item value="org.aitools.programd.server.ServletRequestTransactionEnvelope.getTemplateName()" key="pattern"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -90,8 +90,8 @@
 		<section name="HISTORY8">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.responder.HTMLResponderManager.processLogin(HttpServletRequest, HttpServletResponse, String)" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponderManager.java[HTMLResponderManager~processLogin~QHttpServletRequest;~QHttpServletResponse;~QString;" key="javaElement"/>
+			<item value="org.aitools.programd.responder.HTMLResponderManager.processLogin(HttpServletRequest, HttpServletResponse, String)" key="pattern"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -100,8 +100,8 @@
 		<section name="HISTORY5">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.mortbay.jetty.servlet" key="pattern"/>
 			<item value="=project/C:\/ProgramD\/lib\/org.mortbay.jetty.jar&lt;org.mortbay.jetty.servlet" key="javaElement"/>
+			<item value="org.mortbay.jetty.servlet" key="pattern"/>
 			<item value="2" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -110,8 +110,8 @@
 		<section name="HISTORY4">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.server.jettyinterface.ProgramDAwareJettyServer.addContext(HttpContext)" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.server.jettyinterface{ProgramDAwareJettyServer.java[ProgramDAwareJettyServer~addContext~QHttpContext;" key="javaElement"/>
+			<item value="org.aitools.programd.server.jettyinterface.ProgramDAwareJettyServer.addContext(HttpContext)" key="pattern"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -120,8 +120,8 @@
 		<section name="HISTORY7">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="org.aitools.programd.server.servlet.ProgramD" key="pattern"/>
 			<item value="=project/src&lt;org.aitools.programd.server.servlet{ProgramD.java[ProgramD" key="javaElement"/>
+			<item value="org.aitools.programd.server.servlet.ProgramD" key="pattern"/>
 			<item value="0" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -130,8 +130,8 @@
 		<section name="HISTORY6">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="javax.servlet.http.HttpServlet" key="pattern"/>
 			<item value="=project/C:\/ProgramD\/lib\/javax.servlet.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" key="javaElement"/>
+			<item value="javax.servlet.http.HttpServlet" key="pattern"/>
 			<item value="0" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -147,8 +147,8 @@
 		<item value="2" key="index"/>
 	</section>
 	<section name="SourceActionDialog.methods">
-		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="1" key="InsertPosition"/>
 		<item value="false" key="FinalModifier"/>
@@ -198,7 +198,7 @@
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
-		<item value="true" key="create_unimplemented"/>
 		<item value="false" key="create_main"/>
+		<item value="true" key="create_unimplemented"/>
 	</section>
 </section>

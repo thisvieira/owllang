@@ -4,12 +4,9 @@
 		<list key="search">
 		</list>
 	</section>
-	<section name="ImportResourcesAction">
-		<item value="org.eclipse.ui.wizards.import.FileSystem" key="WizardListSelectionPage.STORE_SELECTED_WIZARD_ID"/>
-	</section>
 	<section name="FileSystemImportWizard">
-		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<item value="true" key="WizardFileSystemResourceImportPage1.STORE_PATH_VARIABLE_SELECTED_ID"/>
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="PROJECT_LOC" key="WizardFileSystemResourceImportPage1.STORE_PATH_VARIABLE_NAME_ID"/>
 		<item value="true" key="WizardFileSystemResourceImportPage1.STORE_CREATE_VIRTUAL_FOLDERS_ID"/>
@@ -18,6 +15,9 @@
 			<item value="C:\ProgramD"/>
 			<item value="C:\ProgramD\lib"/>
 		</list>
+	</section>
+	<section name="ImportResourcesAction">
+		<item value="org.eclipse.ui.wizards.import.FileSystem" key="WizardListSelectionPage.STORE_SELECTED_WIZARD_ID"/>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
 		<item value="155" key="DIALOG_Y_ORIGIN"/>
