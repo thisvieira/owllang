@@ -10061,3 +10061,96 @@ THAT = INDPROIND
 [2012-10-08 13:14:51] Filename: "../aiml/\questionDoYou.aiml"
 [2012-10-08 13:14:51] Response 1 in 248 ms. (Average: 248.0 ms.)
 [2012-10-08 13:15:02] Program D is shutting down.
+[2012-10-08 14:50:19] Starting Program D version 4.5.
+[2012-10-08 14:50:19] Using Java VM 20.10-b01 from Sun Microsystems Inc.
+[2012-10-08 14:50:20] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-08 14:50:20] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-08 14:50:20] Predicates with no values defined will return: "undefined".
+[2012-10-08 14:50:20] Initializing OntologyDBMultiplexor.
+[2012-10-08 14:50:21] Opening database pool.
+[2012-10-08 14:50:21] Saving Ontology
+[2012-10-08 14:50:21] Populating database pool.
+[2012-10-08 14:50:21] PredicateMaster saving all cached predicates (0)
+[2012-10-08 14:50:22] Starting up the Graphmaster.
+[2012-10-08 14:50:22] Configuring bot "TF".
+[2012-10-08 14:50:22] Loaded 287 input substitutions.
+[2012-10-08 14:50:22] Loaded 19 gender substitutions.
+[2012-10-08 14:50:22] Loaded 9 person substitutions.
+[2012-10-08 14:50:22] Loaded 60 person2 substitutions.
+[2012-10-08 14:50:22] Loaded 4 sentence-splitters.
+[2012-10-08 14:50:22] 632 unique categories loaded in 0.47 seconds.
+[2012-10-08 14:50:22] The AIML Watcher is not active.
+[2012-10-08 14:50:22] JavaScript interpreter not started.
+[2012-10-08 14:50:22] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-08 14:50:23] Match: CONNECT : * : * : TF
+[2012-10-08 14:50:23] Filename: "../aiml/\general.aiml"
+[2012-10-08 14:50:23] Symbolic Reduction:
+[2012-10-08 14:50:23] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-08 14:50:23] Match: QUESTASKINFO : _ : * : TF
+[2012-10-08 14:50:23] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:50:23] Symbolic Reduction:
+[2012-10-08 14:50:23] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-08 14:50:23] Match: QUESTASK : _ : * : TF
+[2012-10-08 14:50:23] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:50:23] 
+INPUT = OWLLANG ONTIND :c1 ONTIND efq:home ONTIND :is ONTIND :wellDesign ONTIND Homepage of EFQUEL ONTPRO is ONTIND well designed ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-08 14:50:23] SCHERMERHOM> OWLLANG ONTIND :c1 ONTIND efq:home ONTIND :is ONTIND :wellDesign ONTIND Homepage of EFQUEL ONTPRO is ONTIND well designed ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-08 14:50:23] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-08 14:50:23] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:50:23] Symbolic Reduction:
+[2012-10-08 14:50:23] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-08 14:50:23] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-08 14:50:23] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:50:23] Symbolic Reduction:
+[2012-10-08 14:50:23] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-08 14:50:23] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-08 14:50:23] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-08 14:50:23] Response 1 in 311 ms. (Average: 311.0 ms.)
+[2012-10-08 14:51:52] Starting Program D version 4.5.
+[2012-10-08 14:51:52] Using Java VM 20.10-b01 from Sun Microsystems Inc.
+[2012-10-08 14:51:52] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-08 14:51:52] 12.6 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-08 14:51:52] Predicates with no values defined will return: "undefined".
+[2012-10-08 14:51:52] Initializing OntologyDBMultiplexor.
+[2012-10-08 14:51:55] Opening database pool.
+[2012-10-08 14:51:55] Saving Ontology
+[2012-10-08 14:51:55] Populating database pool.
+[2012-10-08 14:51:55] PredicateMaster saving all cached predicates (0)
+[2012-10-08 14:51:56] Starting up the Graphmaster.
+[2012-10-08 14:51:56] Configuring bot "TF".
+[2012-10-08 14:51:56] Loaded 287 input substitutions.
+[2012-10-08 14:51:56] Loaded 19 gender substitutions.
+[2012-10-08 14:51:56] Loaded 9 person substitutions.
+[2012-10-08 14:51:56] Loaded 60 person2 substitutions.
+[2012-10-08 14:51:56] Loaded 4 sentence-splitters.
+[2012-10-08 14:51:56] 632 unique categories loaded in 0.447 seconds.
+[2012-10-08 14:51:56] The AIML Watcher is not active.
+[2012-10-08 14:51:56] JavaScript interpreter not started.
+[2012-10-08 14:51:56] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-08 14:51:56] Match: CONNECT : * : * : TF
+[2012-10-08 14:51:56] Filename: "../aiml/\general.aiml"
+[2012-10-08 14:51:56] Symbolic Reduction:
+[2012-10-08 14:51:56] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-08 14:51:56] Match: QUESTASKINFO : _ : * : TF
+[2012-10-08 14:51:56] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:51:56] Symbolic Reduction:
+[2012-10-08 14:51:56] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-08 14:51:56] Match: QUESTASK : _ : * : TF
+[2012-10-08 14:51:56] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:51:57] 
+INPUT = OWLLANG ONTIND :c12 ONTIND efq:home ONTIND :is ONTIND :userInterface ONTIND Homepage of EFQUEL ONTPRO is ONTIND having a good user interface ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-08 14:51:57] SCHERMERHOM> OWLLANG ONTIND :c12 ONTIND efq:home ONTIND :is ONTIND :userInterface ONTIND Homepage of EFQUEL ONTPRO is ONTIND having a good user interface ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-08 14:51:57] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-08 14:51:57] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:51:57] Symbolic Reduction:
+[2012-10-08 14:51:57] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-08 14:51:57] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-08 14:51:57] Filename: "../aiml/\questions.aiml"
+[2012-10-08 14:51:57] Symbolic Reduction:
+[2012-10-08 14:51:57] SCHERMERHOM> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-08 14:51:57] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-08 14:51:57] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-08 14:51:57] Response 1 in 465 ms. (Average: 465.0 ms.)
+[2012-10-08 14:52:03] Program D is shutting down.

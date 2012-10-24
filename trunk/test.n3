@@ -95,6 +95,17 @@ efq:layout
       a       :Descriptor ;
       rdfs:label "having a good user interface"@en .
 
+efq:news
+      a       :Structure ;
+      rdfs:comment "The new and events tab of EFQUELs web presence."@en ;
+      rdfs:label "News and Events Section"@en ;
+      dc:identifier "" .
+
+:object
+      a       owl:ObjectProperty ;
+      rdfs:domain :Relation ;
+      rdfs:subPropertyOf rdf:object .
+
 :implies
       a       owl:ObjectProperty , owl:TransitiveProperty ;
       rdfs:comment "Indicates that a descriptor implies that another descriptor may also apply to the same entity being evaluated"@en ;
@@ -103,17 +114,6 @@ efq:layout
       rdfs:range
               [ owl:unionOf (:Descriptor :Quality)
               ] .
-
-:object
-      a       owl:ObjectProperty ;
-      rdfs:domain :Relation ;
-      rdfs:subPropertyOf rdf:object .
-
-efq:news
-      a       :Structure ;
-      rdfs:comment "The new and events tab of EFQUELs web presence."@en ;
-      rdfs:label "News and Events Section"@en ;
-      dc:identifier "" .
 
 :engaging
       a       :Descriptor ;
@@ -280,12 +280,12 @@ efq:community
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty :predicate
+                owl:onProperty :object
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty :object
+                owl:onProperty :predicate
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;

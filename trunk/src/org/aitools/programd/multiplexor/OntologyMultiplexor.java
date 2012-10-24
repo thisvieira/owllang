@@ -61,6 +61,7 @@ import com.hp.hpl.jena.reasoner.rulesys.*;
  * 
  * Developed using
  * org.aitools.programd.multiplexor
+ * @author Karsten Oster Lundqvist
  * @author <a href="mailto:noel@aitools.org">Noel Bush</a>
  * @author Richard Wallace, Jon Baer
  * @author Thomas Ringate/Pedro Colla

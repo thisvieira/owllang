@@ -38,6 +38,7 @@ import org.aitools.programd.util.sql.DbAccessRefsPoolMgr;
  * </a>, to use a better database structure and to support user authentication.
  * </p>
  * 
+ * @author Karsten Oster Lundqvist
  * @author Richard Wallace, Jon Baer
  * @author Thomas Ringate/Pedro Colla
  * @author <a href="mailto:noel@aitools.org">Noel Bush</a>
