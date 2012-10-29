@@ -280,7 +280,7 @@ efq:community
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty :object
+                owl:onProperty :subject
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -290,7 +290,7 @@ efq:community
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty :subject
+                owl:onProperty :object
               ] .
 
 :WebFunctionality

@@ -56,17 +56,17 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>logs</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
 			<name>old-ontology files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>ontology</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>resources</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -481,149 +481,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/lib/xml-apis.jar</locationURI>
 		</link>
 		<link>
-			<name>logs/activity-0.log</name>
+			<name>lib/ymsg_network_v0_61.jar</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-0.log</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-0.log.1</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-0.log.1</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-0.log.1.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-0.log.1.lck</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-0.log.2</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-0.log.2</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-0.log.2.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-0.log.2.lck</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-1.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-1.log</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-2.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-2.log</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-3.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-3.log</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-4.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-4.log</locationURI>
-		</link>
-		<link>
-			<name>logs/activity-5.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/activity-5.log</locationURI>
-		</link>
-		<link>
-			<name>logs/chat</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-0.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-0.log</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-0.log.1</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-0.log.1</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-0.log.1.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-0.log.1.lck</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-0.log.2</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-0.log.2</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-0.log.2.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-0.log.2.lck</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-1.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-1.log</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-2.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-2.log</locationURI>
-		</link>
-		<link>
-			<name>logs/matching-3.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/matching-3.log</locationURI>
-		</link>
-		<link>
-			<name>logs/testing-0.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/testing-0.log</locationURI>
-		</link>
-		<link>
-			<name>logs/testing-0.log.1</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/testing-0.log.1</locationURI>
-		</link>
-		<link>
-			<name>logs/testing-0.log.1.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/testing-0.log.1.lck</locationURI>
-		</link>
-		<link>
-			<name>logs/testing-0.log.2</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/testing-0.log.2</locationURI>
-		</link>
-		<link>
-			<name>logs/testing-0.log.2.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/testing-0.log.2.lck</locationURI>
-		</link>
-		<link>
-			<name>logs/web-server-%g.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/web-server-%25g.log</locationURI>
-		</link>
-		<link>
-			<name>logs/web-server-0.log</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/web-server-0.log</locationURI>
-		</link>
-		<link>
-			<name>logs/web-server-0.log.1</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/web-server-0.log.1</locationURI>
-		</link>
-		<link>
-			<name>logs/web-server-0.log.1.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/web-server-0.log.1.lck</locationURI>
-		</link>
-		<link>
-			<name>logs/web-server-0.log.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/web-server-0.log.lck</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/lib/ymsg_network_v0_61.jar</locationURI>
 		</link>
 		<link>
 			<name>old-ontology files/Multiplexor.java</name>
@@ -699,6 +559,46 @@
 			<name>ontology/tp-feedback.n3</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/ontology/tp-feedback.n3</locationURI>
+		</link>
+		<link>
+			<name>resources/DTD</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>resources/catalog.xml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/catalog.xml</locationURI>
+		</link>
+		<link>
+			<name>resources/database</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>resources/logs</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>resources/schema</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>resources/scripts</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>resources/testing</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>resources/xslt</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>templates/flash</name>
@@ -1201,124 +1101,124 @@
 			<locationURI>PARENT-1-PROJECT_LOC/ffm/yourbot/webuser112973535520610440.predicates</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.log</name>
+			<name>resources/DTD/XMLLogFormatter.dtd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.log</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/XMLLogFormatter.dtd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.log.1</name>
+			<name>resources/DTD/catalog.dtd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.log.1</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/catalog.dtd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.log.1.lck</name>
+			<name>resources/DTD/java-properties.dtd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.log.1.lck</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/java-properties.dtd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.log.2</name>
+			<name>resources/DTD/jetty-configure_1_3.dtd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.log.2</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/jetty-configure_1_3.dtd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.log.2.lck</name>
+			<name>resources/DTD/xhtml-lat1.ent</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.log.2.lck</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/xhtml-lat1.ent</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.xml</name>
+			<name>resources/DTD/xhtml-special.ent</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/xhtml-special.ent</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.xml.1</name>
+			<name>resources/DTD/xhtml-symbol.ent</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.xml.1</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/xhtml-symbol.ent</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.xml.1.lck</name>
+			<name>resources/DTD/xhtml1-transitional.dtd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.xml.1.lck</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/DTD/xhtml1-transitional.dtd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.xml.2</name>
+			<name>resources/database/db-chatlog.script</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.xml.2</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/database/db-chatlog.script</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-0.xml.2.lck</name>
+			<name>resources/database/db-multiplexor.script</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-0.xml.2.lck</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/database/db-multiplexor.script</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-1.xml</name>
+			<name>resources/logs/view-chat.xsl</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-1.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/logs/view-chat.xsl</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-1.xml.1</name>
+			<name>resources/schema/AIML.xsd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-1.xml.1</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/schema/AIML.xsd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-2.xml</name>
+			<name>resources/schema/ChatLog.xsd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-2.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/schema/ChatLog.xsd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-3.xml</name>
+			<name>resources/schema/XMLLogFormatter.xsd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-3.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/schema/XMLLogFormatter.xsd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-4.xml</name>
+			<name>resources/schema/bot-configuration.xsd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-4.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/schema/bot-configuration.xsd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-5.xml</name>
+			<name>resources/schema/common-types.xsd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-5.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/schema/common-types.xsd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-6.xml</name>
+			<name>resources/schema/plugins.xsd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-6.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/schema/plugins.xsd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-7.xml</name>
+			<name>resources/schema/test-cases.xsd</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-7.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/schema/test-cases.xsd</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-8.xml</name>
+			<name>resources/scripts/fix-aiml.pl</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-8.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/scripts/fix-aiml.pl</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/TF-9.xml</name>
+			<name>resources/testing/AIML.aiml</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/TF-9.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/AIML.aiml</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/yourbot-0.log</name>
+			<name>resources/testing/AIML.xml</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/yourbot-0.log</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/AIML.xml</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/yourbot-0.log.lck</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/yourbot-0.log.lck</locationURI>
+			<name>resources/testing/sample</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/yourbot-0.xml</name>
+			<name>resources/testing/testcases.txt</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/yourbot-0.xml</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/testcases.txt</locationURI>
 		</link>
 		<link>
-			<name>logs/chat/yourbot-0.xml.lck</name>
+			<name>resources/xslt/generate-settings-class.xslt</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/logs/chat/yourbot-0.xml.lck</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/xslt/generate-settings-class.xslt</locationURI>
 		</link>
 		<link>
 			<name>templates/flash/chat.xml</name>
@@ -1399,6 +1299,31 @@
 			<name>templates/html/username-format-invalid.html</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/templates/html/username-format-invalid.html</locationURI>
+		</link>
+		<link>
+			<name>resources/testing/sample/infiniteLoopChecker.xml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/sample/infiniteLoopChecker.xml</locationURI>
+		</link>
+		<link>
+			<name>resources/testing/sample/suite1.xml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/sample/suite1.xml</locationURI>
+		</link>
+		<link>
+			<name>resources/testing/sample/suite2.xml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/sample/suite2.xml</locationURI>
+		</link>
+		<link>
+			<name>resources/testing/sample/suiteWillFail1.xml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/sample/suiteWillFail1.xml</locationURI>
+		</link>
+		<link>
+			<name>resources/testing/sample/test.aiml</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/resources/testing/sample/test.aiml</locationURI>
 		</link>
 		<link>
 			<name>templates/html/docroot/sample.css</name>

@@ -35,7 +35,7 @@ GENERAL NOTES
     <entry key="programd.httpserver.classname">org.aitools.programd.server.jettyinterface.JettyWrapper</entry>
     
     <!-- configuration parameter for the HTTP server (not always applicable) [String: conf/jetty.xml]-->
-    <entry key="programd.httpserver.config">project/ajaxJetty.xml</entry>
+    <entry key="programd.httpserver.config">conf/ajaxJetty.xml</entry>
     
     <!-- Pattern for naming the log file for web server messages. [String: logs/web-server-%g.log]-->
     <entry key="programd.httpserver.log.path-pattern">logs/web-server-%g.log</entry>

@@ -101,6 +101,8 @@ public class Chatter extends HttpServlet
     private HashMap<String,String> userSessions = new HashMap<String,String>();
     
     private UUIDgenerator UUIDgen;
+    
+    private String serverURL; //name of your machine with port
 
     /**
      * @see javax.servlet.GenericServlet#init()
@@ -109,7 +111,7 @@ public class Chatter extends HttpServlet
     {
         this.core = (Core) this.getServletContext().getAttribute(CORE);
         this.responderRegistry = (ServletRequestResponderManagerRegistry) this.getServletContext().getAttribute(RESPONDER_REGISTRY);
-        try
+        try 
         {
         	UUIDgen = new UUIDgenerator();
         } catch (Exception e)
@@ -125,6 +127,7 @@ public class Chatter extends HttpServlet
     {
         this.core = (Core) config.getServletContext().getAttribute(CORE);
         this.responderRegistry = (ServletRequestResponderManagerRegistry) config.getServletContext().getAttribute(RESPONDER_REGISTRY);
+        serverURL = this.core.getHostname();
         try
         {
         	UUIDgen = new UUIDgenerator();
@@ -141,6 +144,8 @@ public class Chatter extends HttpServlet
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
     {
+    	serverURL = request.getServerName() + ":" + request.getServerPort();
+    	
     	String userid = request.getParameter("userid");
     	String userRequest = request.getParameter("text");
     	String givenSessionID = request.getHeader("x-session");
@@ -231,18 +236,18 @@ public class Chatter extends HttpServlet
     			"		printChat('<h5>YOU:</h5>'+parent.inputFrame.document.inputArea.inputText.value);"+
     			"		var postStr = 'text=' + encodeURI(parent.inputFrame.document.inputArea.inputText.value ) + '&userid=" + userid +"';"+
     			"		parent.inputFrame.document.inputArea.inputText.value='';"+
-    			"		inputChat('http://athene:8001/chat/Chatter',postStr);"+
+    			"		inputChat('http://" + serverURL + "/chat/Chatter',postStr);"+
     			"	}"+
     			"}"+
     			
     			"function init(){"+
     			"	parent.textFrame.document.open();"+
     			"	parent.textFrame.document.close();"+
-    			"	inputChat('http://athene:8001/chat/Chatter','text=CONNECT&userid=" + userid +"');"+
+    			"	inputChat('http://" + serverURL + "/chat/Chatter','text=CONNECT&userid=" + userid +"');"+
     			"}"+
     			
     			"function exit(){"+
-    			"	inputChat('http://athene:8001/chat/Chatter','userid=" + userid +"');"+
+    			"	inputChat('http://" + serverURL + "/chat/Chatter','userid=" + userid +"');"+
     			"}"+
     			    			
     			"	</script>"+

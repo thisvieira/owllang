@@ -43,7 +43,7 @@ public class AjaxClient
     	{
     		server = new HttpServer();
     		SocketListener listener = new SocketListener();
-    		listener.setPort(80);
+    		listener.setPort(8081);
     		server.addListener(listener);
 
     		HttpContext context = new HttpContext();

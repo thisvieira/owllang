@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="">
+		<item value="1000" key="org.eclipse.search.resultpage.limit"/>
 		<item value="TRUE" key="org.eclipse.jdt.search.resultpage.limit_enabled"/>
 		<item value="1000" key="org.eclipse.jdt.search.resultpage.limit"/>
 	</section>
@@ -13,9 +14,9 @@
 	</section>
 	<section name="DialogBounds_SearchDialog">
 		<item value="567" key="DIALOG_WIDTH"/>
-		<item value="304" key="DIALOG_Y_ORIGIN"/>
+		<item value="103" key="DIALOG_Y_ORIGIN"/>
 		<item value="427" key="DIALOG_HEIGHT"/>
-		<item value="685" key="DIALOG_X_ORIGIN"/>
+		<item value="625" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="Search">
@@ -47,66 +48,6 @@
 		<item value="12" key="HISTORY_SIZE"/>
 		<section name="HISTORY11">
 			<item value="false" key="isRegExSearch"/>
-			<item value="&lt;body" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="true" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="EXTENSIONS">
-			<item value="*.xml" key="2"/>
-			<item value="*.java" key="1"/>
-			<item value="*.*" key="0"/>
-		</section>
-		<section name="HISTORY10">
-			<item value="false" key="isRegExSearch"/>
-			<item value="webserver" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="false" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY9">
-			<item value="false" key="isRegExSearch"/>
-			<item value="ServletHandler" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="false" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY8">
-			<item value="false" key="isRegExSearch"/>
-			<item value="addServlet" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="false" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY5">
-			<item value="false" key="isRegExSearch"/>
-			<item value=" HttpServer " key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="true" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY4">
-			<item value="false" key="isRegExSearch"/>
 			<item value="javascript" key="textPattern"/>
 			<item value="0" key="scope"/>
 			<item value="true" key="ignoreCase"/>
@@ -116,40 +57,12 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY7">
-			<item value="false" key="isRegExSearch"/>
-			<item value="httpserver" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="false" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
+		<section name="EXTENSIONS">
+			<item value="*.xml" key="2"/>
+			<item value="*.*" key="1"/>
+			<item value="*.java" key="0"/>
 		</section>
-		<section name="HISTORY6">
-			<item value="false" key="isRegExSearch"/>
-			<item value="HttpServer" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="true" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY2">
-			<item value="false" key="isRegExSearch"/>
-			<item value="aimlchat" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="true" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*.*"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY3">
+		<section name="HISTORY10">
 			<item value="false" key="isRegExSearch"/>
 			<item value="seequel" key="textPattern"/>
 			<item value="0" key="scope"/>
@@ -160,7 +73,51 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY0">
+		<section name="HISTORY9">
+			<item value="false" key="isRegExSearch"/>
+			<item value="aimlchat" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY8">
+			<item value="false" key="isRegExSearch"/>
+			<item value="ontology.xml" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY5">
+			<item value="false" key="isRegExSearch"/>
+			<item value="schermerhom" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY4">
+			<item value="false" key="isRegExSearch"/>
+			<item value="path-pattern" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY7">
 			<item value="false" key="isRegExSearch"/>
 			<item value="path-identical categories were encountered, and handled according to the" key="textPattern"/>
 			<item value="0" key="scope"/>
@@ -171,13 +128,57 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY1">
+		<section name="HISTORY6">
 			<item value="false" key="isRegExSearch"/>
-			<item value="ontology.xml" key="textPattern"/>
+			<item value="athene" key="textPattern"/>
 			<item value="0" key="scope"/>
 			<item value="true" key="ignoreCase"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY2">
+			<item value="false" key="isRegExSearch"/>
+			<item value="bot-configuration.xsd" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY3">
+			<item value="false" key="isRegExSearch"/>
+			<item value="Developer specified an invalid constructor for listener" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY0">
+			<item value="false" key="isRegExSearch"/>
+			<item value="listener" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
+			<item value="false" key="isRegExSearch"/>
+			<item value="constructor for listener" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
 			</list>
 			<list key="workingSets">
 			</list>

@@ -2,12 +2,11 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2012-10-08T13:14:51.928+0100</date>
-  <millis>1349698491928</millis>
-  <sequence>44</sequence>
+  <date>2012-10-29T16:56:04.766+0000</date>
+  <millis>1351529764766</millis>
+  <sequence>45</sequence>
   <botid>TF</botid>
   <userid>SCHERMERHOM</userid>
   <input>CONNECT</input>
-  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt; I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible. Well here we go! &lt;br xmlns="http://www.w3.org/1999/xhtml"/&gt; Some people believe that the EFQUEL WIKI Page is topical.<br xmlns="http://www.w3.org/1999/xhtml"/> Do you share that opinion?</reply>
+  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt; I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible. Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/> When asked, some people claim that the My EFQUEL Section is relevant.&lt;br xmlns="http://www.w3.org/1999/xhtml"/> Do you agree?</reply>
 </record>
-</log>

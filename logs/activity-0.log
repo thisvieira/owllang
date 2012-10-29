@@ -10154,3 +10154,1706 @@ THAT = INDPROIND
 [2012-10-08 14:51:57] Filename: "../aiml/\questionWouldYouAgree.aiml"
 [2012-10-08 14:51:57] Response 1 in 465 ms. (Average: 465.0 ms.)
 [2012-10-08 14:52:03] Program D is shutting down.
+[2012-10-24 12:48:18] Starting Program D version 4.5.
+[2012-10-24 12:48:18] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 12:48:18] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 12:48:18] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 12:48:18] Predicates with no values defined will return: "undefined".
+[2012-10-24 12:48:18] Initializing OntologyDBMultiplexor.
+[2012-10-24 12:48:21] Opening database pool.
+[2012-10-24 12:48:21] Saving Ontology
+[2012-10-24 12:48:21] Populating database pool.
+[2012-10-24 12:48:21] PredicateMaster saving all cached predicates (0)
+[2012-10-24 12:48:22] Starting up the Graphmaster.
+[2012-10-24 12:48:22] Configuring bot "TF".
+[2012-10-24 12:48:22] Loaded 287 input substitutions.
+[2012-10-24 12:48:22] Loaded 19 gender substitutions.
+[2012-10-24 12:48:22] Loaded 9 person substitutions.
+[2012-10-24 12:48:22] Loaded 60 person2 substitutions.
+[2012-10-24 12:48:22] Loaded 4 sentence-splitters.
+[2012-10-24 12:48:23] 632 unique categories loaded in 0.561 seconds.
+[2012-10-24 12:48:23] The AIML Watcher is not active.
+[2012-10-24 12:48:23] JavaScript interpreter not started.
+[2012-10-24 12:48:23] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 12:54:53] Starting Program D version 4.5.
+[2012-10-24 12:54:53] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 12:54:53] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 12:54:53] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 12:54:53] Predicates with no values defined will return: "undefined".
+[2012-10-24 12:54:53] Initializing OntologyDBMultiplexor.
+[2012-10-24 12:54:56] Opening database pool.
+[2012-10-24 12:54:56] Saving Ontology
+[2012-10-24 12:54:56] Populating database pool.
+[2012-10-24 12:54:56] PredicateMaster saving all cached predicates (0)
+[2012-10-24 12:54:57] Starting up the Graphmaster.
+[2012-10-24 12:54:57] Configuring bot "TF".
+[2012-10-24 12:54:57] Loaded 287 input substitutions.
+[2012-10-24 12:54:57] Loaded 19 gender substitutions.
+[2012-10-24 12:54:57] Loaded 9 person substitutions.
+[2012-10-24 12:54:57] Loaded 60 person2 substitutions.
+[2012-10-24 12:54:57] Loaded 4 sentence-splitters.
+[2012-10-24 12:54:57] 632 unique categories loaded in 0.456 seconds.
+[2012-10-24 12:54:57] The AIML Watcher is not active.
+[2012-10-24 12:54:57] JavaScript interpreter not started.
+[2012-10-24 12:54:57] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 12:55:35] Starting Program D version 4.5.
+[2012-10-24 12:55:35] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 12:55:35] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 12:55:35] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 12:55:35] Predicates with no values defined will return: "undefined".
+[2012-10-24 12:55:35] Initializing OntologyDBMultiplexor.
+[2012-10-24 12:55:51] Opening database pool.
+[2012-10-24 12:55:51] Saving Ontology
+[2012-10-24 12:55:51] Populating database pool.
+[2012-10-24 12:55:51] PredicateMaster saving all cached predicates (0)
+[2012-10-24 12:55:52] Starting up the Graphmaster.
+[2012-10-24 12:55:52] Configuring bot "TF".
+[2012-10-24 12:55:52] Loaded 287 input substitutions.
+[2012-10-24 12:55:52] Loaded 19 gender substitutions.
+[2012-10-24 12:55:52] Loaded 9 person substitutions.
+[2012-10-24 12:55:52] Loaded 60 person2 substitutions.
+[2012-10-24 12:55:52] Loaded 4 sentence-splitters.
+[2012-10-24 12:55:52] 632 unique categories loaded in 0.345 seconds.
+[2012-10-24 12:55:52] The AIML Watcher is not active.
+[2012-10-24 12:55:52] JavaScript interpreter not started.
+[2012-10-24 12:55:52] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 12:57:23] Starting Program D version 4.5.
+[2012-10-24 12:57:23] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 12:57:23] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 12:57:23] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 12:57:23] Predicates with no values defined will return: "undefined".
+[2012-10-24 12:57:23] Initializing OntologyDBMultiplexor.
+[2012-10-24 12:57:28] Opening database pool.
+[2012-10-24 12:57:28] Saving Ontology
+[2012-10-24 12:57:28] Populating database pool.
+[2012-10-24 12:57:28] PredicateMaster saving all cached predicates (0)
+[2012-10-24 12:57:29] Starting up the Graphmaster.
+[2012-10-24 12:57:29] Configuring bot "TF".
+[2012-10-24 12:57:29] Loaded 287 input substitutions.
+[2012-10-24 12:57:29] Loaded 19 gender substitutions.
+[2012-10-24 12:57:29] Loaded 9 person substitutions.
+[2012-10-24 12:57:29] Loaded 60 person2 substitutions.
+[2012-10-24 12:57:29] Loaded 4 sentence-splitters.
+[2012-10-24 12:57:29] 632 unique categories loaded in 0.303 seconds.
+[2012-10-24 12:57:29] The AIML Watcher is not active.
+[2012-10-24 12:57:29] JavaScript interpreter not started.
+[2012-10-24 12:57:29] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 12:58:50] Starting Program D version 4.5.
+[2012-10-24 12:58:50] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 12:58:50] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 12:58:50] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 12:58:50] Predicates with no values defined will return: "undefined".
+[2012-10-24 12:58:50] Initializing OntologyDBMultiplexor.
+[2012-10-24 16:11:17] Opening database pool.
+[2012-10-24 16:11:17] Saving Ontology
+[2012-10-24 16:11:17] Populating database pool.
+[2012-10-24 16:11:17] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:11:18] Starting up the Graphmaster.
+[2012-10-24 16:11:19] Configuring bot "TF".
+[2012-10-24 16:11:19] Loaded 287 input substitutions.
+[2012-10-24 16:11:19] Loaded 19 gender substitutions.
+[2012-10-24 16:11:19] Loaded 9 person substitutions.
+[2012-10-24 16:11:19] Loaded 60 person2 substitutions.
+[2012-10-24 16:11:19] Loaded 4 sentence-splitters.
+[2012-10-24 16:11:20] 632 unique categories loaded in 1.656 seconds.
+[2012-10-24 16:11:20] The AIML Watcher is not active.
+[2012-10-24 16:11:20] JavaScript interpreter not started.
+[2012-10-24 16:11:20] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 16:11:36] Starting Program D version 4.5.
+[2012-10-24 16:11:36] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 16:11:36] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 16:11:36] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 16:11:36] Predicates with no values defined will return: "undefined".
+[2012-10-24 16:11:36] Initializing OntologyDBMultiplexor.
+[2012-10-24 16:11:38] Opening database pool.
+[2012-10-24 16:11:38] Saving Ontology
+[2012-10-24 16:11:38] Populating database pool.
+[2012-10-24 16:11:38] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:11:39] Starting up the Graphmaster.
+[2012-10-24 16:11:39] Configuring bot "TF".
+[2012-10-24 16:11:39] Loaded 287 input substitutions.
+[2012-10-24 16:11:39] Loaded 19 gender substitutions.
+[2012-10-24 16:11:39] Loaded 9 person substitutions.
+[2012-10-24 16:11:39] Loaded 60 person2 substitutions.
+[2012-10-24 16:11:39] Loaded 4 sentence-splitters.
+[2012-10-24 16:11:39] 632 unique categories loaded in 0.28 seconds.
+[2012-10-24 16:11:39] The AIML Watcher is not active.
+[2012-10-24 16:11:39] JavaScript interpreter not started.
+[2012-10-24 16:11:39] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 16:11:57] Starting Program D version 4.5.
+[2012-10-24 16:11:57] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 16:11:57] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 16:11:57] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 16:11:57] Predicates with no values defined will return: "undefined".
+[2012-10-24 16:11:57] Initializing OntologyDBMultiplexor.
+[2012-10-24 16:11:58] Opening database pool.
+[2012-10-24 16:11:58] Saving Ontology
+[2012-10-24 16:11:58] Populating database pool.
+[2012-10-24 16:11:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:11:59] Starting up the Graphmaster.
+[2012-10-24 16:11:59] Configuring bot "TF".
+[2012-10-24 16:11:59] Loaded 287 input substitutions.
+[2012-10-24 16:11:59] Loaded 19 gender substitutions.
+[2012-10-24 16:11:59] Loaded 9 person substitutions.
+[2012-10-24 16:11:59] Loaded 60 person2 substitutions.
+[2012-10-24 16:11:59] Loaded 4 sentence-splitters.
+[2012-10-24 16:11:59] 632 unique categories loaded in 0.3 seconds.
+[2012-10-24 16:11:59] The AIML Watcher is not active.
+[2012-10-24 16:11:59] JavaScript interpreter not started.
+[2012-10-24 16:11:59] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 16:12:58] Saving Ontology
+[2012-10-24 16:12:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:13:58] Saving Ontology
+[2012-10-24 16:13:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:14:58] Saving Ontology
+[2012-10-24 16:14:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:15:58] Saving Ontology
+[2012-10-24 16:15:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:16:58] Saving Ontology
+[2012-10-24 16:16:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:17:58] Saving Ontology
+[2012-10-24 16:17:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:18:58] Saving Ontology
+[2012-10-24 16:18:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:19:58] Saving Ontology
+[2012-10-24 16:19:58] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:20:21] Starting Program D version 4.5.
+[2012-10-24 16:20:21] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 16:20:21] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 16:20:21] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 16:20:21] Predicates with no values defined will return: "undefined".
+[2012-10-24 16:20:21] Initializing OntologyDBMultiplexor.
+[2012-10-24 16:20:26] Opening database pool.
+[2012-10-24 16:20:26] Saving Ontology
+[2012-10-24 16:20:26] Populating database pool.
+[2012-10-24 16:20:26] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:20:26] Starting up the Graphmaster.
+[2012-10-24 16:20:26] Configuring bot "TF".
+[2012-10-24 16:20:26] Loaded 287 input substitutions.
+[2012-10-24 16:20:26] Loaded 19 gender substitutions.
+[2012-10-24 16:20:26] Loaded 9 person substitutions.
+[2012-10-24 16:20:26] Loaded 60 person2 substitutions.
+[2012-10-24 16:20:26] Loaded 4 sentence-splitters.
+[2012-10-24 16:20:27] 632 unique categories loaded in 0.3 seconds.
+[2012-10-24 16:20:27] The AIML Watcher is not active.
+[2012-10-24 16:20:27] JavaScript interpreter not started.
+[2012-10-24 16:20:27] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 16:22:19] Starting Program D version 4.5.
+[2012-10-24 16:22:19] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-24 16:22:19] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-24 16:22:19] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-24 16:22:19] Predicates with no values defined will return: "undefined".
+[2012-10-24 16:22:19] Initializing OntologyDBMultiplexor.
+[2012-10-24 16:22:21] Opening database pool.
+[2012-10-24 16:22:21] Saving Ontology
+[2012-10-24 16:22:21] Populating database pool.
+[2012-10-24 16:22:21] PredicateMaster saving all cached predicates (0)
+[2012-10-24 16:22:21] Starting up the Graphmaster.
+[2012-10-24 16:22:21] Configuring bot "TF".
+[2012-10-24 16:22:21] Loaded 287 input substitutions.
+[2012-10-24 16:22:21] Loaded 19 gender substitutions.
+[2012-10-24 16:22:21] Loaded 9 person substitutions.
+[2012-10-24 16:22:21] Loaded 60 person2 substitutions.
+[2012-10-24 16:22:21] Loaded 4 sentence-splitters.
+[2012-10-24 16:22:21] 632 unique categories loaded in 0.286 seconds.
+[2012-10-24 16:22:21] The AIML Watcher is not active.
+[2012-10-24 16:22:21] JavaScript interpreter not started.
+[2012-10-24 16:22:22] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-24 16:22:22] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-24 16:23:21] Saving Ontology
+[2012-10-24 16:23:21] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:23:08] Starting Program D version 4.5.
+[2012-10-29 13:23:08] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:23:08] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:23:08] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:23:08] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:23:08] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:23:11] Opening database pool.
+[2012-10-29 13:23:11] Saving Ontology
+[2012-10-29 13:23:11] Populating database pool.
+[2012-10-29 13:23:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:23:12] Starting up the Graphmaster.
+[2012-10-29 13:23:13] Configuring bot "TF".
+[2012-10-29 13:23:13] Loaded 287 input substitutions.
+[2012-10-29 13:23:13] Loaded 19 gender substitutions.
+[2012-10-29 13:23:13] Loaded 9 person substitutions.
+[2012-10-29 13:23:13] Loaded 60 person2 substitutions.
+[2012-10-29 13:23:13] Loaded 4 sentence-splitters.
+[2012-10-29 13:23:13] 632 unique categories loaded in 0.739 seconds.
+[2012-10-29 13:23:13] The AIML Watcher is not active.
+[2012-10-29 13:23:13] JavaScript interpreter not started.
+[2012-10-29 13:23:14] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:23:15] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:24:11] Saving Ontology
+[2012-10-29 13:24:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:25:11] Saving Ontology
+[2012-10-29 13:25:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:26:11] Saving Ontology
+[2012-10-29 13:26:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:27:11] Saving Ontology
+[2012-10-29 13:27:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:28:11] Saving Ontology
+[2012-10-29 13:28:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:29:11] Saving Ontology
+[2012-10-29 13:29:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:30:11] Saving Ontology
+[2012-10-29 13:30:11] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:31:12] Starting Program D version 4.5.
+[2012-10-29 13:31:12] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:31:12] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:31:12] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:31:12] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:31:12] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:31:14] Opening database pool.
+[2012-10-29 13:31:14] Saving Ontology
+[2012-10-29 13:31:14] Populating database pool.
+[2012-10-29 13:31:14] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:31:14] Starting up the Graphmaster.
+[2012-10-29 13:31:14] Configuring bot "TF".
+[2012-10-29 13:31:14] Loaded 287 input substitutions.
+[2012-10-29 13:31:14] Loaded 19 gender substitutions.
+[2012-10-29 13:31:14] Loaded 9 person substitutions.
+[2012-10-29 13:31:14] Loaded 60 person2 substitutions.
+[2012-10-29 13:31:14] Loaded 4 sentence-splitters.
+[2012-10-29 13:31:15] 632 unique categories loaded in 0.282 seconds.
+[2012-10-29 13:31:15] The AIML Watcher is not active.
+[2012-10-29 13:31:15] JavaScript interpreter not started.
+[2012-10-29 13:31:15] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:31:15] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:32:20] Starting Program D version 4.5.
+[2012-10-29 13:32:20] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:32:20] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:32:20] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:32:20] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:32:20] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:32:22] Opening database pool.
+[2012-10-29 13:32:22] Saving Ontology
+[2012-10-29 13:32:22] Populating database pool.
+[2012-10-29 13:32:22] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:32:23] Starting up the Graphmaster.
+[2012-10-29 13:32:23] Configuring bot "TF".
+[2012-10-29 13:32:23] Loaded 287 input substitutions.
+[2012-10-29 13:32:23] Loaded 19 gender substitutions.
+[2012-10-29 13:32:23] Loaded 9 person substitutions.
+[2012-10-29 13:32:23] Loaded 60 person2 substitutions.
+[2012-10-29 13:32:23] Loaded 4 sentence-splitters.
+[2012-10-29 13:32:23] 632 unique categories loaded in 0.288 seconds.
+[2012-10-29 13:32:23] The AIML Watcher is not active.
+[2012-10-29 13:32:23] JavaScript interpreter not started.
+[2012-10-29 13:32:23] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:32:23] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:32:56] Starting Program D version 4.5.
+[2012-10-29 13:32:56] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:32:56] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:32:56] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:32:56] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:32:56] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:33:07] Opening database pool.
+[2012-10-29 13:33:07] Saving Ontology
+[2012-10-29 13:33:07] Populating database pool.
+[2012-10-29 13:33:07] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:33:07] Starting up the Graphmaster.
+[2012-10-29 13:33:07] Configuring bot "TF".
+[2012-10-29 13:33:07] Loaded 287 input substitutions.
+[2012-10-29 13:33:07] Loaded 19 gender substitutions.
+[2012-10-29 13:33:07] Loaded 9 person substitutions.
+[2012-10-29 13:33:07] Loaded 60 person2 substitutions.
+[2012-10-29 13:33:07] Loaded 4 sentence-splitters.
+[2012-10-29 13:33:08] 632 unique categories loaded in 0.303 seconds.
+[2012-10-29 13:33:08] The AIML Watcher is not active.
+[2012-10-29 13:33:08] JavaScript interpreter not started.
+[2012-10-29 13:33:08] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:33:11] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:34:07] Saving Ontology
+[2012-10-29 13:34:07] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:34:50] Starting Program D version 4.5.
+[2012-10-29 13:34:50] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:34:50] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:34:50] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:34:50] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:34:50] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:34:59] Opening database pool.
+[2012-10-29 13:34:59] Saving Ontology
+[2012-10-29 13:34:59] Populating database pool.
+[2012-10-29 13:34:59] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:35:00] Starting up the Graphmaster.
+[2012-10-29 13:35:00] Configuring bot "TF".
+[2012-10-29 13:35:00] Loaded 287 input substitutions.
+[2012-10-29 13:35:00] Loaded 19 gender substitutions.
+[2012-10-29 13:35:00] Loaded 9 person substitutions.
+[2012-10-29 13:35:00] Loaded 60 person2 substitutions.
+[2012-10-29 13:35:00] Loaded 4 sentence-splitters.
+[2012-10-29 13:35:00] 632 unique categories loaded in 0.297 seconds.
+[2012-10-29 13:35:00] The AIML Watcher is not active.
+[2012-10-29 13:35:00] JavaScript interpreter not started.
+[2012-10-29 13:35:00] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:35:00] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:40:44] Starting Program D version 4.5.
+[2012-10-29 13:40:44] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:40:44] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:40:44] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:40:44] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:40:44] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:40:46] Opening database pool.
+[2012-10-29 13:40:46] Saving Ontology
+[2012-10-29 13:40:46] Populating database pool.
+[2012-10-29 13:40:46] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:40:46] Starting up the Graphmaster.
+[2012-10-29 13:40:46] Configuring bot "TF".
+[2012-10-29 13:40:46] Loaded 287 input substitutions.
+[2012-10-29 13:40:46] Loaded 19 gender substitutions.
+[2012-10-29 13:40:46] Loaded 9 person substitutions.
+[2012-10-29 13:40:46] Loaded 60 person2 substitutions.
+[2012-10-29 13:40:46] Loaded 4 sentence-splitters.
+[2012-10-29 13:40:47] 632 unique categories loaded in 0.297 seconds.
+[2012-10-29 13:40:47] The AIML Watcher is not active.
+[2012-10-29 13:40:47] JavaScript interpreter not started.
+[2012-10-29 13:40:47] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:40:47] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:41:46] Saving Ontology
+[2012-10-29 13:41:46] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:42:46] Saving Ontology
+[2012-10-29 13:42:46] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:43:46] Starting Program D version 4.5.
+[2012-10-29 13:43:46] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:43:46] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:43:46] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:43:46] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:43:46] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:43:48] Opening database pool.
+[2012-10-29 13:43:48] Saving Ontology
+[2012-10-29 13:43:48] Populating database pool.
+[2012-10-29 13:43:48] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:43:49] Starting up the Graphmaster.
+[2012-10-29 13:43:49] Configuring bot "TF".
+[2012-10-29 13:43:49] Loaded 287 input substitutions.
+[2012-10-29 13:43:49] Loaded 19 gender substitutions.
+[2012-10-29 13:43:49] Loaded 9 person substitutions.
+[2012-10-29 13:43:49] Loaded 60 person2 substitutions.
+[2012-10-29 13:43:49] Loaded 4 sentence-splitters.
+[2012-10-29 13:43:49] 632 unique categories loaded in 0.304 seconds.
+[2012-10-29 13:43:49] The AIML Watcher is not active.
+[2012-10-29 13:43:49] JavaScript interpreter not started.
+[2012-10-29 13:43:49] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:43:49] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:44:10] test1> CONNECT : * : * : TF
+[2012-10-29 13:44:10] Match: CONNECT : * : * : TF
+[2012-10-29 13:44:10] Filename: "../aiml/\general.aiml"
+[2012-10-29 13:44:10] Symbolic Reduction:
+[2012-10-29 13:44:10] test1> QUESTASKINFO : * : * : TF
+[2012-10-29 13:44:10] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 13:44:10] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:10] Symbolic Reduction:
+[2012-10-29 13:44:10] test1> QUESTASK : * : * : TF
+[2012-10-29 13:44:10] Match: QUESTASK : _ : * : TF
+[2012-10-29 13:44:10] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:10] 
+INPUT = OWLLANG ONTIND :c11 ONTIND efq:wiki ONTIND :is ONTIND :tooComplex ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too complex ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 13:44:10] test1> OWLLANG ONTIND :c11 ONTIND efq:wiki ONTIND :is ONTIND :tooComplex ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too complex ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 13:44:10] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 13:44:10] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:10] Symbolic Reduction:
+[2012-10-29 13:44:10] test1> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 13:44:10] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 13:44:10] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:10] Symbolic Reduction:
+[2012-10-29 13:44:10] test1> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:10] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:10] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 13:44:10] Response 1 in 385 ms. (Average: 385.0 ms.)
+[2012-10-29 13:44:34] test1> Not exactly : Would you agree with this statement the EFQUEL WIKI Page is too complex : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:34] Match: * : * : * : TF
+[2012-10-29 13:44:34] Filename: "../aiml/\general.aiml"
+[2012-10-29 13:44:34] Symbolic Reduction:
+[2012-10-29 13:44:34] test1> Not exactly : Would you agree with this statement the EFQUEL WIKI Page is too complex : checkForValidAnswer : TF
+[2012-10-29 13:44:34] Match: NOT * : * : CHECKFORVALIDANSWER : TF
+[2012-10-29 13:44:34] Filename: "../aiml/\IsValidAnswer.aiml"
+[2012-10-29 13:44:34] Symbolic Reduction:
+[2012-10-29 13:44:34] test1> NOINCLINATIONBUTPROBABLYVALIDANSWER : Would you agree with this statement the EFQUEL WIKI Page is too complex : checkForValidAnswer : TF
+[2012-10-29 13:44:34] Match: NOINCLINATIONBUTPROBABLYVALIDANSWER : * : CHECKFORVALIDANSWER : TF
+[2012-10-29 13:44:34] Filename: "../aiml/\IsValidAnswer.aiml"
+[2012-10-29 13:44:34] Symbolic Reduction:
+[2012-10-29 13:44:34] test1> UNSURE : Would you agree with this statement the EFQUEL WIKI Page is too complex : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:34] Match: UNSURE : * : QUESTION _ : TF
+[2012-10-29 13:44:34] Filename: "../aiml/\questionAnswersOther.aiml"
+[2012-10-29 13:44:34] Response 2 in 8 ms. (Average: 196.5 ms.)
+[2012-10-29 13:44:48] Saving Ontology
+[2012-10-29 13:44:48] PredicateMaster saving all cached predicates (20)
+[2012-10-29 13:44:48] test1> I would say so : In your opinion would it be true that the EFQUEL WIKI Page is too complex more often than not : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: I WOULD SAY SO : * : QUESTION * : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\YesAnswers.aiml"
+[2012-10-29 13:44:48] Symbolic Reduction:
+[2012-10-29 13:44:48] test1> YES : In your opinion would it be true that the EFQUEL WIKI Page is too complex more often than not : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: YES : * : QUESTION _ : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2012-10-29 13:44:48] Symbolic Reduction:
+[2012-10-29 13:44:48] test1> STOREREIFICATION : In your opinion would it be true that the EFQUEL WIKI Page is too complex more often than not : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: STOREREIFICATION : _ : _ : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:48] 
+INPUT = OWLLANG ONTSTORE :CLAIM
+THAT = STOREREIFICATIONRESULT
+[2012-10-29 13:44:48] test1> OWLLANG ONTSTORE :CLAIM : STOREREIFICATIONRESULT : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:48] Symbolic Reduction:
+[2012-10-29 13:44:48] test1> QUESTASK : In your opinion would it be true that the EFQUEL WIKI Page is too complex more often than not : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: QUESTASK : _ : * : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:48] 
+INPUT = OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 13:44:48] test1> OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:48] Symbolic Reduction:
+[2012-10-29 13:44:48] test1> CHECKPREDICATEGRAMMAR : In your opinion would it be true that the EFQUEL WIKI Page is too complex more often than not : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:48] Symbolic Reduction:
+[2012-10-29 13:44:48] test1> WOULDYOUAGREE : In your opinion would it be true that the EFQUEL WIKI Page is too complex more often than not : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:48] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 13:44:48] Response 3 in 125 ms. (Average: 172.66667 ms.)
+[2012-10-29 13:44:59] test1> not at all : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: NOT AT ALL : * : QUESTION * : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\NoAnswers.aiml"
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] test1> FINDINVERSEOFPREDICATE : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: FINDINVERSEOFPREDICATE : _ : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] 
+INPUT = OWLLANG ONTPRO :isNot ONTPRO is not
+THAT = INVERSEOFPREDICATE
+[2012-10-29 13:44:59] test1> OWLLANG ONTPRO :isNot ONTPRO is not : INVERSEOFPREDICATE : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: OWLLANG ONTPRO * ONTPRO * : INVERSEOFPREDICATE : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] test1> FINDINVERSEOFPREDICATE : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: FINDINVERSEOFPREDICATE : _ : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] 
+INPUT = OWLLANG ONTPRO :is ONTPRO is
+THAT = INVERSEOFPREDICATE
+[2012-10-29 13:44:59] test1> OWLLANG ONTPRO :is ONTPRO is : INVERSEOFPREDICATE : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: OWLLANG ONTPRO * ONTPRO * : INVERSEOFPREDICATE : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] test1> NO The My EFQUEL Section is not relevant : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: NO * : * : QUESTION _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\questionAnswersYesNoUnknown.aiml"
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] test1> FINDINVERSEOFPREDICATE : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: FINDINVERSEOFPREDICATE : _ : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] 
+INPUT = OWLLANG ONTPRO :isNot ONTPRO is not
+THAT = INVERSEOFPREDICATE
+[2012-10-29 13:44:59] test1> OWLLANG ONTPRO :isNot ONTPRO is not : INVERSEOFPREDICATE : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: OWLLANG ONTPRO * ONTPRO * : INVERSEOFPREDICATE : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] test1> STOREREIFICATION : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: STOREREIFICATION : _ : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] 
+INPUT = OWLLANG ONTSTORE :CLAIM18668552460861
+THAT = STOREREIFICATIONRESULT
+[2012-10-29 13:44:59] test1> OWLLANG ONTSTORE :CLAIM18668552460861 : STOREREIFICATIONRESULT : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: OWLLANG ONTSTORE * : STOREREIFICATIONRESULT : _ : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\procedures.aiml"
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] test1> QUESTASK : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: QUESTASK : _ : * : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:59] 
+INPUT = OWLLANG ONTIND :c10 ONTIND efq:home ONTIND :is ONTIND :tooSimple ONTIND Homepage of EFQUEL ONTPRO is ONTIND too simple ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 13:44:59] test1> OWLLANG ONTIND :c10 ONTIND efq:home ONTIND :is ONTIND :tooSimple ONTIND Homepage of EFQUEL ONTPRO is ONTIND too simple ONTIND UNKNOWN : INDPROIND : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] test1> CHECKPREDICATEGRAMMAR : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\questions.aiml"
+[2012-10-29 13:44:59] Symbolic Reduction:
+[2012-10-29 13:44:59] test1> WOULDYOUAGREE : Would you agree when some say that the My EFQUEL Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 13:44:59] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 13:44:59] Response 4 in 149 ms. (Average: 166.75 ms.)
+[2012-10-29 13:54:14] Starting Program D version 4.5.
+[2012-10-29 13:54:14] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:54:14] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:54:14] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:54:14] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:54:14] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:54:16] Opening database pool.
+[2012-10-29 13:54:16] Saving Ontology
+[2012-10-29 13:54:16] Populating database pool.
+[2012-10-29 13:54:16] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:54:16] Starting up the Graphmaster.
+[2012-10-29 13:54:16] Configuring bot "TF".
+[2012-10-29 13:54:17] Loaded 287 input substitutions.
+[2012-10-29 13:54:17] Loaded 19 gender substitutions.
+[2012-10-29 13:54:17] Loaded 9 person substitutions.
+[2012-10-29 13:54:17] Loaded 60 person2 substitutions.
+[2012-10-29 13:54:17] Loaded 4 sentence-splitters.
+[2012-10-29 13:54:17] 632 unique categories loaded in 0.305 seconds.
+[2012-10-29 13:54:17] The AIML Watcher is not active.
+[2012-10-29 13:54:17] JavaScript interpreter not started.
+[2012-10-29 13:54:17] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:54:17] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 13:59:51] Starting Program D version 4.5.
+[2012-10-29 13:59:52] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 13:59:52] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 13:59:52] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 13:59:52] Predicates with no values defined will return: "undefined".
+[2012-10-29 13:59:52] Initializing OntologyDBMultiplexor.
+[2012-10-29 13:59:53] Opening database pool.
+[2012-10-29 13:59:53] Saving Ontology
+[2012-10-29 13:59:53] Populating database pool.
+[2012-10-29 13:59:53] PredicateMaster saving all cached predicates (0)
+[2012-10-29 13:59:54] Starting up the Graphmaster.
+[2012-10-29 13:59:54] Configuring bot "TF".
+[2012-10-29 13:59:54] Loaded 287 input substitutions.
+[2012-10-29 13:59:54] Loaded 19 gender substitutions.
+[2012-10-29 13:59:54] Loaded 9 person substitutions.
+[2012-10-29 13:59:54] Loaded 60 person2 substitutions.
+[2012-10-29 13:59:54] Loaded 4 sentence-splitters.
+[2012-10-29 13:59:54] 632 unique categories loaded in 0.316 seconds.
+[2012-10-29 13:59:54] The AIML Watcher is not active.
+[2012-10-29 13:59:54] JavaScript interpreter not started.
+[2012-10-29 13:59:54] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 13:59:54] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 14:00:53] Saving Ontology
+[2012-10-29 14:00:53] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:03:18] Starting Program D version 4.5.
+[2012-10-29 14:03:18] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:03:18] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:03:18] 11.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:03:18] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:03:18] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:03:19] Opening database pool.
+[2012-10-29 14:03:19] Saving Ontology
+[2012-10-29 14:03:19] Populating database pool.
+[2012-10-29 14:03:19] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:03:20] Starting up the Graphmaster.
+[2012-10-29 14:03:20] Configuring bot "TF".
+[2012-10-29 14:03:20] Loaded 287 input substitutions.
+[2012-10-29 14:03:20] Loaded 19 gender substitutions.
+[2012-10-29 14:03:20] Loaded 9 person substitutions.
+[2012-10-29 14:03:20] Loaded 60 person2 substitutions.
+[2012-10-29 14:03:20] Loaded 4 sentence-splitters.
+[2012-10-29 14:03:20] 632 unique categories loaded in 0.306 seconds.
+[2012-10-29 14:03:20] The AIML Watcher is not active.
+[2012-10-29 14:03:20] JavaScript interpreter not started.
+[2012-10-29 14:03:20] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 14:03:20] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 14:04:19] Saving Ontology
+[2012-10-29 14:04:19] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:12:51] Starting Program D version 4.5.
+[2012-10-29 14:12:51] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:12:51] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:12:51] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:12:51] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:12:51] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:12:52] Opening database pool.
+[2012-10-29 14:12:52] Saving Ontology
+[2012-10-29 14:12:52] Populating database pool.
+[2012-10-29 14:12:53] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:12:53] Starting up the Graphmaster.
+[2012-10-29 14:12:53] Configuring bot "TF".
+[2012-10-29 14:12:53] Loaded 287 input substitutions.
+[2012-10-29 14:12:53] Loaded 19 gender substitutions.
+[2012-10-29 14:12:53] Loaded 9 person substitutions.
+[2012-10-29 14:12:53] Loaded 60 person2 substitutions.
+[2012-10-29 14:12:53] Loaded 4 sentence-splitters.
+[2012-10-29 14:12:53] 632 unique categories loaded in 0.285 seconds.
+[2012-10-29 14:12:53] The AIML Watcher is not active.
+[2012-10-29 14:12:53] JavaScript interpreter not started.
+[2012-10-29 14:12:53] Starting web server org.aitools.programd.server.jettyinterface.JettyWrapper.
+[2012-10-29 14:12:53] Web server is listening at http://SCHERMERHOM:8081
+[2012-10-29 14:13:10] test1> CONNECT : * : * : TF
+[2012-10-29 14:13:10] Match: CONNECT : * : * : TF
+[2012-10-29 14:13:10] Filename: "../aiml/\general.aiml"
+[2012-10-29 14:13:10] Symbolic Reduction:
+[2012-10-29 14:13:10] test1> QUESTASKINFO : * : * : TF
+[2012-10-29 14:13:10] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 14:13:10] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:13:10] Symbolic Reduction:
+[2012-10-29 14:13:10] test1> QUESTASK : * : * : TF
+[2012-10-29 14:13:10] Match: QUESTASK : _ : * : TF
+[2012-10-29 14:13:10] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:13:11] 
+INPUT = OWLLANG ONTIND :c3 ONTIND efq:news ONTIND :is ONTIND :relevant ONTIND News and Events Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 14:13:11] test1> OWLLANG ONTIND :c3 ONTIND efq:news ONTIND :is ONTIND :relevant ONTIND News and Events Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:13:11] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:13:11] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:13:11] Symbolic Reduction:
+[2012-10-29 14:13:11] test1> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 14:13:11] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 14:13:11] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:13:11] Symbolic Reduction:
+[2012-10-29 14:13:11] test1> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:13:11] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:13:11] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 14:13:11] Response 1 in 320 ms. (Average: 320.0 ms.)
+[2012-10-29 14:13:23] test1> I am only tessting this : Would you agree with this statement the News and Events Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:13:23] Match: * : * : * : TF
+[2012-10-29 14:13:23] Filename: "../aiml/\general.aiml"
+[2012-10-29 14:13:23] Symbolic Reduction:
+[2012-10-29 14:13:23] test1> I am only tessting this : Would you agree with this statement the News and Events Section is relevant : checkForValidAnswer : TF
+[2012-10-29 14:13:23] Match: * AM * : * : CHECKFORVALIDANSWER : TF
+[2012-10-29 14:13:23] Filename: "../aiml/\IsValidAnswer.aiml"
+[2012-10-29 14:13:23] Symbolic Reduction:
+[2012-10-29 14:13:23] test1> NOINCLINATIONBUTPROBABLYVALIDANSWER : Would you agree with this statement the News and Events Section is relevant : checkForValidAnswer : TF
+[2012-10-29 14:13:23] Match: NOINCLINATIONBUTPROBABLYVALIDANSWER : * : CHECKFORVALIDANSWER : TF
+[2012-10-29 14:13:23] Filename: "../aiml/\IsValidAnswer.aiml"
+[2012-10-29 14:13:23] Symbolic Reduction:
+[2012-10-29 14:13:23] test1> UNSURE : Would you agree with this statement the News and Events Section is relevant : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:13:23] Match: UNSURE : * : QUESTION _ : TF
+[2012-10-29 14:13:23] Filename: "../aiml/\questionAnswersOther.aiml"
+[2012-10-29 14:13:23] Response 2 in 7 ms. (Average: 163.5 ms.)
+[2012-10-29 14:13:52] Saving Ontology
+[2012-10-29 14:13:52] PredicateMaster saving all cached predicates (20)
+[2012-10-29 14:14:52] Saving Ontology
+[2012-10-29 14:14:52] PredicateMaster saving all cached predicates (8)
+[2012-10-29 14:15:52] Saving Ontology
+[2012-10-29 14:15:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:16:52] Saving Ontology
+[2012-10-29 14:16:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:17:52] Saving Ontology
+[2012-10-29 14:17:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:18:52] Saving Ontology
+[2012-10-29 14:18:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:19:52] Saving Ontology
+[2012-10-29 14:19:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:20:52] Saving Ontology
+[2012-10-29 14:20:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:21:52] Saving Ontology
+[2012-10-29 14:21:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:22:52] Saving Ontology
+[2012-10-29 14:22:52] PredicateMaster saving all cached predicates (-3)
+[2012-10-29 14:45:36] Starting Program D version 4.5.
+[2012-10-29 14:45:36] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:45:36] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:45:36] 13.2 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:45:36] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:45:36] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:45:37] Opening database pool.
+[2012-10-29 14:45:37] Saving Ontology
+[2012-10-29 14:45:37] Populating database pool.
+[2012-10-29 14:45:38] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:45:38] Starting up the Graphmaster.
+[2012-10-29 14:45:38] Configuring bot "TF".
+[2012-10-29 14:45:38] Loaded 287 input substitutions.
+[2012-10-29 14:45:38] Loaded 19 gender substitutions.
+[2012-10-29 14:45:38] Loaded 9 person substitutions.
+[2012-10-29 14:45:38] Loaded 60 person2 substitutions.
+[2012-10-29 14:45:38] Loaded 4 sentence-splitters.
+[2012-10-29 14:45:38] 632 unique categories loaded in 0.289 seconds.
+[2012-10-29 14:45:38] The AIML Watcher is not active.
+[2012-10-29 14:45:38] JavaScript interpreter not started.
+[2012-10-29 14:45:38] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 14:45:38] Match: CONNECT : * : * : TF
+[2012-10-29 14:45:38] Filename: "../aiml/\general.aiml"
+[2012-10-29 14:45:38] Symbolic Reduction:
+[2012-10-29 14:45:38] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 14:45:38] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 14:45:38] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:45:38] Symbolic Reduction:
+[2012-10-29 14:45:38] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 14:45:38] Match: QUESTASK : _ : * : TF
+[2012-10-29 14:45:38] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:45:39] 
+INPUT = OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 14:45:39] SCHERMERHOM> OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:45:39] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:45:39] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:45:39] Symbolic Reduction:
+[2012-10-29 14:45:39] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 14:45:39] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 14:45:39] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:45:39] Symbolic Reduction:
+[2012-10-29 14:45:39] SCHERMERHOM> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:45:39] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:45:39] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 14:45:39] Response 1 in 252 ms. (Average: 252.0 ms.)
+[2012-10-29 14:46:14] Starting Program D version 4.5.
+[2012-10-29 14:46:14] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:46:14] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:46:14] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:46:14] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:46:14] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:46:16] Opening database pool.
+[2012-10-29 14:46:16] Saving Ontology
+[2012-10-29 14:46:16] Populating database pool.
+[2012-10-29 14:46:16] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:46:17] Starting up the Graphmaster.
+[2012-10-29 14:46:17] Configuring bot "TF".
+[2012-10-29 14:46:17] Loaded 287 input substitutions.
+[2012-10-29 14:46:17] Loaded 19 gender substitutions.
+[2012-10-29 14:46:17] Loaded 9 person substitutions.
+[2012-10-29 14:46:17] Loaded 60 person2 substitutions.
+[2012-10-29 14:46:17] Loaded 4 sentence-splitters.
+[2012-10-29 14:46:17] 632 unique categories loaded in 0.286 seconds.
+[2012-10-29 14:46:17] The AIML Watcher is not active.
+[2012-10-29 14:46:17] JavaScript interpreter not started.
+[2012-10-29 14:46:17] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 14:46:17] Match: CONNECT : * : * : TF
+[2012-10-29 14:46:17] Filename: "../aiml/\general.aiml"
+[2012-10-29 14:46:17] Symbolic Reduction:
+[2012-10-29 14:46:17] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 14:46:17] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 14:46:17] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:46:17] Symbolic Reduction:
+[2012-10-29 14:46:17] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 14:46:17] Match: QUESTASK : _ : * : TF
+[2012-10-29 14:46:17] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:46:17] 
+INPUT = OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 14:46:17] SCHERMERHOM> OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:46:17] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:46:17] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:46:17] Symbolic Reduction:
+[2012-10-29 14:46:17] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 14:46:17] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 14:46:17] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:46:17] Symbolic Reduction:
+[2012-10-29 14:46:17] SCHERMERHOM> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:46:17] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 14:46:17] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 14:46:17] Response 1 in 292 ms. (Average: 292.0 ms.)
+[2012-10-29 14:47:02] Starting Program D version 4.5.
+[2012-10-29 14:47:02] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:47:02] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:47:02] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:47:02] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:47:02] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:47:04] Opening database pool.
+[2012-10-29 14:47:04] Saving Ontology
+[2012-10-29 14:47:04] Populating database pool.
+[2012-10-29 14:47:04] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:47:04] Starting up the Graphmaster.
+[2012-10-29 14:47:04] Configuring bot "TF".
+[2012-10-29 14:47:04] Loaded 287 input substitutions.
+[2012-10-29 14:47:04] Loaded 19 gender substitutions.
+[2012-10-29 14:47:04] Loaded 9 person substitutions.
+[2012-10-29 14:47:04] Loaded 60 person2 substitutions.
+[2012-10-29 14:47:04] Loaded 4 sentence-splitters.
+[2012-10-29 14:47:04] 632 unique categories loaded in 0.285 seconds.
+[2012-10-29 14:47:04] The AIML Watcher is not active.
+[2012-10-29 14:47:04] JavaScript interpreter not started.
+[2012-10-29 14:47:18] Starting Program D version 4.5.
+[2012-10-29 14:47:18] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:47:18] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:47:18] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:47:18] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:47:18] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:47:20] Opening database pool.
+[2012-10-29 14:47:20] Saving Ontology
+[2012-10-29 14:47:20] Populating database pool.
+[2012-10-29 14:47:20] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:47:20] Starting up the Graphmaster.
+[2012-10-29 14:47:20] Configuring bot "TF".
+[2012-10-29 14:47:20] Loaded 287 input substitutions.
+[2012-10-29 14:47:20] Loaded 19 gender substitutions.
+[2012-10-29 14:47:20] Loaded 9 person substitutions.
+[2012-10-29 14:47:20] Loaded 60 person2 substitutions.
+[2012-10-29 14:47:20] Loaded 4 sentence-splitters.
+[2012-10-29 14:47:21] 632 unique categories loaded in 0.302 seconds.
+[2012-10-29 14:47:21] The AIML Watcher is not active.
+[2012-10-29 14:47:21] JavaScript interpreter not started.
+[2012-10-29 14:47:26] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 14:47:26] Match: CONNECT : * : * : TF
+[2012-10-29 14:47:26] Filename: "../aiml/\general.aiml"
+[2012-10-29 14:47:26] Symbolic Reduction:
+[2012-10-29 14:47:26] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 14:47:26] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 14:47:26] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:47:26] Symbolic Reduction:
+[2012-10-29 14:47:26] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 14:47:26] Match: QUESTASK : _ : * : TF
+[2012-10-29 14:47:26] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:47:26] 
+INPUT = OWLLANG ONTIND :c12 ONTIND efq:home ONTIND :is ONTIND :userInterface ONTIND Homepage of EFQUEL ONTPRO is ONTIND having a good user interface ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 14:47:26] SCHERMERHOM> OWLLANG ONTIND :c12 ONTIND efq:home ONTIND :is ONTIND :userInterface ONTIND Homepage of EFQUEL ONTPRO is ONTIND having a good user interface ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:47:26] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 14:47:26] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:47:26] Symbolic Reduction:
+[2012-10-29 14:47:26] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 14:47:26] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 14:47:26] Filename: "../aiml/\questions.aiml"
+[2012-10-29 14:47:26] Symbolic Reduction:
+[2012-10-29 14:47:26] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 14:47:26] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 14:47:26] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 14:47:26] Response 1 in 302 ms. (Average: 302.0 ms.)
+[2012-10-29 14:49:20] Starting Program D version 4.5.
+[2012-10-29 14:49:20] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:49:20] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:49:20] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:49:20] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:49:20] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:49:21] Opening database pool.
+[2012-10-29 14:49:21] Saving Ontology
+[2012-10-29 14:49:21] Populating database pool.
+[2012-10-29 14:49:21] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:49:22] Starting up the Graphmaster.
+[2012-10-29 14:49:22] Configuring bot "TF".
+[2012-10-29 14:49:22] Loaded 287 input substitutions.
+[2012-10-29 14:49:22] Loaded 19 gender substitutions.
+[2012-10-29 14:49:22] Loaded 9 person substitutions.
+[2012-10-29 14:49:22] Loaded 60 person2 substitutions.
+[2012-10-29 14:49:22] Loaded 4 sentence-splitters.
+[2012-10-29 14:49:22] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 14:49:22] Program D is shutting down.
+[2012-10-29 14:49:22] Shutting down all ManagedProcesses.
+[2012-10-29 14:49:22] Finished shutting down ManagedProcesses.
+[2012-10-29 14:49:22] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:49:22] Shutdown complete.
+[2012-10-29 14:49:42] Starting Program D version 4.5.
+[2012-10-29 14:49:42] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:49:42] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:49:42] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:49:42] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:49:42] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:49:43] Opening database pool.
+[2012-10-29 14:49:43] Saving Ontology
+[2012-10-29 14:49:43] Populating database pool.
+[2012-10-29 14:49:43] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:49:44] Starting up the Graphmaster.
+[2012-10-29 14:49:44] Configuring bot "TF".
+[2012-10-29 14:49:44] Loaded 287 input substitutions.
+[2012-10-29 14:49:44] Loaded 19 gender substitutions.
+[2012-10-29 14:49:44] Loaded 9 person substitutions.
+[2012-10-29 14:49:44] Loaded 60 person2 substitutions.
+[2012-10-29 14:49:44] Loaded 4 sentence-splitters.
+[2012-10-29 14:49:44] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 14:49:44] Program D is shutting down.
+[2012-10-29 14:49:44] Shutting down all ManagedProcesses.
+[2012-10-29 14:49:44] Finished shutting down ManagedProcesses.
+[2012-10-29 14:49:44] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:49:44] Shutdown complete.
+[2012-10-29 14:50:43] Saving Ontology
+[2012-10-29 14:50:43] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:52:15] Starting Program D version 4.5.
+[2012-10-29 14:52:15] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:52:15] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:52:15] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:52:15] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:52:15] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:52:17] Opening database pool.
+[2012-10-29 14:52:17] Saving Ontology
+[2012-10-29 14:52:17] Populating database pool.
+[2012-10-29 14:52:17] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:52:18] Starting up the Graphmaster.
+[2012-10-29 14:52:18] Configuring bot "TF".
+[2012-10-29 14:52:18] Loaded 287 input substitutions.
+[2012-10-29 14:52:18] Loaded 19 gender substitutions.
+[2012-10-29 14:52:18] Loaded 9 person substitutions.
+[2012-10-29 14:52:18] Loaded 60 person2 substitutions.
+[2012-10-29 14:52:18] Loaded 4 sentence-splitters.
+[2012-10-29 14:52:18] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 14:52:18] Program D is shutting down.
+[2012-10-29 14:52:18] Shutting down all ManagedProcesses.
+[2012-10-29 14:52:18] Finished shutting down ManagedProcesses.
+[2012-10-29 14:52:18] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:52:18] Shutdown complete.
+[2012-10-29 14:53:17] Saving Ontology
+[2012-10-29 14:53:17] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:54:17] Saving Ontology
+[2012-10-29 14:54:17] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:54:47] Starting Program D version 4.5.
+[2012-10-29 14:54:47] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:54:47] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:54:47] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:54:47] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:54:47] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:54:49] Opening database pool.
+[2012-10-29 14:54:49] Saving Ontology
+[2012-10-29 14:54:49] Populating database pool.
+[2012-10-29 14:54:49] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:54:49] Starting up the Graphmaster.
+[2012-10-29 14:54:49] Configuring bot "TF".
+[2012-10-29 14:54:49] Loaded 287 input substitutions.
+[2012-10-29 14:54:49] Loaded 19 gender substitutions.
+[2012-10-29 14:54:49] Loaded 9 person substitutions.
+[2012-10-29 14:54:49] Loaded 60 person2 substitutions.
+[2012-10-29 14:54:49] Loaded 4 sentence-splitters.
+[2012-10-29 14:54:49] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 14:54:49] Program D is shutting down.
+[2012-10-29 14:54:49] Shutting down all ManagedProcesses.
+[2012-10-29 14:54:49] Finished shutting down ManagedProcesses.
+[2012-10-29 14:54:49] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:54:49] Shutdown complete.
+[2012-10-29 14:55:01] Starting Program D version 4.5.
+[2012-10-29 14:55:01] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:55:01] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:55:01] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:55:01] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:55:01] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:55:02] Opening database pool.
+[2012-10-29 14:55:02] Saving Ontology
+[2012-10-29 14:55:02] Populating database pool.
+[2012-10-29 14:55:02] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:55:03] Starting up the Graphmaster.
+[2012-10-29 14:55:03] Configuring bot "TF".
+[2012-10-29 14:55:03] Loaded 287 input substitutions.
+[2012-10-29 14:55:03] Loaded 19 gender substitutions.
+[2012-10-29 14:55:03] Loaded 9 person substitutions.
+[2012-10-29 14:55:03] Loaded 60 person2 substitutions.
+[2012-10-29 14:55:03] Loaded 4 sentence-splitters.
+[2012-10-29 14:55:03] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 14:55:03] Program D is shutting down.
+[2012-10-29 14:55:03] Shutting down all ManagedProcesses.
+[2012-10-29 14:55:03] Finished shutting down ManagedProcesses.
+[2012-10-29 14:55:03] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:55:03] Shutdown complete.
+[2012-10-29 14:55:58] Starting Program D version 4.5.
+[2012-10-29 14:55:58] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:55:58] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:55:58] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:55:58] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:55:58] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:55:59] Opening database pool.
+[2012-10-29 14:55:59] Saving Ontology
+[2012-10-29 14:55:59] Populating database pool.
+[2012-10-29 14:56:00] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:56:00] Starting up the Graphmaster.
+[2012-10-29 14:56:00] Configuring bot "TF".
+[2012-10-29 14:56:00] Loaded 287 input substitutions.
+[2012-10-29 14:56:00] Loaded 19 gender substitutions.
+[2012-10-29 14:56:00] Loaded 9 person substitutions.
+[2012-10-29 14:56:00] Loaded 60 person2 substitutions.
+[2012-10-29 14:56:00] Loaded 4 sentence-splitters.
+[2012-10-29 14:56:00] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 14:56:00] Program D is shutting down.
+[2012-10-29 14:56:00] Shutting down all ManagedProcesses.
+[2012-10-29 14:56:00] Finished shutting down ManagedProcesses.
+[2012-10-29 14:56:00] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:56:00] Shutdown complete.
+[2012-10-29 14:56:59] Saving Ontology
+[2012-10-29 14:57:00] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:57:47] Starting Program D version 4.5.
+[2012-10-29 14:57:47] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 14:57:47] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 14:57:47] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 14:57:47] Predicates with no values defined will return: "undefined".
+[2012-10-29 14:57:47] Initializing OntologyDBMultiplexor.
+[2012-10-29 14:57:49] Opening database pool.
+[2012-10-29 14:57:49] Saving Ontology
+[2012-10-29 14:57:49] Populating database pool.
+[2012-10-29 14:57:49] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:57:49] Starting up the Graphmaster.
+[2012-10-29 14:57:50] Configuring bot "TF".
+[2012-10-29 14:57:50] Loaded 287 input substitutions.
+[2012-10-29 14:57:50] Loaded 19 gender substitutions.
+[2012-10-29 14:57:50] Loaded 9 person substitutions.
+[2012-10-29 14:57:50] Loaded 60 person2 substitutions.
+[2012-10-29 14:57:50] Loaded 4 sentence-splitters.
+[2012-10-29 14:57:50] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 14:57:50] Program D is shutting down.
+[2012-10-29 14:57:50] Shutting down all ManagedProcesses.
+[2012-10-29 14:57:50] Finished shutting down ManagedProcesses.
+[2012-10-29 14:57:50] PredicateMaster saving all cached predicates (0)
+[2012-10-29 14:57:50] Shutdown complete.
+[2012-10-29 15:12:58] Starting Program D version 4.5.
+[2012-10-29 15:12:58] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:12:58] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:12:58] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:12:58] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:12:58] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:13:00] Opening database pool.
+[2012-10-29 15:13:00] Saving Ontology
+[2012-10-29 15:13:00] Populating database pool.
+[2012-10-29 15:13:00] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:13:00] Starting up the Graphmaster.
+[2012-10-29 15:13:00] Configuring bot "TF".
+[2012-10-29 15:13:00] Loaded 287 input substitutions.
+[2012-10-29 15:13:00] Loaded 19 gender substitutions.
+[2012-10-29 15:13:00] Loaded 9 person substitutions.
+[2012-10-29 15:13:00] Loaded 60 person2 substitutions.
+[2012-10-29 15:13:00] Loaded 4 sentence-splitters.
+[2012-10-29 15:13:01] 632 unique categories loaded in 0.288 seconds.
+[2012-10-29 15:13:01] The AIML Watcher is not active.
+[2012-10-29 15:13:01] JavaScript interpreter not started.
+[2012-10-29 15:13:01] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:13:01] Match: CONNECT : * : * : TF
+[2012-10-29 15:13:01] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:13:01] Symbolic Reduction:
+[2012-10-29 15:13:01] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:13:01] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:13:01] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:13:01] Symbolic Reduction:
+[2012-10-29 15:13:01] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:13:01] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:13:01] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:13:01] 
+INPUT = OWLLANG ONTIND :c4 ONTIND efq:wiki ONTIND :isNot ONTIND :easyToRead ONTIND EFQUEL WIKI Page ONTPRO is not ONTIND easy to read ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:13:01] SCHERMERHOM> OWLLANG ONTIND :c4 ONTIND efq:wiki ONTIND :isNot ONTIND :easyToRead ONTIND EFQUEL WIKI Page ONTPRO is not ONTIND easy to read ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:13:01] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:13:01] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:13:01] Symbolic Reduction:
+[2012-10-29 15:13:01] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:13:01] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:13:01] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:13:01] Symbolic Reduction:
+[2012-10-29 15:13:01] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:13:01] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:13:01] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 15:13:01] Response 1 in 250 ms. (Average: 250.0 ms.)
+[2012-10-29 15:13:12] Starting Program D version 4.5.
+[2012-10-29 15:13:12] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:13:12] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:13:12] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:13:12] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:13:12] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:13:14] Opening database pool.
+[2012-10-29 15:13:14] Saving Ontology
+[2012-10-29 15:13:14] Populating database pool.
+[2012-10-29 15:13:14] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:13:14] Starting up the Graphmaster.
+[2012-10-29 15:13:14] Configuring bot "TF".
+[2012-10-29 15:13:14] Loaded 287 input substitutions.
+[2012-10-29 15:13:14] Loaded 19 gender substitutions.
+[2012-10-29 15:13:14] Loaded 9 person substitutions.
+[2012-10-29 15:13:14] Loaded 60 person2 substitutions.
+[2012-10-29 15:13:14] Loaded 4 sentence-splitters.
+[2012-10-29 15:13:14] Core is exiting abnormally due to developer error:
+DeveloperError in thread "main": Developer specified an invalid constructor for listener.
+[2012-10-29 15:13:14] Program D is shutting down.
+[2012-10-29 15:13:14] Shutting down all ManagedProcesses.
+[2012-10-29 15:13:14] Finished shutting down ManagedProcesses.
+[2012-10-29 15:13:14] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:13:14] Shutdown complete.
+[2012-10-29 15:14:14] Saving Ontology
+[2012-10-29 15:14:14] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:18:33] Starting Program D version 4.5.
+[2012-10-29 15:18:33] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:18:33] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:18:33] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:18:33] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:18:33] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:18:35] Opening database pool.
+[2012-10-29 15:18:35] Saving Ontology
+[2012-10-29 15:18:35] Populating database pool.
+[2012-10-29 15:18:35] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:18:35] Starting up the Graphmaster.
+[2012-10-29 15:18:35] Configuring bot "TF".
+[2012-10-29 15:18:35] Loaded 287 input substitutions.
+[2012-10-29 15:18:35] Loaded 19 gender substitutions.
+[2012-10-29 15:18:35] Loaded 9 person substitutions.
+[2012-10-29 15:18:35] Loaded 60 person2 substitutions.
+[2012-10-29 15:18:35] Loaded 4 sentence-splitters.
+[2012-10-29 15:18:44] Started "org.aitools.programd.listener.JabberListener" listener for bot "TF".
+[2012-10-29 15:18:44] 632 unique categories loaded in 8.468 seconds.
+[2012-10-29 15:18:44] The AIML Watcher is not active.
+[2012-10-29 15:18:44] JavaScript interpreter not started.
+[2012-10-29 15:18:44] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:18:44] Match: CONNECT : * : * : TF
+[2012-10-29 15:18:44] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:18:44] Symbolic Reduction:
+[2012-10-29 15:18:44] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:18:44] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:18:44] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:18:44] Symbolic Reduction:
+[2012-10-29 15:18:44] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:18:44] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:18:44] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:18:44] 
+INPUT = OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:18:44] SCHERMERHOM> OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:18:44] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:18:44] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:18:44] Symbolic Reduction:
+[2012-10-29 15:18:44] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:18:44] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:18:44] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:18:44] Symbolic Reduction:
+[2012-10-29 15:18:44] SCHERMERHOM> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 15:18:44] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 15:18:44] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 15:18:44] Response 1 in 494 ms. (Average: 494.0 ms.)
+[2012-10-29 15:25:25] Starting Program D version 4.5.
+[2012-10-29 15:25:25] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:25:25] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:25:25] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:25:25] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:25:25] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:25:27] Opening database pool.
+[2012-10-29 15:25:27] Saving Ontology
+[2012-10-29 15:25:27] Populating database pool.
+[2012-10-29 15:25:27] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:25:27] Starting up the Graphmaster.
+[2012-10-29 15:25:27] Configuring bot "TF".
+[2012-10-29 15:25:27] Loaded 287 input substitutions.
+[2012-10-29 15:25:27] Loaded 19 gender substitutions.
+[2012-10-29 15:25:27] Loaded 9 person substitutions.
+[2012-10-29 15:25:27] Loaded 60 person2 substitutions.
+[2012-10-29 15:25:27] Loaded 4 sentence-splitters.
+[2012-10-29 15:25:28] 632 unique categories loaded in 0.297 seconds.
+[2012-10-29 15:25:28] The AIML Watcher is not active.
+[2012-10-29 15:25:28] JavaScript interpreter not started.
+[2012-10-29 15:25:28] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:25:28] Match: CONNECT : * : * : TF
+[2012-10-29 15:25:28] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:25:28] Symbolic Reduction:
+[2012-10-29 15:25:28] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:25:28] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:25:28] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:25:28] Symbolic Reduction:
+[2012-10-29 15:25:28] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:25:28] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:25:28] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:25:28] 
+INPUT = OWLLANG ONTIND :c2 ONTIND efq:wiki ONTIND :is ONTIND :topical ONTIND EFQUEL WIKI Page ONTPRO is ONTIND topical ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:25:28] SCHERMERHOM> OWLLANG ONTIND :c2 ONTIND efq:wiki ONTIND :is ONTIND :topical ONTIND EFQUEL WIKI Page ONTPRO is ONTIND topical ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:25:28] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:25:28] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:25:28] Symbolic Reduction:
+[2012-10-29 15:25:28] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:25:28] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:25:28] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:25:28] Symbolic Reduction:
+[2012-10-29 15:25:28] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:25:28] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:25:28] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 15:25:28] Response 1 in 244 ms. (Average: 244.0 ms.)
+[2012-10-29 15:27:04] Starting Program D version 4.5.
+[2012-10-29 15:27:04] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:27:04] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:27:04] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:27:04] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:27:04] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:27:06] Opening database pool.
+[2012-10-29 15:27:06] Saving Ontology
+[2012-10-29 15:27:06] Populating database pool.
+[2012-10-29 15:27:06] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:27:06] Starting up the Graphmaster.
+[2012-10-29 15:27:06] Configuring bot "TF".
+[2012-10-29 15:27:06] Loaded 287 input substitutions.
+[2012-10-29 15:27:06] Loaded 19 gender substitutions.
+[2012-10-29 15:27:06] Loaded 9 person substitutions.
+[2012-10-29 15:27:06] Loaded 60 person2 substitutions.
+[2012-10-29 15:27:06] Loaded 4 sentence-splitters.
+[2012-10-29 15:27:07] 632 unique categories loaded in 0.295 seconds.
+[2012-10-29 15:27:07] The AIML Watcher is not active.
+[2012-10-29 15:27:07] JavaScript interpreter not started.
+[2012-10-29 15:27:07] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:27:07] Match: CONNECT : * : * : TF
+[2012-10-29 15:27:07] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:27:07] Symbolic Reduction:
+[2012-10-29 15:27:07] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:27:07] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:27:07] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:07] Symbolic Reduction:
+[2012-10-29 15:27:07] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:27:07] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:27:07] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:07] 
+INPUT = OWLLANG ONTIND :c7 ONTIND efq:eLQual ONTIND :is ONTIND :interesting ONTIND eLearning Quality Tab ONTPRO is ONTIND interesting ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:27:07] SCHERMERHOM> OWLLANG ONTIND :c7 ONTIND efq:eLQual ONTIND :is ONTIND :interesting ONTIND eLearning Quality Tab ONTPRO is ONTIND interesting ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:27:07] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:27:07] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:07] Symbolic Reduction:
+[2012-10-29 15:27:07] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:27:07] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:27:07] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:07] Symbolic Reduction:
+[2012-10-29 15:27:07] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:27:07] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:27:07] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 15:27:07] Response 1 in 226 ms. (Average: 226.0 ms.)
+[2012-10-29 15:27:31] Starting Program D version 4.5.
+[2012-10-29 15:27:31] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:27:31] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:27:31] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:27:31] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:27:31] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:27:33] Opening database pool.
+[2012-10-29 15:27:33] Saving Ontology
+[2012-10-29 15:27:33] Populating database pool.
+[2012-10-29 15:27:33] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:27:33] Starting up the Graphmaster.
+[2012-10-29 15:27:33] Configuring bot "TF".
+[2012-10-29 15:27:33] Loaded 287 input substitutions.
+[2012-10-29 15:27:33] Loaded 19 gender substitutions.
+[2012-10-29 15:27:33] Loaded 9 person substitutions.
+[2012-10-29 15:27:33] Loaded 60 person2 substitutions.
+[2012-10-29 15:27:33] Loaded 4 sentence-splitters.
+[2012-10-29 15:27:33] 632 unique categories loaded in 0.294 seconds.
+[2012-10-29 15:27:33] The AIML Watcher is not active.
+[2012-10-29 15:27:33] JavaScript interpreter not started.
+[2012-10-29 15:27:33] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:27:33] Match: CONNECT : * : * : TF
+[2012-10-29 15:27:33] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:27:33] Symbolic Reduction:
+[2012-10-29 15:27:33] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:27:33] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:27:33] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:33] Symbolic Reduction:
+[2012-10-29 15:27:33] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:27:33] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:27:33] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:34] 
+INPUT = OWLLANG ONTIND :c11 ONTIND efq:wiki ONTIND :is ONTIND :tooComplex ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too complex ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:27:34] SCHERMERHOM> OWLLANG ONTIND :c11 ONTIND efq:wiki ONTIND :is ONTIND :tooComplex ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too complex ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:27:34] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:27:34] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:34] Symbolic Reduction:
+[2012-10-29 15:27:34] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:27:34] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:27:34] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:34] Symbolic Reduction:
+[2012-10-29 15:27:34] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:27:34] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:27:34] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 15:27:34] Response 1 in 226 ms. (Average: 226.0 ms.)
+[2012-10-29 15:27:50] Starting Program D version 4.5.
+[2012-10-29 15:27:50] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:27:50] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:27:50] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:27:50] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:27:50] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:27:51] Opening database pool.
+[2012-10-29 15:27:51] Saving Ontology
+[2012-10-29 15:27:51] Populating database pool.
+[2012-10-29 15:27:52] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:27:52] Starting up the Graphmaster.
+[2012-10-29 15:27:52] Configuring bot "TF".
+[2012-10-29 15:27:52] Loaded 287 input substitutions.
+[2012-10-29 15:27:52] Loaded 19 gender substitutions.
+[2012-10-29 15:27:52] Loaded 9 person substitutions.
+[2012-10-29 15:27:52] Loaded 60 person2 substitutions.
+[2012-10-29 15:27:52] Loaded 4 sentence-splitters.
+[2012-10-29 15:27:52] 632 unique categories loaded in 0.294 seconds.
+[2012-10-29 15:27:52] The AIML Watcher is not active.
+[2012-10-29 15:27:52] JavaScript interpreter not started.
+[2012-10-29 15:27:52] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:27:52] Match: CONNECT : * : * : TF
+[2012-10-29 15:27:52] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:27:52] Symbolic Reduction:
+[2012-10-29 15:27:52] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:27:52] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:27:52] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:52] Symbolic Reduction:
+[2012-10-29 15:27:52] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:27:52] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:27:52] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:53] 
+INPUT = OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:27:53] SCHERMERHOM> OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:27:53] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:27:53] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:53] Symbolic Reduction:
+[2012-10-29 15:27:53] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:27:53] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:27:53] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:27:53] Symbolic Reduction:
+[2012-10-29 15:27:53] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:27:53] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:27:53] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 15:27:53] Response 1 in 225 ms. (Average: 225.0 ms.)
+[2012-10-29 15:28:51] Saving Ontology
+[2012-10-29 15:28:52] PredicateMaster saving all cached predicates (13)
+[2012-10-29 15:29:51] Saving Ontology
+[2012-10-29 15:29:52] PredicateMaster saving all cached predicates (4)
+[2012-10-29 15:30:51] Saving Ontology
+[2012-10-29 15:30:52] PredicateMaster saving all cached predicates (-5)
+[2012-10-29 15:31:22] Starting Program D version 4.5.
+[2012-10-29 15:31:22] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:31:22] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:31:22] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:31:22] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:31:22] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:31:24] Opening database pool.
+[2012-10-29 15:31:24] Saving Ontology
+[2012-10-29 15:31:24] Populating database pool.
+[2012-10-29 15:31:24] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:31:24] Starting up the Graphmaster.
+[2012-10-29 15:31:24] Configuring bot "TF".
+[2012-10-29 15:31:24] Loaded 287 input substitutions.
+[2012-10-29 15:31:24] Loaded 19 gender substitutions.
+[2012-10-29 15:31:24] Loaded 9 person substitutions.
+[2012-10-29 15:31:24] Loaded 60 person2 substitutions.
+[2012-10-29 15:31:24] Loaded 4 sentence-splitters.
+[2012-10-29 15:31:24] Started "org.aitools.programd.listener.JabberListener" listener for bot "TF".
+[2012-10-29 15:31:25] 632 unique categories loaded in 0.321 seconds.
+[2012-10-29 15:31:25] The AIML Watcher is not active.
+[2012-10-29 15:31:25] JavaScript interpreter not started.
+[2012-10-29 15:31:25] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:31:25] Match: CONNECT : * : * : TF
+[2012-10-29 15:31:25] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:31:25] Symbolic Reduction:
+[2012-10-29 15:31:25] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:31:25] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:31:25] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:31:25] Symbolic Reduction:
+[2012-10-29 15:31:25] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:31:25] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:31:25] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:31:25] 
+INPUT = OWLLANG ONTIND :c2 ONTIND efq:wiki ONTIND :is ONTIND :topical ONTIND EFQUEL WIKI Page ONTPRO is ONTIND topical ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:31:25] SCHERMERHOM> OWLLANG ONTIND :c2 ONTIND efq:wiki ONTIND :is ONTIND :topical ONTIND EFQUEL WIKI Page ONTPRO is ONTIND topical ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:31:25] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:31:25] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:31:25] Symbolic Reduction:
+[2012-10-29 15:31:25] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:31:25] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:31:25] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:31:25] Symbolic Reduction:
+[2012-10-29 15:31:25] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:31:25] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 15:31:25] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 15:31:25] Response 1 in 266 ms. (Average: 266.0 ms.)
+[2012-10-29 15:31:58] Starting Program D version 4.5.
+[2012-10-29 15:31:58] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 15:31:58] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 15:31:58] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 15:31:58] Predicates with no values defined will return: "undefined".
+[2012-10-29 15:31:58] Initializing OntologyDBMultiplexor.
+[2012-10-29 15:32:00] Opening database pool.
+[2012-10-29 15:32:00] Saving Ontology
+[2012-10-29 15:32:00] Populating database pool.
+[2012-10-29 15:32:00] PredicateMaster saving all cached predicates (0)
+[2012-10-29 15:32:00] Starting up the Graphmaster.
+[2012-10-29 15:32:00] Configuring bot "TF".
+[2012-10-29 15:32:00] Loaded 287 input substitutions.
+[2012-10-29 15:32:00] Loaded 19 gender substitutions.
+[2012-10-29 15:32:00] Loaded 9 person substitutions.
+[2012-10-29 15:32:00] Loaded 60 person2 substitutions.
+[2012-10-29 15:32:00] Loaded 4 sentence-splitters.
+[2012-10-29 15:32:00] Started "org.aitools.programd.listener.JabberListener" listener for bot "TF".
+[2012-10-29 15:32:00] 632 unique categories loaded in 0.33 seconds.
+[2012-10-29 15:32:00] The AIML Watcher is not active.
+[2012-10-29 15:32:00] JavaScript interpreter not started.
+[2012-10-29 15:32:00] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 15:32:00] Match: CONNECT : * : * : TF
+[2012-10-29 15:32:00] Filename: "../aiml/\general.aiml"
+[2012-10-29 15:32:00] Symbolic Reduction:
+[2012-10-29 15:32:00] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 15:32:00] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 15:32:00] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:32:00] Symbolic Reduction:
+[2012-10-29 15:32:00] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 15:32:00] Match: QUESTASK : _ : * : TF
+[2012-10-29 15:32:00] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:32:01] 
+INPUT = OWLLANG ONTIND :c3 ONTIND efq:news ONTIND :is ONTIND :relevant ONTIND News and Events Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 15:32:01] SCHERMERHOM> OWLLANG ONTIND :c3 ONTIND efq:news ONTIND :is ONTIND :relevant ONTIND News and Events Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:32:01] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 15:32:01] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:32:01] Symbolic Reduction:
+[2012-10-29 15:32:01] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 15:32:01] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 15:32:01] Filename: "../aiml/\questions.aiml"
+[2012-10-29 15:32:01] Symbolic Reduction:
+[2012-10-29 15:32:01] SCHERMERHOM> WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 15:32:01] Match: WOULDYOUAGREE : * : QUESTION WOULDYOUAGREE : TF
+[2012-10-29 15:32:01] Filename: "../aiml/\questionWouldYouAgree.aiml"
+[2012-10-29 15:32:01] Response 1 in 256 ms. (Average: 256.0 ms.)
+[2012-10-29 16:31:25] Starting Program D version 4.5.
+[2012-10-29 16:31:25] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 16:31:25] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 16:31:25] 11.4 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 16:31:25] Predicates with no values defined will return: "undefined".
+[2012-10-29 16:31:25] Initializing OntologyDBMultiplexor.
+[2012-10-29 16:31:27] Opening database pool.
+[2012-10-29 16:31:27] Saving Ontology
+[2012-10-29 16:31:27] Populating database pool.
+[2012-10-29 16:31:27] PredicateMaster saving all cached predicates (0)
+[2012-10-29 16:31:27] Starting up the Graphmaster.
+[2012-10-29 16:31:28] Configuring bot "TF".
+[2012-10-29 16:31:28] Loaded 287 input substitutions.
+[2012-10-29 16:31:28] Loaded 19 gender substitutions.
+[2012-10-29 16:31:28] Loaded 9 person substitutions.
+[2012-10-29 16:31:28] Loaded 60 person2 substitutions.
+[2012-10-29 16:31:28] Loaded 4 sentence-splitters.
+[2012-10-29 16:31:28] Started "org.aitools.programd.listener.JabberListener" listener for bot "TF".
+[2012-10-29 16:31:28] 632 unique categories loaded in 1.07 seconds.
+[2012-10-29 16:31:28] The AIML Watcher is not active.
+[2012-10-29 16:31:28] JavaScript interpreter not started.
+[2012-10-29 16:31:29] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 16:31:29] Match: CONNECT : * : * : TF
+[2012-10-29 16:31:29] Filename: "../aiml/\general.aiml"
+[2012-10-29 16:31:29] Symbolic Reduction:
+[2012-10-29 16:31:29] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 16:31:29] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 16:31:29] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:31:29] Symbolic Reduction:
+[2012-10-29 16:31:29] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 16:31:29] Match: QUESTASK : _ : * : TF
+[2012-10-29 16:31:29] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:31:30] 
+INPUT = OWLLANG ONTIND :c3 ONTIND efq:news ONTIND :is ONTIND :relevant ONTIND News and Events Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 16:31:30] SCHERMERHOM> OWLLANG ONTIND :c3 ONTIND efq:news ONTIND :is ONTIND :relevant ONTIND News and Events Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:31:30] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:31:30] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:31:30] Symbolic Reduction:
+[2012-10-29 16:31:30] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 16:31:30] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 16:31:30] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:31:30] Symbolic Reduction:
+[2012-10-29 16:31:30] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:31:30] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:31:30] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 16:31:30] Response 1 in 1119 ms. (Average: 1119.0 ms.)
+[2012-10-29 16:32:27] Saving Ontology
+[2012-10-29 16:32:27] PredicateMaster saving all cached predicates (13)
+[2012-10-29 16:33:27] Saving Ontology
+[2012-10-29 16:33:27] PredicateMaster saving all cached predicates (4)
+[2012-10-29 16:34:27] Saving Ontology
+[2012-10-29 16:34:27] PredicateMaster saving all cached predicates (-5)
+[2012-10-29 16:35:27] Saving Ontology
+[2012-10-29 16:35:27] PredicateMaster saving all cached predicates (-5)
+[2012-10-29 16:55:01] Starting Program D version 4.5.
+[2012-10-29 16:55:01] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 16:55:01] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 16:55:01] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 16:55:01] Predicates with no values defined will return: "undefined".
+[2012-10-29 16:55:01] Initializing OntologyDBMultiplexor.
+[2012-10-29 16:55:03] Opening database pool.
+[2012-10-29 16:55:03] Saving Ontology
+[2012-10-29 16:55:03] Populating database pool.
+[2012-10-29 16:55:03] PredicateMaster saving all cached predicates (0)
+[2012-10-29 16:55:04] Starting up the Graphmaster.
+[2012-10-29 16:55:04] Configuring bot "TF".
+[2012-10-29 16:55:04] Loaded 287 input substitutions.
+[2012-10-29 16:55:04] Loaded 19 gender substitutions.
+[2012-10-29 16:55:04] Loaded 9 person substitutions.
+[2012-10-29 16:55:04] Loaded 60 person2 substitutions.
+[2012-10-29 16:55:04] Loaded 4 sentence-splitters.
+[2012-10-29 16:55:04] Started "org.aitools.programd.listener.JabberListener" listener for bot "TF".
+[2012-10-29 16:55:04] 632 unique categories loaded in 0.307 seconds.
+[2012-10-29 16:55:04] The AIML Watcher is not active.
+[2012-10-29 16:55:04] JavaScript interpreter not started.
+[2012-10-29 16:55:04] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 16:55:04] Match: CONNECT : * : * : TF
+[2012-10-29 16:55:04] Filename: "../aiml/\general.aiml"
+[2012-10-29 16:55:04] Symbolic Reduction:
+[2012-10-29 16:55:04] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 16:55:04] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 16:55:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:55:04] Symbolic Reduction:
+[2012-10-29 16:55:04] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 16:55:04] Match: QUESTASK : _ : * : TF
+[2012-10-29 16:55:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:55:04] 
+INPUT = OWLLANG ONTIND :c10 ONTIND efq:wiki ONTIND :is ONTIND :tooSimple ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too simple ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 16:55:04] SCHERMERHOM> OWLLANG ONTIND :c10 ONTIND efq:wiki ONTIND :is ONTIND :tooSimple ONTIND EFQUEL WIKI Page ONTPRO is ONTIND too simple ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:55:04] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:55:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:55:04] Symbolic Reduction:
+[2012-10-29 16:55:04] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 16:55:04] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 16:55:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:55:04] Symbolic Reduction:
+[2012-10-29 16:55:04] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:55:04] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:55:04] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 16:55:04] Response 1 in 269 ms. (Average: 269.0 ms.)
+[2012-10-29 16:55:42] Starting Program D version 4.5.
+[2012-10-29 16:55:42] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 16:55:42] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 16:55:42] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 16:55:42] Predicates with no values defined will return: "undefined".
+[2012-10-29 16:55:42] Initializing OntologyDBMultiplexor.
+[2012-10-29 16:55:44] Opening database pool.
+[2012-10-29 16:55:44] Saving Ontology
+[2012-10-29 16:55:44] Populating database pool.
+[2012-10-29 16:55:44] PredicateMaster saving all cached predicates (0)
+[2012-10-29 16:55:44] Starting up the Graphmaster.
+[2012-10-29 16:55:44] Configuring bot "TF".
+[2012-10-29 16:55:44] Loaded 287 input substitutions.
+[2012-10-29 16:55:44] Loaded 19 gender substitutions.
+[2012-10-29 16:55:44] Loaded 9 person substitutions.
+[2012-10-29 16:55:44] Loaded 60 person2 substitutions.
+[2012-10-29 16:55:44] Loaded 4 sentence-splitters.
+[2012-10-29 16:55:44] SAX parsing error while parsing "file:/C:/ProgramD/conf/listeners.xml".
+[2012-10-29 16:55:44] Core is exiting abnormally due to processor exception during startup:
+ProcessorException in thread "main": SAX parsing error while parsing "file:/C:/ProgramD/conf/listeners.xml".
+[2012-10-29 16:55:44] Program D is shutting down.
+[2012-10-29 16:55:44] Shutting down all ManagedProcesses.
+[2012-10-29 16:55:44] Finished shutting down ManagedProcesses.
+[2012-10-29 16:55:44] PredicateMaster saving all cached predicates (0)
+[2012-10-29 16:55:44] Shutdown complete.
+[2012-10-29 16:55:44] 0 unique categories loaded in 0.07 seconds.
+[2012-10-29 16:55:44] The AIML Watcher is not active.
+[2012-10-29 16:55:44] JavaScript interpreter not started.
+[2012-10-29 16:55:45] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 16:55:45] Match is null.
+[2012-10-29 16:55:45] No match found for path "CONNECT".
+[2012-10-29 16:55:45] Response 1 in 3 ms. (Average: 3.0 ms.)
+[2012-10-29 16:56:02] Starting Program D version 4.5.
+[2012-10-29 16:56:02] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 16:56:02] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 16:56:02] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 16:56:02] Predicates with no values defined will return: "undefined".
+[2012-10-29 16:56:02] Initializing OntologyDBMultiplexor.
+[2012-10-29 16:56:03] Opening database pool.
+[2012-10-29 16:56:03] Saving Ontology
+[2012-10-29 16:56:03] Populating database pool.
+[2012-10-29 16:56:03] PredicateMaster saving all cached predicates (0)
+[2012-10-29 16:56:04] Starting up the Graphmaster.
+[2012-10-29 16:56:04] Configuring bot "TF".
+[2012-10-29 16:56:04] Loaded 287 input substitutions.
+[2012-10-29 16:56:04] Loaded 19 gender substitutions.
+[2012-10-29 16:56:04] Loaded 9 person substitutions.
+[2012-10-29 16:56:04] Loaded 60 person2 substitutions.
+[2012-10-29 16:56:04] Loaded 4 sentence-splitters.
+[2012-10-29 16:56:04] Started "org.aitools.programd.listener.YahooListener" listener for bot "TF".
+[2012-10-29 16:56:04] 632 unique categories loaded in 0.334 seconds.
+[2012-10-29 16:56:04] The AIML Watcher is not active.
+[2012-10-29 16:56:04] JavaScript interpreter not started.
+[2012-10-29 16:56:04] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 16:56:04] Match: CONNECT : * : * : TF
+[2012-10-29 16:56:04] Filename: "../aiml/\general.aiml"
+[2012-10-29 16:56:04] Symbolic Reduction:
+[2012-10-29 16:56:04] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 16:56:04] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 16:56:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:56:04] Symbolic Reduction:
+[2012-10-29 16:56:04] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 16:56:04] Match: QUESTASK : _ : * : TF
+[2012-10-29 16:56:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:56:04] 
+INPUT = OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 16:56:04] SCHERMERHOM> OWLLANG ONTIND :c9 ONTIND efq:myEFQ ONTIND :is ONTIND :relevant ONTIND My EFQUEL Section ONTPRO is ONTIND relevant ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:56:04] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:56:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:56:04] Symbolic Reduction:
+[2012-10-29 16:56:04] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 16:56:04] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 16:56:04] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:56:04] Symbolic Reduction:
+[2012-10-29 16:56:04] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:56:04] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:56:04] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 16:56:04] Response 1 in 231 ms. (Average: 231.0 ms.)
+[2012-10-29 16:57:03] Saving Ontology
+[2012-10-29 16:57:03] PredicateMaster saving all cached predicates (13)
+[2012-10-29 16:57:37] Starting Program D version 4.5.
+[2012-10-29 16:57:37] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 16:57:37] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 16:57:37] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 16:57:37] Predicates with no values defined will return: "undefined".
+[2012-10-29 16:57:37] Initializing OntologyDBMultiplexor.
+[2012-10-29 16:57:39] Opening database pool.
+[2012-10-29 16:57:39] Saving Ontology
+[2012-10-29 16:57:39] Populating database pool.
+[2012-10-29 16:57:39] PredicateMaster saving all cached predicates (0)
+[2012-10-29 16:57:39] Starting up the Graphmaster.
+[2012-10-29 16:57:39] Configuring bot "TF".
+[2012-10-29 16:57:39] Loaded 287 input substitutions.
+[2012-10-29 16:57:39] Loaded 19 gender substitutions.
+[2012-10-29 16:57:39] Loaded 9 person substitutions.
+[2012-10-29 16:57:39] Loaded 60 person2 substitutions.
+[2012-10-29 16:57:39] Loaded 4 sentence-splitters.
+[2012-10-29 16:57:39] Started "org.aitools.programd.listener.YahooListener" listener for bot "TF".
+[2012-10-29 16:57:40] 632 unique categories loaded in 0.387 seconds.
+[2012-10-29 16:57:40] The AIML Watcher is not active.
+[2012-10-29 16:57:40] JavaScript interpreter not started.
+[2012-10-29 16:57:40] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 16:57:40] Match: CONNECT : * : * : TF
+[2012-10-29 16:57:40] Filename: "../aiml/\general.aiml"
+[2012-10-29 16:57:40] Symbolic Reduction:
+[2012-10-29 16:57:40] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 16:57:40] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 16:57:40] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:57:40] Symbolic Reduction:
+[2012-10-29 16:57:40] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 16:57:40] Match: QUESTASK : _ : * : TF
+[2012-10-29 16:57:40] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:57:40] 
+INPUT = OWLLANG ONTIND :c4 ONTIND efq:wiki ONTIND :isNot ONTIND :easyToRead ONTIND EFQUEL WIKI Page ONTPRO is not ONTIND easy to read ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 16:57:40] SCHERMERHOM> OWLLANG ONTIND :c4 ONTIND efq:wiki ONTIND :isNot ONTIND :easyToRead ONTIND EFQUEL WIKI Page ONTPRO is not ONTIND easy to read ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:57:40] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 16:57:40] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:57:40] Symbolic Reduction:
+[2012-10-29 16:57:40] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 16:57:40] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 16:57:40] Filename: "../aiml/\questions.aiml"
+[2012-10-29 16:57:40] Symbolic Reduction:
+[2012-10-29 16:57:40] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:57:40] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 16:57:40] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 16:57:40] Response 1 in 243 ms. (Average: 243.0 ms.)
+[2012-10-29 16:58:39] Saving Ontology
+[2012-10-29 16:58:39] PredicateMaster saving all cached predicates (13)
+[2012-10-29 16:59:39] Saving Ontology
+[2012-10-29 16:59:39] PredicateMaster saving all cached predicates (4)
+[2012-10-29 17:00:39] Saving Ontology
+[2012-10-29 17:00:39] PredicateMaster saving all cached predicates (-5)
+[2012-10-29 17:04:25] Starting Program D version 4.5.
+[2012-10-29 17:04:25] Using Java VM 20.12-b01 from Sun Microsystems Inc.
+[2012-10-29 17:04:25] On Windows 7 version 6.1 (x86) with 4 processor(s) available.
+[2012-10-29 17:04:25] 11.3 MB of memory free out of 15.5 MB total in JVM.  Configured maximum: 247.5 MB.
+[2012-10-29 17:04:25] Predicates with no values defined will return: "undefined".
+[2012-10-29 17:04:25] Initializing OntologyDBMultiplexor.
+[2012-10-29 17:04:26] Opening database pool.
+[2012-10-29 17:04:26] Saving Ontology
+[2012-10-29 17:04:26] Populating database pool.
+[2012-10-29 17:04:26] PredicateMaster saving all cached predicates (0)
+[2012-10-29 17:04:27] Starting up the Graphmaster.
+[2012-10-29 17:04:27] Configuring bot "TF".
+[2012-10-29 17:04:27] Loaded 287 input substitutions.
+[2012-10-29 17:04:27] Loaded 19 gender substitutions.
+[2012-10-29 17:04:27] Loaded 9 person substitutions.
+[2012-10-29 17:04:27] Loaded 60 person2 substitutions.
+[2012-10-29 17:04:27] Loaded 4 sentence-splitters.
+[2012-10-29 17:04:27] 632 unique categories loaded in 0.302 seconds.
+[2012-10-29 17:04:27] The AIML Watcher is not active.
+[2012-10-29 17:04:27] JavaScript interpreter not started.
+[2012-10-29 17:04:27] SCHERMERHOM> CONNECT : * : * : TF
+[2012-10-29 17:04:27] Match: CONNECT : * : * : TF
+[2012-10-29 17:04:27] Filename: "../aiml/\general.aiml"
+[2012-10-29 17:04:27] Symbolic Reduction:
+[2012-10-29 17:04:27] SCHERMERHOM> QUESTASKINFO : * : * : TF
+[2012-10-29 17:04:27] Match: QUESTASKINFO : _ : * : TF
+[2012-10-29 17:04:27] Filename: "../aiml/\questions.aiml"
+[2012-10-29 17:04:27] Symbolic Reduction:
+[2012-10-29 17:04:27] SCHERMERHOM> QUESTASK : * : * : TF
+[2012-10-29 17:04:27] Match: QUESTASK : _ : * : TF
+[2012-10-29 17:04:27] Filename: "../aiml/\questions.aiml"
+[2012-10-29 17:04:27] 
+INPUT = OWLLANG ONTIND :c5 ONTIND efq:home ONTIND :is ONTIND :goodSource ONTIND Homepage of EFQUEL ONTPRO is ONTIND a good source ONTIND UNKNOWN
+THAT = INDPROIND
+[2012-10-29 17:04:27] SCHERMERHOM> OWLLANG ONTIND :c5 ONTIND efq:home ONTIND :is ONTIND :goodSource ONTIND Homepage of EFQUEL ONTPRO is ONTIND a good source ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 17:04:27] Match: OWLLANG ONTIND * ONTIND * ONTIND * ONTIND * ONTIND * ONTPRO * ONTIND * ONTIND UNKNOWN : INDPROIND : * : TF
+[2012-10-29 17:04:27] Filename: "../aiml/\questions.aiml"
+[2012-10-29 17:04:27] Symbolic Reduction:
+[2012-10-29 17:04:27] SCHERMERHOM> CHECKPREDICATEGRAMMAR : * : * : TF
+[2012-10-29 17:04:27] Match: CHECKPREDICATEGRAMMAR : _ : * : TF
+[2012-10-29 17:04:27] Filename: "../aiml/\questions.aiml"
+[2012-10-29 17:04:27] Symbolic Reduction:
+[2012-10-29 17:04:27] SCHERMERHOM> ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 17:04:27] Match: ASKSOMEBELIEVES : * : QUESTION DOYOU : TF
+[2012-10-29 17:04:27] Filename: "../aiml/\questionDoYou.aiml"
+[2012-10-29 17:04:27] Response 1 in 246 ms. (Average: 246.0 ms.)
+[2012-10-29 17:05:26] Saving Ontology
+[2012-10-29 17:05:26] PredicateMaster saving all cached predicates (13)
