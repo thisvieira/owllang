@@ -26,5 +26,6 @@
 	<classpathentry kind="lib" path="C:/ProgramD/lib/smackx-debug.jar"/>
 	<classpathentry kind="lib" path="C:/ProgramD/lib/smackx.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jre6/lib/jsse.jar"/>
+	<classpathentry kind="lib" path="lib/ymsg_network_v0_61.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

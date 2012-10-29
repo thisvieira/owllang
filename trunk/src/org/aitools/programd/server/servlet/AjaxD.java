@@ -92,6 +92,9 @@ public class AjaxD extends HttpServlet
 
     /** The string &quot;{@value}&quot;. */
     private static final String TEMPLATE = "template";
+    
+    /** URL of the only allowed server to access. Here the name of my local machine */
+    private String serverURL = "http://schemerhom:8081";
 
     /**
      * @see javax.servlet.GenericServlet#init()
@@ -119,7 +122,7 @@ public class AjaxD extends HttpServlet
     {
     	String referer=request.getHeader("X-Referer");
     	if(referer!=null)
-        if (!referer.equals("http://athene:8001/chatter.html"))
+        if (!referer.equals(serverURL + "/chatter.html"))
         {
             return;
         }

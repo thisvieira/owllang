@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
-	<item value="400,442" key="UserLibraryLoadSaveDialog.size"/>
 	<item value="filter_imports;" key="filters_last_used"/>
+	<item value="400,442" key="UserLibraryLoadSaveDialog.size"/>
 	<item value="C:\ProgramD\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="0" key="TypeHierarchyViewPart.orientation"/>
 	<item value="C:\ProgramD\src\org\UoR" key="org.eclipse.jdt.ui.last.external.project"/>
@@ -20,8 +20,8 @@
 		<section name="HISTORY11">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponderSettings.java[HTMLResponderSettings~getChatDefaultTemplateName" key="javaElement"/>
 			<item value="org.aitools.programd.responder.HTMLResponderSettings.getChatDefaultTemplateName()" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponderSettings.java[HTMLResponderSettings~getChatDefaultTemplateName" key="javaElement"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -30,8 +30,8 @@
 		<section name="HISTORY2">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~connect" key="javaElement"/>
 			<item value="org.aitools.programd.util.sql.DbAccess.connect()" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~connect" key="javaElement"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -40,19 +40,9 @@
 		<section name="HISTORY3">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~getConnection" key="javaElement"/>
 			<item value="org.aitools.programd.util.sql.DbAccess.getConnection()" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~getConnection" key="javaElement"/>
 			<item value="1" key="searchFor"/>
-			<item value="true" key="isCaseSensitive"/>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY0">
-			<item value="2" key="limitTo"/>
-			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccessRefsPoolMgr.java[DbAccessRefsPoolMgr~DbAccessRefsPoolMgr~QString;~QString;~QString;~QString;" key="javaElement"/>
-			<item value="org.aitools.programd.util.sql.DbAccessRefsPoolMgr(String, String, String, String)" key="pattern"/>
-			<item value="3" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
 			</list>
@@ -60,8 +50,18 @@
 		<section name="HISTORY10">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponder.java[HTMLResponder~HTMLResponder~QHTMLResponderManager;~QServletRequestTransactionEnvelope;" key="javaElement"/>
 			<item value="org.aitools.programd.responder.HTMLResponder(HTMLResponderManager, ServletRequestTransactionEnvelope)" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponder.java[HTMLResponder~HTMLResponder~QHTMLResponderManager;~QServletRequestTransactionEnvelope;" key="javaElement"/>
+			<item value="3" key="searchFor"/>
+			<item value="true" key="isCaseSensitive"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY0">
+			<item value="2" key="limitTo"/>
+			<item value="0" key="scope"/>
+			<item value="org.aitools.programd.util.sql.DbAccessRefsPoolMgr(String, String, String, String)" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccessRefsPoolMgr.java[DbAccessRefsPoolMgr~DbAccessRefsPoolMgr~QString;~QString;~QString;~QString;" key="javaElement"/>
 			<item value="3" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -70,8 +70,8 @@
 		<section name="HISTORY1">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~DbAccess~QString;~QString;~QString;~QString;" key="javaElement"/>
 			<item value="org.aitools.programd.util.sql.DbAccess(String, String, String, String)" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.util.sql{DbAccess.java[DbAccess~DbAccess~QString;~QString;~QString;~QString;" key="javaElement"/>
 			<item value="3" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -80,8 +80,8 @@
 		<section name="HISTORY9">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.server{ServletRequestTransactionEnvelope.java[ServletRequestTransactionEnvelope~getTemplateName" key="javaElement"/>
 			<item value="org.aitools.programd.server.ServletRequestTransactionEnvelope.getTemplateName()" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.server{ServletRequestTransactionEnvelope.java[ServletRequestTransactionEnvelope~getTemplateName" key="javaElement"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -90,8 +90,8 @@
 		<section name="HISTORY8">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponderManager.java[HTMLResponderManager~processLogin~QHttpServletRequest;~QHttpServletResponse;~QString;" key="javaElement"/>
 			<item value="org.aitools.programd.responder.HTMLResponderManager.processLogin(HttpServletRequest, HttpServletResponse, String)" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.responder{HTMLResponderManager.java[HTMLResponderManager~processLogin~QHttpServletRequest;~QHttpServletResponse;~QString;" key="javaElement"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -100,8 +100,8 @@
 		<section name="HISTORY5">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/C:\/ProgramD\/lib\/org.mortbay.jetty.jar&lt;org.mortbay.jetty.servlet" key="javaElement"/>
 			<item value="org.mortbay.jetty.servlet" key="pattern"/>
+			<item value="=project/C:\/ProgramD\/lib\/org.mortbay.jetty.jar&lt;org.mortbay.jetty.servlet" key="javaElement"/>
 			<item value="2" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -110,8 +110,8 @@
 		<section name="HISTORY4">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.server.jettyinterface{ProgramDAwareJettyServer.java[ProgramDAwareJettyServer~addContext~QHttpContext;" key="javaElement"/>
 			<item value="org.aitools.programd.server.jettyinterface.ProgramDAwareJettyServer.addContext(HttpContext)" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.server.jettyinterface{ProgramDAwareJettyServer.java[ProgramDAwareJettyServer~addContext~QHttpContext;" key="javaElement"/>
 			<item value="1" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -120,8 +120,8 @@
 		<section name="HISTORY7">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/src&lt;org.aitools.programd.server.servlet{ProgramD.java[ProgramD" key="javaElement"/>
 			<item value="org.aitools.programd.server.servlet.ProgramD" key="pattern"/>
+			<item value="=project/src&lt;org.aitools.programd.server.servlet{ProgramD.java[ProgramD" key="javaElement"/>
 			<item value="0" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -130,8 +130,8 @@
 		<section name="HISTORY6">
 			<item value="2" key="limitTo"/>
 			<item value="0" key="scope"/>
-			<item value="=project/C:\/ProgramD\/lib\/javax.servlet.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" key="javaElement"/>
 			<item value="javax.servlet.http.HttpServlet" key="pattern"/>
+			<item value="=project/C:\/ProgramD\/lib\/javax.servlet.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" key="javaElement"/>
 			<item value="0" key="searchFor"/>
 			<item value="true" key="isCaseSensitive"/>
 			<list key="workingSets">
@@ -147,8 +147,8 @@
 		<item value="2" key="index"/>
 	</section>
 	<section name="SourceActionDialog.methods">
-		<item value="false" key="Comments"/>
 		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="Comments"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="1" key="InsertPosition"/>
 		<item value="false" key="FinalModifier"/>
@@ -168,16 +168,21 @@
 		<item value="public" key="access"/>
 		<item value="true" key="version"/>
 		<item value="false" key="nodeprecated"/>
-		<item value="true" key="author"/>
 		<item value="C:\ProgramD\project\doc" key="destdir"/>
+		<item value="true" key="author"/>
 		<item value="" key="docletname"/>
-		<item value="1.5" key="source"/>
+		<item value="1.6" key="source"/>
 		<item value="false" key="openinbrowser"/>
 		<item value="false" key="noindex"/>
 		<item value="" key="docletpath"/>
 		<item value="C:\ProgramD\project\javadoc.xml" key="antpath"/>
 		<item value="true" key="fromStandard"/>
 		<section name="projects">
+			<section name="project">
+				<item value="C:\ProgramD\project\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\ProgramD\project\javadoc.xml" key="antpath"/>
+			</section>
 		</section>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.TypeSelectionComponent">
@@ -193,12 +198,21 @@
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;packageExplorer group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;&gt;&#x0D;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0D;&#x0A;&lt;xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;lastRecentlyUsedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot;/&gt;&#x0D;&#x0A;&lt;/lastRecentlyUsedFilters&gt;&#x0D;&#x0A;&lt;/customFilters&gt;&#x0D;&#x0A;&lt;/packageExplorer&gt;" key="memento"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item value="681" key="size.x"/>
+		<item value="538" key="size.y"/>
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
-		<item value="false" key="create_main"/>
 		<item value="true" key="create_unimplemented"/>
+		<item value="false" key="create_main"/>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="616" key="DIALOG_WIDTH"/>
+		<item value="178" key="DIALOG_Y_ORIGIN"/>
+		<item value="660" key="DIALOG_X_ORIGIN"/>
+		<item value="615" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>

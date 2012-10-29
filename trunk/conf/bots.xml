@@ -17,6 +17,7 @@
         <!--<predicates href="predicates.xml"/>-->
         <substitutions href="substitutions.xml"/>
         <sentence-splitters href="sentence-splitters.xml"/>
+        <listeners href="listeners.xml"/>
         <learn>../aiml/*.aiml</learn>
     </bot>
 </bots>

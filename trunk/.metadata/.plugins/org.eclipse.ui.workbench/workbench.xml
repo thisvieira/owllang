@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="30" version="2.0">
+<workbench progressCount="59" version="2.0">
 <workbenchAdvisor/>
 <window height="780" maximized="true" width="849" x="379" y="71">
 <fastViewData fastViewLocation="1024"/>
@@ -12,7 +12,7 @@
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ant.ui.internal.editor.AntEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
@@ -21,11 +21,13 @@
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="153" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org_eclipse_ui_examples_readmetool_actionSet" itemType="typeToolBarContribution" x="82" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typeToolBarContribution" x="104" y="22"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -43,59 +45,170 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Bot.java" partName="Bot.java" path="C:/ProgramD/src/org/aitools/programd/bot/Bot.java" title="Bot.java" tooltip="project/src/org/aitools/programd/bot/Bot.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/bot/Bot.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2126" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="ajaxJetty.xml" partName="ajaxJetty.xml" path="C:/ProgramD/conf/ajaxJetty.xml" title="ajaxJetty.xml" tooltip="project/conf/ajaxJetty.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/conf/ajaxJetty.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologyDBMultiplexor.java" partName="OntologyDBMultiplexor.java" path="C:/ProgramD/src/org/aitools/programd/multiplexor/OntologyDBMultiplexor.java" title="OntologyDBMultiplexor.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologyDBMultiplexor.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/multiplexor/OntologyDBMultiplexor.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="36" selectionOffset="1526" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="web-server.xml" partName="web-server.xml" path="C:/ProgramD/conf/web-server.xml" title="web-server.xml" tooltip="project/conf/web-server.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/conf/web-server.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologyFlatFileMultiplexor.java" partName="OntologyFlatFileMultiplexor.java" path="C:/ProgramD/src/org/aitools/programd/multiplexor/OntologyFlatFileMultiplexor.java" title="OntologyFlatFileMultiplexor.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologyFlatFileMultiplexor.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/multiplexor/OntologyFlatFileMultiplexor.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="35" selectionOffset="1100" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="jetty.xml" partName="jetty.xml" path="C:/ProgramD/conf/jetty.xml" title="jetty.xml" tooltip="project/conf/jetty.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/conf/jetty.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologyMultiplexor.java" partName="OntologyMultiplexor.java" path="C:/ProgramD/src/org/aitools/programd/multiplexor/OntologyMultiplexor.java" title="OntologyMultiplexor.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologyMultiplexor.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/multiplexor/OntologyMultiplexor.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2302" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AjaxClient.java" partName="AjaxClient.java" path="C:/ProgramD/src/org/aitools/programd/configurations/AjaxClient.java" title="AjaxClient.java" tooltip="project/src/org/aitools/programd/configurations/AjaxClient.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/configurations/AjaxClient.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1315" selectionTopPixel="91"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologySettings.java" partName="OntologySettings.java" path="C:/ProgramD/src/org/aitools/programd/multiplexor/OntologySettings.java" title="OntologySettings.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologySettings.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/multiplexor/OntologySettings.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="597" selectionTopPixel="90"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AjaxServer.java" partName="AjaxServer.java" path="C:/ProgramD/src/org/aitools/programd/configurations/AjaxServer.java" title="AjaxServer.java" tooltip="project/src/org/aitools/programd/configurations/AjaxServer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/configurations/AjaxServer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="1816"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Bots.java" partName="Bots.java" path="C:/ProgramD/src/org/aitools/programd/bot/Bots.java" title="Bots.java" tooltip="project/src/org/aitools/programd/bot/Bots.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/bot/Bots.java"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JettyWrapper.java" partName="JettyWrapper.java" path="C:/ProgramD/src/org/aitools/programd/server/jettyinterface/JettyWrapper.java" title="JettyWrapper.java" tooltip="project/src/org/aitools/programd/server/jettyinterface/JettyWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/server/jettyinterface/JettyWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="1817" selectionTopPixel="405"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPServer.java" partName="HTTPServer.java" path="C:/ProgramD/src/org/aitools/programd/interfaces/HTTPServer.java" title="HTTPServer.java" tooltip="project/src/org/aitools/programd/interfaces/HTTPServer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/interfaces/HTTPServer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="53" selectionOffset="2828" selectionTopPixel="510"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="extraFrame.html" partName="extraFrame.html" path="C:/ProgramD/docroot/extraFrame.html" title="extraFrame.html" tooltip="project/docroot/extraFrame.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/docroot/extraFrame.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="inputFrame.html" partName="inputFrame.html" path="C:/ProgramD/docroot/inputFrame.html" title="inputFrame.html" tooltip="project/docroot/inputFrame.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/docroot/inputFrame.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="inputFrame.html" partName="inputFrame.html" path="C:/ProgramD/docroot/chat/inputFrame.html" title="inputFrame.html" tooltip="project/docroot/chat/inputFrame.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/docroot/chat/inputFrame.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="web-server.bat" partName="web-server.bat" path="C:/ProgramD/build.tmp/web-server.bat" title="web-server.bat" tooltip="project/build.tmp/web-server.bat" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/build.tmp/web-server.bat"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AjaxD.java" partName="AjaxD.java" path="C:/ProgramD/src/org/aitools/programd/server/servlet/AjaxD.java" title="AjaxD.java" tooltip="project/src/org/aitools/programd/server/servlet/AjaxD.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/server/servlet/AjaxD.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2738" selectionTopPixel="585"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Chatter.java" partName="Chatter.java" path="C:/ProgramD/src/org/aitools/programd/server/servlet/Chatter.java" title="Chatter.java" tooltip="project/src/org/aitools/programd/server/servlet/Chatter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/server/servlet/Chatter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4900" selectionTopPixel="1422"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProgramDAwareJettyServer.java" partName="ProgramDAwareJettyServer.java" path="C:/ProgramD/src/org/aitools/programd/server/jettyinterface/ProgramDAwareJettyServer.java" title="ProgramDAwareJettyServer.java" tooltip="project/src/org/aitools/programd/server/jettyinterface/ProgramDAwareJettyServer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/server/jettyinterface/ProgramDAwareJettyServer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1280" selectionTopPixel="1"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="web-server.bat" partName="web-server.bat" path="C:/ProgramD/src/web-server.bat" title="web-server.bat" tooltip="project/src/web-server.bat" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/web-server.bat"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1195" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="ajax-server.xml" partName="ajax-server.xml" path="C:/ProgramD/conf/ajax-server.xml" title="ajax-server.xml" tooltip="project/conf/ajax-server.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/conf/ajax-server.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPServerSettings.java" partName="HTTPServerSettings.java" path="C:/ProgramD/src/org/aitools/programd/interfaces/HTTPServerSettings.java" title="HTTPServerSettings.java" tooltip="project/src/org/aitools/programd/interfaces/HTTPServerSettings.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/interfaces/HTTPServerSettings.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="1890" selectionTopPixel="315"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="listeners.xml" partName="listeners.xml" path="C:/ProgramD/conf/listeners.xml" title="listeners.xml" tooltip="project/conf/listeners.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/conf/listeners.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JabberListener.java" partName="JabberListener.java" path="C:/ProgramD/src/org/aitools/programd/listener/JabberListener.java" title="JabberListener.java" tooltip="project/src/org/aitools/programd/listener/JabberListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/listener/JabberListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3554" selectionTopPixel="1381"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Listener.java" partName="Listener.java" path="C:/ProgramD/src/org/aitools/programd/listener/Listener.java" title="Listener.java" tooltip="project/src/org/aitools/programd/listener/Listener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/listener/Listener.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="OwlLang.jj" partName="OwlLang.jj" path="C:/ProgramD/src/org/UoR/OwlLang/OwlLang.jj" title="OwlLang.jj" tooltip="project/src/org/UoR/OwlLang/OwlLang.jj" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/UoR/OwlLang/OwlLang.jj"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Core.java" partName="Core.java" path="C:/ProgramD/src/org/aitools/programd/Core.java" title="Core.java" tooltip="project/src/org/aitools/programd/Core.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/Core.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15599" selectionTopPixel="5895"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="core.xml" partName="core.xml" path="C:/ProgramD/conf/core.xml" title="core.xml" tooltip="project/conf/core.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/conf/core.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="bots.xml" partName="bots.xml" path="C:/ProgramD/conf/bots.xml" title="bots.xml" tooltip="project/conf/bots.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/conf/bots.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InvalidListenerParameterException.java" partName="InvalidListenerParameterException.java" path="C:/ProgramD/src/org/aitools/programd/listener/InvalidListenerParameterException.java" title="InvalidListenerParameterException.java" tooltip="project/src/org/aitools/programd/listener/InvalidListenerParameterException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/listener/InvalidListenerParameterException.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" name="bot-configuration.xsd" partName="bot-configuration.xsd" path="C:/ProgramD/resources/schema/bot-configuration.xsd" title="bot-configuration.xsd" tooltip="project/resources/schema/bot-configuration.xsd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/resources/schema/bot-configuration.xsd"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="YahooListener.java" partName="YahooListener.java" path="C:/ProgramD/src/org/aitools/programd/listener/YahooListener.java" title="YahooListener.java" tooltip="project/src/org/aitools/programd/listener/YahooListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/listener/YahooListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="2071"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="YahooSessionListener.java" partName="YahooSessionListener.java" path="C:/ProgramD/src/org/aitools/programd/listener/YahooSessionListener.java" title="YahooSessionListener.java" tooltip="project/src/org/aitools/programd/listener/YahooSessionListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/project/src/org/aitools/programd/listener/YahooSessionListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="3736"/>
 </editor>
 </editors>
 <views>
-<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
-<viewState/>
-</view>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy">
 <viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=project/C:\/Jena-2.3\/lib\/xml-apis.jar" mv_vertical_scroll="0" org.eclipse.jdt.ui.packages.linktypehierarchytoeditor="0" orientation="0" ratio="350" selection="=project/C:\/Java\/jre1.5.0_05\/lib\/rt.jar&lt;java.lang(Object.class[Object" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
 </view>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="3" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="2" org.eclipse.search.resultpage.layout="2"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState columnWidth0="19" columnWidth1="19" columnWidth2="200" columnWidth3="75" columnWidth4="150" columnWidth5="60" horizontalPosition="0" verticalPosition="0">
+<selection/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (100 of 316 items)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="733"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -104,9 +217,6 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
-</view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
@@ -144,25 +254,14 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
-<viewState columnWidth0="19" columnWidth1="19" columnWidth2="200" columnWidth3="75" columnWidth4="150" columnWidth5="60" horizontalPosition="0" verticalPosition="0">
-<selection/>
-</viewState>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -218,6 +317,7 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
@@ -244,21 +344,22 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.27291775" ratioLeft="521" ratioRight="1388" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.68441063" ratioLeft="720" ratioRight="332" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -315,44 +416,60 @@
 <view id="org.eclipse.debug.ui.ExpressionView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7496063" ratioLeft="952" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7496063" ratioLeft="952" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.78396434" ratioLeft="704" ratioRight="194" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.78396434" ratioLeft="704" ratioRight="194" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="1"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="1"/>
 <part id="0"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.5037369" ratioLeft="337" ratioRight="332" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496063" ratioLeft="952" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496063" ratioLeft="952" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="635" ratioRight="635" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="635" ratioRight="635" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
@@ -365,76 +482,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/UoR/OwlLang/OwlLang.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/bot/Bots.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/bot/Bot.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/multiplexor/OntologyDBMultiplexor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/multiplexor/OntologyFlatFileMultiplexor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/multiplexor/OntologyMultiplexor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/multiplexor/OntologySettings.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/bot/Bots.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/UoR/OwlLang/OwlLang.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/project/src/org/UoR/OwlLang/OwlLang.jj"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/project/conf/bots.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/project/conf/listeners.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/listener/JabberListener.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/listener/Listener.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/Core.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/listener/InvalidListenerParameterException.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" path="/project/resources/schema/bot-configuration.xsd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/project/resources/schema/bot-configuration.xsd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/listener/YahooListener.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/project/src/org/aitools/programd/listener/YahooSessionListener.java"/>
 </editors>
-<item historyLabel="OwlLang.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="bots.xml" index="0">
+<position info="not_deleted" x="1028" y="0"/>
 </item>
-<item historyLabel="OwlLang.java" index="0">
-<position info="not_deleted" x="957" y="0"/>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="15599" y="0"/>
 </item>
-<item historyLabel="Bots.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="14537" y="0"/>
 </item>
-<item historyLabel="Bots.java" index="1">
-<position info="not_deleted" x="893" y="0"/>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="15599" y="0"/>
 </item>
-<item historyLabel="OwlLang.java" index="0">
-<position info="not_deleted" x="957" y="0"/>
+<item historyLabel="bots.xml" index="0">
+<position info="not_deleted" x="1012" y="0"/>
 </item>
-<item historyLabel="Bot.java" index="2">
+<item historyLabel="Listener.java" index="3">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="OwlLang.java" index="0">
-<position info="not_deleted" x="957" y="0"/>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="493" y="0"/>
 </item>
-<item historyLabel="Bot.java" index="2">
+<item historyLabel="bots.xml" index="0">
+<position info="not_deleted" x="1012" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="167" y="0"/>
+</item>
+<item historyLabel="bots.xml" index="0">
+<position info="not_deleted" x="1012" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="167" y="0"/>
+</item>
+<item historyLabel="bots.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="167" y="0"/>
+</item>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="15599" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="3234" y="8"/>
+</item>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="15599" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="4412" y="0"/>
+</item>
+<item historyLabel="bots.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="15599" y="0"/>
+</item>
+<item historyLabel="Listener.java" index="3">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="OntologyDBMultiplexor.java" index="3">
-<position info="not_deleted" x="1526" y="36"/>
-</item>
-<item historyLabel="OntologyFlatFileMultiplexor.java" index="4">
-<position info="not_deleted" x="1100" y="35"/>
-</item>
-<item historyLabel="OntologyMultiplexor.java" index="5">
-<position info="not_deleted" x="2302" y="0"/>
-</item>
-<item historyLabel="OntologySettings.java" index="6">
-<position info="not_deleted" x="597" y="0"/>
-</item>
-<item historyLabel="OntologyMultiplexor.java" index="5">
-<position info="not_deleted" x="2302" y="0"/>
-</item>
-<item historyLabel="OntologyFlatFileMultiplexor.java" index="4">
-<position info="not_deleted" x="1100" y="35"/>
-</item>
-<item historyLabel="OntologyDBMultiplexor.java" index="3">
-<position info="not_deleted" x="1526" y="36"/>
-</item>
-<item historyLabel="Bots.java" index="7">
+<item historyLabel="InvalidListenerParameterException.java" index="5">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="OwlLang.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="15599" y="0"/>
 </item>
-<item historyLabel="OwlLang.jj" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="84" y="21"/>
 </item>
-<item historyLabel="OwlLang.java" index="8">
-<position info="not_deleted" x="885" y="7"/>
+<item historyLabel="bot-configuration.xsd" index="6">
+<position path=""/>
 </item>
-<item active="true" historyLabel="OwlLang.jj" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="bot-configuration.xsd" index="6">
+<position path="element[@name=&apos;listeners&apos;]"/>
+</item>
+<item historyLabel="Listener.java" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="84" y="21"/>
+</item>
+<item historyLabel="bot-configuration.xsd" index="6">
+<position path="element[@name=&apos;listeners&apos;]"/>
+</item>
+<item historyLabel="bot-configuration.xsd" index="7">
+<position info="not_deleted" x="9636" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="493" y="0"/>
+</item>
+<item historyLabel="Core.java" index="4">
+<position info="not_deleted" x="15599" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="4412" y="0"/>
+</item>
+<item historyLabel="Listener.java" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="493" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="4412" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="2723" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="2770" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="3554" y="0"/>
+</item>
+<item historyLabel="Listener.java" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="JabberListener.java" index="2">
+<position info="not_deleted" x="3554" y="0"/>
+</item>
+<item historyLabel="bot-configuration.xsd" index="6">
+<position info="not_deleted" x="9636" y="0"/>
+</item>
+<item historyLabel="Listener.java" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="689" y="0"/>
+</item>
+<item historyLabel="YahooListener.java" index="8">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Listener.java" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="836" y="0"/>
+</item>
+<item historyLabel="YahooListener.java" index="8">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="YahooSessionListener.java" index="9">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item active="true" historyLabel="listeners.xml" index="1">
+<position info="not_deleted" x="836" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -454,50 +661,47 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="OwlLang.jj" tooltip="project/src/org/UoR/OwlLang/OwlLang.jj">
-<persistable path="/project/src/org/UoR/OwlLang/OwlLang.jj"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="YahooSessionListener.java" tooltip="project/src/org/aitools/programd/listener/YahooSessionListener.java">
+<persistable path="/project/src/org/aitools/programd/listener/YahooSessionListener.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OwlLang.java" tooltip="project/src/org/UoR/OwlLang/OwlLang.java">
-<persistable path="/project/src/org/UoR/OwlLang/OwlLang.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="YahooListener.java" tooltip="project/src/org/aitools/programd/listener/YahooListener.java">
+<persistable path="/project/src/org/aitools/programd/listener/YahooListener.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Bots.java" tooltip="project/src/org/aitools/programd/bot/Bots.java">
-<persistable path="/project/src/org/aitools/programd/bot/Bots.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" name="bot-configuration.xsd" tooltip="project/resources/schema/bot-configuration.xsd">
+<persistable path="/project/resources/schema/bot-configuration.xsd"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologySettings.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologySettings.java">
-<persistable path="/project/src/org/aitools/programd/multiplexor/OntologySettings.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InvalidListenerParameterException.java" tooltip="project/src/org/aitools/programd/listener/InvalidListenerParameterException.java">
+<persistable path="/project/src/org/aitools/programd/listener/InvalidListenerParameterException.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologyMultiplexor.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologyMultiplexor.java">
-<persistable path="/project/src/org/aitools/programd/multiplexor/OntologyMultiplexor.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="bots.xml" tooltip="project/conf/bots.xml">
+<persistable path="/project/conf/bots.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologyFlatFileMultiplexor.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologyFlatFileMultiplexor.java">
-<persistable path="/project/src/org/aitools/programd/multiplexor/OntologyFlatFileMultiplexor.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="core.xml" tooltip="project/conf/core.xml">
+<persistable path="/project/conf/core.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OntologyDBMultiplexor.java" tooltip="project/src/org/aitools/programd/multiplexor/OntologyDBMultiplexor.java">
-<persistable path="/project/src/org/aitools/programd/multiplexor/OntologyDBMultiplexor.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleConsole.java" tooltip="project/src/org/aitools/programd/configurations/SimpleConsole.java">
+<persistable path="/project/src/org/aitools/programd/configurations/SimpleConsole.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Bot.java" tooltip="project/src/org/aitools/programd/bot/Bot.java">
-<persistable path="/project/src/org/aitools/programd/bot/Bot.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Listener.java" tooltip="project/src/org/aitools/programd/listener/Listener.java">
+<persistable path="/project/src/org/aitools/programd/listener/Listener.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrammaCheck.java" tooltip="project/src/org/UoR/GrammaCheck/GrammaCheck.java">
-<persistable path="/project/src/org/UoR/GrammaCheck/GrammaCheck.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JabberListener.java" tooltip="project/src/org/aitools/programd/listener/JabberListener.java">
+<persistable path="/project/src/org/aitools/programd/listener/JabberListener.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="java-GrammaCheckGen.h" tooltip="project/src/java-GrammaCheckGen.h">
-<persistable path="/project/src/java-GrammaCheckGen.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="listeners.xml" tooltip="project/conf/listeners.xml">
+<persistable path="/project/conf/listeners.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="readme.txt" tooltip="project/src/readme.txt">
-<persistable path="/project/src/readme.txt"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ServletHolder.class" tooltip="org.mortbay.jetty.servlet.ServletHolder">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=project/C:\/ProgramD\/lib\/org.mortbay.jetty.jar&lt;org.mortbay.jetty.servlet(ServletHolder.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBMultiplexor.java" tooltip="project/src/org/aitools/programd/multiplexor/DBMultiplexor.java">
-<persistable path="/project/src/org/aitools/programd/multiplexor/DBMultiplexor.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ServletContext.class" tooltip="javax.servlet.ServletContext">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=project/C:\/ProgramD\/lib\/javax.servlet.jar&lt;javax.servlet(ServletContext.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UUIDgenerator.java" tooltip="project/src/org/UoR/secureAjax/UUIDgenerator.java">
-<persistable path="/project/src/org/UoR/secureAjax/UUIDgenerator.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HttpServlet.class" tooltip="javax.servlet.http.HttpServlet">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=project/C:\/ProgramD\/lib\/javax.servlet.jar&lt;javax.servlet.http(HttpServlet.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="OwlLang-0.1.jj" tooltip="project/src/org/UoR/OwlLang/OwlLang-0.1.jj">
-<persistable path="/project/src/org/UoR/OwlLang/OwlLang-0.1.jj"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TokenMgrError.java" tooltip="project/src/org/UoR/OwlLang/TokenMgrError.java">
-<persistable path="/project/src/org/UoR/OwlLang/TokenMgrError.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPServerSettings.java" tooltip="project/src/org/aitools/programd/interfaces/HTTPServerSettings.java">
+<persistable path="/project/src/org/aitools/programd/interfaces/HTTPServerSettings.java"/>
 </file>
 </mruList>
 </workbench>

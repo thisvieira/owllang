@@ -2,12 +2,11 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2012-10-08T13:14:03.752+0100</date>
-  <millis>1349698443752</millis>
-  <sequence>46</sequence>
+  <date>2012-10-29T16:55:45.034+0000</date>
+  <millis>1351529745034</millis>
+  <sequence>31</sequence>
   <botid>TF</botid>
   <userid>SCHERMERHOM</userid>
   <input>CONNECT</input>
-  <reply>Hello! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/&gt; I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible. Well here we go! &lt;br xmlns=&quot;http://www.w3.org/1999/xhtml"/> Some say that the Homepage of EFQUEL is a good source.<br xmlns="http://www.w3.org/1999/xhtml"/> Do you share that point of view?</reply>
+  <reply></reply>
 </record>
-</log>
