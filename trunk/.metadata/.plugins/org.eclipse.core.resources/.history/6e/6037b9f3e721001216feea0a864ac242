@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?oxygen SCHSchema="../resources/schema/bot-configuration.xsd"?>
+<listeners xmlns="http://aitools.org/programd/4.5/bot-configuration"
+    xmlns:d="http://aitools.org/programd/4.5"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://aitools.org/programd/4.5/bot-configuration http://aitools.org/programd/4.5/bot-configuration.xsd">
+    <listener class="org.aitools.programd.listener.JabberListener" enabled="true">
+        <parameter name="username" value="karlund"/>
+        <parameter name="password" value="pa2trold"/>
+        <parameter name="port" value="5222"/>
+        <parameter name="host" value="plupper.com"/>
+    </listener>
+</listeners>

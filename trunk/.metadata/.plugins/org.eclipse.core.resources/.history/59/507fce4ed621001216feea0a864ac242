@@ -1,0 +1,185 @@
+/*
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation; either version 2 of the License, or (at your option) any later
+ * version. You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software Foundation, Inc.,
+ * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+
+package org.aitools.programd.listener;
+
+
+import java.util.Map;
+import java.util.logging.Level;
+
+import org.aitools.programd.Core;
+import org.aitools.programd.bot.Bot;
+import org.apache.log4j.Logger;
+
+import org.jivesoftware.smack.*;
+import org.jivesoftware.smack.filter.*;
+import org.jivesoftware.smack.packet.*;
+
+/**
+ * This code is from the Everybuddy Java Project by Chris Carlin
+ * (http://EBJava.sourceforge.net/) modified to work with a Program D server.
+ * This needs more documentation.
+ * 
+ * @author Chris Carlin
+ * @author Jon Baer
+ * @author <a href="mailto:noel@aitools.org">Noel Bush</a>
+ * @see <a href="http://EBJava.sourceforge.net/">Everybuddy </a>
+ * @version 1.0
+ */
+public class JabberListener implements Listener
+{
+    /** ? */
+    private static final String _Jabber = "_Jabber";
+    
+    /** The Core object in use. */
+    protected Core core;
+
+    /** The bot for which this listener works. */
+    protected Bot bot;
+
+    /** The id of the bot for which this listener works. */
+    protected String botID;
+
+    /** The parameters that can be set for this listener. */
+    protected Map<String, String> parameters;
+    
+    /** The logger to use. */
+    protected Logger logger = Logger.getLogger("programd.listener.jabber");
+
+    /** ? */
+    private String password;
+
+    /** ? */
+    private String username;
+
+    /** ? */
+    private String host;
+
+    /** ? */
+    private int port;
+    
+    /** Connection to a Jabber server */
+    private XMPPConnection connection;
+    
+    /** Listener for incoming chat packages */
+    private PacketListener listener; 
+
+    /** The label (as required by the registration scheme). */
+    public static final String label = "ProgramD-Jabber";
+
+    /** ? */
+    private static final String MSG = "ProgramD-Jabber: ";
+
+    /**
+     * Creates a new ICQListener chat listener for a given bot.
+     * 
+     * @param coreToUse the Core object in use
+     * @param botToListenFor the bot for whom to listen
+     * @param parametersToUse the parameters for the listener and their default
+     *            values
+     * @throws InvalidListenerParameterException
+     */
+    public JabberListener(Core coreToUse, Bot botToListenFor, Map<String, String> parametersToUse) throws InvalidListenerParameterException
+    {
+    	this.core = coreToUse;
+        this.bot = botToListenFor;
+        this.botID = botToListenFor.getID();
+        this.parameters = parametersToUse;
+        
+        try
+        {
+            this.port = Integer.parseInt(this.parameters.get("port"));
+        }
+        catch (NumberFormatException e)
+        {
+            throw new InvalidListenerParameterException("Invalid user number (try a number!)");
+        }
+        this.username = this.parameters.get("username");
+        this.password = this.parameters.get("password");
+        this.host = this.parameters.get("host");
+    }
+
+    /**
+     * @see org.aitools.programd.listener.Listener#checkParameters()
+     */
+    public void checkParameters() throws InvalidListenerParameterException
+    {
+        // Check parameters.
+        if (this.port <= 0)
+        {
+        	throw new InvalidListenerParameterException("Invalid port number");
+        }
+        if (this.username == null)
+        {
+        	throw new InvalidListenerParameterException("Must have a username");
+        }
+        if (this.username.length() == 0)
+        {
+        	throw new InvalidListenerParameterException("Invalid username");
+        }
+        if (this.password == null)
+        {
+        	throw new InvalidListenerParameterException("Must have a password");
+        }
+        if (this.password.length() == 0)
+        {
+        	throw new InvalidListenerParameterException("Invalid password");
+        }
+    }
+
+    /**
+     * 
+     */
+    public void run()
+    {
+    	try
+    	{
+    		this.connection = new XMPPConnection(this.host,this.port);
+    		this.connection.login(this.username,this.password);
+    		Roster roster = this.connection.getRoster();
+    		roster.setSubscriptionMode(Roster.SUBSCRIPTION_ACCEPT_ALL);
+    	}
+    	catch (XMPPException e)
+    	{
+    		this.logger.log(Level.SEVERE, "Jabber connection failed.");
+    		return;
+    	}
+    	
+    	PacketFilter filter = new PacketTypeFilter(Message.class);
+ 
+    	PacketCollector collector = connection.createPacketCollector(filter);
+    	
+    	while(this.connection.isConnected())
+    	{
+    		Message message = (Message)collector.nextResult(100);
+    		
+   			if(message!=null)
+    		{    		
+    			Message response = new Message();
+    			response.setTo(message.getFrom());
+    			response.setFrom(message.getTo());
+    			response.setType(Message.Type.CHAT);
+    		
+    			response.setBody(this.core.getResponse(	message.getBody(),
+    												message.getFrom() + _Jabber,
+    												this.botID));
+    			
+    			this.connection.sendPacket(response);
+    		}
+    	}
+    }
+
+    /**
+     * @see org.aitools.programd.util.ManagedProcess#shutdown()
+     */
+    public void shutdown()
+    {
+
+    }
+}

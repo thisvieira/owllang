@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?oxygen SCHSchema="../resources/schema/bot-configuration.xsd"?>
+<listeners xmlns="http://aitools.org/programd/4.5/bot-configuration"
+    xmlns:d="http://aitools.org/programd/4.5"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://aitools.org/programd/4.5/bot-configuration http://aitools.org/programd/4.5/bot-configuration.xsd">
+    <listener class="org.aitools.programd.listener.JabberListener" enabled="enable">
+        <parameter name="username" value="karstenlundqvist@gmail.com"/>
+        <parameter name="password" value="Ga2tro1d"/>
+        <parameter name="port" value="5222"/>
+        <parameter name="host" value="talk.google.com"/>
+    </listener>
+    <listener class="org.aitools.programd.listener.YahooListener" enabled="false">
+        <parameter name="userid" value="test"/>
+        <parameter name="password" value="test"/>
+    </listener>
+</listeners>
