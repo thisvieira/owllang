@@ -19,7 +19,7 @@ QUESTIONS INITIATION
 			<think>
 				<set name="numberOfQuestions"/>
 			</think>
-			I will be asking you a series of questions about the EFQUEL homepage. Please answer as honestly as possible.
+			I will be asking you a series of questions about this homepage. Please answer as honestly as possible.
 			Well here we go! <html:br/>
 			<srai>QUESTASK</srai>
 		</template>
